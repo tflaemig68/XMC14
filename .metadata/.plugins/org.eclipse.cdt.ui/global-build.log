@@ -1,0 +1,337 @@
+16:21:22 **** Clean-only build of configuration Debug for project LED ****
+"\"C:\\Infineon\\Tools\\DAVE IDE\\450\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j8 clean 
+rm -rf  ./Startup/startup_XMC1400.o ./Startup/system_XMC1400.o  ./Libraries/XMCLib/src/xmc1_eru.o ./Libraries/XMCLib/src/xmc1_flash.o ./Libraries/XMCLib/src/xmc1_gpio.o ./Libraries/XMCLib/src/xmc1_rtc.o ./Libraries/XMCLib/src/xmc1_scu.o ./Libraries/XMCLib/src/xmc_acmp.o ./Libraries/XMCLib/src/xmc_bccu.o ./Libraries/XMCLib/src/xmc_can.o ./Libraries/XMCLib/src/xmc_ccu4.o ./Libraries/XMCLib/src/xmc_ccu8.o ./Libraries/XMCLib/src/xmc_common.o ./Libraries/XMCLib/src/xmc_eru.o ./Libraries/XMCLib/src/xmc_gpio.o ./Libraries/XMCLib/src/xmc_i2c.o ./Libraries/XMCLib/src/xmc_i2s.o ./Libraries/XMCLib/src/xmc_ledts.o ./Libraries/XMCLib/src/xmc_math.o ./Libraries/XMCLib/src/xmc_pau.o ./Libraries/XMCLib/src/xmc_posif.o ./Libraries/XMCLib/src/xmc_prng.o ./Libraries/XMCLib/src/xmc_rtc.o ./Libraries/XMCLib/src/xmc_spi.o ./Libraries/XMCLib/src/xmc_uart.o ./Libraries/XMCLib/src/xmc_usic.o ./Libraries/XMCLib/src/xmc_vadc.o ./Libraries/XMCLib/src/xmc_wdt.o  ./Libraries/Newlib/syscalls.o  ./Dave/Generated/PWM/pwm.o ./Dave/Generated/PWM/pwm_conf.o  ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o  ./Dave/Generated/CLOCK_XMC1/clock_xmc1.o ./Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.o  ./Dave/Generated/DAVE.o  ./main.o  LED.hex  LED.lst  LED.siz  ./Startup/startup_XMC1400.d  ./Startup/system_XMC1400.d  ./Libraries/XMCLib/src/xmc1_eru.d ./Libraries/XMCLib/src/xmc1_flash.d ./Libraries/XMCLib/src/xmc1_gpio.d ./Libraries/XMCLib/src/xmc1_rtc.d ./Libraries/XMCLib/src/xmc1_scu.d ./Libraries/XMCLib/src/xmc_acmp.d ./Libraries/XMCLib/src/xmc_bccu.d ./Libraries/XMCLib/src/xmc_can.d ./Libraries/XMCLib/src/xmc_ccu4.d ./Libraries/XMCLib/src/xmc_ccu8.d ./Libraries/XMCLib/src/xmc_common.d ./Libraries/XMCLib/src/xmc_eru.d ./Libraries/XMCLib/src/xmc_gpio.d ./Libraries/XMCLib/src/xmc_i2c.d ./Libraries/XMCLib/src/xmc_i2s.d ./Libraries/XMCLib/src/xmc_ledts.d ./Libraries/XMCLib/src/xmc_math.d ./Libraries/XMCLib/src/xmc_pau.d ./Libraries/XMCLib/src/xmc_posif.d ./Libraries/XMCLib/src/xmc_prng.d ./Libraries/XMCLib/src/xmc_rtc.d ./Libraries/XMCLib/src/xmc_spi.d ./Libraries/XMCLib/src/xmc_uart.d ./Libraries/XMCLib/src/xmc_usic.d ./Libraries/XMCLib/src/xmc_vadc.d ./Libraries/XMCLib/src/xmc_wdt.d  ./Libraries/Newlib/syscalls.d  ./Dave/Generated/PWM/pwm.d ./Dave/Generated/PWM/pwm_conf.d  ./Dave/Generated/GLOBAL_CCU4/global_ccu4.d ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.d  ./Dave/Generated/CLOCK_XMC1/clock_xmc1.d ./Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.d  ./Dave/Generated/DAVE.d  ./main.d  LED.elf ./Startup/startup_XMC1400.o.lst ./Startup/system_XMC1400.o.lst ./Libraries/XMCLib/src/xmc1_eru.o.lst ./Libraries/XMCLib/src/xmc1_flash.o.lst ./Libraries/XMCLib/src/xmc1_gpio.o.lst ./Libraries/XMCLib/src/xmc1_rtc.o.lst ./Libraries/XMCLib/src/xmc1_scu.o.lst ./Libraries/XMCLib/src/xmc_acmp.o.lst ./Libraries/XMCLib/src/xmc_bccu.o.lst ./Libraries/XMCLib/src/xmc_can.o.lst ./Libraries/XMCLib/src/xmc_ccu4.o.lst ./Libraries/XMCLib/src/xmc_ccu8.o.lst ./Libraries/XMCLib/src/xmc_common.o.lst ./Libraries/XMCLib/src/xmc_eru.o.lst ./Libraries/XMCLib/src/xmc_gpio.o.lst ./Libraries/XMCLib/src/xmc_i2c.o.lst ./Libraries/XMCLib/src/xmc_i2s.o.lst ./Libraries/XMCLib/src/xmc_ledts.o.lst ./Libraries/XMCLib/src/xmc_math.o.lst ./Libraries/XMCLib/src/xmc_pau.o.lst ./Libraries/XMCLib/src/xmc_posif.o.lst ./Libraries/XMCLib/src/xmc_prng.o.lst ./Libraries/XMCLib/src/xmc_rtc.o.lst ./Libraries/XMCLib/src/xmc_spi.o.lst ./Libraries/XMCLib/src/xmc_uart.o.lst ./Libraries/XMCLib/src/xmc_usic.o.lst ./Libraries/XMCLib/src/xmc_vadc.o.lst ./Libraries/XMCLib/src/xmc_wdt.o.lst ./Libraries/Newlib/syscalls.o.lst ./Dave/Generated/PWM/pwm.o.lst ./Dave/Generated/PWM/pwm_conf.o.lst ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o.lst ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o.lst ./Dave/Generated/CLOCK_XMC1/clock_xmc1.o.lst ./Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.o.lst ./Dave/Generated/DAVE.o.lst ./main.o.lst  "LED.map" objects.rsp
+
+16:22:43 **** Build of configuration Debug for project LED ****
+"\"C:\\Infineon\\Tools\\DAVE IDE\\450\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j8 all 
+'Building file: ../Startup/startup_XMC1400.S'
+'Invoking: ARM-GCC Assembler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Startup/startup_XMC1400.o" -x assembler-with-cpp -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -Wall -Wa,-adhlns="Startup/startup_XMC1400.o.lst" -c -fmessage-length=0 -MMD -MP -MF"Startup/startup_XMC1400.d" -MT"Startup/startup_XMC1400.d Startup/startup_XMC1400.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Startup/startup_XMC1400.o" "../Startup/startup_XMC1400.S" 
+'Finished building: ../Startup/startup_XMC1400.S'
+
+'Building file: ../Startup/system_XMC1400.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Startup/system_XMC1400.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Startup/system_XMC1400.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Startup/system_XMC1400.d" -MT"Startup/system_XMC1400.d Startup/system_XMC1400.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Startup/system_XMC1400.o" "../Startup/system_XMC1400.c" 
+'Finished building: ../Startup/system_XMC1400.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc1_eru.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc1_eru.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc1_eru.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc1_eru.d" -MT"Libraries/XMCLib/src/xmc1_eru.d Libraries/XMCLib/src/xmc1_eru.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc1_eru.o" "../Libraries/XMCLib/src/xmc1_eru.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc1_eru.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc1_flash.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc1_flash.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc1_flash.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc1_flash.d" -MT"Libraries/XMCLib/src/xmc1_flash.d Libraries/XMCLib/src/xmc1_flash.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc1_flash.o" "../Libraries/XMCLib/src/xmc1_flash.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc1_flash.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc1_gpio.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc1_gpio.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc1_gpio.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc1_gpio.d" -MT"Libraries/XMCLib/src/xmc1_gpio.d Libraries/XMCLib/src/xmc1_gpio.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc1_gpio.o" "../Libraries/XMCLib/src/xmc1_gpio.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc1_gpio.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_acmp.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_acmp.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_acmp.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_acmp.d" -MT"Libraries/XMCLib/src/xmc_acmp.d Libraries/XMCLib/src/xmc_acmp.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_acmp.o" "../Libraries/XMCLib/src/xmc_acmp.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_acmp.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc1_rtc.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc1_rtc.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc1_rtc.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc1_rtc.d" -MT"Libraries/XMCLib/src/xmc1_rtc.d Libraries/XMCLib/src/xmc1_rtc.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc1_rtc.o" "../Libraries/XMCLib/src/xmc1_rtc.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc1_rtc.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc1_scu.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc1_scu.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc1_scu.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc1_scu.d" -MT"Libraries/XMCLib/src/xmc1_scu.d Libraries/XMCLib/src/xmc1_scu.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc1_scu.o" "../Libraries/XMCLib/src/xmc1_scu.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc1_scu.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_bccu.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_bccu.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_bccu.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_bccu.d" -MT"Libraries/XMCLib/src/xmc_bccu.d Libraries/XMCLib/src/xmc_bccu.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_bccu.o" "../Libraries/XMCLib/src/xmc_bccu.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_bccu.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_can.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_can.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_can.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_can.d" -MT"Libraries/XMCLib/src/xmc_can.d Libraries/XMCLib/src/xmc_can.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_can.o" "../Libraries/XMCLib/src/xmc_can.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_can.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_ccu4.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_ccu4.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_ccu4.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_ccu4.d" -MT"Libraries/XMCLib/src/xmc_ccu4.d Libraries/XMCLib/src/xmc_ccu4.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_ccu4.o" "../Libraries/XMCLib/src/xmc_ccu4.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_ccu4.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_ccu8.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_ccu8.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_ccu8.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_ccu8.d" -MT"Libraries/XMCLib/src/xmc_ccu8.d Libraries/XMCLib/src/xmc_ccu8.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_ccu8.o" "../Libraries/XMCLib/src/xmc_ccu8.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_ccu8.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_common.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_common.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_common.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_common.d" -MT"Libraries/XMCLib/src/xmc_common.d Libraries/XMCLib/src/xmc_common.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_common.o" "../Libraries/XMCLib/src/xmc_common.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_common.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_eru.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_eru.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_eru.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_eru.d" -MT"Libraries/XMCLib/src/xmc_eru.d Libraries/XMCLib/src/xmc_eru.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_eru.o" "../Libraries/XMCLib/src/xmc_eru.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_eru.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_gpio.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_gpio.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_gpio.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_gpio.d" -MT"Libraries/XMCLib/src/xmc_gpio.d Libraries/XMCLib/src/xmc_gpio.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_gpio.o" "../Libraries/XMCLib/src/xmc_gpio.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_gpio.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_i2c.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_i2c.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_i2c.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_i2c.d" -MT"Libraries/XMCLib/src/xmc_i2c.d Libraries/XMCLib/src/xmc_i2c.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_i2c.o" "../Libraries/XMCLib/src/xmc_i2c.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_i2c.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_i2s.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_i2s.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_i2s.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_i2s.d" -MT"Libraries/XMCLib/src/xmc_i2s.d Libraries/XMCLib/src/xmc_i2s.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_i2s.o" "../Libraries/XMCLib/src/xmc_i2s.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_i2s.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_ledts.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_ledts.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_ledts.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_ledts.d" -MT"Libraries/XMCLib/src/xmc_ledts.d Libraries/XMCLib/src/xmc_ledts.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_ledts.o" "../Libraries/XMCLib/src/xmc_ledts.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_ledts.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_pau.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_pau.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_pau.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_pau.d" -MT"Libraries/XMCLib/src/xmc_pau.d Libraries/XMCLib/src/xmc_pau.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_pau.o" "../Libraries/XMCLib/src/xmc_pau.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_pau.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_math.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_math.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_math.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_math.d" -MT"Libraries/XMCLib/src/xmc_math.d Libraries/XMCLib/src/xmc_math.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_math.o" "../Libraries/XMCLib/src/xmc_math.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_math.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_posif.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_posif.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_posif.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_posif.d" -MT"Libraries/XMCLib/src/xmc_posif.d Libraries/XMCLib/src/xmc_posif.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_posif.o" "../Libraries/XMCLib/src/xmc_posif.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_posif.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_prng.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_prng.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_prng.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_prng.d" -MT"Libraries/XMCLib/src/xmc_prng.d Libraries/XMCLib/src/xmc_prng.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_prng.o" "../Libraries/XMCLib/src/xmc_prng.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_prng.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_rtc.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_rtc.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_rtc.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_rtc.d" -MT"Libraries/XMCLib/src/xmc_rtc.d Libraries/XMCLib/src/xmc_rtc.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_rtc.o" "../Libraries/XMCLib/src/xmc_rtc.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_rtc.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_spi.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_spi.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_spi.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_spi.d" -MT"Libraries/XMCLib/src/xmc_spi.d Libraries/XMCLib/src/xmc_spi.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_spi.o" "../Libraries/XMCLib/src/xmc_spi.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_spi.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_uart.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_uart.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_uart.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_uart.d" -MT"Libraries/XMCLib/src/xmc_uart.d Libraries/XMCLib/src/xmc_uart.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_uart.o" "../Libraries/XMCLib/src/xmc_uart.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_uart.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_usic.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_usic.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_usic.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_usic.d" -MT"Libraries/XMCLib/src/xmc_usic.d Libraries/XMCLib/src/xmc_usic.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_usic.o" "../Libraries/XMCLib/src/xmc_usic.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_usic.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_wdt.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_wdt.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_wdt.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_wdt.d" -MT"Libraries/XMCLib/src/xmc_wdt.d Libraries/XMCLib/src/xmc_wdt.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_wdt.o" "../Libraries/XMCLib/src/xmc_wdt.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_wdt.c'
+
+'Building file: ../Libraries/Newlib/syscalls.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/Newlib/syscalls.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/Newlib/syscalls.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/Newlib/syscalls.d" -MT"Libraries/Newlib/syscalls.d Libraries/Newlib/syscalls.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/Newlib/syscalls.o" "../Libraries/Newlib/syscalls.c" 
+'Finished building: ../Libraries/Newlib/syscalls.c'
+
+'Building file: ../Libraries/XMCLib/src/xmc_vadc.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Libraries/XMCLib/src/xmc_vadc.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Libraries/XMCLib/src/xmc_vadc.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Libraries/XMCLib/src/xmc_vadc.d" -MT"Libraries/XMCLib/src/xmc_vadc.d Libraries/XMCLib/src/xmc_vadc.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Libraries/XMCLib/src/xmc_vadc.o" "../Libraries/XMCLib/src/xmc_vadc.c" 
+'Finished building: ../Libraries/XMCLib/src/xmc_vadc.c'
+
+'Building file: ../Dave/Generated/PWM/pwm.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Dave/Generated/PWM/pwm.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Dave/Generated/PWM/pwm.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Dave/Generated/PWM/pwm.d" -MT"Dave/Generated/PWM/pwm.d Dave/Generated/PWM/pwm.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Dave/Generated/PWM/pwm.o" "../Dave/Generated/PWM/pwm.c" 
+'Finished building: ../Dave/Generated/PWM/pwm.c'
+
+'Building file: ../Dave/Generated/PWM/pwm_conf.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Dave/Generated/PWM/pwm_conf.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Dave/Generated/PWM/pwm_conf.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Dave/Generated/PWM/pwm_conf.d" -MT"Dave/Generated/PWM/pwm_conf.d Dave/Generated/PWM/pwm_conf.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Dave/Generated/PWM/pwm_conf.o" "../Dave/Generated/PWM/pwm_conf.c" 
+'Finished building: ../Dave/Generated/PWM/pwm_conf.c'
+
+'Building file: ../Dave/Generated/GLOBAL_CCU4/global_ccu4.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Dave/Generated/GLOBAL_CCU4/global_ccu4.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Dave/Generated/GLOBAL_CCU4/global_ccu4.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Dave/Generated/GLOBAL_CCU4/global_ccu4.d" -MT"Dave/Generated/GLOBAL_CCU4/global_ccu4.d Dave/Generated/GLOBAL_CCU4/global_ccu4.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Dave/Generated/GLOBAL_CCU4/global_ccu4.o" "../Dave/Generated/GLOBAL_CCU4/global_ccu4.c" 
+'Finished building: ../Dave/Generated/GLOBAL_CCU4/global_ccu4.c'
+
+'Building file: ../Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.d" -MT"Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.d Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o" "../Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.c" 
+'Finished building: ../Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.c'
+
+'Building file: ../Dave/Generated/CLOCK_XMC1/clock_xmc1.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Dave/Generated/CLOCK_XMC1/clock_xmc1.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Dave/Generated/CLOCK_XMC1/clock_xmc1.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Dave/Generated/CLOCK_XMC1/clock_xmc1.d" -MT"Dave/Generated/CLOCK_XMC1/clock_xmc1.d Dave/Generated/CLOCK_XMC1/clock_xmc1.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Dave/Generated/CLOCK_XMC1/clock_xmc1.o" "../Dave/Generated/CLOCK_XMC1/clock_xmc1.c" 
+'Finished building: ../Dave/Generated/CLOCK_XMC1/clock_xmc1.c'
+
+'Building file: ../main.c'
+../main.c: In function 'main':
+'Invoking: ARM-GCC C Compiler'
+../main.c:39:21: error: 'MyLED1' undeclared (first use in this function)
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "main.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="main.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d main.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "main.o" "../main.c" 
+   PWM_SetDutyCycle(&MyLED1, 1000); // set duty cycle to 10%
+subdir.mk:18: recipe for target 'main.o' failed
+                     ^
+../main.c:39:21: note: each undeclared identifier is reported only once for each function it appears in
+../main.c:40:21: error: 'MyLED2' undeclared (first use in this function)
+   PWM_SetDutyCycle(&MyLED2, 9000); // set duty cycle to 90%
+                     ^
+make: *** [main.o] Error 1
+make: *** Waiting for unfinished jobs....
+'Building file: ../Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.d" -MT"Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.d Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.o" "../Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.c" 
+'Finished building: ../Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.c'
+
+'Building file: ../Dave/Generated/DAVE.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Dave/Generated/DAVE.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Dave/Generated/DAVE.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Dave/Generated/DAVE.d" -MT"Dave/Generated/DAVE.d Dave/Generated/DAVE.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Dave/Generated/DAVE.o" "../Dave/Generated/DAVE.c" 
+'Finished building: ../Dave/Generated/DAVE.c'
+
+16:22:56 **** Incremental Build of configuration Debug for project LED ****
+"\"C:\\Infineon\\Tools\\DAVE IDE\\450\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j8 all 
+'Building file: ../main.c'
+../main.c: In function 'main':
+'Invoking: ARM-GCC C Compiler'
+../main.c:39:21: error: 'MyLED1' undeclared (first use in this function)
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "main.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="main.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d main.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "main.o" "../main.c" 
+   PWM_SetDutyCycle(&MyLED1, 1000); // set duty cycle to 10%
+subdir.mk:18: recipe for target 'main.o' failed
+                     ^
+../main.c:39:21: note: each undeclared identifier is reported only once for each function it appears in
+../main.c:40:21: error: 'MyLED2' undeclared (first use in this function)
+   PWM_SetDutyCycle(&MyLED2, 9000); // set duty cycle to 90%
+                     ^
+make: *** [main.o] Error 1
+16:27:24 **** Build of configuration Debug for project LED ****
+"\"C:\\Infineon\\Tools\\DAVE IDE\\450\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j8 all 
+'Building file: ../Dave/Generated/PWM/pwm_conf.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Dave/Generated/PWM/pwm_conf.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Dave/Generated/PWM/pwm_conf.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Dave/Generated/PWM/pwm_conf.d" -MT"Dave/Generated/PWM/pwm_conf.d Dave/Generated/PWM/pwm_conf.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Dave/Generated/PWM/pwm_conf.o" "../Dave/Generated/PWM/pwm_conf.c" 
+'Finished building: ../Dave/Generated/PWM/pwm_conf.c'
+
+'Building file: ../Dave/Generated/PWM/pwm.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Dave/Generated/PWM/pwm.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Dave/Generated/PWM/pwm.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Dave/Generated/PWM/pwm.d" -MT"Dave/Generated/PWM/pwm.d Dave/Generated/PWM/pwm.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Dave/Generated/PWM/pwm.o" "../Dave/Generated/PWM/pwm.c" 
+'Finished building: ../Dave/Generated/PWM/pwm.c'
+
+'Building file: ../Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.d" -MT"Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.d Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o" "../Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.c" 
+'Finished building: ../Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.c'
+
+'Building file: ../Dave/Generated/DAVE.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Dave/Generated/DAVE.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Dave/Generated/DAVE.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Dave/Generated/DAVE.d" -MT"Dave/Generated/DAVE.d Dave/Generated/DAVE.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Dave/Generated/DAVE.o" "../Dave/Generated/DAVE.c" 
+'Finished building: ../Dave/Generated/DAVE.c'
+
+'Building file: ../main.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "main.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="main.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d main.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "main.o" "../main.c" 
+'Finished building: ../main.c'
+
+'Building target: LED.elf'
+'Invoking: ARM-GCC C Linker'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -T"../linker_script.ld" -nostartfiles -Xlinker --gc-sections -specs=nano.specs -specs=nosys.specs -Wl,-Map,"LED.map" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "LED.elf" "@objects.rsp"  -lm
+'Finished building target: LED.elf'
+
+'Invoking: ARM-GCC Create Flash Image'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-objcopy" -O ihex "LED.elf" "LED.hex"
+'Finished building: LED.hex'
+
+'Invoking: ARM-GCC Create Listing'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-objdump" -h -S "LED.elf" > "LED.lst"
+'Finished building: LED.lst'
+
+'Invoking: ARM-GCC Print Size'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-size" --format=berkeley "LED.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3924	    120	   1044	   5088	   13e0	LED.elf
+'Finished building: LED.siz'
+
+16:27:31 **** Incremental Build of configuration Debug for project LED ****
+"\"C:\\Infineon\\Tools\\DAVE IDE\\450\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j8 all 
+'Invoking: ARM-GCC Print Size'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-size" --format=berkeley "LED.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3924	    120	   1044	   5088	   13e0	LED.elf
+'Finished building: LED.siz'
+
+17:10:16 **** Build of configuration Debug for project LED ****
+"\"C:\\Infineon\\Tools\\DAVE IDE\\450\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j8 all 
+'Building file: ../Dave/Generated/PWM/pwm_conf.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Dave/Generated/PWM/pwm_conf.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Dave/Generated/PWM/pwm_conf.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Dave/Generated/PWM/pwm_conf.d" -MT"Dave/Generated/PWM/pwm_conf.d Dave/Generated/PWM/pwm_conf.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Dave/Generated/PWM/pwm_conf.o" "../Dave/Generated/PWM/pwm_conf.c" 
+'Finished building: ../Dave/Generated/PWM/pwm_conf.c'
+
+'Building target: LED.elf'
+'Invoking: ARM-GCC C Linker'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -T"../linker_script.ld" -nostartfiles -Xlinker --gc-sections -specs=nano.specs -specs=nosys.specs -Wl,-Map,"LED.map" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "LED.elf" "@objects.rsp"  -lm
+'Finished building target: LED.elf'
+
+'Invoking: ARM-GCC Create Flash Image'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-objcopy" -O ihex "LED.elf" "LED.hex"
+'Finished building: LED.hex'
+
+'Invoking: ARM-GCC Print Size'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-size" --format=berkeley "LED.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3924	    120	   1044	   5088	   13e0	LED.elf
+'Finished building: LED.siz'
+
+'Invoking: ARM-GCC Create Listing'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-objdump" -h -S "LED.elf" > "LED.lst"
+'Finished building: LED.lst'
+
+17:10:51 **** Incremental Build of configuration Debug for project LED ****
+"\"C:\\Infineon\\Tools\\DAVE IDE\\450\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j8 all 
+'Invoking: ARM-GCC Print Size'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-size" --format=berkeley "LED.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3924	    120	   1044	   5088	   13e0	LED.elf
+'Finished building: LED.siz'
+
+17:13:15 **** Build of configuration Debug for project LED ****
+"\"C:\\Infineon\\Tools\\DAVE IDE\\450\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j8 all 
+'Building file: ../Dave/Generated/PWM/pwm_conf.c'
+'Invoking: ARM-GCC C Compiler'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -MMD -MT "Dave/Generated/PWM/pwm_conf.o" -DXMC1404_Q040x0200 -I"D:/github/XMC14/LED/Libraries/XMCLib/inc" -I"D:/github/XMC14/LED/Libraries/CMSIS/Include" -I"D:/github/XMC14/LED/Libraries/CMSIS/Infineon/XMC1400_series/Include" -I"D:/github/XMC14/LED" -I"D:/github/XMC14/LED/Dave/Generated" -I"D:/github/XMC14/LED/Libraries" -O0 -ffunction-sections -fdata-sections -Wall -std=gnu99 -Wa,-adhlns="Dave/Generated/PWM/pwm_conf.o.lst" -pipe -c -fmessage-length=0 -MMD -MP -MF"Dave/Generated/PWM/pwm_conf.d" -MT"Dave/Generated/PWM/pwm_conf.d Dave/Generated/PWM/pwm_conf.o" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "Dave/Generated/PWM/pwm_conf.o" "../Dave/Generated/PWM/pwm_conf.c" 
+'Finished building: ../Dave/Generated/PWM/pwm_conf.c'
+
+'Building target: LED.elf'
+'Invoking: ARM-GCC C Linker'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-gcc" -T"../linker_script.ld" -nostartfiles -Xlinker --gc-sections -specs=nano.specs -specs=nosys.specs -Wl,-Map,"LED.map" -mcpu=cortex-m0 -mthumb -g -gdwarf-2 -o "LED.elf" "@objects.rsp"  -lm
+'Finished building target: LED.elf'
+
+'Invoking: ARM-GCC Create Flash Image'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-objcopy" -O ihex "LED.elf" "LED.hex"
+'Finished building: LED.hex'
+
+'Invoking: ARM-GCC Print Size'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-size" --format=berkeley "LED.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3924	    120	   1044	   5088	   13e0	LED.elf
+'Finished building: LED.siz'
+
+'Invoking: ARM-GCC Create Listing'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-objdump" -h -S "LED.elf" > "LED.lst"
+'Finished building: LED.lst'
+
+17:13:28 **** Incremental Build of configuration Debug for project LED ****
+"\"C:\\Infineon\\Tools\\DAVE IDE\\450\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j8 all 
+'Invoking: ARM-GCC Print Size'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-size" --format=berkeley "LED.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3924	    120	   1044	   5088	   13e0	LED.elf
+'Finished building: LED.siz'
+

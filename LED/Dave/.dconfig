@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ProjectConfig>
+    <ResourceReserve/>
+    <Solver>
+        <SolverBndMap>
+            <BindMap MUri="peripheral/scu/0/ccu/config" Proxy="app/CLOCK_XMC1/0/hwres_clkcntrlunit"/>
+            <BindMap MUri="peripheral/ccu4/0/cc4/1" Proxy="app/PWM/0/hwres_ccu4_cc4_slice"/>
+            <BindMap MUri="port/p/0/pad/6" Proxy="app/PWM/1/hwres_port_pad_pwm_out"/>
+            <BindMap MUri="port/p/0/pad/7" Proxy="app/PWM/0/hwres_port_pad_pwm_out"/>
+            <BindMap MUri="devicepackage/0/35" Proxy="app/PWM/1/__pin_hwres_port_pad_pwm_out"/>
+            <BindMap MUri="peripheral/ccu4/0/global" Proxy="app/GLOBAL_CCU4/0/hwres_peripheral_ccu4_global"/>
+            <BindMap MUri="peripheral/scu/0/gcu/ccu4_global_enable/0" Proxy="app/GLOBAL_CCU4/0/hwres_peripheral_scu_gcu_ccu4_global_enable"/>
+            <BindMap MUri="devicepackage/0/36" Proxy="app/PWM/0/__pin_hwres_port_pad_pwm_out"/>
+            <BindMap MUri="peripheral/ccu4/0/cc4/0" Proxy="app/PWM/1/hwres_ccu4_cc4_slice"/>
+        </SolverBndMap>
+    </Solver>
+</ProjectConfig>

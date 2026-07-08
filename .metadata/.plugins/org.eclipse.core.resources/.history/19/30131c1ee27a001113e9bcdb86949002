@@ -1,0 +1,144 @@
+/*
+ * ssd1306.c
+ *
+ *  Created on: 8 Jul 2026
+ *      Author: tobia
+ */
+
+#include "ssd1306.h"
+#include "DAVE.h"
+
+#define SSD1306_ADDR 0x3C
+
+static uint8_t OLED_Buffer[512];
+
+static uint8_t CurrentX;
+static uint8_t CurrentY;
+
+
+
+
+void delay_ms(uint32_t delay)
+{
+    uint32_t start = SysTickCounter;
+
+    while((SysTickCounter - start) < delay)
+    {
+        __NOP();
+    }
+}
+
+
+static I2C_MASTER_STATUS_t SSD1306_Send(
+    uint8_t *buffer,
+    uint32_t length)
+{
+    return I2C_MASTER_Transmit(
+                &I2C_MASTER_0,
+                true,
+                SSD1306_ADDR,
+                buffer,
+                length,
+                true);
+}
+
+
+static void SSD1306_WriteCommand(uint8_t cmd)
+{
+    uint8_t data[2];
+
+    data[0] = 0x00;
+    data[1] = cmd;
+
+
+    SSD1306_Send(data, 2);
+
+}
+
+static void SSD1306_WriteData(uint8_t *data,uint16_t size)
+{
+    uint8_t tx[17];
+
+    tx[0] = 0x40;
+
+    while(size)
+    {
+        uint8_t chunk = (size > 16) ? 16 : size;
+
+        memcpy(&tx[1], data, chunk);
+        SSD1306_Send(tx, chunk + 1);
+
+        data += chunk;
+        size -= chunk;
+    }
+}
+
+
+
+void SSD1306_Init(void)
+{
+    delay_ms(100);
+
+    SSD1306_WriteCommand(0xAE);
+    SSD1306_WriteCommand(0xD5);
+    SSD1306_WriteCommand(0x80);
+
+    SSD1306_WriteCommand(0xA8);
+    SSD1306_WriteCommand(0x1F);
+
+    SSD1306_WriteCommand(0xD3);
+    SSD1306_WriteCommand(0x00);
+
+    SSD1306_WriteCommand(0x40);
+
+    SSD1306_WriteCommand(0x8D);
+    SSD1306_WriteCommand(0x14);
+
+    SSD1306_WriteCommand(0x20);
+    SSD1306_WriteCommand(0x00);
+
+    SSD1306_WriteCommand(0xA1);
+    SSD1306_WriteCommand(0xC8);
+
+    SSD1306_WriteCommand(0xDA);
+    SSD1306_WriteCommand(0x02);
+
+    SSD1306_WriteCommand(0x81);
+    SSD1306_WriteCommand(0x8F);
+
+    SSD1306_WriteCommand(0xD9);
+    SSD1306_WriteCommand(0xF1);
+
+    SSD1306_WriteCommand(0xDB);
+    SSD1306_WriteCommand(0x40);
+
+    SSD1306_WriteCommand(0xA4);
+    SSD1306_WriteCommand(0xA6);
+
+    SSD1306_WriteCommand(0xAF);
+
+    SSD1306_Clear();
+    SSD1306_UpdateScreen();
+}
+
+void SSD1306_Clear(void)
+{
+    memset(OLED_Buffer,0,sizeof(OLED_Buffer));
+
+    CurrentX = 0;
+    CurrentY = 0;
+}
+
+void SSD1306_UpdateScreen(void)
+{
+    for(uint8_t page=0; page<4; page++)
+    {
+        SSD1306_WriteCommand(0xB0 + page);
+        SSD1306_WriteCommand(0x00);
+        SSD1306_WriteCommand(0x10);
+
+        SSD1306_WriteData(
+            &OLED_Buffer[128*page],
+            128);
+    }
+}

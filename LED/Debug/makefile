@@ -47,7 +47,7 @@ LIST_FILES = $(addsuffix .o.lst, $(basename $(OBJS)))
 MAP_FILE = "LED.map"
 
 TOOLCHAIN_ROOT=C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49
-PROJECT_LOC=D:/github/XMC14/LED
+PROJECT_LOC=D:/GITHUB/XMC14/LED
 
 # All Target
 all: LED.elf secondary-outputs

@@ -141,8 +141,8 @@
   79              	.Letext0:
   80              	 .file 2 "c:\\infineon\\tools\\dave ide\\450\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
   81              	 .file 3 "c:\\infineon\\tools\\dave ide\\450\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
-  82              	 .file 4 "D:/github/XMC14/LED/Libraries/XMCLib/inc/xmc_eru.h"
-  83              	 .file 5 "D:/github/XMC14/LED/Libraries/CMSIS/Include/cmsis_gcc.h"
+  82              	 .file 4 "D:/GITHUB/XMC14/LED/Libraries/XMCLib/inc/xmc_eru.h"
+  83              	 .file 5 "D:/GITHUB/XMC14/LED/Libraries/CMSIS/Include/cmsis_gcc.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 xmc1_eru.c
     {standard input}:18     .text.XMC_ERU_Enable:00000000 $t

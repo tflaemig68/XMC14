@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Project MotherSystem_Version="" Name="LED" Path="D:\github\XMC14\LED">
+<Project MotherSystem_Version="" Name="LED" Path="D:\GITHUB\XMC14\LED">
     <COMPILER>
         <Name>ARM_GCC_HOME</Name>
         <Version/>

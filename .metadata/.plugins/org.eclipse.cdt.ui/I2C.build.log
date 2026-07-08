@@ -1,0 +1,11 @@
+18:32:11 **** Incremental Build of configuration Debug for project I2C ****
+"\"C:\\Infineon\\Tools\\DAVE IDE\\450\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j8 all 
+'Invoking: ARM-GCC Print Size'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-size" --format=berkeley "I2C.elf"
+   text	   data	    bss	    dec	    hex	filename
+  13768	    124	   1864	  15756	   3d8c	I2C.elf
+'Finished building: I2C.siz'
+
+
+18:32:12 Build Finished (took 1s.115ms)
+

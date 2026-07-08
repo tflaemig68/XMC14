@@ -2048,7 +2048,7 @@ Stack           0x20000150      0x400 load address 0x00000000
  .debug_frame   0x000013a8       0x34 ./main.o
  .debug_frame   0x000013dc       0x2c c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
 
-.debug_str      0x00000000     0x53e8
+.debug_str      0x00000000     0x5402
  *(.debug_str)
  .debug_str     0x00000000      0x3c1 ./Startup/system_XMC1400.o
                                 0x407 (size before relaxing)
@@ -2060,23 +2060,23 @@ Stack           0x20000150      0x400 load address 0x00000000
                                0x1997 (size before relaxing)
  .debug_str     0x00003f3a      0x701 ./Libraries/XMCLib/src/xmc_math.o
                                 0x972 (size before relaxing)
- .debug_str     0x0000463b       0x6f ./Libraries/Newlib/syscalls.o
+ .debug_str     0x0000463b       0x89 ./Libraries/Newlib/syscalls.o
                                 0x1d5 (size before relaxing)
- .debug_str     0x000046aa      0x769 ./Dave/Generated/PWM/pwm.o
+ .debug_str     0x000046c4      0x769 ./Dave/Generated/PWM/pwm.o
                                0x1516 (size before relaxing)
- .debug_str     0x00004e13      0x2e7 ./Dave/Generated/PWM/pwm_conf.o
+ .debug_str     0x00004e2d      0x2e7 ./Dave/Generated/PWM/pwm_conf.o
                                0x1255 (size before relaxing)
- .debug_str     0x000050fa       0xb5 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
+ .debug_str     0x00005114       0xb5 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
                                 0x544 (size before relaxing)
- .debug_str     0x000051af       0x31 ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
+ .debug_str     0x000051c9       0x31 ./Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.o
                                 0x458 (size before relaxing)
- .debug_str     0x000051e0      0x144 ./Dave/Generated/CLOCK_XMC1/clock_xmc1.o
+ .debug_str     0x000051fa      0x144 ./Dave/Generated/CLOCK_XMC1/clock_xmc1.o
                                 0x3ad (size before relaxing)
- .debug_str     0x00005324       0x50 ./Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.o
+ .debug_str     0x0000533e       0x50 ./Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.o
                                 0x5e5 (size before relaxing)
- .debug_str     0x00005374       0x65 ./Dave/Generated/DAVE.o
+ .debug_str     0x0000538e       0x65 ./Dave/Generated/DAVE.o
                                 0xf37 (size before relaxing)
- .debug_str     0x000053d9        0xf ./main.o
+ .debug_str     0x000053f3        0xf ./main.o
                                 0xef9 (size before relaxing)
 
 .debug_loc      0x00000000     0x2042

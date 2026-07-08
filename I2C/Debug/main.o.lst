@@ -1,0 +1,289 @@
+   1              	 .cpu cortex-m0
+   2              	 .fpu softvfp
+   3              	 .eabi_attribute 20,1
+   4              	 .eabi_attribute 21,1
+   5              	 .eabi_attribute 23,3
+   6              	 .eabi_attribute 24,1
+   7              	 .eabi_attribute 25,1
+   8              	 .eabi_attribute 26,1
+   9              	 .eabi_attribute 30,6
+  10              	 .eabi_attribute 34,0
+  11              	 .eabi_attribute 18,4
+  12              	 .code 16
+  13              	 .file "main.c"
+  14              	 .text
+  15              	.Ltext0:
+  16              	 .cfi_sections .debug_frame
+  17              	 .global SysTickCounter
+  18              	 .section .bss.SysTickCounter,"aw",%nobits
+  19              	 .align 2
+  22              	SysTickCounter:
+  23 0000 00000000 	 .space 4
+  24              	 .global __aeabi_uidivmod
+  25              	 .section .text.milliSec_Handler,"ax",%progbits
+  26              	 .align 2
+  27              	 .global milliSec_Handler
+  28              	 .code 16
+  29              	 .thumb_func
+  31              	milliSec_Handler:
+  32              	.LFB232:
+  33              	 .file 1 "../main.c"
+   1:../main.c     **** /*
+   2:../main.c     ****  * main.c
+   3:../main.c     ****  *
+   4:../main.c     ****  *  Created on: 2026 Jul 08 07:45:30
+   5:../main.c     ****  *  Author: tobia
+   6:../main.c     ****  */
+   7:../main.c     **** 
+   8:../main.c     **** 
+   9:../main.c     **** 
+  10:../main.c     **** 
+  11:../main.c     **** #include "DAVE.h"                 //Declarations from DAVE Code Generation (includes SFR declaratio
+  12:../main.c     **** 
+  13:../main.c     **** #include "ssd1306.h"
+  14:../main.c     **** 
+  15:../main.c     **** #define milliSec 1000U
+  16:../main.c     **** 
+  17:../main.c     **** volatile uint32_t SysTickCounter = 0;
+  18:../main.c     **** 
+  19:../main.c     **** void milliSec_Handler(void)
+  20:../main.c     **** {
+  34              	 .loc 1 20 0
+  35              	 .cfi_startproc
+  36 0000 80B5     	 push {r7,lr}
+  37              	.LCFI0:
+  38              	 .cfi_def_cfa_offset 8
+  39              	 .cfi_offset 7,-8
+  40              	 .cfi_offset 14,-4
+  41 0002 00AF     	 add r7,sp,#0
+  42              	.LCFI1:
+  43              	 .cfi_def_cfa_register 7
+  21:../main.c     ****     SysTickCounter++;
+  44              	 .loc 1 21 0
+  45 0004 104B     	 ldr r3,.L3
+  46 0006 1B68     	 ldr r3,[r3]
+  47 0008 5A1C     	 add r2,r3,#1
+  48 000a 0F4B     	 ldr r3,.L3
+  49 000c 1A60     	 str r2,[r3]
+  22:../main.c     ****    //int32_t DutyPWM_0 = SysTickCounter % 1000; //Modulo 1000
+  23:../main.c     ****     if ((SysTickCounter % 10U) == 0)
+  50              	 .loc 1 23 0
+  51 000e 0E4B     	 ldr r3,.L3
+  52 0010 1B68     	 ldr r3,[r3]
+  53 0012 181C     	 mov r0,r3
+  54 0014 0A21     	 mov r1,#10
+  55 0016 FFF7FEFF 	 bl __aeabi_uidivmod
+  56 001a 0B1E     	 sub r3,r1,#0
+  57 001c 12D1     	 bne .L1
+  24:../main.c     ****     {
+  25:../main.c     ****     	PWM_SetDutyCycle(&PWM_0, (uint32_t) 10*(SysTickCounter % 1000U)); // set duty 10000 = 100% cyc
+  58              	 .loc 1 25 0
+  59 001e 0A4B     	 ldr r3,.L3
+  60 0020 1B68     	 ldr r3,[r3]
+  61 0022 181C     	 mov r0,r3
+  62 0024 FA23     	 mov r3,#250
+  63 0026 9900     	 lsl r1,r3,#2
+  64 0028 FFF7FEFF 	 bl __aeabi_uidivmod
+  65 002c 0B1C     	 mov r3,r1
+  66 002e 1A1C     	 mov r2,r3
+  67 0030 131C     	 mov r3,r2
+  68 0032 9B00     	 lsl r3,r3,#2
+  69 0034 9B18     	 add r3,r3,r2
+  70 0036 5B00     	 lsl r3,r3,#1
+  71 0038 1A1C     	 mov r2,r3
+  72 003a 044B     	 ldr r3,.L3+4
+  73 003c 181C     	 mov r0,r3
+  74 003e 111C     	 mov r1,r2
+  75 0040 FFF7FEFF 	 bl PWM_SetDutyCycle
+  76              	.L1:
+  26:../main.c     ****     }
+  27:../main.c     **** }
+  77              	 .loc 1 27 0
+  78 0044 BD46     	 mov sp,r7
+  79              	 
+  80 0046 80BD     	 pop {r7,pc}
+  81              	.L4:
+  82              	 .align 2
+  83              	.L3:
+  84 0048 00000000 	 .word SysTickCounter
+  85 004c 00000000 	 .word PWM_0
+  86              	 .cfi_endproc
+  87              	.LFE232:
+  89              	 .section .text.main,"ax",%progbits
+  90              	 .align 2
+  91              	 .global main
+  92              	 .code 16
+  93              	 .thumb_func
+  95              	main:
+  96              	.LFB233:
+  28:../main.c     **** 
+  29:../main.c     **** 
+  30:../main.c     **** 
+  31:../main.c     **** /**
+  32:../main.c     **** 
+  33:../main.c     ****  * @brief main() - Application entry point
+  34:../main.c     ****  *
+  35:../main.c     ****  * <b>Details of function</b><br>
+  36:../main.c     ****  * This routine is the application entry point. It is invoked by the device startup code. It is res
+  37:../main.c     ****  * invoking the APP initialization dispatcher routine - DAVE_Init() and hosting the place-holder fo
+  38:../main.c     ****  * code.
+  39:../main.c     ****  */
+  40:../main.c     **** int main(void)
+  41:../main.c     **** {
+  97              	 .loc 1 41 0
+  98              	 .cfi_startproc
+  99 0000 90B5     	 push {r4,r7,lr}
+ 100              	.LCFI2:
+ 101              	 .cfi_def_cfa_offset 12
+ 102              	 .cfi_offset 4,-12
+ 103              	 .cfi_offset 7,-8
+ 104              	 .cfi_offset 14,-4
+ 105 0002 83B0     	 sub sp,sp,#12
+ 106              	.LCFI3:
+ 107              	 .cfi_def_cfa_offset 24
+ 108 0004 00AF     	 add r7,sp,#0
+ 109              	.LCFI4:
+ 110              	 .cfi_def_cfa_register 7
+  42:../main.c     ****   DAVE_STATUS_t status;
+  43:../main.c     ****   uint32_t TimerId;
+  44:../main.c     **** 
+  45:../main.c     ****   status = DAVE_Init();           /* Initialization of DAVE APPs  */
+ 111              	 .loc 1 45 0
+ 112 0006 FC1D     	 add r4,r7,#7
+ 113 0008 FFF7FEFF 	 bl DAVE_Init
+ 114 000c 031C     	 mov r3,r0
+ 115 000e 2370     	 strb r3,[r4]
+  46:../main.c     **** 
+  47:../main.c     **** 
+  48:../main.c     **** 
+  49:../main.c     ****   // SYSTIMER APP Initialized during DAVE Initialization
+  50:../main.c     ****   // Create Software timer
+  51:../main.c     ****   TimerId = (uint32_t)SYSTIMER_CreateTimer(milliSec,SYSTIMER_MODE_PERIODIC,(void*)milliSec_Handler,
+ 116              	 .loc 1 51 0
+ 117 0010 FA23     	 mov r3,#250
+ 118 0012 9A00     	 lsl r2,r3,#2
+ 119 0014 0D4B     	 ldr r3,.L10
+ 120 0016 101C     	 mov r0,r2
+ 121 0018 0121     	 mov r1,#1
+ 122 001a 1A1C     	 mov r2,r3
+ 123 001c 0023     	 mov r3,#0
+ 124 001e FFF7FEFF 	 bl SYSTIMER_CreateTimer
+ 125 0022 031C     	 mov r3,r0
+ 126 0024 3B60     	 str r3,[r7]
+  52:../main.c     ****   if (TimerId != 0U)
+ 127              	 .loc 1 52 0
+ 128 0026 3B68     	 ldr r3,[r7]
+ 129 0028 002B     	 cmp r3,#0
+ 130 002a 03D0     	 beq .L6
+  53:../main.c     ****   {
+  54:../main.c     **** 	//software timer is created successfully
+  55:../main.c     **** 	//Add user code here
+  56:../main.c     **** 	SYSTIMER_StartTimer(TimerId);
+ 131              	 .loc 1 56 0
+ 132 002c 3B68     	 ldr r3,[r7]
+ 133 002e 181C     	 mov r0,r3
+ 134 0030 FFF7FEFF 	 bl SYSTIMER_StartTimer
+ 135              	.L6:
+  57:../main.c     ****   }
+  58:../main.c     ****   else
+  59:../main.c     ****   {
+  60:../main.c     **** 	// //software timer creation is failed
+  61:../main.c     ****   }
+  62:../main.c     **** 
+  63:../main.c     ****   if (status != DAVE_STATUS_SUCCESS)
+ 136              	 .loc 1 63 0
+ 137 0034 FB1D     	 add r3,r7,#7
+ 138 0036 1B78     	 ldrb r3,[r3]
+ 139 0038 002B     	 cmp r3,#0
+ 140 003a 00D0     	 beq .L7
+ 141              	.L8:
+  64:../main.c     ****   {
+  65:../main.c     ****     /* Placeholder for error handler code. The while loop below can be replaced with an user error 
+  66:../main.c     ****     XMC_DEBUG("DAVE APPs initialization failed\n");
+  67:../main.c     **** 
+  68:../main.c     ****     while(1U)
+  69:../main.c     ****     {
+  70:../main.c     **** 
+  71:../main.c     ****     }
+ 142              	 .loc 1 71 0 discriminator 1
+ 143 003c FEE7     	 b .L8
+ 144              	.L7:
+  72:../main.c     ****   }
+  73:../main.c     **** 
+  74:../main.c     ****   SSD1306_Init();
+ 145              	 .loc 1 74 0
+ 146 003e FFF7FEFF 	 bl SSD1306_Init
+ 147              	.L9:
+  75:../main.c     **** 
+  76:../main.c     **** 
+  77:../main.c     ****   /* Placeholder for user application code. The while loop below can be replaced with user applicat
+  78:../main.c     ****   while(1U)
+  79:../main.c     ****   {
+  80:../main.c     **** 
+  81:../main.c     **** 	  /*
+  82:../main.c     **** 	  if((SysTickCounter - last_update) >= 5000)
+  83:../main.c     **** 	  {
+  84:../main.c     **** 		  last_update = SysTickCounter;
+  85:../main.c     **** */
+  86:../main.c     **** 		  SSD1306_Clear();
+ 148              	 .loc 1 86 0 discriminator 1
+ 149 0042 FFF7FEFF 	 bl SSD1306_Clear
+  87:../main.c     **** 
+  88:../main.c     **** 		  //SSD1306_SetCursor(10,12);
+  89:../main.c     **** 		  //SSD1306_WriteString("DHBW Stuttgart");
+  90:../main.c     **** 
+  91:../main.c     **** 		  SSD1306_UpdateScreen();
+ 150              	 .loc 1 91 0 discriminator 1
+ 151 0046 FFF7FEFF 	 bl SSD1306_UpdateScreen
+  92:../main.c     **** 		  /*
+  93:../main.c     **** 	  }
+  94:../main.c     **** 	  */
+  95:../main.c     **** 
+  96:../main.c     ****   }
+ 152              	 .loc 1 96 0 discriminator 1
+ 153 004a FAE7     	 b .L9
+ 154              	.L11:
+ 155              	 .align 2
+ 156              	.L10:
+ 157 004c 00000000 	 .word milliSec_Handler
+ 158              	 .cfi_endproc
+ 159              	.LFE233:
+ 161              	 .text
+ 162              	.Letext0:
+ 163              	 .file 2 "c:\\infineon\\tools\\dave ide\\450\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 164              	 .file 3 "c:\\infineon\\tools\\dave ide\\450\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+ 165              	 .file 4 "D:/GITHUB/XMC14/I2C/Libraries/CMSIS/Infineon/XMC1400_series/Include/XMC1400.h"
+ 166              	 .file 5 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc1_scu.h"
+ 167              	 .file 6 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc_gpio.h"
+ 168              	 .file 7 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc1_gpio.h"
+ 169              	 .file 8 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc_usic.h"
+ 170              	 .file 9 "D:/GITHUB/XMC14/I2C/Dave/Generated/SYSTIMER/systimer.h"
+ 171              	 .file 10 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc_ccu4.h"
+ 172              	 .file 11 "D:/GITHUB/XMC14/I2C/Dave/Generated/GLOBAL_CCU4/global_ccu4.h"
+ 173              	 .file 12 "D:/GITHUB/XMC14/I2C/Dave/Generated/PWM/pwm.h"
+ 174              	 .file 13 "D:/GITHUB/XMC14/I2C/Dave/Generated/DAVE.h"
+ 175              	 .file 14 "D:/GITHUB/XMC14/I2C/Libraries/CMSIS/Include/cmsis_gcc.h"
+ 176              	 .file 15 "D:/GITHUB/XMC14/I2C/Libraries/CMSIS/Infineon/XMC1400_series/Include/system_XMC1400.h"
+ 177              	 .file 16 "D:/GITHUB/XMC14/I2C/Dave/Generated/PWM/PWM_Extern.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+    {standard input}:22     .bss.SysTickCounter:00000000 SysTickCounter
+    {standard input}:19     .bss.SysTickCounter:00000000 $d
+    {standard input}:26     .text.milliSec_Handler:00000000 $t
+    {standard input}:31     .text.milliSec_Handler:00000000 milliSec_Handler
+    {standard input}:84     .text.milliSec_Handler:00000048 $d
+    {standard input}:90     .text.main:00000000 $t
+    {standard input}:95     .text.main:00000000 main
+    {standard input}:157    .text.main:0000004c $d
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+__aeabi_uidivmod
+PWM_SetDutyCycle
+PWM_0
+DAVE_Init
+SYSTIMER_CreateTimer
+SYSTIMER_StartTimer
+SSD1306_Init
+SSD1306_Clear
+SSD1306_UpdateScreen

@@ -1,4 +1,4 @@
-17:13:28 **** Incremental Build of configuration Debug for project LED ****
+20:02:46 **** Incremental Build of configuration Debug for project LED ****
 "\"C:\\Infineon\\Tools\\DAVE IDE\\450\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j8 all 
 'Invoking: ARM-GCC Print Size'
 "C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-size" --format=berkeley "LED.elf"
@@ -7,5 +7,5 @@
 'Finished building: LED.siz'
 
 
-17:13:29 Build Finished (took 694ms)
+20:02:47 Build Finished (took 1s.216ms)
 

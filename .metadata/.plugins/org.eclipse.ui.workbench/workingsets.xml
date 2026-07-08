@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
 <workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1783430552686_1" label="ActiveProject" name="ActiveProject">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/LED" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/I2C" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1783414733157_0" label="Window Working Set" name="Aggregate for window 1783414733157">
 <workingSet IMemento.internal.id="ActiveProject"/>

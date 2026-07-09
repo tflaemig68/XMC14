@@ -39,7 +39,9 @@ main.o main.d main.o: ../main.c D:/GITHUB/XMC14/I2C/Dave/Generated/DAVE.h \
  D:/GITHUB/XMC14/I2C/Dave/Generated/PWM/pwm_conf.h \
  D:/GITHUB/XMC14/I2C/Dave/Generated/GLOBAL_CCU4/global_ccu4.h \
  D:/GITHUB/XMC14/I2C/Dave/Generated/PWM/PWM_Extern.h \
- D:/GITHUB/XMC14/I2C/Libraries/OLED/ssd1306.h
+ D:/GITHUB/XMC14/I2C/Libraries/OLED/oled.h \
+ D:/GITHUB/XMC14/I2C/Libraries/OLED/gui.h \
+ D:/GITHUB/XMC14/I2C/Libraries/OLED/test.h
 
 D:/GITHUB/XMC14/I2C/Dave/Generated/DAVE.h:
 
@@ -123,4 +125,8 @@ D:/GITHUB/XMC14/I2C/Dave/Generated/GLOBAL_CCU4/global_ccu4.h:
 
 D:/GITHUB/XMC14/I2C/Dave/Generated/PWM/PWM_Extern.h:
 
-D:/GITHUB/XMC14/I2C/Libraries/OLED/ssd1306.h:
+D:/GITHUB/XMC14/I2C/Libraries/OLED/oled.h:
+
+D:/GITHUB/XMC14/I2C/Libraries/OLED/gui.h:
+
+D:/GITHUB/XMC14/I2C/Libraries/OLED/test.h:

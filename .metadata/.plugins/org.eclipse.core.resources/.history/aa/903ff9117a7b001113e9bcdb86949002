@@ -1,0 +1,251 @@
+/*
+ * OLED.h
+ *
+ *  Created on: 8 Jul 2026
+ *      Author: tobia
+ */
+#ifndef SSD1306_H_
+#define SSD1306_H_
+
+#include <stdint.h>
+extern volatile uint32_t SysTickCounter;
+
+void Driver_Delay_ms(uint16_t xms);
+
+// LCD - Routinen für OLED 0.91 inch Display
+// bei font16 Pixel => 2 x 11 Zeichen möglich
+extern void lcd_init      ( void );                            // Initialisierung des Displays
+extern void lcd_clear     ( void );
+extern void lcd_setcursor ( uint8_t row, uint8_t column );     // Setzen der Cursorposition
+                                                               // row (Zeile) = 1,2, ...
+                                                               // column (Spalte) = 1,2,3, ...
+extern void lcd_print ( uint16_t zeile,uint16_t spalte ,char  text[] );// Textausgabe ab Cursorposition, bis '\0'
+extern void lcd_char  ( uint16_t zeile,uint16_t spalte,char  value );// Ausgabe eines Zeichens an der aktuellen Cursorposition
+extern void lcd_byte ( uint16_t zeile,uint16_t spalte,uint8_t  value  ); // 0 ... 255
+extern void lcd_int( uint16_t zeile,uint16_t spalte,uint16_t val);           // 0 ... 65535
+
+//**********************************************************************************
+
+#define UBYTE   uint8_t
+#define UWORD   uint16_t
+#define UDOUBLE uint32_t
+
+void OLED_0in91_Init(void);
+void OLED_0in91_Clear(void);
+void OLED_0in91_Display(const UBYTE *Image);
+
+
+
+#define USE_IIC     1
+#define SSD1306_SLAVE_ADDR_WR 0x78
+
+
+
+#define OLED_0in91_WIDTH  128//OLED width
+#define OLED_0in91_HEIGHT 32 //OLED height
+
+#define IIC_CMD        0X00
+#define IIC_RAM        0X40
+
+#define _T_CONST_ 109  // zuletzt 104
+/*------------------------------------------------------------------------------------------------------*/
+void OLED_Write_Byte(uint8_t value, uint8_t Cmd);
+
+void Driver_Delay_ms(uint16_t xms);
+void Driver_Delay_us(uint16_t xus);
+
+/*******************************************************
+ * Image attributes
+*********************************************/
+typedef struct {
+    UBYTE *Image;
+    UWORD Width;
+    UWORD Height;
+    UWORD WidthMemory;
+    UWORD HeightMemory;
+    UWORD Color;
+    UWORD Rotate;
+    UWORD Mirror;
+    UWORD WidthByte;
+    UWORD HeightByte;
+    UWORD Scale;
+} PAINT;
+extern PAINT Paint;
+
+#define MAX_HEIGHT_FONT         41
+#define MAX_WIDTH_FONT          32
+#define OFFSET_BITMAP			0
+
+/**
+ * Display rotate
+**/
+#define ROTATE_0            0
+#define ROTATE_90           90
+#define ROTATE_180          180
+#define ROTATE_270          270
+
+/**
+ * Display Flip
+**/
+typedef enum {
+    MIRROR_NONE  = 0x00,
+    MIRROR_HORIZONTAL = 0x01,
+    MIRROR_VERTICAL = 0x02,
+    MIRROR_ORIGIN = 0x03,
+} MIRROR_IMAGE;
+#define MIRROR_IMAGE_DFT MIRROR_NONE
+
+/**
+ * image color
+**/
+
+#define WHITE          0xFFFF
+#define BLACK          0x0000
+#define BLUE           0x001F
+#define BRED           0XF81F
+#define GRED           0XFFE0
+#define GBLUE          0X07FF
+#define RED            0xF800
+#define MAGENTA        0xF81F
+#define GREEN          0x07E0
+#define CYAN           0x7FFF
+#define YELLOW         0xFFE0
+#define BROWN          0XBC40
+#define BRRED          0XFC07
+#define GRAY           0X8430
+
+#define IMAGE_BACKGROUND    WHITE
+#define FONT_FOREGROUND     BLACK
+#define FONT_BACKGROUND     WHITE
+
+//4 Gray level
+#define  GRAY1 0x03 //Blackest
+#define  GRAY2 0x02
+#define  GRAY3 0x01 //gray
+#define  GRAY4 0x00 //white
+/**
+ * The size of the point
+**/
+typedef enum {
+    DOT_PIXEL_1X1  = 1, // 1 x 1
+    DOT_PIXEL_2X2  ,    // 2 X 2
+    DOT_PIXEL_3X3  ,    // 3 X 3
+    DOT_PIXEL_4X4  ,    // 4 X 4
+    DOT_PIXEL_5X5  ,    // 5 X 5
+    DOT_PIXEL_6X6  ,    // 6 X 6
+    DOT_PIXEL_7X7  ,    // 7 X 7
+    DOT_PIXEL_8X8  ,    // 8 X 8
+} DOT_PIXEL;
+#define DOT_PIXEL_DFT  DOT_PIXEL_1X1  //Default dot pilex
+
+/**
+ * Point size fill style
+**/
+typedef enum {
+    DOT_FILL_AROUND  = 1,   // dot pixel 1 x 1
+    DOT_FILL_RIGHTUP  ,     // dot pixel 2 X 2
+} DOT_STYLE;
+#define DOT_STYLE_DFT  DOT_FILL_AROUND  //Default dot pilex
+
+/**
+ * Line style, solid or dashed
+**/
+typedef enum {
+    LINE_STYLE_SOLID = 0,
+    LINE_STYLE_DOTTED,
+} LINE_STYLE;
+
+/**
+ * Whether the graphic is filled
+**/
+typedef enum {
+    DRAW_FILL_EMPTY = 0,
+    DRAW_FILL_FULL,
+} DRAW_FILL;
+
+/**
+ * Custom structure of a time attribute
+**/
+typedef struct {
+    UWORD Year;  //0000
+    UBYTE Month; //1 - 12
+    UBYTE Day;   //1 - 30
+    UBYTE Hour;  //0 - 23
+    UBYTE Min;   //0 - 59
+    UBYTE Sec;   //0 - 59
+} PAINT_TIME;
+extern PAINT_TIME sPaint_time;
+
+//ASCII
+typedef struct _tFont
+{
+  const uint8_t *table;
+  uint16_t Width;
+  uint16_t Height;
+
+} sFONT;
+// Für Font16 gilt :
+#define xpos16 11
+#define ypos16 16
+
+//GB2312
+typedef struct                                          // 汉字字模数据结构
+{
+  unsigned char index[3];                               // 汉字内码索引
+  const char matrix[MAX_HEIGHT_FONT*MAX_WIDTH_FONT/8];  // 点阵码数据
+}CH_CN;
+
+
+typedef struct
+{
+  const CH_CN *table;
+  uint16_t size;
+  uint16_t ASCII_Width;
+  uint16_t Width;
+  uint16_t Height;
+
+}cFONT;
+
+//extern sFONT Font24;
+//extern sFONT Font20;
+extern sFONT Font16;
+//extern sFONT Font12;
+//extern sFONT Font8;
+
+
+//init and Clear
+void Paint_NewImage(UBYTE *image, UWORD Width, UWORD Height, UWORD Rotate, UWORD Color);
+void Paint_SelectImage(UBYTE *image);
+void Paint_SetRotate(UWORD Rotate);
+void Paint_SetMirroring(UBYTE mirror);
+void Paint_SetPixel(UWORD Xpoint, UWORD Ypoint, UWORD Color);
+void Paint_SetScale(UBYTE scale);
+
+void Paint_Clear(UWORD Color);
+void Paint_ClearWindows(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color);
+
+//Drawing
+void Paint_DrawPoint(UWORD Xpoint, UWORD Ypoint, UWORD Color, DOT_PIXEL Dot_Pixel, DOT_STYLE Dot_FillWay);
+void Paint_DrawLine(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color, DOT_PIXEL Line_width, LINE_STYLE Line_Style);
+void Paint_DrawRectangle(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color, DOT_PIXEL Line_width, DRAW_FILL Draw_Fill);
+void Paint_DrawCircle(UWORD X_Center, UWORD Y_Center, UWORD Radius, UWORD Color, DOT_PIXEL Line_width, DRAW_FILL Draw_Fill);
+
+//Display string
+void Paint_DrawChar(UWORD Xstart, UWORD Ystart, const char Acsii_Char, sFONT* Font, UWORD Color_Foreground, UWORD Color_Background);
+void Paint_DrawString_EN(UWORD Xstart, UWORD Ystart, const char * pString, sFONT* Font, UWORD Color_Foreground, UWORD Color_Background);
+void Paint_DrawString_CN(UWORD Xstart, UWORD Ystart, const char * pString, cFONT* font, UWORD Color_Foreground, UWORD Color_Background);
+void Paint_DrawNum(UWORD Xpoint, UWORD Ypoint, const char * Number,  sFONT* Font, UWORD Digit,UWORD Color_Foreground, UWORD Color_Background);
+void Paint_DrawTime(UWORD Xstart, UWORD Ystart, PAINT_TIME *pTime, sFONT* Font, UWORD Color_Foreground, UWORD Color_Background);
+
+//pic
+void Paint_DrawBitMap(const unsigned char* image_buffer);
+//void Paint_DrawBitMap_Half(const unsigned char* image_buffer, UBYTE Region);
+//void Paint_DrawBitMap_OneQuarter(const unsigned char* image_buffer, UBYTE Region);
+//void Paint_DrawBitMap_OneEighth(const unsigned char* image_buffer, UBYTE Region);
+void Paint_DrawBitMap_Block(const unsigned char* image_buffer, UBYTE Region);
+
+
+
+
+
+#endif

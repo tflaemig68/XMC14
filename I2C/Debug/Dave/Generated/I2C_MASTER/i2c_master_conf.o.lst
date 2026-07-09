@@ -1857,12 +1857,12 @@
  268 0044 80BD     	 pop {r7,pc}
  269              	 .cfi_endproc
  270              	.LFE54:
- 272 0046 C046     	 .section .text.XMC_USIC_CH_TXFIFO_EnableEvent,"ax",%progbits
+ 272 0046 C046     	 .section .text.XMC_USIC_CH_EnableInputDigitalFilter,"ax",%progbits
  273              	 .align 2
  274              	 .code 16
  275              	 .thumb_func
- 277              	XMC_USIC_CH_TXFIFO_EnableEvent:
- 278              	.LFB92:
+ 277              	XMC_USIC_CH_EnableInputDigitalFilter:
+ 278              	.LFB61:
  848:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** /**
  849:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h ****  * @param  channel Pointer to USIC channel handler of type @ref XMC_USIC_CH_t \n
  850:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h ****  * 				   \b Range: @ref XMC_USIC0_CH0, @ref XMC_USIC0_CH1 to @ref XMC_USIC2_CH1 based on device su
@@ -1991,8 +1991,55 @@
  973:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h ****  */
  974:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** __STATIC_INLINE void XMC_USIC_CH_EnableInputDigitalFilter(XMC_USIC_CH_t *const channel, const XMC_U
  975:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** {
+ 279              	 .loc 2 975 0
+ 280              	 .cfi_startproc
+ 281 0000 80B5     	 push {r7,lr}
+ 282              	.LCFI9:
+ 283              	 .cfi_def_cfa_offset 8
+ 284              	 .cfi_offset 7,-8
+ 285              	 .cfi_offset 14,-4
+ 286 0002 82B0     	 sub sp,sp,#8
+ 287              	.LCFI10:
+ 288              	 .cfi_def_cfa_offset 16
+ 289 0004 00AF     	 add r7,sp,#0
+ 290              	.LCFI11:
+ 291              	 .cfi_def_cfa_register 7
+ 292 0006 7860     	 str r0,[r7,#4]
+ 293 0008 0A1C     	 mov r2,r1
+ 294 000a FB1C     	 add r3,r7,#3
+ 295 000c 1A70     	 strb r2,[r3]
  976:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h ****   channel->DXCR[input] |= (uint32_t)USIC_CH_DXCR_DFEN_Msk;
+ 296              	 .loc 2 976 0
+ 297 000e FB1C     	 add r3,r7,#3
+ 298 0010 1878     	 ldrb r0,[r3]
+ 299 0012 FB1C     	 add r3,r7,#3
+ 300 0014 1B78     	 ldrb r3,[r3]
+ 301 0016 7A68     	 ldr r2,[r7,#4]
+ 302 0018 0633     	 add r3,r3,#6
+ 303 001a 9B00     	 lsl r3,r3,#2
+ 304 001c D318     	 add r3,r2,r3
+ 305 001e 5B68     	 ldr r3,[r3,#4]
+ 306 0020 2022     	 mov r2,#32
+ 307 0022 1A43     	 orr r2,r3
+ 308 0024 7968     	 ldr r1,[r7,#4]
+ 309 0026 831D     	 add r3,r0,#6
+ 310 0028 9B00     	 lsl r3,r3,#2
+ 311 002a CB18     	 add r3,r1,r3
+ 312 002c 5A60     	 str r2,[r3,#4]
  977:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** }
+ 313              	 .loc 2 977 0
+ 314 002e BD46     	 mov sp,r7
+ 315 0030 02B0     	 add sp,sp,#8
+ 316              	 
+ 317 0032 80BD     	 pop {r7,pc}
+ 318              	 .cfi_endproc
+ 319              	.LFE61:
+ 321              	 .section .text.XMC_USIC_CH_EnableInputSync,"ax",%progbits
+ 322              	 .align 2
+ 323              	 .code 16
+ 324              	 .thumb_func
+ 326              	XMC_USIC_CH_EnableInputSync:
+ 327              	.LFB63:
  978:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** /**
  979:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h ****  * @param  channel Pointer to USIC channel handler of type @ref XMC_USIC_CH_t \n
  980:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h ****  * 				   \b Range: @ref XMC_USIC0_CH0, @ref XMC_USIC0_CH1 to @ref XMC_USIC2_CH1 based on device su
@@ -2028,8 +2075,55 @@
 1010:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h ****  */
 1011:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** __STATIC_INLINE void XMC_USIC_CH_EnableInputSync(XMC_USIC_CH_t *const channel, const XMC_USIC_CH_IN
 1012:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** {
+ 328              	 .loc 2 1012 0
+ 329              	 .cfi_startproc
+ 330 0000 80B5     	 push {r7,lr}
+ 331              	.LCFI12:
+ 332              	 .cfi_def_cfa_offset 8
+ 333              	 .cfi_offset 7,-8
+ 334              	 .cfi_offset 14,-4
+ 335 0002 82B0     	 sub sp,sp,#8
+ 336              	.LCFI13:
+ 337              	 .cfi_def_cfa_offset 16
+ 338 0004 00AF     	 add r7,sp,#0
+ 339              	.LCFI14:
+ 340              	 .cfi_def_cfa_register 7
+ 341 0006 7860     	 str r0,[r7,#4]
+ 342 0008 0A1C     	 mov r2,r1
+ 343 000a FB1C     	 add r3,r7,#3
+ 344 000c 1A70     	 strb r2,[r3]
 1013:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h ****   channel->DXCR[input] |= (uint32_t)USIC_CH_DXCR_DSEN_Msk;
+ 345              	 .loc 2 1013 0
+ 346 000e FB1C     	 add r3,r7,#3
+ 347 0010 1878     	 ldrb r0,[r3]
+ 348 0012 FB1C     	 add r3,r7,#3
+ 349 0014 1B78     	 ldrb r3,[r3]
+ 350 0016 7A68     	 ldr r2,[r7,#4]
+ 351 0018 0633     	 add r3,r3,#6
+ 352 001a 9B00     	 lsl r3,r3,#2
+ 353 001c D318     	 add r3,r2,r3
+ 354 001e 5B68     	 ldr r3,[r3,#4]
+ 355 0020 4022     	 mov r2,#64
+ 356 0022 1A43     	 orr r2,r3
+ 357 0024 7968     	 ldr r1,[r7,#4]
+ 358 0026 831D     	 add r3,r0,#6
+ 359 0028 9B00     	 lsl r3,r3,#2
+ 360 002a CB18     	 add r3,r1,r3
+ 361 002c 5A60     	 str r2,[r3,#4]
 1014:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** }
+ 362              	 .loc 2 1014 0
+ 363 002e BD46     	 mov sp,r7
+ 364 0030 02B0     	 add sp,sp,#8
+ 365              	 
+ 366 0032 80BD     	 pop {r7,pc}
+ 367              	 .cfi_endproc
+ 368              	.LFE63:
+ 370              	 .section .text.XMC_USIC_CH_SetMode,"ax",%progbits
+ 371              	 .align 2
+ 372              	 .code 16
+ 373              	 .thumb_func
+ 375              	XMC_USIC_CH_SetMode:
+ 376              	.LFB118:
 1015:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** /**
 1016:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h ****  * @param  channel Pointer to USIC channel handler of type @ref XMC_USIC_CH_t \n
 1017:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h ****  * 				   \b Range: @ref XMC_USIC0_CH0, @ref XMC_USIC0_CH1 to @ref XMC_USIC2_CH1 based on device su
@@ -2697,48 +2791,8 @@
 1679:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h ****  */
 1680:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** __STATIC_INLINE void XMC_USIC_CH_TXFIFO_EnableEvent(XMC_USIC_CH_t *const channel, const uint32_t ev
 1681:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** {
- 279              	 .loc 2 1681 0
- 280              	 .cfi_startproc
- 281 0000 80B5     	 push {r7,lr}
- 282              	.LCFI9:
- 283              	 .cfi_def_cfa_offset 8
- 284              	 .cfi_offset 7,-8
- 285              	 .cfi_offset 14,-4
- 286 0002 82B0     	 sub sp,sp,#8
- 287              	.LCFI10:
- 288              	 .cfi_def_cfa_offset 16
- 289 0004 00AF     	 add r7,sp,#0
- 290              	.LCFI11:
- 291              	 .cfi_def_cfa_register 7
- 292 0006 7860     	 str r0,[r7,#4]
- 293 0008 3960     	 str r1,[r7]
 1682:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h ****   channel->TBCTR |= event;
- 294              	 .loc 2 1682 0
- 295 000a 7A68     	 ldr r2,[r7,#4]
- 296 000c 8423     	 mov r3,#132
- 297 000e 5B00     	 lsl r3,r3,#1
- 298 0010 D258     	 ldr r2,[r2,r3]
- 299 0012 3B68     	 ldr r3,[r7]
- 300 0014 1A43     	 orr r2,r3
- 301 0016 111C     	 mov r1,r2
- 302 0018 7A68     	 ldr r2,[r7,#4]
- 303 001a 8423     	 mov r3,#132
- 304 001c 5B00     	 lsl r3,r3,#1
- 305 001e D150     	 str r1,[r2,r3]
 1683:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** }
- 306              	 .loc 2 1683 0
- 307 0020 BD46     	 mov sp,r7
- 308 0022 02B0     	 add sp,sp,#8
- 309              	 
- 310 0024 80BD     	 pop {r7,pc}
- 311              	 .cfi_endproc
- 312              	.LFE92:
- 314 0026 C046     	 .section .text.XMC_USIC_CH_RXFIFO_EnableEvent,"ax",%progbits
- 315              	 .align 2
- 316              	 .code 16
- 317              	 .thumb_func
- 319              	XMC_USIC_CH_RXFIFO_EnableEvent:
- 320              	.LFB105:
 1684:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** 
 1685:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** 
 1686:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** /**
@@ -3095,48 +3149,8 @@
 2037:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h ****  */
 2038:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** __STATIC_INLINE void XMC_USIC_CH_RXFIFO_EnableEvent(XMC_USIC_CH_t *const channel, const uint32_t ev
 2039:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** {
- 321              	 .loc 2 2039 0
- 322              	 .cfi_startproc
- 323 0000 80B5     	 push {r7,lr}
- 324              	.LCFI12:
- 325              	 .cfi_def_cfa_offset 8
- 326              	 .cfi_offset 7,-8
- 327              	 .cfi_offset 14,-4
- 328 0002 82B0     	 sub sp,sp,#8
- 329              	.LCFI13:
- 330              	 .cfi_def_cfa_offset 16
- 331 0004 00AF     	 add r7,sp,#0
- 332              	.LCFI14:
- 333              	 .cfi_def_cfa_register 7
- 334 0006 7860     	 str r0,[r7,#4]
- 335 0008 3960     	 str r1,[r7]
 2040:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h ****   channel->RBCTR |= event;
- 336              	 .loc 2 2040 0
- 337 000a 7A68     	 ldr r2,[r7,#4]
- 338 000c 8623     	 mov r3,#134
- 339 000e 5B00     	 lsl r3,r3,#1
- 340 0010 D258     	 ldr r2,[r2,r3]
- 341 0012 3B68     	 ldr r3,[r7]
- 342 0014 1A43     	 orr r2,r3
- 343 0016 111C     	 mov r1,r2
- 344 0018 7A68     	 ldr r2,[r7,#4]
- 345 001a 8623     	 mov r3,#134
- 346 001c 5B00     	 lsl r3,r3,#1
- 347 001e D150     	 str r1,[r2,r3]
 2041:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** }
- 348              	 .loc 2 2041 0
- 349 0020 BD46     	 mov sp,r7
- 350 0022 02B0     	 add sp,sp,#8
- 351              	 
- 352 0024 80BD     	 pop {r7,pc}
- 353              	 .cfi_endproc
- 354              	.LFE105:
- 356 0026 C046     	 .section .text.XMC_USIC_CH_SetMode,"ax",%progbits
- 357              	 .align 2
- 358              	 .code 16
- 359              	 .thumb_func
- 361              	XMC_USIC_CH_SetMode:
- 362              	.LFB118:
 2042:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** 
 2043:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** 
 2044:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** /**
@@ -3438,50 +3452,50 @@
 2340:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h ****  */
 2341:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** __STATIC_INLINE void XMC_USIC_CH_SetMode(XMC_USIC_CH_t *const channel, const XMC_USIC_CH_OPERATING_
 2342:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** {
- 363              	 .loc 2 2342 0
- 364              	 .cfi_startproc
- 365 0000 80B5     	 push {r7,lr}
- 366              	.LCFI15:
- 367              	 .cfi_def_cfa_offset 8
- 368              	 .cfi_offset 7,-8
- 369              	 .cfi_offset 14,-4
- 370 0002 82B0     	 sub sp,sp,#8
- 371              	.LCFI16:
- 372              	 .cfi_def_cfa_offset 16
- 373 0004 00AF     	 add r7,sp,#0
- 374              	.LCFI17:
- 375              	 .cfi_def_cfa_register 7
- 376 0006 7860     	 str r0,[r7,#4]
- 377 0008 0A1C     	 mov r2,r1
- 378 000a FB1C     	 add r3,r7,#3
- 379 000c 1A70     	 strb r2,[r3]
+ 377              	 .loc 2 2342 0
+ 378              	 .cfi_startproc
+ 379 0000 80B5     	 push {r7,lr}
+ 380              	.LCFI15:
+ 381              	 .cfi_def_cfa_offset 8
+ 382              	 .cfi_offset 7,-8
+ 383              	 .cfi_offset 14,-4
+ 384 0002 82B0     	 sub sp,sp,#8
+ 385              	.LCFI16:
+ 386              	 .cfi_def_cfa_offset 16
+ 387 0004 00AF     	 add r7,sp,#0
+ 388              	.LCFI17:
+ 389              	 .cfi_def_cfa_register 7
+ 390 0006 7860     	 str r0,[r7,#4]
+ 391 0008 0A1C     	 mov r2,r1
+ 392 000a FB1C     	 add r3,r7,#3
+ 393 000c 1A70     	 strb r2,[r3]
 2343:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h ****   channel->CCR = (uint32_t)(channel->CCR & (~(USIC_CH_CCR_MODE_Msk))) | (uint32_t)mode;
- 380              	 .loc 2 2343 0
- 381 000e 7B68     	 ldr r3,[r7,#4]
- 382 0010 1B6C     	 ldr r3,[r3,#64]
- 383 0012 0F22     	 mov r2,#15
- 384 0014 9343     	 bic r3,r2
- 385 0016 1A1C     	 mov r2,r3
- 386 0018 FB1C     	 add r3,r7,#3
- 387 001a 1B78     	 ldrb r3,[r3]
- 388 001c 1A43     	 orr r2,r3
- 389 001e 7B68     	 ldr r3,[r7,#4]
- 390 0020 1A64     	 str r2,[r3,#64]
+ 394              	 .loc 2 2343 0
+ 395 000e 7B68     	 ldr r3,[r7,#4]
+ 396 0010 1B6C     	 ldr r3,[r3,#64]
+ 397 0012 0F22     	 mov r2,#15
+ 398 0014 9343     	 bic r3,r2
+ 399 0016 1A1C     	 mov r2,r3
+ 400 0018 FB1C     	 add r3,r7,#3
+ 401 001a 1B78     	 ldrb r3,[r3]
+ 402 001c 1A43     	 orr r2,r3
+ 403 001e 7B68     	 ldr r3,[r7,#4]
+ 404 0020 1A64     	 str r2,[r3,#64]
 2344:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_usic.h **** }
- 391              	 .loc 2 2344 0
- 392 0022 BD46     	 mov sp,r7
- 393 0024 02B0     	 add sp,sp,#8
- 394              	 
- 395 0026 80BD     	 pop {r7,pc}
- 396              	 .cfi_endproc
- 397              	.LFE118:
- 399              	 .section .text.XMC_I2C_CH_Init,"ax",%progbits
- 400              	 .align 2
- 401              	 .code 16
- 402              	 .thumb_func
- 404              	XMC_I2C_CH_Init:
- 405              	.LFB119:
- 406              	 .file 3 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc_i2c.h"
+ 405              	 .loc 2 2344 0
+ 406 0022 BD46     	 mov sp,r7
+ 407 0024 02B0     	 add sp,sp,#8
+ 408              	 
+ 409 0026 80BD     	 pop {r7,pc}
+ 410              	 .cfi_endproc
+ 411              	.LFE118:
+ 413              	 .section .text.XMC_I2C_CH_Init,"ax",%progbits
+ 414              	 .align 2
+ 415              	 .code 16
+ 416              	 .thumb_func
+ 418              	XMC_I2C_CH_Init:
+ 419              	.LFB119:
+ 420              	 .file 3 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc_i2c.h"
    1:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_i2c.h **** /**
    2:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_i2c.h ****  * @file xmc_i2c.h
    3:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_i2c.h ****  * @date 2020-12-05
@@ -3806,43 +3820,43 @@
  322:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_i2c.h ****  */
  323:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_i2c.h **** __STATIC_INLINE void XMC_I2C_CH_Init(XMC_USIC_CH_t *const channel, const XMC_I2C_CH_CONFIG_t *const
  324:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_i2c.h **** {
- 407              	 .loc 3 324 0
- 408              	 .cfi_startproc
- 409 0000 80B5     	 push {r7,lr}
- 410              	.LCFI18:
- 411              	 .cfi_def_cfa_offset 8
- 412              	 .cfi_offset 7,-8
- 413              	 .cfi_offset 14,-4
- 414 0002 82B0     	 sub sp,sp,#8
- 415              	.LCFI19:
- 416              	 .cfi_def_cfa_offset 16
- 417 0004 00AF     	 add r7,sp,#0
- 418              	.LCFI20:
- 419              	 .cfi_def_cfa_register 7
- 420 0006 7860     	 str r0,[r7,#4]
- 421 0008 3960     	 str r1,[r7]
+ 421              	 .loc 3 324 0
+ 422              	 .cfi_startproc
+ 423 0000 80B5     	 push {r7,lr}
+ 424              	.LCFI18:
+ 425              	 .cfi_def_cfa_offset 8
+ 426              	 .cfi_offset 7,-8
+ 427              	 .cfi_offset 14,-4
+ 428 0002 82B0     	 sub sp,sp,#8
+ 429              	.LCFI19:
+ 430              	 .cfi_def_cfa_offset 16
+ 431 0004 00AF     	 add r7,sp,#0
+ 432              	.LCFI20:
+ 433              	 .cfi_def_cfa_register 7
+ 434 0006 7860     	 str r0,[r7,#4]
+ 435 0008 3960     	 str r1,[r7]
  325:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_i2c.h ****   XMC_I2C_CH_InitEx(channel, config, true);
- 422              	 .loc 3 325 0
- 423 000a 7A68     	 ldr r2,[r7,#4]
- 424 000c 3B68     	 ldr r3,[r7]
- 425 000e 101C     	 mov r0,r2
- 426 0010 191C     	 mov r1,r3
- 427 0012 0122     	 mov r2,#1
- 428 0014 FFF7FEFF 	 bl XMC_I2C_CH_InitEx
+ 436              	 .loc 3 325 0
+ 437 000a 7A68     	 ldr r2,[r7,#4]
+ 438 000c 3B68     	 ldr r3,[r7]
+ 439 000e 101C     	 mov r0,r2
+ 440 0010 191C     	 mov r1,r3
+ 441 0012 0122     	 mov r2,#1
+ 442 0014 FFF7FEFF 	 bl XMC_I2C_CH_InitEx
  326:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_i2c.h **** }
- 429              	 .loc 3 326 0
- 430 0018 BD46     	 mov sp,r7
- 431 001a 02B0     	 add sp,sp,#8
- 432              	 
- 433 001c 80BD     	 pop {r7,pc}
- 434              	 .cfi_endproc
- 435              	.LFE119:
- 437 001e C046     	 .section .text.XMC_I2C_CH_Start,"ax",%progbits
- 438              	 .align 2
- 439              	 .code 16
- 440              	 .thumb_func
- 442              	XMC_I2C_CH_Start:
- 443              	.LFB120:
+ 443              	 .loc 3 326 0
+ 444 0018 BD46     	 mov sp,r7
+ 445 001a 02B0     	 add sp,sp,#8
+ 446              	 
+ 447 001c 80BD     	 pop {r7,pc}
+ 448              	 .cfi_endproc
+ 449              	.LFE119:
+ 451 001e C046     	 .section .text.XMC_I2C_CH_Start,"ax",%progbits
+ 452              	 .align 2
+ 453              	 .code 16
+ 454              	 .thumb_func
+ 456              	XMC_I2C_CH_Start:
+ 457              	.LFB120:
  327:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_i2c.h **** 
  328:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_i2c.h **** /**
  329:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_i2c.h ****  * @param channel Constant pointer to USIC channel structure of type @ref XMC_USIC_CH_t
@@ -3895,60 +3909,60 @@
  376:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_i2c.h ****  */
  377:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_i2c.h **** __STATIC_INLINE void XMC_I2C_CH_Start(XMC_USIC_CH_t *const channel)
  378:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_i2c.h **** {
- 444              	 .loc 3 378 0
- 445              	 .cfi_startproc
- 446 0000 80B5     	 push {r7,lr}
- 447              	.LCFI21:
- 448              	 .cfi_def_cfa_offset 8
- 449              	 .cfi_offset 7,-8
- 450              	 .cfi_offset 14,-4
- 451 0002 82B0     	 sub sp,sp,#8
- 452              	.LCFI22:
- 453              	 .cfi_def_cfa_offset 16
- 454 0004 00AF     	 add r7,sp,#0
- 455              	.LCFI23:
- 456              	 .cfi_def_cfa_register 7
- 457 0006 7860     	 str r0,[r7,#4]
+ 458              	 .loc 3 378 0
+ 459              	 .cfi_startproc
+ 460 0000 80B5     	 push {r7,lr}
+ 461              	.LCFI21:
+ 462              	 .cfi_def_cfa_offset 8
+ 463              	 .cfi_offset 7,-8
+ 464              	 .cfi_offset 14,-4
+ 465 0002 82B0     	 sub sp,sp,#8
+ 466              	.LCFI22:
+ 467              	 .cfi_def_cfa_offset 16
+ 468 0004 00AF     	 add r7,sp,#0
+ 469              	.LCFI23:
+ 470              	 .cfi_def_cfa_register 7
+ 471 0006 7860     	 str r0,[r7,#4]
  379:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_i2c.h ****   XMC_USIC_CH_SetMode(channel, XMC_USIC_CH_OPERATING_MODE_I2C);
- 458              	 .loc 3 379 0
- 459 0008 7B68     	 ldr r3,[r7,#4]
- 460 000a 181C     	 mov r0,r3
- 461 000c 0421     	 mov r1,#4
- 462 000e FFF7FEFF 	 bl XMC_USIC_CH_SetMode
+ 472              	 .loc 3 379 0
+ 473 0008 7B68     	 ldr r3,[r7,#4]
+ 474 000a 181C     	 mov r0,r3
+ 475 000c 0421     	 mov r1,#4
+ 476 000e FFF7FEFF 	 bl XMC_USIC_CH_SetMode
  380:D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc\xmc_i2c.h **** }
- 463              	 .loc 3 380 0
- 464 0012 BD46     	 mov sp,r7
- 465 0014 02B0     	 add sp,sp,#8
- 466              	 
- 467 0016 80BD     	 pop {r7,pc}
- 468              	 .cfi_endproc
- 469              	.LFE120:
- 471              	 .section .rodata.I2C_MASTER_0_sda_pin_config,"a",%progbits
- 472              	 .align 2
- 475              	I2C_MASTER_0_sda_pin_config:
- 476 0000 DC       	 .byte -36
- 477 0001 000000   	 .space 3
- 478 0004 01000000 	 .word 1
- 479              	 .section .rodata.I2C_MASTER_0_scl_pin_config,"a",%progbits
- 480              	 .align 2
- 483              	I2C_MASTER_0_scl_pin_config:
- 484 0000 D8       	 .byte -40
- 485 0001 000000   	 .space 3
- 486 0004 01000000 	 .word 1
- 487              	 .global I2C_MASTER_0_channel_config
- 488              	 .section .rodata.I2C_MASTER_0_channel_config,"a",%progbits
- 489              	 .align 2
- 492              	I2C_MASTER_0_channel_config:
- 493 0000 A0860100 	 .word 100000
- 494 0004 0000     	 .space 2
- 495 0006 0000     	 .short 0
- 496              	 .section .text.I2C_MASTER_0_disable_io,"ax",%progbits
- 497              	 .align 2
- 498              	 .code 16
- 499              	 .thumb_func
- 501              	I2C_MASTER_0_disable_io:
- 502              	.LFB179:
- 503              	 .file 4 "../Dave/Generated/I2C_MASTER/i2c_master_conf.c"
+ 477              	 .loc 3 380 0
+ 478 0012 BD46     	 mov sp,r7
+ 479 0014 02B0     	 add sp,sp,#8
+ 480              	 
+ 481 0016 80BD     	 pop {r7,pc}
+ 482              	 .cfi_endproc
+ 483              	.LFE120:
+ 485              	 .section .rodata.I2C_MASTER_0_sda_pin_config,"a",%progbits
+ 486              	 .align 2
+ 489              	I2C_MASTER_0_sda_pin_config:
+ 490 0000 DC       	 .byte -36
+ 491 0001 000000   	 .space 3
+ 492 0004 01000000 	 .word 1
+ 493              	 .section .rodata.I2C_MASTER_0_scl_pin_config,"a",%progbits
+ 494              	 .align 2
+ 497              	I2C_MASTER_0_scl_pin_config:
+ 498 0000 D8       	 .byte -40
+ 499 0001 000000   	 .space 3
+ 500 0004 01000000 	 .word 1
+ 501              	 .global I2C_MASTER_0_channel_config
+ 502              	 .section .rodata.I2C_MASTER_0_channel_config,"a",%progbits
+ 503              	 .align 2
+ 506              	I2C_MASTER_0_channel_config:
+ 507 0000 801A0600 	 .word 400000
+ 508 0004 0000     	 .space 2
+ 509 0006 0000     	 .short 0
+ 510              	 .section .text.I2C_MASTER_0_disable_io,"ax",%progbits
+ 511              	 .align 2
+ 512              	 .code 16
+ 513              	 .thumb_func
+ 515              	I2C_MASTER_0_disable_io:
+ 516              	.LFB179:
+ 517              	 .file 4 "../Dave/Generated/I2C_MASTER/i2c_master_conf.c"
    1:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** /**************************************************************************************************
    2:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** * DAVE APP Name : I2C_MASTER       APP Version: 4.1.34
    3:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** *
@@ -4058,142 +4072,136 @@
  107:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   }; 
  108:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** const XMC_I2C_CH_CONFIG_t I2C_MASTER_0_channel_config =
  109:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** {
- 110:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .baudrate = (uint32_t)(100000U),
+ 110:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .baudrate = (uint32_t)(400000U),
  111:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .address  = 0
  112:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** };
  113:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** 
  114:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** static void I2C_MASTER_0_disable_io(void)
  115:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** {
- 504              	 .loc 4 115 0
- 505              	 .cfi_startproc
- 506 0000 80B5     	 push {r7,lr}
- 507              	.LCFI24:
- 508              	 .cfi_def_cfa_offset 8
- 509              	 .cfi_offset 7,-8
- 510              	 .cfi_offset 14,-4
- 511 0002 00AF     	 add r7,sp,#0
- 512              	.LCFI25:
- 513              	 .cfi_def_cfa_register 7
+ 518              	 .loc 4 115 0
+ 519              	 .cfi_startproc
+ 520 0000 80B5     	 push {r7,lr}
+ 521              	.LCFI24:
+ 522              	 .cfi_def_cfa_offset 8
+ 523              	 .cfi_offset 7,-8
+ 524              	 .cfi_offset 14,-4
+ 525 0002 00AF     	 add r7,sp,#0
+ 526              	.LCFI25:
+ 527              	 .cfi_def_cfa_register 7
  116:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_GPIO_SetMode((XMC_GPIO_PORT_t *)PORT2_BASE, (uint8_t)10, XMC_GPIO_MODE_INPUT_TRISTATE);
- 514              	 .loc 4 116 0
- 515 0004 064B     	 ldr r3,.L17
- 516 0006 181C     	 mov r0,r3
- 517 0008 0A21     	 mov r1,#10
- 518 000a 0022     	 mov r2,#0
- 519 000c FFF7FEFF 	 bl XMC_GPIO_SetMode
+ 528              	 .loc 4 116 0
+ 529 0004 064B     	 ldr r3,.L17
+ 530 0006 181C     	 mov r0,r3
+ 531 0008 0A21     	 mov r1,#10
+ 532 000a 0022     	 mov r2,#0
+ 533 000c FFF7FEFF 	 bl XMC_GPIO_SetMode
  117:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_GPIO_SetMode((XMC_GPIO_PORT_t *)PORT2_BASE, (uint8_t)11, XMC_GPIO_MODE_INPUT_TRISTATE);
- 520              	 .loc 4 117 0
- 521 0010 034B     	 ldr r3,.L17
- 522 0012 181C     	 mov r0,r3
- 523 0014 0B21     	 mov r1,#11
- 524 0016 0022     	 mov r2,#0
- 525 0018 FFF7FEFF 	 bl XMC_GPIO_SetMode
+ 534              	 .loc 4 117 0
+ 535 0010 034B     	 ldr r3,.L17
+ 536 0012 181C     	 mov r0,r3
+ 537 0014 0B21     	 mov r1,#11
+ 538 0016 0022     	 mov r2,#0
+ 539 0018 FFF7FEFF 	 bl XMC_GPIO_SetMode
  118:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** }
- 526              	 .loc 4 118 0
- 527 001c BD46     	 mov sp,r7
- 528              	 
- 529 001e 80BD     	 pop {r7,pc}
- 530              	.L18:
- 531              	 .align 2
- 532              	.L17:
- 533 0020 00020440 	 .word 1074004480
- 534              	 .cfi_endproc
- 535              	.LFE179:
- 537              	 .section .text.I2C_MASTER_0_enable_io,"ax",%progbits
- 538              	 .align 2
- 539              	 .code 16
- 540              	 .thumb_func
- 542              	I2C_MASTER_0_enable_io:
- 543              	.LFB180:
+ 540              	 .loc 4 118 0
+ 541 001c BD46     	 mov sp,r7
+ 542              	 
+ 543 001e 80BD     	 pop {r7,pc}
+ 544              	.L18:
+ 545              	 .align 2
+ 546              	.L17:
+ 547 0020 00020440 	 .word 1074004480
+ 548              	 .cfi_endproc
+ 549              	.LFE179:
+ 551              	 .section .text.I2C_MASTER_0_enable_io,"ax",%progbits
+ 552              	 .align 2
+ 553              	 .code 16
+ 554              	 .thumb_func
+ 556              	I2C_MASTER_0_enable_io:
+ 557              	.LFB180:
  119:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** 
  120:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** static void I2C_MASTER_0_enable_io(void)
  121:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** {
- 544              	 .loc 4 121 0
- 545              	 .cfi_startproc
- 546 0000 80B5     	 push {r7,lr}
- 547              	.LCFI26:
- 548              	 .cfi_def_cfa_offset 8
- 549              	 .cfi_offset 7,-8
- 550              	 .cfi_offset 14,-4
- 551 0002 00AF     	 add r7,sp,#0
- 552              	.LCFI27:
- 553              	 .cfi_def_cfa_register 7
+ 558              	 .loc 4 121 0
+ 559              	 .cfi_startproc
+ 560 0000 80B5     	 push {r7,lr}
+ 561              	.LCFI26:
+ 562              	 .cfi_def_cfa_offset 8
+ 563              	 .cfi_offset 7,-8
+ 564              	 .cfi_offset 14,-4
+ 565 0002 00AF     	 add r7,sp,#0
+ 566              	.LCFI27:
+ 567              	 .cfi_def_cfa_register 7
  122:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_GPIO_SetMode((XMC_GPIO_PORT_t *)PORT2_BASE, (uint8_t)10, I2C_MASTER_0_sda_pin_config.mode);
- 554              	 .loc 4 122 0
- 555 0004 DC23     	 mov r3,#220
- 556 0006 074A     	 ldr r2,.L20
- 557 0008 101C     	 mov r0,r2
- 558 000a 0A21     	 mov r1,#10
- 559 000c 1A1C     	 mov r2,r3
- 560 000e FFF7FEFF 	 bl XMC_GPIO_SetMode
+ 568              	 .loc 4 122 0
+ 569 0004 DC23     	 mov r3,#220
+ 570 0006 074A     	 ldr r2,.L20
+ 571 0008 101C     	 mov r0,r2
+ 572 000a 0A21     	 mov r1,#10
+ 573 000c 1A1C     	 mov r2,r3
+ 574 000e FFF7FEFF 	 bl XMC_GPIO_SetMode
  123:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_GPIO_SetMode((XMC_GPIO_PORT_t *)PORT2_BASE, (uint8_t)11, I2C_MASTER_0_scl_pin_config.mode);
- 561              	 .loc 4 123 0
- 562 0012 D823     	 mov r3,#216
- 563 0014 034A     	 ldr r2,.L20
- 564 0016 101C     	 mov r0,r2
- 565 0018 0B21     	 mov r1,#11
- 566 001a 1A1C     	 mov r2,r3
- 567 001c FFF7FEFF 	 bl XMC_GPIO_SetMode
+ 575              	 .loc 4 123 0
+ 576 0012 D823     	 mov r3,#216
+ 577 0014 034A     	 ldr r2,.L20
+ 578 0016 101C     	 mov r0,r2
+ 579 0018 0B21     	 mov r1,#11
+ 580 001a 1A1C     	 mov r2,r3
+ 581 001c FFF7FEFF 	 bl XMC_GPIO_SetMode
  124:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** }
- 568              	 .loc 4 124 0
- 569 0020 BD46     	 mov sp,r7
- 570              	 
- 571 0022 80BD     	 pop {r7,pc}
- 572              	.L21:
- 573              	 .align 2
- 574              	.L20:
- 575 0024 00020440 	 .word 1074004480
- 576              	 .cfi_endproc
- 577              	.LFE180:
- 579              	 .global I2C_MASTER_0_config
- 580              	 .section .rodata.I2C_MASTER_0_config,"a",%progbits
- 581              	 .align 2
- 584              	I2C_MASTER_0_config:
- 585 0000 00000000 	 .word I2C_MASTER_0_channel_config
- 586 0004 00000000 	 .word I2C_MASTER_0_init
- 587 0008 00000000 	 .word I2C_MASTER_0_enable_io
- 588 000c 00000000 	 .word I2C_MASTER_0_disable_io
- 589 0010 00000000 	 .word 0
- 590 0014 00000000 	 .word 0
- 591 0018 00000000 	 .word 0
- 592 001c 00000000 	 .word 0
- 593 0020 00000000 	 .word 0
- 594 0024 00       	 .byte 0
- 595 0025 00       	 .byte 0
- 596 0026 04       	 .byte 4
- 597 0027 04       	 .byte 4
- 598 0028 0A       	 .byte 10
- 599 0029 09       	 .byte 9
- 600 002a 0000     	 .space 2
- 601              	 .global I2C_MASTER_0_runtime
- 602              	 .section .data.I2C_MASTER_0_runtime,"aw",%progbits
- 603              	 .align 2
- 606              	I2C_MASTER_0_runtime:
- 607 0000 00000000 	 .space 36
- 607      00000000 
- 607      00000000 
- 607      00000000 
- 607      00000000 
- 608 0024 01       	 .byte 1
- 609 0025 00       	 .byte 0
- 610 0026 00       	 .byte 0
- 611 0027 00       	 .byte 0
- 612 0028 00       	 .byte 0
- 613 0029 000000   	 .space 3
- 614              	 .global I2C_MASTER_0
- 615              	 .section .data.I2C_MASTER_0,"aw",%progbits
- 616              	 .align 2
- 619              	I2C_MASTER_0:
- 620 0000 00020048 	 .word 1207960064
- 621 0004 00000000 	 .word I2C_MASTER_0_config
- 622 0008 00000000 	 .word I2C_MASTER_0_runtime
- 623              	 .section .text.I2C_MASTER_0_init,"ax",%progbits
+ 582              	 .loc 4 124 0
+ 583 0020 BD46     	 mov sp,r7
+ 584              	 
+ 585 0022 80BD     	 pop {r7,pc}
+ 586              	.L21:
+ 587              	 .align 2
+ 588              	.L20:
+ 589 0024 00020440 	 .word 1074004480
+ 590              	 .cfi_endproc
+ 591              	.LFE180:
+ 593              	 .global I2C_MASTER_0_config
+ 594              	 .section .rodata.I2C_MASTER_0_config,"a",%progbits
+ 595              	 .align 2
+ 598              	I2C_MASTER_0_config:
+ 599 0000 00000000 	 .word I2C_MASTER_0_channel_config
+ 600 0004 00000000 	 .word I2C_MASTER_0_init
+ 601 0008 00000000 	 .word I2C_MASTER_0_enable_io
+ 602 000c 00000000 	 .word I2C_MASTER_0_disable_io
+ 603 0010 00000000 	 .word 0
+ 604 0014 00000000 	 .word 0
+ 605 0018 00000000 	 .word NACK_Handler
+ 606 001c 00000000 	 .word 0
+ 607 0020 00000000 	 .word 0
+ 608 0024 02       	 .byte 2
+ 609 0025 02       	 .byte 2
+ 610 0026 04       	 .byte 4
+ 611 0027 04       	 .byte 4
+ 612 0028 FF       	 .byte -1
+ 613 0029 FF       	 .byte -1
+ 614 002a 0000     	 .space 2
+ 615              	 .global I2C_MASTER_0_runtime
+ 616              	 .section .bss.I2C_MASTER_0_runtime,"aw",%nobits
+ 617              	 .align 2
+ 620              	I2C_MASTER_0_runtime:
+ 621 0000 00000000 	 .space 44
+ 621      00000000 
+ 621      00000000 
+ 621      00000000 
+ 621      00000000 
+ 622              	 .global I2C_MASTER_0
+ 623              	 .section .data.I2C_MASTER_0,"aw",%progbits
  624              	 .align 2
- 625              	 .global I2C_MASTER_0_init
- 626              	 .code 16
- 627              	 .thumb_func
- 629              	I2C_MASTER_0_init:
- 630              	.LFB181:
+ 627              	I2C_MASTER_0:
+ 628 0000 00020048 	 .word 1207960064
+ 629 0004 00000000 	 .word I2C_MASTER_0_config
+ 630 0008 00000000 	 .word I2C_MASTER_0_runtime
+ 631              	 .section .text.I2C_MASTER_0_init,"ax",%progbits
+ 632              	 .align 2
+ 633              	 .global I2C_MASTER_0_init
+ 634              	 .code 16
+ 635              	 .thumb_func
+ 637              	I2C_MASTER_0_init:
+ 638              	.LFB181:
  125:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** 
  126:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** const I2C_MASTER_CONFIG_t I2C_MASTER_0_config =
  127:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** {
@@ -4203,11 +4211,11 @@
  131:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .fptr_i2c_disable_io = I2C_MASTER_0_disable_io,
  132:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .tx_cbhandler = NULL,
  133:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .rx_cbhandler = NULL,
- 134:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .nack_cbhandler = NULL,
+ 134:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .nack_cbhandler = NACK_Handler,
  135:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .arbitration_cbhandler = NULL,
  136:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .error_cbhandler = NULL,
- 137:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .transmit_mode = I2C_MASTER_TRANSFER_MODE_INTERRUPT,
- 138:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .receive_mode = I2C_MASTER_TRANSFER_MODE_INTERRUPT,
+ 137:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .transmit_mode = I2C_MASTER_TRANSFER_MODE_DIRECT,
+ 138:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .receive_mode = I2C_MASTER_TRANSFER_MODE_DIRECT,
  139:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .txFIFO_size = XMC_USIC_CH_FIFO_SIZE_16WORDS,
  140:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****  
  141:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .rxFIFO_size = XMC_USIC_CH_FIFO_SIZE_16WORDS,
@@ -4227,7 +4235,7 @@
  155:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** };
  156:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** I2C_MASTER_RUNTIME_t I2C_MASTER_0_runtime =
  157:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** {
- 158:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .tx_ack_sr = 0x1U,
+ 158:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .tx_ack_sr = 0x0U,
  159:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .tx_busy = false,
  160:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .rx_sr = 0x0U,
  161:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   .rx_busy = false,
@@ -4243,299 +4251,234 @@
  171:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** 
  172:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** void I2C_MASTER_0_init(void)
  173:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** {
- 631              	 .loc 4 173 0
- 632              	 .cfi_startproc
- 633 0000 80B5     	 push {r7,lr}
- 634              	.LCFI28:
- 635              	 .cfi_def_cfa_offset 8
- 636              	 .cfi_offset 7,-8
- 637              	 .cfi_offset 14,-4
- 638 0002 82B0     	 sub sp,sp,#8
- 639              	.LCFI29:
- 640              	 .cfi_def_cfa_offset 16
- 641 0004 00AF     	 add r7,sp,#0
- 642              	.LCFI30:
- 643              	 .cfi_def_cfa_register 7
+ 639              	 .loc 4 173 0
+ 640              	 .cfi_startproc
+ 641 0000 80B5     	 push {r7,lr}
+ 642              	.LCFI28:
+ 643              	 .cfi_def_cfa_offset 8
+ 644              	 .cfi_offset 7,-8
+ 645              	 .cfi_offset 14,-4
+ 646 0002 82B0     	 sub sp,sp,#8
+ 647              	.LCFI29:
+ 648              	 .cfi_def_cfa_offset 16
+ 649 0004 00AF     	 add r7,sp,#0
+ 650              	.LCFI30:
+ 651              	 .cfi_def_cfa_register 7
  174:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****  
- 175:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   const uint32_t tx_fifo_events = (uint32_t)(0);
- 644              	 .loc 4 175 0
- 645 0006 0023     	 mov r3,#0
- 646 0008 7B60     	 str r3,[r7,#4]
- 176:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   const uint32_t rx_fifo_events = (uint32_t)(XMC_USIC_CH_RXFIFO_EVENT_CONF_ALTERNATE | XMC_USIC_CH_
- 647              	 .loc 4 176 0
- 648 000a C023     	 mov r3,#192
- 649 000c DB05     	 lsl r3,r3,#23
- 650 000e 3B60     	 str r3,[r7]
+ 175:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   const uint32_t enabled_protocol_events = (uint32_t)(XMC_I2C_CH_EVENT_NACK); 
+ 652              	 .loc 4 175 0
+ 653 0006 8023     	 mov r3,#128
+ 654 0008 9B03     	 lsl r3,r3,#14
+ 655 000a 7B60     	 str r3,[r7,#4]
+ 176:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** 
  177:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_I2C_CH_Init(XMC_I2C0_CH1, &I2C_MASTER_0_channel_config);
- 651              	 .loc 4 177 0
- 652 0010 424A     	 ldr r2,.L23
- 653 0012 434B     	 ldr r3,.L23+4
- 654 0014 101C     	 mov r0,r2
- 655 0016 191C     	 mov r1,r3
- 656 0018 FFF7FEFF 	 bl XMC_I2C_CH_Init
+ 656              	 .loc 4 177 0
+ 657 000c 394A     	 ldr r2,.L23
+ 658 000e 3A4B     	 ldr r3,.L23+4
+ 659 0010 101C     	 mov r0,r2
+ 660 0012 191C     	 mov r1,r3
+ 661 0014 FFF7FEFF 	 bl XMC_I2C_CH_Init
  178:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** 
  179:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_SetInputSource(XMC_I2C0_CH1, XMC_USIC_CH_INPUT_DX0, 5);
- 657              	 .loc 4 179 0
- 658 001c 3F4B     	 ldr r3,.L23
- 659 001e 181C     	 mov r0,r3
- 660 0020 0021     	 mov r1,#0
- 661 0022 0522     	 mov r2,#5
- 662 0024 FFF7FEFF 	 bl XMC_USIC_CH_SetInputSource
+ 662              	 .loc 4 179 0
+ 663 0018 364B     	 ldr r3,.L23
+ 664 001a 181C     	 mov r0,r3
+ 665 001c 0021     	 mov r1,#0
+ 666 001e 0522     	 mov r2,#5
+ 667 0020 FFF7FEFF 	 bl XMC_USIC_CH_SetInputSource
  180:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_SetInputSource(XMC_I2C0_CH1, XMC_USIC_CH_INPUT_DX1, 4);
- 663              	 .loc 4 180 0
- 664 0028 3C4B     	 ldr r3,.L23
- 665 002a 181C     	 mov r0,r3
- 666 002c 0121     	 mov r1,#1
- 667 002e 0422     	 mov r2,#4
- 668 0030 FFF7FEFF 	 bl XMC_USIC_CH_SetInputSource
+ 668              	 .loc 4 180 0
+ 669 0024 334B     	 ldr r3,.L23
+ 670 0026 181C     	 mov r0,r3
+ 671 0028 0121     	 mov r1,#1
+ 672 002a 0422     	 mov r2,#4
+ 673 002c FFF7FEFF 	 bl XMC_USIC_CH_SetInputSource
  181:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** 
  182:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_SetInputSource(XMC_I2C0_CH1, XMC_USIC_CH_INPUT_DX3, 0U);
- 669              	 .loc 4 182 0
- 670 0034 394B     	 ldr r3,.L23
- 671 0036 181C     	 mov r0,r3
- 672 0038 0321     	 mov r1,#3
- 673 003a 0022     	 mov r2,#0
- 674 003c FFF7FEFF 	 bl XMC_USIC_CH_SetInputSource
+ 674              	 .loc 4 182 0
+ 675 0030 304B     	 ldr r3,.L23
+ 676 0032 181C     	 mov r0,r3
+ 677 0034 0321     	 mov r1,#3
+ 678 0036 0022     	 mov r2,#0
+ 679 0038 FFF7FEFF 	 bl XMC_USIC_CH_SetInputSource
  183:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_SetInputSource(XMC_I2C0_CH1, XMC_USIC_CH_INPUT_DX4, 0U);
- 675              	 .loc 4 183 0
- 676 0040 364B     	 ldr r3,.L23
- 677 0042 181C     	 mov r0,r3
- 678 0044 0421     	 mov r1,#4
- 679 0046 0022     	 mov r2,#0
- 680 0048 FFF7FEFF 	 bl XMC_USIC_CH_SetInputSource
+ 680              	 .loc 4 183 0
+ 681 003c 2D4B     	 ldr r3,.L23
+ 682 003e 181C     	 mov r0,r3
+ 683 0040 0421     	 mov r1,#4
+ 684 0042 0022     	 mov r2,#0
+ 685 0044 FFF7FEFF 	 bl XMC_USIC_CH_SetInputSource
  184:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_SetInputSource(XMC_I2C0_CH1, XMC_USIC_CH_INPUT_DX5, 0U);
- 681              	 .loc 4 184 0
- 682 004c 334B     	 ldr r3,.L23
- 683 004e 181C     	 mov r0,r3
- 684 0050 0521     	 mov r1,#5
- 685 0052 0022     	 mov r2,#0
- 686 0054 FFF7FEFF 	 bl XMC_USIC_CH_SetInputSource
- 185:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   /* configure i2c tx fifo */
- 186:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_TXFIFO_Configure(XMC_I2C0_CH1,
- 687              	 .loc 4 186 0
- 688 0058 304B     	 ldr r3,.L23
- 689 005a 181C     	 mov r0,r3
- 690 005c 1021     	 mov r1,#16
- 691 005e 0422     	 mov r2,#4
- 692 0060 0123     	 mov r3,#1
- 693 0062 FFF7FEFF 	 bl XMC_USIC_CH_TXFIFO_Configure
- 187:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                16,
- 188:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                XMC_USIC_CH_FIFO_SIZE_16WORDS,
- 189:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                (uint32_t)1);
- 190:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_TXFIFO_SetInterruptNodePointer(XMC_I2C0_CH1,
- 694              	 .loc 4 190 0
- 695 0066 2D4B     	 ldr r3,.L23
- 696 0068 181C     	 mov r0,r3
- 697 006a 1021     	 mov r1,#16
- 698 006c 0122     	 mov r2,#1
- 699 006e FFF7FEFF 	 bl XMC_USIC_CH_TXFIFO_SetInterruptNodePointer
- 191:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                                XMC_USIC_CH_TXFIFO_INTERRUPT_NODE_POINTER_STANDARD,
- 192:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                              ((uint32_t)1));
- 193:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_TXFIFO_EnableEvent(XMC_I2C0_CH1, tx_fifo_events);
- 700              	 .loc 4 193 0
- 701 0072 2A4A     	 ldr r2,.L23
- 702 0074 7B68     	 ldr r3,[r7,#4]
- 703 0076 101C     	 mov r0,r2
- 704 0078 191C     	 mov r1,r3
- 705 007a FFF7FEFF 	 bl XMC_USIC_CH_TXFIFO_EnableEvent
- 194:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   /* configure i2c rx fifo */
- 195:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_RXFIFO_Configure(XMC_I2C0_CH1,
- 706              	 .loc 4 195 0
- 707 007e 274B     	 ldr r3,.L23
- 708 0080 181C     	 mov r0,r3
- 709 0082 0021     	 mov r1,#0
- 710 0084 0422     	 mov r2,#4
- 711 0086 0F23     	 mov r3,#15
- 712 0088 FFF7FEFF 	 bl XMC_USIC_CH_RXFIFO_Configure
- 196:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                0,
- 197:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                XMC_USIC_CH_FIFO_SIZE_16WORDS,
- 198:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                 (uint32_t)(15));
- 199:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_RXFIFO_SetInterruptNodePointer(XMC_I2C0_CH1,
- 713              	 .loc 4 199 0
- 714 008c 234B     	 ldr r3,.L23
- 715 008e 181C     	 mov r0,r3
- 716 0090 1021     	 mov r1,#16
- 717 0092 0022     	 mov r2,#0
- 718 0094 FFF7FEFF 	 bl XMC_USIC_CH_RXFIFO_SetInterruptNodePointer
- 200:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                                XMC_USIC_CH_RXFIFO_INTERRUPT_NODE_POINTER_STANDARD,
- 201:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                               ((uint32_t)0x0));
- 202:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_RXFIFO_SetInterruptNodePointer(XMC_I2C0_CH1,
- 719              	 .loc 4 202 0
- 720 0098 204B     	 ldr r3,.L23
- 721 009a 181C     	 mov r0,r3
- 722 009c 1321     	 mov r1,#19
- 723 009e 0022     	 mov r2,#0
- 724 00a0 FFF7FEFF 	 bl XMC_USIC_CH_RXFIFO_SetInterruptNodePointer
- 203:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                                XMC_USIC_CH_RXFIFO_INTERRUPT_NODE_POINTER_ALTERNATE,
- 204:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                               ((uint32_t)0x0));
- 205:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_RXFIFO_EnableEvent(XMC_I2C0_CH1, rx_fifo_events);
- 725              	 .loc 4 205 0
- 726 00a4 1D4A     	 ldr r2,.L23
- 727 00a6 3B68     	 ldr r3,[r7]
- 728 00a8 101C     	 mov r0,r2
- 729 00aa 191C     	 mov r1,r3
- 730 00ac FFF7FEFF 	 bl XMC_USIC_CH_RXFIFO_EnableEvent
- 206:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_SetInterruptNodePointer(XMC_I2C0_CH1,
- 731              	 .loc 4 206 0
- 732 00b0 1A4B     	 ldr r3,.L23
- 733 00b2 181C     	 mov r0,r3
- 734 00b4 1021     	 mov r1,#16
- 735 00b6 0222     	 mov r2,#2
- 736 00b8 FFF7FEFF 	 bl XMC_USIC_CH_SetInterruptNodePointer
- 207:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                       XMC_USIC_CH_INTERRUPT_NODE_POINTER_PROTOCOL,
- 208:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                        ((uint32_t)2));
- 209:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_I2C_CH_Start(XMC_I2C0_CH1);
- 737              	 .loc 4 209 0
- 738 00bc 174B     	 ldr r3,.L23
- 739 00be 181C     	 mov r0,r3
- 740 00c0 FFF7FEFF 	 bl XMC_I2C_CH_Start
- 210:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** 
- 211:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT2_BASE, (uint8_t)10, &I2C_MASTER_0_sda_pin_config);
- 741              	 .loc 4 211 0
- 742 00c4 174A     	 ldr r2,.L23+8
- 743 00c6 184B     	 ldr r3,.L23+12
- 744 00c8 101C     	 mov r0,r2
- 745 00ca 0A21     	 mov r1,#10
- 746 00cc 1A1C     	 mov r2,r3
- 747 00ce FFF7FEFF 	 bl XMC_GPIO_Init
- 212:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT2_BASE, (uint8_t)11, &I2C_MASTER_0_scl_pin_config);
- 748              	 .loc 4 212 0
- 749 00d2 144A     	 ldr r2,.L23+8
- 750 00d4 154B     	 ldr r3,.L23+16
- 751 00d6 101C     	 mov r0,r2
- 752 00d8 0B21     	 mov r1,#11
- 753 00da 1A1C     	 mov r2,r3
- 754 00dc FFF7FEFF 	 bl XMC_GPIO_Init
- 213:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** 
- 214:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   NVIC_SetPriority((IRQn_Type)10, 3);
- 755              	 .loc 4 214 0
- 756 00e0 0A20     	 mov r0,#10
- 757 00e2 0321     	 mov r1,#3
- 758 00e4 FFF7FEFF 	 bl __NVIC_SetPriority
- 215:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_SCU_SetInterruptControl(10, XMC_SCU_IRQCTRL_USIC0_SR1_IRQ10);
- 759              	 .loc 4 215 0
- 760 00e8 A023     	 mov r3,#160
- 761 00ea 1B01     	 lsl r3,r3,#4
- 762 00ec 0A20     	 mov r0,#10
- 763 00ee 191C     	 mov r1,r3
- 764 00f0 FFF7FEFF 	 bl XMC_SCU_SetInterruptControl
- 216:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   NVIC_EnableIRQ((IRQn_Type)10);
- 765              	 .loc 4 216 0
- 766 00f4 0A20     	 mov r0,#10
- 767 00f6 FFF7FEFF 	 bl __NVIC_EnableIRQ
- 217:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   NVIC_SetPriority((IRQn_Type)9, 3);
- 768              	 .loc 4 217 0
- 769 00fa 0920     	 mov r0,#9
- 770 00fc 0321     	 mov r1,#3
- 771 00fe FFF7FEFF 	 bl __NVIC_SetPriority
- 218:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_SCU_SetInterruptControl(9, XMC_SCU_IRQCTRL_USIC0_SR0_IRQ9);
- 772              	 .loc 4 218 0
- 773 0102 9023     	 mov r3,#144
- 774 0104 1B01     	 lsl r3,r3,#4
- 775 0106 0920     	 mov r0,#9
- 776 0108 191C     	 mov r1,r3
- 777 010a FFF7FEFF 	 bl XMC_SCU_SetInterruptControl
- 219:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   NVIC_EnableIRQ((IRQn_Type)9);}
- 778              	 .loc 4 219 0
- 779 010e 0920     	 mov r0,#9
- 780 0110 FFF7FEFF 	 bl __NVIC_EnableIRQ
- 781 0114 BD46     	 mov sp,r7
- 782 0116 02B0     	 add sp,sp,#8
- 783              	 
- 784 0118 80BD     	 pop {r7,pc}
- 785              	.L24:
- 786 011a C046     	 .align 2
- 787              	.L23:
- 788 011c 00020048 	 .word 1207960064
- 789 0120 00000000 	 .word I2C_MASTER_0_channel_config
- 790 0124 00020440 	 .word 1074004480
- 791 0128 00000000 	 .word I2C_MASTER_0_sda_pin_config
- 792 012c 00000000 	 .word I2C_MASTER_0_scl_pin_config
- 793              	 .cfi_endproc
- 794              	.LFE181:
- 796              	 .section .text.IRQ10_Handler,"ax",%progbits
- 797              	 .align 2
- 798              	 .global IRQ10_Handler
- 799              	 .code 16
- 800              	 .thumb_func
- 802              	IRQ10_Handler:
- 803              	.LFB182:
- 220:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** /*Transmit ISR*/
- 221:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** void I2C_MASTER_0_TX_HANDLER()
- 222:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** {
- 804              	 .loc 4 222 0
- 805              	 .cfi_startproc
- 806 0000 80B5     	 push {r7,lr}
- 807              	.LCFI31:
- 808              	 .cfi_def_cfa_offset 8
- 809              	 .cfi_offset 7,-8
- 810              	 .cfi_offset 14,-4
- 811 0002 00AF     	 add r7,sp,#0
- 812              	.LCFI32:
- 813              	 .cfi_def_cfa_register 7
- 223:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   I2C_MASTER_TransmitHandler(&I2C_MASTER_0);
- 814              	 .loc 4 223 0
- 815 0004 024B     	 ldr r3,.L26
- 816 0006 181C     	 mov r0,r3
- 817 0008 FFF7FEFF 	 bl I2C_MASTER_TransmitHandler
- 224:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** }
- 818              	 .loc 4 224 0
- 819 000c BD46     	 mov sp,r7
- 820              	 
- 821 000e 80BD     	 pop {r7,pc}
- 822              	.L27:
- 823              	 .align 2
- 824              	.L26:
- 825 0010 00000000 	 .word I2C_MASTER_0
- 826              	 .cfi_endproc
- 827              	.LFE182:
- 829              	 .section .text.IRQ9_Handler,"ax",%progbits
- 830              	 .align 2
- 831              	 .global IRQ9_Handler
- 832              	 .code 16
- 833              	 .thumb_func
- 835              	IRQ9_Handler:
- 836              	.LFB183:
- 225:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** /*Receive ISR*/
- 226:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** void I2C_MASTER_0_RX_HANDLER()
- 227:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** {
- 837              	 .loc 4 227 0
- 838              	 .cfi_startproc
- 839 0000 80B5     	 push {r7,lr}
- 840              	.LCFI33:
- 841              	 .cfi_def_cfa_offset 8
- 842              	 .cfi_offset 7,-8
- 843              	 .cfi_offset 14,-4
- 844 0002 00AF     	 add r7,sp,#0
- 845              	.LCFI34:
- 846              	 .cfi_def_cfa_register 7
- 228:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   I2C_MASTER_ReceiveHandler(&I2C_MASTER_0);
- 847              	 .loc 4 228 0
- 848 0004 024B     	 ldr r3,.L29
- 849 0006 181C     	 mov r0,r3
- 850 0008 FFF7FEFF 	 bl I2C_MASTER_ReceiveHandler
- 229:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** }
- 851              	 .loc 4 229 0
- 852 000c BD46     	 mov sp,r7
- 853              	 
- 854 000e 80BD     	 pop {r7,pc}
- 855              	.L30:
- 856              	 .align 2
- 857              	.L29:
- 858 0010 00000000 	 .word I2C_MASTER_0
- 859              	 .cfi_endproc
- 860              	.LFE183:
- 862              	 .text
- 863              	.Letext0:
- 864              	 .file 5 "c:\\infineon\\tools\\dave ide\\450\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
- 865              	 .file 6 "c:\\infineon\\tools\\dave ide\\450\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
- 866              	 .file 7 "D:/GITHUB/XMC14/I2C/Libraries/CMSIS/Infineon/XMC1400_series/Include/XMC1400.h"
- 867              	 .file 8 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc_gpio.h"
- 868              	 .file 9 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc1_gpio.h"
- 869              	 .file 10 "../Dave/Generated/I2C_MASTER/i2c_master.h"
- 870              	 .file 11 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc1_scu.h"
- 871              	 .file 12 "D:/GITHUB/XMC14/I2C/Libraries/CMSIS/Include/cmsis_gcc.h"
- 872              	 .file 13 "D:/GITHUB/XMC14/I2C/Libraries/CMSIS/Infineon/XMC1400_series/Include/system_XMC1400.h"
+ 686              	 .loc 4 184 0
+ 687 0048 2A4B     	 ldr r3,.L23
+ 688 004a 181C     	 mov r0,r3
+ 689 004c 0521     	 mov r1,#5
+ 690 004e 0022     	 mov r2,#0
+ 691 0050 FFF7FEFF 	 bl XMC_USIC_CH_SetInputSource
+ 185:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_EnableInputDigitalFilter(XMC_I2C0_CH1, XMC_USIC_CH_INPUT_DX0);
+ 692              	 .loc 4 185 0
+ 693 0054 274B     	 ldr r3,.L23
+ 694 0056 181C     	 mov r0,r3
+ 695 0058 0021     	 mov r1,#0
+ 696 005a FFF7FEFF 	 bl XMC_USIC_CH_EnableInputDigitalFilter
+ 186:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_EnableInputSync(XMC_I2C0_CH1, XMC_USIC_CH_INPUT_DX0);
+ 697              	 .loc 4 186 0
+ 698 005e 254B     	 ldr r3,.L23
+ 699 0060 181C     	 mov r0,r3
+ 700 0062 0021     	 mov r1,#0
+ 701 0064 FFF7FEFF 	 bl XMC_USIC_CH_EnableInputSync
+ 187:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_EnableInputDigitalFilter(XMC_I2C0_CH1, XMC_USIC_CH_INPUT_DX1);
+ 702              	 .loc 4 187 0
+ 703 0068 224B     	 ldr r3,.L23
+ 704 006a 181C     	 mov r0,r3
+ 705 006c 0121     	 mov r1,#1
+ 706 006e FFF7FEFF 	 bl XMC_USIC_CH_EnableInputDigitalFilter
+ 188:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_EnableInputSync(XMC_I2C0_CH1, XMC_USIC_CH_INPUT_DX1);
+ 707              	 .loc 4 188 0
+ 708 0072 204B     	 ldr r3,.L23
+ 709 0074 181C     	 mov r0,r3
+ 710 0076 0121     	 mov r1,#1
+ 711 0078 FFF7FEFF 	 bl XMC_USIC_CH_EnableInputSync
+ 189:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****     
+ 190:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   /* configure i2c tx fifo */
+ 191:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_TXFIFO_Configure(XMC_I2C0_CH1,
+ 712              	 .loc 4 191 0
+ 713 007c 1D4B     	 ldr r3,.L23
+ 714 007e 181C     	 mov r0,r3
+ 715 0080 1021     	 mov r1,#16
+ 716 0082 0422     	 mov r2,#4
+ 717 0084 0123     	 mov r3,#1
+ 718 0086 FFF7FEFF 	 bl XMC_USIC_CH_TXFIFO_Configure
+ 192:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                16,
+ 193:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                XMC_USIC_CH_FIFO_SIZE_16WORDS,
+ 194:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                (uint32_t)1);
+ 195:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   /* configure i2c rx fifo */
+ 196:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_RXFIFO_Configure(XMC_I2C0_CH1,
+ 719              	 .loc 4 196 0
+ 720 008a 1A4B     	 ldr r3,.L23
+ 721 008c 181C     	 mov r0,r3
+ 722 008e 0021     	 mov r1,#0
+ 723 0090 0422     	 mov r2,#4
+ 724 0092 0F23     	 mov r3,#15
+ 725 0094 FFF7FEFF 	 bl XMC_USIC_CH_RXFIFO_Configure
+ 197:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                0,
+ 198:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                XMC_USIC_CH_FIFO_SIZE_16WORDS,
+ 199:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                 (uint32_t)(15));
+ 200:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_USIC_CH_SetInterruptNodePointer(XMC_I2C0_CH1,
+ 726              	 .loc 4 200 0
+ 727 0098 164B     	 ldr r3,.L23
+ 728 009a 181C     	 mov r0,r3
+ 729 009c 1021     	 mov r1,#16
+ 730 009e 0022     	 mov r2,#0
+ 731 00a0 FFF7FEFF 	 bl XMC_USIC_CH_SetInterruptNodePointer
+ 201:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                       XMC_USIC_CH_INTERRUPT_NODE_POINTER_PROTOCOL,
+ 202:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****                                        ((uint32_t)0));
+ 203:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_I2C_CH_EnableEvent(XMC_I2C0_CH1, enabled_protocol_events);
+ 732              	 .loc 4 203 0
+ 733 00a4 134A     	 ldr r2,.L23
+ 734 00a6 7B68     	 ldr r3,[r7,#4]
+ 735 00a8 101C     	 mov r0,r2
+ 736 00aa 191C     	 mov r1,r3
+ 737 00ac FFF7FEFF 	 bl XMC_I2C_CH_EnableEvent
+ 204:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_I2C_CH_Start(XMC_I2C0_CH1);
+ 738              	 .loc 4 204 0
+ 739 00b0 104B     	 ldr r3,.L23
+ 740 00b2 181C     	 mov r0,r3
+ 741 00b4 FFF7FEFF 	 bl XMC_I2C_CH_Start
+ 205:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** 
+ 206:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT2_BASE, (uint8_t)10, &I2C_MASTER_0_sda_pin_config);
+ 742              	 .loc 4 206 0
+ 743 00b8 104A     	 ldr r2,.L23+8
+ 744 00ba 114B     	 ldr r3,.L23+12
+ 745 00bc 101C     	 mov r0,r2
+ 746 00be 0A21     	 mov r1,#10
+ 747 00c0 1A1C     	 mov r2,r3
+ 748 00c2 FFF7FEFF 	 bl XMC_GPIO_Init
+ 207:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT2_BASE, (uint8_t)11, &I2C_MASTER_0_scl_pin_config);
+ 749              	 .loc 4 207 0
+ 750 00c6 0D4A     	 ldr r2,.L23+8
+ 751 00c8 0E4B     	 ldr r3,.L23+16
+ 752 00ca 101C     	 mov r0,r2
+ 753 00cc 0B21     	 mov r1,#11
+ 754 00ce 1A1C     	 mov r2,r3
+ 755 00d0 FFF7FEFF 	 bl XMC_GPIO_Init
+ 208:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** 
+ 209:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   NVIC_SetPriority((IRQn_Type)9, 3);
+ 756              	 .loc 4 209 0
+ 757 00d4 0920     	 mov r0,#9
+ 758 00d6 0321     	 mov r1,#3
+ 759 00d8 FFF7FEFF 	 bl __NVIC_SetPriority
+ 210:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   NVIC_EnableIRQ((IRQn_Type)9);
+ 760              	 .loc 4 210 0
+ 761 00dc 0920     	 mov r0,#9
+ 762 00de FFF7FEFF 	 bl __NVIC_EnableIRQ
+ 211:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   XMC_SCU_SetInterruptControl(9, XMC_SCU_IRQCTRL_USIC0_SR0_IRQ9);}
+ 763              	 .loc 4 211 0
+ 764 00e2 9023     	 mov r3,#144
+ 765 00e4 1B01     	 lsl r3,r3,#4
+ 766 00e6 0920     	 mov r0,#9
+ 767 00e8 191C     	 mov r1,r3
+ 768 00ea FFF7FEFF 	 bl XMC_SCU_SetInterruptControl
+ 769 00ee BD46     	 mov sp,r7
+ 770 00f0 02B0     	 add sp,sp,#8
+ 771              	 
+ 772 00f2 80BD     	 pop {r7,pc}
+ 773              	.L24:
+ 774              	 .align 2
+ 775              	.L23:
+ 776 00f4 00020048 	 .word 1207960064
+ 777 00f8 00000000 	 .word I2C_MASTER_0_channel_config
+ 778 00fc 00020440 	 .word 1074004480
+ 779 0100 00000000 	 .word I2C_MASTER_0_sda_pin_config
+ 780 0104 00000000 	 .word I2C_MASTER_0_scl_pin_config
+ 781              	 .cfi_endproc
+ 782              	.LFE181:
+ 784              	 .section .text.IRQ9_Handler,"ax",%progbits
+ 785              	 .align 2
+ 786              	 .global IRQ9_Handler
+ 787              	 .code 16
+ 788              	 .thumb_func
+ 790              	IRQ9_Handler:
+ 791              	.LFB182:
+ 212:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** void I2C_MASTER_0_ERR_HANDLER()
+ 213:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** {
+ 792              	 .loc 4 213 0
+ 793              	 .cfi_startproc
+ 794 0000 80B5     	 push {r7,lr}
+ 795              	.LCFI31:
+ 796              	 .cfi_def_cfa_offset 8
+ 797              	 .cfi_offset 7,-8
+ 798              	 .cfi_offset 14,-4
+ 799 0002 00AF     	 add r7,sp,#0
+ 800              	.LCFI32:
+ 801              	 .cfi_def_cfa_register 7
+ 214:../Dave/Generated/I2C_MASTER/i2c_master_conf.c ****   I2C_MASTER_ProtocolHandler(&I2C_MASTER_0);
+ 802              	 .loc 4 214 0
+ 803 0004 024B     	 ldr r3,.L26
+ 804 0006 181C     	 mov r0,r3
+ 805 0008 FFF7FEFF 	 bl I2C_MASTER_ProtocolHandler
+ 215:../Dave/Generated/I2C_MASTER/i2c_master_conf.c **** }
+ 806              	 .loc 4 215 0
+ 807 000c BD46     	 mov sp,r7
+ 808              	 
+ 809 000e 80BD     	 pop {r7,pc}
+ 810              	.L27:
+ 811              	 .align 2
+ 812              	.L26:
+ 813 0010 00000000 	 .word I2C_MASTER_0
+ 814              	 .cfi_endproc
+ 815              	.LFE182:
+ 817              	 .text
+ 818              	.Letext0:
+ 819              	 .file 5 "c:\\infineon\\tools\\dave ide\\450\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 820              	 .file 6 "c:\\infineon\\tools\\dave ide\\450\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+ 821              	 .file 7 "D:/GITHUB/XMC14/I2C/Libraries/CMSIS/Infineon/XMC1400_series/Include/XMC1400.h"
+ 822              	 .file 8 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc_gpio.h"
+ 823              	 .file 9 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc1_gpio.h"
+ 824              	 .file 10 "../Dave/Generated/I2C_MASTER/i2c_master.h"
+ 825              	 .file 11 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc1_scu.h"
+ 826              	 .file 12 "D:/GITHUB/XMC14/I2C/Libraries/CMSIS/Include/cmsis_gcc.h"
+ 827              	 .file 13 "D:/GITHUB/XMC14/I2C/Libraries/CMSIS/Infineon/XMC1400_series/Include/system_XMC1400.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 i2c_master_conf.c
     {standard input}:18     .text.__NVIC_EnableIRQ:00000000 $t
@@ -4546,54 +4489,50 @@ DEFINED SYMBOLS
     {standard input}:206    .text.__NVIC_SetPriority:000000cc $d
     {standard input}:212    .text.XMC_USIC_CH_SetInputSource:00000000 $t
     {standard input}:216    .text.XMC_USIC_CH_SetInputSource:00000000 XMC_USIC_CH_SetInputSource
-    {standard input}:273    .text.XMC_USIC_CH_TXFIFO_EnableEvent:00000000 $t
-    {standard input}:277    .text.XMC_USIC_CH_TXFIFO_EnableEvent:00000000 XMC_USIC_CH_TXFIFO_EnableEvent
-    {standard input}:315    .text.XMC_USIC_CH_RXFIFO_EnableEvent:00000000 $t
-    {standard input}:319    .text.XMC_USIC_CH_RXFIFO_EnableEvent:00000000 XMC_USIC_CH_RXFIFO_EnableEvent
-    {standard input}:357    .text.XMC_USIC_CH_SetMode:00000000 $t
-    {standard input}:361    .text.XMC_USIC_CH_SetMode:00000000 XMC_USIC_CH_SetMode
-    {standard input}:400    .text.XMC_I2C_CH_Init:00000000 $t
-    {standard input}:404    .text.XMC_I2C_CH_Init:00000000 XMC_I2C_CH_Init
-    {standard input}:438    .text.XMC_I2C_CH_Start:00000000 $t
-    {standard input}:442    .text.XMC_I2C_CH_Start:00000000 XMC_I2C_CH_Start
-    {standard input}:472    .rodata.I2C_MASTER_0_sda_pin_config:00000000 $d
-    {standard input}:475    .rodata.I2C_MASTER_0_sda_pin_config:00000000 I2C_MASTER_0_sda_pin_config
-    {standard input}:480    .rodata.I2C_MASTER_0_scl_pin_config:00000000 $d
-    {standard input}:483    .rodata.I2C_MASTER_0_scl_pin_config:00000000 I2C_MASTER_0_scl_pin_config
-    {standard input}:492    .rodata.I2C_MASTER_0_channel_config:00000000 I2C_MASTER_0_channel_config
-    {standard input}:489    .rodata.I2C_MASTER_0_channel_config:00000000 $d
-    {standard input}:497    .text.I2C_MASTER_0_disable_io:00000000 $t
-    {standard input}:501    .text.I2C_MASTER_0_disable_io:00000000 I2C_MASTER_0_disable_io
-    {standard input}:533    .text.I2C_MASTER_0_disable_io:00000020 $d
-    {standard input}:538    .text.I2C_MASTER_0_enable_io:00000000 $t
-    {standard input}:542    .text.I2C_MASTER_0_enable_io:00000000 I2C_MASTER_0_enable_io
-    {standard input}:575    .text.I2C_MASTER_0_enable_io:00000024 $d
-    {standard input}:584    .rodata.I2C_MASTER_0_config:00000000 I2C_MASTER_0_config
-    {standard input}:581    .rodata.I2C_MASTER_0_config:00000000 $d
-    {standard input}:629    .text.I2C_MASTER_0_init:00000000 I2C_MASTER_0_init
-    {standard input}:606    .data.I2C_MASTER_0_runtime:00000000 I2C_MASTER_0_runtime
-    {standard input}:603    .data.I2C_MASTER_0_runtime:00000000 $d
-    {standard input}:619    .data.I2C_MASTER_0:00000000 I2C_MASTER_0
-    {standard input}:616    .data.I2C_MASTER_0:00000000 $d
-    {standard input}:624    .text.I2C_MASTER_0_init:00000000 $t
-    {standard input}:788    .text.I2C_MASTER_0_init:0000011c $d
-    {standard input}:797    .text.IRQ10_Handler:00000000 $t
-    {standard input}:802    .text.IRQ10_Handler:00000000 IRQ10_Handler
-    {standard input}:825    .text.IRQ10_Handler:00000010 $d
-    {standard input}:830    .text.IRQ9_Handler:00000000 $t
-    {standard input}:835    .text.IRQ9_Handler:00000000 IRQ9_Handler
-    {standard input}:858    .text.IRQ9_Handler:00000010 $d
+    {standard input}:273    .text.XMC_USIC_CH_EnableInputDigitalFilter:00000000 $t
+    {standard input}:277    .text.XMC_USIC_CH_EnableInputDigitalFilter:00000000 XMC_USIC_CH_EnableInputDigitalFilter
+    {standard input}:322    .text.XMC_USIC_CH_EnableInputSync:00000000 $t
+    {standard input}:326    .text.XMC_USIC_CH_EnableInputSync:00000000 XMC_USIC_CH_EnableInputSync
+    {standard input}:371    .text.XMC_USIC_CH_SetMode:00000000 $t
+    {standard input}:375    .text.XMC_USIC_CH_SetMode:00000000 XMC_USIC_CH_SetMode
+    {standard input}:414    .text.XMC_I2C_CH_Init:00000000 $t
+    {standard input}:418    .text.XMC_I2C_CH_Init:00000000 XMC_I2C_CH_Init
+    {standard input}:452    .text.XMC_I2C_CH_Start:00000000 $t
+    {standard input}:456    .text.XMC_I2C_CH_Start:00000000 XMC_I2C_CH_Start
+    {standard input}:486    .rodata.I2C_MASTER_0_sda_pin_config:00000000 $d
+    {standard input}:489    .rodata.I2C_MASTER_0_sda_pin_config:00000000 I2C_MASTER_0_sda_pin_config
+    {standard input}:494    .rodata.I2C_MASTER_0_scl_pin_config:00000000 $d
+    {standard input}:497    .rodata.I2C_MASTER_0_scl_pin_config:00000000 I2C_MASTER_0_scl_pin_config
+    {standard input}:506    .rodata.I2C_MASTER_0_channel_config:00000000 I2C_MASTER_0_channel_config
+    {standard input}:503    .rodata.I2C_MASTER_0_channel_config:00000000 $d
+    {standard input}:511    .text.I2C_MASTER_0_disable_io:00000000 $t
+    {standard input}:515    .text.I2C_MASTER_0_disable_io:00000000 I2C_MASTER_0_disable_io
+    {standard input}:547    .text.I2C_MASTER_0_disable_io:00000020 $d
+    {standard input}:552    .text.I2C_MASTER_0_enable_io:00000000 $t
+    {standard input}:556    .text.I2C_MASTER_0_enable_io:00000000 I2C_MASTER_0_enable_io
+    {standard input}:589    .text.I2C_MASTER_0_enable_io:00000024 $d
+    {standard input}:598    .rodata.I2C_MASTER_0_config:00000000 I2C_MASTER_0_config
+    {standard input}:595    .rodata.I2C_MASTER_0_config:00000000 $d
+    {standard input}:637    .text.I2C_MASTER_0_init:00000000 I2C_MASTER_0_init
+    {standard input}:620    .bss.I2C_MASTER_0_runtime:00000000 I2C_MASTER_0_runtime
+    {standard input}:617    .bss.I2C_MASTER_0_runtime:00000000 $d
+    {standard input}:627    .data.I2C_MASTER_0:00000000 I2C_MASTER_0
+    {standard input}:624    .data.I2C_MASTER_0:00000000 $d
+    {standard input}:632    .text.I2C_MASTER_0_init:00000000 $t
+    {standard input}:776    .text.I2C_MASTER_0_init:000000f4 $d
+    {standard input}:785    .text.IRQ9_Handler:00000000 $t
+    {standard input}:790    .text.IRQ9_Handler:00000000 IRQ9_Handler
+    {standard input}:813    .text.IRQ9_Handler:00000010 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
 XMC_I2C_CH_InitEx
 XMC_GPIO_SetMode
+NACK_Handler
 XMC_USIC_CH_TXFIFO_Configure
-XMC_USIC_CH_TXFIFO_SetInterruptNodePointer
 XMC_USIC_CH_RXFIFO_Configure
-XMC_USIC_CH_RXFIFO_SetInterruptNodePointer
 XMC_USIC_CH_SetInterruptNodePointer
+XMC_I2C_CH_EnableEvent
 XMC_GPIO_Init
 XMC_SCU_SetInterruptControl
-I2C_MASTER_TransmitHandler
-I2C_MASTER_ReceiveHandler
+I2C_MASTER_ProtocolHandler

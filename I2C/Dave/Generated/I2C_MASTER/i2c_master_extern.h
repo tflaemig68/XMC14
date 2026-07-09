@@ -60,11 +60,12 @@ extern "C" {
  * MACROS
  **********************************************************************************************************************/
 
-#define I2C_MASTER_0_TX_HANDLER	IRQ_Hdlr_10
 
-#define I2C_MASTER_0_RX_HANDLER	IRQ_Hdlr_9
+#define I2C_MASTER_0_ERR_HANDLER	IRQ_Hdlr_9
 
 extern I2C_MASTER_t I2C_MASTER_0;
+extern void NACK_Handler(void);
+
 void I2C_MASTER_ProtocolHandler(I2C_MASTER_t * const handle);
 #ifdef __cplusplus
 }

@@ -5605,3 +5605,1509 @@ org.eclipse.equinox.launcher.Main.run(Main.java:1519)
 
 !ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-08 18:32:13.056
 !MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:03:38.735
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:03:39.922
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:06:12.243
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:06:12.662
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:15:16.639
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:15:17.812
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.ui 4 4 2026-07-09 08:16:55.742
+!MESSAGE Referenced part does not exist yet: org.eclipse.jdt.ui.ProjectsView.
+
+!ENTRY PIN_CONFIG 1 0 2026-07-09 08:17:40.980
+!MESSAGE USER_ACTION : Opening Manual Pin Allocator Dialog.!
+
+!ENTRY PIN_CONFIG 1 0 2026-07-09 08:17:55.716
+!MESSAGE USER_ACTION : Manual Pin Allocator Dialog is closed..!
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-09 08:20:41.748
+!MESSAGE USER_ACTION : App Getting Added: I2C_CONFIG [4.0.8]
+
+!ENTRY SOLVER 1 0 2026-07-09 08:20:41.814
+!MESSAGE USER_ACTION : Creating an APP: I2C_CONFIG [4.0.8]
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-09 08:20:42.006
+!MESSAGE USER_ACTION : CASE-1 PR->PR
+ CLOCK_XMC1 [4.0.6] lStoreAppVersion: 4.0.26:p
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-09 08:20:42.399
+!MESSAGE USER_ACTION : Created APP: I2C_CONFIG [4.0.8]-->http://resources/4.0.8/app/I2C_CONFIG/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 08:20:42.825
+!MESSAGE Time taken for processing complete solver result is: 16 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 08:20:42.828
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 08:20:42.831
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 08:20:42.906
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-07-09 08:20:43.013
+!MESSAGE Time Taken By Serialization  : 105 ms :: D:\GITHUB\XMC14\I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 08:20:43.066
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 08:20:43.204
+!MESSAGE Time taken for serialization in msec: 376
+
+!ENTRY DAVE CE 4 0 2026-07-09 08:20:52.177
+!MESSAGE 
+
+***START of Exception Info***
+null
+com.ifx.davex.ui.editor.ms.DaveCEControlsUpdater.updateUiControlAttributes(DaveCEControlsUpdater.java:427)
+com.ifx.davex.ui.editor.ms.DaveCEEditor.processGMessage(DaveCEEditor.java:980)
+com.ifx.davex.ui.editor.ms.DaveCEEditor.processWidgetNode(DaveCEEditor.java:1342)
+com.ifx.davex.ui.editor.ms.DaveCEEditor.reDraw(DaveCEEditor.java:1181)
+com.ifx.davex.ui.editor.ms.DaveCEEditor.repopulateXWTComposite(DaveCEEditor.java:487)
+com.ifx.davex.ui.editor.ms.DaveCEEditor.populateXwtComposite(DaveCEEditor.java:517)
+com.ifx.davex.ui.editor.ms.DaveCEEditor.createPartControl(DaveCEEditor.java:318)
+org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:150)
+org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor.createPartControl(CompatibilityEditor.java:99)
+org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:340)
+sun.reflect.GeneratedMethodAccessor35.invoke(Unknown Source)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:966)
+org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:931)
+org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:151)
+org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:375)
+org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:294)
+org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:105)
+org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:74)
+org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:56)
+org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:129)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:975)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:651)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:757)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:728)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:722)
+org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:706)
+org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1324)
+org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer$1.handleEvent(LazyStackRenderer.java:72)
+org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:233)
+org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:145)
+org.eclipse.swt.widgets.Display.syncExec(Display.java:4821)
+org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:211)
+org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:201)
+org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:94)
+org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:60)
+org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:173)
+org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:617)
+org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:581)
+org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:770)
+org.eclipse.e4.ui.internal.workbench.PartServiceImpl.bringToTop(PartServiceImpl.java:401)
+org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1214)
+org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3261)
+org.eclipse.ui.internal.WorkbenchPage.access$25(WorkbenchPage.java:3176)
+org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:3158)
+org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3153)
+org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3117)
+org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3098)
+com.ifx.davex.ce.core.generic.GenericUtils.openInEditor(GenericUtils.java:802)
+com.ifx.davex.ce.ui.views.AppDependencyTreeView.openUiEditor(AppDependencyTreeView.java:733)
+com.ifx.davex.ce.ui.views.AppDependencyTreeView.access$6(AppDependencyTreeView.java:718)
+com.ifx.davex.ce.ui.views.AppDependencyTreeView$5.doubleClick(AppDependencyTreeView.java:343)
+org.eclipse.jface.viewers.StructuredViewer$1.run(StructuredViewer.java:833)
+org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+org.eclipse.jface.viewers.StructuredViewer.fireDoubleClick(StructuredViewer.java:830)
+org.eclipse.jface.viewers.AbstractTreeViewer.handleDoubleSelect(AbstractTreeViewer.java:1470)
+org.eclipse.jface.viewers.StructuredViewer$4.widgetDefaultSelected(StructuredViewer.java:1264)
+org.eclipse.jface.util.OpenStrategy.fireDefaultSelectionEvent(OpenStrategy.java:252)
+org.eclipse.jface.util.OpenStrategy.access$0(OpenStrategy.java:249)
+org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:311)
+org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+org.eclipse.graphiti.ui.internal.util.gef.ZoomManagerWithAnimation.stepPerformed(ZoomManagerWithAnimation.java:123)
+org.eclipse.graphiti.ui.internal.util.gef.ZoomManagerWithAnimation.zoomSqrt(ZoomManagerWithAnimation.java:109)
+org.eclipse.graphiti.ui.internal.util.gef.ZoomManagerWithAnimation.primSetZoom(ZoomManagerWithAnimation.java:62)
+org.eclipse.gef.editparts.ZoomManager.setZoom(ZoomManager.java:447)
+com.ifx.davex.ce.dependencies.hw.HWConnectivityViewPart.zoomSelection(HWConnectivityViewPart.java:1583)
+com.ifx.davex.ce.dependencies.hw.HWConnectivityViewPart.access$7(HWConnectivityViewPart.java:1577)
+com.ifx.davex.ce.dependencies.hw.HWConnectivityViewPart$7.doExecute(HWConnectivityViewPart.java:1556)
+org.eclipse.emf.transaction.RecordingCommand.execute(RecordingCommand.java:135)
+org.eclipse.emf.workspace.EMFCommandOperation.doExecute(EMFCommandOperation.java:119)
+org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:150)
+org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:488)
+org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.doExecute(WorkspaceCommandStackImpl.java:208)
+org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:165)
+org.eclipse.graphiti.ui.internal.editor.GFWorkspaceCommandStackImpl.execute(GFWorkspaceCommandStackImpl.java:97)
+org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:219)
+com.ifx.davex.ce.dependencies.hw.HWConnectivityViewPart.show(HWConnectivityViewPart.java:1480)
+com.ifx.davex.ce.ui.views.AppDependencyTreeView.setSelection(AppDependencyTreeView.java:700)
+com.ifx.davex.ce.ui.views.AppDependencyTreeView.selectionChanged(AppDependencyTreeView.java:708)
+org.eclipse.jface.viewers.Viewer$1.run(Viewer.java:158)
+org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:155)
+org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2191)
+org.eclipse.jface.viewers.StructuredViewer.handleSelect(StructuredViewer.java:1229)
+org.eclipse.jface.viewers.StructuredViewer$4.widgetSelected(StructuredViewer.java:1258)
+org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:242)
+org.eclipse.jface.util.OpenStrategy.access$4(OpenStrategy.java:236)
+org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:405)
+org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+com.ifx.davex.product.DaveApplication.start(DaveApplication.java:140)
+org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+***END of Exception Info***
+
+
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-07-09 08:20:52.344
+!MESSAGE USER_ACTION : Time taken for opening editor is: 532 msec 
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-07-09 08:20:56.509
+!MESSAGE USER_ACTION : Time taken for opening editor is: 561 msec 
+
+!ENTRY CODEGEN 1 0 2026-07-09 08:22:11.430
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-07-09 08:22:12.978
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 08:22:37.002
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:22:55.107
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:22:55.596
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:30:07.618
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:30:07.998
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:30:43.304
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:30:43.717
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:31:18.752
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:31:19.189
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:46:50.578
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:46:50.999
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:49:35.274
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 08:49:35.814
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY CODEGEN 1 0 2026-07-09 09:25:52.714
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-07-09 09:25:54.407
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 09:26:07.678
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 09:26:08.159
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 09:28:23.827
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 09:28:24.216
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 09:28:47.181
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 09:28:47.655
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 09:31:35.592
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 09:31:36.056
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 09:47:43.205
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 09:47:43.602
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 09:48:39.483
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 09:48:39.955
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY DAVE CE 4 0 2026-07-09 09:53:04.976
+!MESSAGE 
+
+***START of Exception Info***
+null
+com.ifx.davex.ui.editor.ms.DaveCEControlsUpdater.updateUiControlAttributes(DaveCEControlsUpdater.java:427)
+com.ifx.davex.ui.editor.ms.DaveCEEditor.processGMessage(DaveCEEditor.java:980)
+com.ifx.davex.ui.editor.ms.DaveCEEditor.processWidgetNode(DaveCEEditor.java:1342)
+com.ifx.davex.ui.editor.ms.DaveCEEditor.reDraw(DaveCEEditor.java:1181)
+com.ifx.davex.ui.editor.ms.DaveCEEditor.repopulateXWTComposite(DaveCEEditor.java:487)
+com.ifx.davex.ui.editor.ms.DaveCEEditor.populateXwtComposite(DaveCEEditor.java:517)
+com.ifx.davex.ui.editor.ms.DaveCEEditor.createPartControl(DaveCEEditor.java:318)
+org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:150)
+org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor.createPartControl(CompatibilityEditor.java:99)
+org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:340)
+sun.reflect.GeneratedMethodAccessor35.invoke(Unknown Source)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:966)
+org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:931)
+org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:151)
+org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:375)
+org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:294)
+org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:105)
+org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:74)
+org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:56)
+org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:129)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:975)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:651)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:757)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:728)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:722)
+org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:706)
+org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1324)
+org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer$1.handleEvent(LazyStackRenderer.java:72)
+org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:233)
+org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:145)
+org.eclipse.swt.widgets.Display.syncExec(Display.java:4821)
+org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:211)
+org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:201)
+org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:94)
+org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:60)
+org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:173)
+org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:617)
+org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:581)
+org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:770)
+org.eclipse.e4.ui.internal.workbench.PartServiceImpl.bringToTop(PartServiceImpl.java:401)
+org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1214)
+org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3261)
+org.eclipse.ui.internal.WorkbenchPage.access$25(WorkbenchPage.java:3176)
+org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:3158)
+org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3153)
+org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3117)
+org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3098)
+com.ifx.davex.ce.core.generic.GenericUtils.openInEditor(GenericUtils.java:802)
+com.ifx.davex.ce.ui.views.AppDependencyTreeView.openUiEditor(AppDependencyTreeView.java:733)
+com.ifx.davex.ce.ui.views.AppDependencyTreeView.access$6(AppDependencyTreeView.java:718)
+com.ifx.davex.ce.ui.views.AppDependencyTreeView$5.doubleClick(AppDependencyTreeView.java:343)
+org.eclipse.jface.viewers.StructuredViewer$1.run(StructuredViewer.java:833)
+org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+org.eclipse.jface.viewers.StructuredViewer.fireDoubleClick(StructuredViewer.java:830)
+org.eclipse.jface.viewers.AbstractTreeViewer.handleDoubleSelect(AbstractTreeViewer.java:1470)
+org.eclipse.jface.viewers.StructuredViewer$4.widgetDefaultSelected(StructuredViewer.java:1264)
+org.eclipse.jface.util.OpenStrategy.fireDefaultSelectionEvent(OpenStrategy.java:252)
+org.eclipse.jface.util.OpenStrategy.access$0(OpenStrategy.java:249)
+org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:311)
+org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+com.ifx.davex.product.DaveApplication.start(DaveApplication.java:140)
+org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+***END of Exception Info***
+
+
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-07-09 09:53:05.154
+!MESSAGE USER_ACTION : Time taken for opening editor is: 531 msec 
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 09:53:25.382
+!MESSAGE USER_ACTION : Setting value = "true" of "gcheck_enable_osc_hp" in APP: CLOCK_XMC1/4.0.26/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:53:26.014
+!MESSAGE Time taken for processing complete solver result is: 10 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:53:26.015
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:53:26.017
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:53:26.071
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-07-09 09:53:26.161
+!MESSAGE Time Taken By Serialization  : 87 ms :: D:\GITHUB\XMC14\I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:53:26.194
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:53:26.225
+!MESSAGE Time taken for serialization in msec: 210
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 09:53:26.250
+!MESSAGE USER_ACTION : Time taken for refreshing CLOCK_XMC1/4.0.26/0 editor is : 12
+
+!ENTRY SOLVER 1 0 2026-07-09 09:53:26.252
+!MESSAGE Time Taken By Solver for UI Action: 755 ms
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-07-09 09:53:56.667
+!MESSAGE USER_ACTION : Time taken for opening editor is: 78 msec 
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-07-09 09:54:00.452
+!MESSAGE USER_ACTION : Time taken for opening editor is: 78 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-09 09:54:08.061
+!MESSAGE USER_ACTION : Remove Option: Remove this APP and all APPs that are requiring it (Recursively up the tree)
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-09 09:54:08.172
+!MESSAGE USER_ACTION : Deleting resource : http://resources/4.0.8/app/I2C_CONFIG/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:54:08.586
+!MESSAGE Time taken for processing complete solver result is: 5 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:54:08.588
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:54:08.589
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:54:08.639
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-07-09 09:54:08.707
+!MESSAGE Time Taken By Serialization  : 67 ms :: D:\GITHUB\XMC14\I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:54:08.738
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:54:08.767
+!MESSAGE Time taken for serialization in msec: 178
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 09:54:08.786
+!MESSAGE USER_ACTION : Time taken for refreshing CLOCK_XMC1/4.0.26/0 editor is : 7
+
+!ENTRY SOLVER 1 0 2026-07-09 09:54:08.788
+!MESSAGE Time Taken By Solver for UI Action: 563 ms
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-07-09 09:54:14.531
+!MESSAGE USER_ACTION : Time taken for opening editor is: 76 msec 
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-07-09 09:54:16.317
+!MESSAGE USER_ACTION : Time taken for opening editor is: 232 msec 
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-07-09 09:54:55.234
+!MESSAGE USER_ACTION : Time taken for opening editor is: 85 msec 
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-07-09 09:54:57.526
+!MESSAGE USER_ACTION : Time taken for opening editor is: 64 msec 
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-07-09 09:55:08.663
+!MESSAGE USER_ACTION : Time taken for opening editor is: 58 msec 
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 09:55:25.991
+!MESSAGE USER_ACTION : Setting value = "true" of "gcheck_hardfault" in APP: CPU_CTRL_XMC1/4.0.12/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:55:25.994
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:55:25.996
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:55:26.008
+!MESSAGE Time taken for serialization in msec: 13
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:55:26.010
+!MESSAGE *****************************
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 09:55:27.245
+!MESSAGE USER_ACTION : Setting value = "false" of "gcheck_hardfault" in APP: CPU_CTRL_XMC1/4.0.12/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:55:27.248
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:55:27.250
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:55:27.272
+!MESSAGE Time taken for serialization in msec: 22
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:55:27.275
+!MESSAGE *****************************
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-07-09 09:55:45.856
+!MESSAGE USER_ACTION : Time taken for opening editor is: 443 msec 
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 09:56:01.576
+!MESSAGE USER_ACTION : Setting value = "Direct" of "gcombo_tx_mode" in APP: I2C_MASTER/4.1.34/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:02.073
+!MESSAGE Time taken for processing complete solver result is: 4 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:02.074
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:02.076
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:02.132
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-07-09 09:56:02.193
+!MESSAGE Time Taken By Serialization  : 59 ms :: D:\GITHUB\XMC14\I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:02.223
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:02.254
+!MESSAGE Time taken for serialization in msec: 179
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 09:56:02.276
+!MESSAGE USER_ACTION : Time taken for refreshing I2C_MASTER/4.1.34/0 editor is : 10
+
+!ENTRY SOLVER 1 0 2026-07-09 09:56:02.277
+!MESSAGE Time Taken By Solver for UI Action: 633 ms
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 09:56:05.761
+!MESSAGE USER_ACTION : Setting value = "Direct" of "gcombo_rx_mode" in APP: I2C_MASTER/4.1.34/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:06.247
+!MESSAGE Time taken for processing complete solver result is: 4 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:06.249
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:06.251
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:06.299
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-07-09 09:56:06.363
+!MESSAGE Time Taken By Serialization  : 61 ms :: D:\GITHUB\XMC14\I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:06.398
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:06.428
+!MESSAGE Time taken for serialization in msec: 180
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 09:56:06.446
+!MESSAGE USER_ACTION : Time taken for refreshing I2C_MASTER/4.1.34/0 editor is : 7
+
+!ENTRY SOLVER 1 0 2026-07-09 09:56:06.447
+!MESSAGE Time Taken By Solver for UI Action: 600 ms
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 09:56:23.517
+!MESSAGE USER_ACTION : Setting value = "true" of "gcheck_pinconfig" in APP: I2C_MASTER/4.1.34/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:23.521
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:23.522
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:23.537
+!MESSAGE Time taken for serialization in msec: 15
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:23.538
+!MESSAGE *****************************
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 09:56:33.189
+!MESSAGE USER_ACTION : Setting value = "true" of "gcheck_enable_noise_filter" in APP: I2C_MASTER/4.1.34/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:33.192
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:33.194
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:33.215
+!MESSAGE Time taken for serialization in msec: 21
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:33.216
+!MESSAGE *****************************
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 09:56:44.822
+!MESSAGE USER_ACTION : Setting value = "true" of "gcheck_nack" in APP: I2C_MASTER/4.1.34/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:45.297
+!MESSAGE Time taken for processing complete solver result is: 4 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:45.300
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:45.303
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:45.368
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-07-09 09:56:45.456
+!MESSAGE Time Taken By Serialization  : 87 ms :: D:\GITHUB\XMC14\I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:45.496
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:56:45.531
+!MESSAGE Time taken for serialization in msec: 232
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 09:56:45.551
+!MESSAGE USER_ACTION : Time taken for refreshing I2C_MASTER/4.1.34/0 editor is : 9
+
+!ENTRY SOLVER 1 0 2026-07-09 09:56:45.553
+!MESSAGE Time Taken By Solver for UI Action: 663 ms
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 09:57:16.407
+!MESSAGE USER_ACTION : Setting value = "NACK" of "gstring_nack" in APP: I2C_MASTER/4.1.34/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:57:16.411
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:57:16.415
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:57:16.426
+!MESSAGE Time taken for serialization in msec: 14
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:57:16.427
+!MESSAGE *****************************
+
+!ENTRY CODEGEN 1 0 2026-07-09 09:57:25.129
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-07-09 09:57:26.224
+!MESSAGE Code generation completed...
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-09 09:58:32.527
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-07-09 09:58:35.953
+!MESSAGE USER_ACTION : Time taken for opening editor is: 116 msec 
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 09:58:44.895
+!MESSAGE USER_ACTION : Setting value = "NACK_Handler" of "gstring_nack" in APP: I2C_MASTER/4.1.34/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:58:44.899
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:58:44.901
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:58:44.920
+!MESSAGE Time taken for serialization in msec: 19
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 09:58:44.922
+!MESSAGE *****************************
+
+!ENTRY CODEGEN 1 0 2026-07-09 09:58:45.043
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-07-09 09:58:46.207
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 09:59:25.944
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 09:59:26.501
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 09:59:41.214
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 09:59:41.938
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 10:00:57.649
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 10:00:58.097
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-09 10:01:52.028
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-07-09 10:01:58.529
+!MESSAGE USER_ACTION : Time taken for opening editor is: 114 msec 
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 10:02:02.374
+!MESSAGE USER_ACTION : Setting value = "false" of "gcheck_enable_osc_hp" in APP: CLOCK_XMC1/4.0.26/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 10:02:02.812
+!MESSAGE Time taken for processing complete solver result is: 15 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 10:02:02.814
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 10:02:02.815
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 10:02:02.869
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2026-07-09 10:02:02.933
+!MESSAGE Time Taken By Serialization  : 63 ms :: D:\GITHUB\XMC14\I2C\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 10:02:02.971
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 10:02:03.008
+!MESSAGE Time taken for serialization in msec: 195
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 10:02:03.028
+!MESSAGE USER_ACTION : Time taken for refreshing CLOCK_XMC1/4.0.26/0 editor is : 9
+
+!ENTRY SOLVER 1 0 2026-07-09 10:02:03.029
+!MESSAGE Time Taken By Solver for UI Action: 588 ms
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-07-09 10:02:16.546
+!MESSAGE USER_ACTION : Time taken for opening editor is: 74 msec 
+
+!ENTRY CODEGEN 1 0 2026-07-09 10:03:19.884
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-07-09 10:03:20.860
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 10:03:53.673
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 10:03:54.085
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 10:17:08.099
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 10:17:08.579
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 10:19:50.241
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 10:19:50.606
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 10:22:29.403
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 10:22:29.842
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY CODEGEN 1 0 2026-07-09 10:51:17.991
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-07-09 10:51:19.018
+!MESSAGE Code generation completed...
+
+!ENTRY CODEGEN 1 0 2026-07-09 10:59:14.705
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-07-09 10:59:15.678
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:06:55.870
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:06:56.274
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 11:13:27.107
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:13:38.227
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:13:38.609
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:16:15.689
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:16:16.076
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:19:36.011
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:19:36.395
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:22:14.471
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:22:14.879
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:23:25.167
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:23:25.549
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:24:29.554
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:24:30.067
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:32:42.344
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:32:42.797
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 11:38:10.940
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:38:18.682
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:38:19.101
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:41:13.730
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:41:14.121
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 11:46:10.292
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:46:17.681
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:46:18.065
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:49:58.863
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:49:59.340
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:50:41.804
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:50:42.174
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:53:31.705
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:53:32.087
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 11:55:53.527
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 11:55:58.025
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:56:07.056
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 11:56:07.466
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 12:04:26.234
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 12:04:26.655
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 12:06:13.632
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 12:06:26.388
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 12:06:26.867
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-07-09 12:06:31.942
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2026-07-09 12:06:31.942
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2026-07-09 12:06:31.942
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@7f698417): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception. null' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2026-07-09 12:06:31.945
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2026-07-09 12:06:31.945
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2026-07-09 12:06:31.945
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@70495290): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception. null' resulted in a rejected execution exception.
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 12:20:59.857
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 12:21:00.292
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 12:24:23.100
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 12:24:23.521
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.core.expressions 4 201 2026-07-09 13:52:58.573
+!MESSAGE No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.eclipse.cdt.internal.core.model.TranslationUnit
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.eclipse.cdt.internal.core.model.TranslationUnit
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:127)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AndExpression.evaluate(AndExpression.java:31)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.failsEnablement(RegistryPageContributor.java:306)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.isApplicableTo(RegistryPageContributor.java:248)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:216)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:235)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.hasPropertyPagesFor(PropertyDialogAction.java:106)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:148)
+	at org.eclipse.cdt.ui.actions.OpenViewActionGroup.fillContextMenu(OpenViewActionGroup.java:229)
+	at org.eclipse.cdt.internal.ui.cview.MainActionGroup.fillContextMenu(MainActionGroup.java:235)
+	at org.eclipse.cdt.internal.ui.cview.CView.fillContextMenu(CView.java:712)
+	at org.eclipse.cdt.internal.ui.cview.CView$5.menuAboutToShow(CView.java:459)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:339)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:470)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:465)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:497)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:256)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5160)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4828)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1656)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2199)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5110)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:262)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4277)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3818)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at com.ifx.davex.product.DaveApplication.start(DaveApplication.java:140)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2026-07-09 13:52:58.573
+!MESSAGE No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.eclipse.cdt.internal.core.model.TranslationUnit
+
+!ENTRY org.eclipse.core.expressions 4 201 2026-07-09 13:52:58.577
+!MESSAGE No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.eclipse.cdt.internal.core.model.TranslationUnit
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.eclipse.cdt.internal.core.model.TranslationUnit
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:127)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AndExpression.evaluate(AndExpression.java:31)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.failsEnablement(RegistryPageContributor.java:306)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.isApplicableTo(RegistryPageContributor.java:248)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:216)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:235)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.hasPropertyPagesFor(PropertyDialogAction.java:106)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:148)
+	at org.eclipse.cdt.ui.actions.OpenViewActionGroup.fillContextMenu(OpenViewActionGroup.java:229)
+	at org.eclipse.cdt.internal.ui.cview.MainActionGroup.fillContextMenu(MainActionGroup.java:235)
+	at org.eclipse.cdt.internal.ui.cview.CView.fillContextMenu(CView.java:712)
+	at org.eclipse.cdt.internal.ui.cview.CView$5.menuAboutToShow(CView.java:459)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:339)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:470)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:465)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:497)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:256)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5160)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4828)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1656)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2199)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5110)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:262)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4277)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3818)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at com.ifx.davex.product.DaveApplication.start(DaveApplication.java:140)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2026-07-09 13:52:58.577
+!MESSAGE No property tester contributes a property org.eclipse.wst.jsdt.chromium.debug.core.isJsFile to type class org.eclipse.cdt.internal.core.model.TranslationUnit
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 14:14:23.052
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:14:32.766
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:14:33.173
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:15:12.115
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:15:12.580
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:25:22.330
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:25:22.745
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:33:41.709
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:33:42.193
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY CODEGEN 1 0 2026-07-09 14:40:36.998
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-07-09 14:40:38.073
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:41:55.473
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:41:55.880
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:45:10.439
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:45:10.836
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:46:39.114
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:46:39.593
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:48:03.636
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:48:04.049
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:53:01.582
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:53:01.984
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 14:54:04.953
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:54:16.398
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:54:16.829
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:59:35.697
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 14:59:36.118
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 15:00:08.015
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 15:00:08.430
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 15:01:42.133
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 15:01:42.580
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 15:05:48.006
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 15:05:48.407
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 15:08:02.103
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 15:08:02.558
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:05:20.624
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:05:21.027
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 16:22:39.697
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:23:04.296
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:23:04.768
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:27:08.411
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:27:08.865
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 16:29:21.116
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:29:34.279
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:29:34.701
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:35:30.886
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:35:31.356
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:44:49.709
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:44:50.115
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:54:46.273
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:54:46.674
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:58:45.346
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:58:45.971
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 16:58:57.062
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:59:09.960
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 16:59:10.375
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:00:03.708
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:00:04.149
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 17:02:34.549
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 17:02:45.964
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:02:56.241
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:02:56.626
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:08:20.153
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:08:20.574
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:14:27.690
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:14:28.070
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:22:22.115
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:22:22.531
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 17:28:15.600
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:28:27.353
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:28:27.812
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 17:42:26.216
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:42:40.009
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:42:40.512
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY APPLICATION_MODEL 1 0 2026-07-09 17:45:17.467
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY CODEGEN 1 0 2026-07-09 17:45:28.982
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-07-09 17:45:30.004
+!MESSAGE Code generation completed...
+
+!ENTRY GLOBAL_INTERRUPT 1 0 2026-07-09 17:45:31.307
+!MESSAGE USER_ACTION : Opening Global Interrupt Dialog.!
+
+!ENTRY GLOBAL_INTERRUPT 1 0 2026-07-09 17:45:43.211
+!MESSAGE USER_ACTION : Global Interrupt Dialog is closed..!
+
+!ENTRY PIN_CONFIG 1 0 2026-07-09 17:45:47.796
+!MESSAGE USER_ACTION : Opening Manual Pin Allocator Dialog.!
+
+!ENTRY PIN_CONFIG 1 0 2026-07-09 17:45:50.893
+!MESSAGE USER_ACTION : Manual Pin Allocator Dialog is closed..!
+
+!ENTRY APP_CONFIGURATOR 1 0 2026-07-09 17:45:58.845
+!MESSAGE USER_ACTION : Time taken for opening editor is: 449 msec 
+
+!ENTRY UI_EDITOR 1 0 2026-07-09 17:46:07.129
+!MESSAGE USER_ACTION : Setting value = "400" of "gint_desiredbaudrate" in APP: I2C_MASTER/4.1.34/0
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 17:46:07.147
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 17:46:07.150
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 17:46:07.171
+!MESSAGE Time taken for serialization in msec: 22
+
+!ENTRY com.dave.mbs.common 1 0 2026-07-09 17:46:07.172
+!MESSAGE *****************************
+
+!ENTRY CODEGEN 1 0 2026-07-09 17:46:07.290
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2026-07-09 17:46:08.255
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:46:45.233
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:46:45.641
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:50:24.977
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 17:50:25.407
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 18:08:14.430
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 18:08:14.816
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 18:10:56.404
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 18:10:56.787
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 18:12:52.086
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 18:12:52.572
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 19:09:47.829
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 19:10:19.697
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 19:10:31.946
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 19:10:32.360
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2026-07-09 19:13:47.290
+!MESSAGE Debug session 'I2C Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 19:13:57.351
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 19:13:57.781
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2026-07-09 19:22:27.700
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: D:\GITHUB\XMC14\I2C\Debug\I2C.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:126)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:292)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.checkBinaryDetails(LaunchConfigurationDelegate.java:502)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:230)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:179)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:152)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2026-07-09 19:22:27.700
+!MESSAGE D:\GITHUB\XMC14\I2C\Debug\I2C.elf not found
+!STACK 0
+java.io.FileNotFoundException: D:\GITHUB\XMC14\I2C\Debug\I2C.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:126)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:292)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.checkBinaryDetails(LaunchConfigurationDelegate.java:502)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:230)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:179)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:152)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2026-07-09 19:22:40.783
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: D:\GITHUB\XMC14\I2C\Debug\I2C.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:126)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:292)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.checkBinaryDetails(LaunchConfigurationDelegate.java:502)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:230)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:179)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:152)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2026-07-09 19:22:40.784
+!MESSAGE D:\GITHUB\XMC14\I2C\Debug\I2C.elf not found
+!STACK 0
+java.io.FileNotFoundException: D:\GITHUB\XMC14\I2C\Debug\I2C.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:126)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:292)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.checkBinaryDetails(LaunchConfigurationDelegate.java:502)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:230)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:179)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:152)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 19:25:40.295
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 19:25:40.721
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 19:39:13.540
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 19:39:14.003
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 23:13:05.640
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 23:13:06.748
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 23:17:59.413
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 23:17:59.839
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 23:29:26.108
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 23:29:26.620
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 23:30:45.865
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 23:30:46.297
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 23:53:54.098
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 23:53:54.514
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 23:56:56.107
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-09 23:56:56.508
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-10 00:12:22.999
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-10 00:12:23.409
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-10 00:15:22.826
+!MESSAGE C:/Program Files/SEGGER/JLink_V956/JLinkGDBServerCL.exe -if swd -device XMC1404-Q040x0200 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.packs.core 4 1 2026-07-10 00:15:23.907
+!MESSAGE C:\Infineon\Tools\DAVE IDE\450\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx

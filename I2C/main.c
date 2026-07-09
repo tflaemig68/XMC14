@@ -9,12 +9,54 @@
 
 
 #include "DAVE.h"                 //Declarations from DAVE Code Generation (includes SFR declaration)
+//#include "ssd1306.h"
+#include "oled.h"
+#include "gui.h"
+#include "test.h"
 
-#include "ssd1306.h"
 
 #define milliSec 1000U
+#define LED1 XMC_GPIO_PORT0, 7
+#define LED2 XMC_GPIO_PORT0, 6
 
 volatile uint32_t SysTickCounter = 0;
+uint16_t run1sec = 0;
+
+void LED_init(void)
+{
+	XMC_GPIO_CONFIG_t gpio_config =
+    {
+       .mode = XMC_GPIO_MODE_OUTPUT_PUSH_PULL,
+       .output_level = XMC_GPIO_OUTPUT_LEVEL_LOW
+    };
+
+   XMC_GPIO_Init(LED1, &gpio_config);
+   XMC_GPIO_Init(LED2, &gpio_config);
+}
+
+void Error(int32_t ErrNo)
+{
+	XMC_GPIO_SetOutputHigh(LED2);
+}
+
+
+void Task10ms(void)
+{
+	PWM_SetDutyCycle(&PWM_0, (uint32_t) 10*(SysTickCounter % 1000U)); // set duty 10000 = 100% cycle to modulo SysTickCounter per sec
+	//I2C_MASTER_Transmit(&I2C_MASTER_0,true,SSD1306_ADDR,mem_address,1,true);
+	   // while(I2C_MASTER_IsTxBusy(&I2C_MASTER_0));
+}
+
+void Task100ms(void)
+{
+
+}
+
+void Task1s(void)
+{
+	XMC_GPIO_ToggleOutput(LED1);
+	run1sec++;
+}
 
 void milliSec_Handler(void)
 {
@@ -22,8 +64,22 @@ void milliSec_Handler(void)
    //int32_t DutyPWM_0 = SysTickCounter % 1000; //Modulo 1000
     if ((SysTickCounter % 10U) == 0)
     {
-    	PWM_SetDutyCycle(&PWM_0, (uint32_t) 10*(SysTickCounter % 1000U)); // set duty 10000 = 100% cycle to modulo SysTickCounter per sec
+    	Task10ms();
     }
+    if ((SysTickCounter % 100U) == 0)
+    {
+      	Task100ms();
+    }
+    if ((SysTickCounter % 1000U) == 0)
+    {
+		Task1s();
+    }
+
+}
+
+void NACK_Handler(void)
+{
+	Error(1);
 }
 
 
@@ -41,10 +97,23 @@ int main(void)
 {
   DAVE_STATUS_t status;
   uint32_t TimerId;
+  uint32_t update_5SecTimer;
+  uint32_t run_status = 0;
+  char str[]= "DHBW Stuttgart";
+  char str_time[8];
+
 
   status = DAVE_Init();           /* Initialization of DAVE APPs  */
+  LED_init();
 
+  //XMC_GPIO_SetMode(P2_11, XMC_GPIO_MODE_INPUT_PULL_UP);
 
+  DAVE_APP_VERSION_t version = I2C_MASTER_GetAppVersion();
+  if(version.major == 4U)
+  {
+	 //I2C_MASTER_0_init();
+	 //I2C_MASTER_Transmit(&I2C_MASTER_0,true,0x78,mem_address,1,true);
+  }
 
   // SYSTIMER APP Initialized during DAVE Initialization
   // Create Software timer
@@ -70,28 +139,66 @@ int main(void)
 
     }
   }
-
-  SSD1306_Init();
+  delay_ms(500);
+  OLED_Init();
+  OLED_Clear(0);
+  //TEST_MainPage();
 
 
   /* Placeholder for user application code. The while loop below can be replaced with user application code. */
   while(1U)
   {
 
-	  /*
-	  if((SysTickCounter - last_update) >= 5000)
+	  if (run1sec > 0)
 	  {
-		  last_update = SysTickCounter;
-*/
-		  SSD1306_Clear();
-
-		  //SSD1306_SetCursor(10,12);
-		  //SSD1306_WriteString("DHBW Stuttgart");
-
-		  SSD1306_UpdateScreen();
-		  /*
+		  unsigned int disp_Time = (SysTickCounter/1000)%1000000;
+		  snprintf(str_time, sizeof(str_time), "%6d", disp_Time);
+		  //		  sprintf(str_time,"%6u/n", disp_Time);
+		  GUI_ShowString((u8)90,(u8)3,(char*)str_time,(u8)8,(u8)1);
+		  run1sec -=1;
 	  }
-	  */
+
+
+	  if((SysTickCounter - update_5SecTimer) >= 5000)
+	  {
+		  update_5SecTimer = SysTickCounter;
+		  switch (run_status++)
+		  {
+			  case 0:
+			  OLED_Clear(0);
+			  GUI_ShowString((u8)0,(u8)0,(char*)str,(u8)16,(u8)1);
+
+			  //TEST_MainPage();
+			  break;
+			  case 1:
+			  {
+			     Test_Color(0);
+			  }
+			  break;
+			  case 2:
+			  {
+				 TEST_English(0);
+			  }
+			  break;
+			  case 3:
+			  TEST_Number_Character(0);
+			  break;
+			  case 4:
+			  TEST_Chinese(0);
+			  break;
+			  case 5:
+			  TEST_BMP();
+			  break;
+
+			  default:
+			  {
+			  run_status = 0;
+			  OLED_Clear(1);
+			  }
+			  break;
+		  }
+
+	  }
 
   }
 }

@@ -53,9 +53,6 @@
   <hwConnections href="APPS/I2C_MASTER/v4_1_34/I2C_MASTER_0.app#//@connections.1"/>
   <hwConnections href="APPS/I2C_MASTER/v4_1_34/I2C_MASTER_0.app#//@connections.2"/>
   <hwConnections href="APPS/I2C_MASTER/v4_1_34/I2C_MASTER_0.app#//@connections.3"/>
-  <hwConnections href="APPS/I2C_MASTER/v4_1_34/I2C_MASTER_0.app#//@connections.7"/>
-  <hwConnections href="APPS/I2C_MASTER/v4_1_34/I2C_MASTER_0.app#//@connections.8"/>
-  <hwConnections href="APPS/I2C_MASTER/v4_1_34/I2C_MASTER_0.app#//@connections.9"/>
   <hwConnections href="APPS/I2C_MASTER/v4_1_34/I2C_MASTER_0.app#//@connections.10"/>
   <hwConnections href="APPS/I2C_MASTER/v4_1_34/I2C_MASTER_0.app#//@connections.11"/>
   <hwConnections href="APPS/I2C_MASTER/v4_1_34/I2C_MASTER_0.app#//@connections.12"/>

@@ -18,13 +18,13 @@
   <virtualSignals name="event_transmit_buffer" URI="http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_std_tx_int" hwSignal="transmit_buffer_int" hwResource="//@hwResources.0" required="false"/>
   <virtualSignals name="event_std_receive" URI="http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_std_rx_int" hwSignal="standard_receive_int" hwResource="//@hwResources.0" required="false"/>
   <virtualSignals name="event_alt_receive" URI="http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_alt_rx_int" hwSignal="alternate_receive_int" hwResource="//@hwResources.0" required="false"/>
-  <virtualSignals name="event_fifo_transmit" URI="http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_fifo_tx_int" hwSignal="standard_transmit_buffer_int" hwResource="//@hwResources.0"/>
-  <virtualSignals name="event_fifo_std_receive" URI="http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_fifo_rx_int" hwSignal="standard_receive_buffer_int" hwResource="//@hwResources.0"/>
-  <virtualSignals name="event_fifo_alt_receive" URI="http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_fifo_alt_rx_int" hwSignal="alternate_receive_buffer_int" hwResource="//@hwResources.0"/>
+  <virtualSignals name="event_fifo_transmit" URI="http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_fifo_tx_int" hwSignal="standard_transmit_buffer_int" hwResource="//@hwResources.0" visible="true"/>
+  <virtualSignals name="event_fifo_std_receive" URI="http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_fifo_rx_int" hwSignal="standard_receive_buffer_int" hwResource="//@hwResources.0" visible="true"/>
+  <virtualSignals name="event_fifo_alt_receive" URI="http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_fifo_alt_rx_int" hwSignal="alternate_receive_buffer_int" hwResource="//@hwResources.0" visible="true"/>
   <virtualSignals name="event_protocol" URI="http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_proto_specfic_int" hwSignal="protocol_specific_int" hwResource="//@hwResources.0"/>
-  <virtualSignals name="sr_transmit" URI="http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_tx_int" hwSignal="signal_in" hwResource="//@hwResources.1"/>
-  <virtualSignals name="sr_receive" URI="http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_rx_int" hwSignal="signal_in" hwResource="//@hwResources.2"/>
-  <virtualSignals name="sr_protocol_events" URI="http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_error_int" hwSignal="signal_in" hwResource="//@hwResources.3" required="false"/>
+  <virtualSignals name="sr_transmit" URI="http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_tx_int" hwSignal="signal_in" hwResource="//@hwResources.1" required="false"/>
+  <virtualSignals name="sr_receive" URI="http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_rx_int" hwSignal="signal_in" hwResource="//@hwResources.2" required="false"/>
+  <virtualSignals name="sr_protocol_events" URI="http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_error_int" hwSignal="signal_in" hwResource="//@hwResources.3"/>
   <virtualSignals name="SDA_signal" URI="http://resources/4.1.34/app/I2C_MASTER/0/__pin_vs_i2c_sdapad" hwSignal="pin" hwResource="//@hwResources.10"/>
   <virtualSignals name="SCL_signal" URI="http://resources/4.1.34/app/I2C_MASTER/0/__pin_vs_i2c_sclpad" hwSignal="pin" hwResource="//@hwResources.11"/>
   <requiredApps URI="http://resources/4.1.34/app/I2C_MASTER/0/appres_clk_xmc1" requiredAppName="CLOCK_XMC1" requiringMode="SHARABLE">
@@ -36,13 +36,11 @@
   <hwResources name="Channel" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_usic_channel" resourceGroupUri="peripheral/usic/*/channel/*" mResGrpUri="peripheral/usic/*/channel/*">
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/usic0/usic0_0.dd#//@provided.0"/>
   </hwResources>
-  <hwResources name="NVIC Node Tx" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_nvic_node_i2c_tx" resourceGroupUri="peripheral/cpu/0/nvic/interrupt/*" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/cpu/cpu_0.dd#//@provided.5"/>
-  </hwResources>
-  <hwResources name="NVIC Node Rx" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_nvic_node_i2c_rx" resourceGroupUri="peripheral/cpu/0/nvic/interrupt/*" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*">
+  <hwResources name="NVIC Node Tx" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_nvic_node_i2c_tx" resourceGroupUri="" required="false" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*"/>
+  <hwResources name="NVIC Node Rx" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_nvic_node_i2c_rx" resourceGroupUri="" required="false" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*"/>
+  <hwResources name="NVIC Node Error" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_nvic_node_i2c_error" resourceGroupUri="peripheral/cpu/0/nvic/interrupt/*" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*">
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/cpu/cpu_0.dd#//@provided.0"/>
   </hwResources>
-  <hwResources name="NVIC Node Error" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_nvic_node_i2c_error" resourceGroupUri="" required="false" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*"/>
   <hwResources name="SDA" URI="http://resources/4.1.34/app/I2C_MASTER/0/hwres_i2c_sda" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/port2/port2_2.dd#//@provided.0"/>
   </hwResources>
@@ -80,9 +78,9 @@
   <connections URI="http://resources/4.1.34/app/I2C_MASTER/0/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_std_tx_int/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_tx_int" systemDefined="true" sourceSignal="event_transmit_buffer" targetSignal="sr_transmit" required="false" srcVirtualSignal="//@virtualSignals.14" targetVirtualSignal="//@virtualSignals.21"/>
   <connections URI="http://resources/4.1.34/app/I2C_MASTER/0/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_std_rx_int/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_rx_int" systemDefined="true" sourceSignal="event_std_receive" targetSignal="sr_receive" required="false" srcVirtualSignal="//@virtualSignals.15" targetVirtualSignal="//@virtualSignals.22"/>
   <connections URI="http://resources/4.1.34/app/I2C_MASTER/0/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_alt_rx_int/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_rx_int" systemDefined="true" sourceSignal="event_alt_receive" targetSignal="sr_receive" required="false" srcVirtualSignal="//@virtualSignals.16" targetVirtualSignal="//@virtualSignals.22"/>
-  <connections URI="http://resources/4.1.34/app/I2C_MASTER/0/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_fifo_tx_int/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_tx_int" systemDefined="true" sourceSignal="event_fifo_transmit" targetSignal="sr_transmit" srcVirtualSignal="//@virtualSignals.17" targetVirtualSignal="//@virtualSignals.21"/>
-  <connections URI="http://resources/4.1.34/app/I2C_MASTER/0/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_fifo_rx_int/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_rx_int" systemDefined="true" sourceSignal="event_fifo_std_receive" targetSignal="sr_receive" srcVirtualSignal="//@virtualSignals.18" targetVirtualSignal="//@virtualSignals.22"/>
-  <connections URI="http://resources/4.1.34/app/I2C_MASTER/0/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_fifo_alt_rx_int/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_rx_int" systemDefined="true" sourceSignal="event_fifo_alt_receive" targetSignal="sr_receive" srcVirtualSignal="//@virtualSignals.19" targetVirtualSignal="//@virtualSignals.22"/>
+  <connections URI="http://resources/4.1.34/app/I2C_MASTER/0/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_fifo_tx_int/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_tx_int" systemDefined="true" sourceSignal="event_fifo_transmit" targetSignal="sr_transmit" required="false" srcVirtualSignal="//@virtualSignals.17" targetVirtualSignal="//@virtualSignals.21"/>
+  <connections URI="http://resources/4.1.34/app/I2C_MASTER/0/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_fifo_rx_int/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_rx_int" systemDefined="true" sourceSignal="event_fifo_std_receive" targetSignal="sr_receive" required="false" srcVirtualSignal="//@virtualSignals.18" targetVirtualSignal="//@virtualSignals.22"/>
+  <connections URI="http://resources/4.1.34/app/I2C_MASTER/0/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_fifo_alt_rx_int/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_rx_int" systemDefined="true" sourceSignal="event_fifo_alt_receive" targetSignal="sr_receive" required="false" srcVirtualSignal="//@virtualSignals.19" targetVirtualSignal="//@virtualSignals.22"/>
   <connections URI="http://resources/4.1.34/app/I2C_MASTER/0/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_proto_specfic_int/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_error_int" systemDefined="true" sourceSignal="event_protocol" targetSignal="sr_protocol_events" srcVirtualSignal="//@virtualSignals.20" targetVirtualSignal="//@virtualSignals.23"/>
   <connections URI="http://resources/4.1.34/app/I2C_MASTER/0/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_sdapad/http://resources/4.1.34/app/I2C_MASTER/0/__pin_vs_i2c_sdapad" systemDefined="true" sourceSignal="sda_pin" targetSignal="SDA_signal" srcVirtualSignal="//@virtualSignals.8" targetVirtualSignal="//@virtualSignals.24"/>
   <connections URI="http://resources/4.1.34/app/I2C_MASTER/0/http://resources/4.1.34/app/I2C_MASTER/0/__pin_vs_i2c_sdapad/http://resources/4.1.34/app/I2C_MASTER/0/vs_i2c_sdapad" systemDefined="true" sourceSignal="SDA_signal" targetSignal="sda_pin" srcVirtualSignal="//@virtualSignals.24" targetVirtualSignal="//@virtualSignals.8"/>

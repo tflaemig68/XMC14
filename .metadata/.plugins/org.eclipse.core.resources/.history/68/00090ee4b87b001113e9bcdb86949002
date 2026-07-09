@@ -1,0 +1,189 @@
+/***************************************************************************************************
+  * @attention
+  *
+  * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+  * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
+  * TIME. AS A RESULT, QD electronic SHALL NOT BE HELD LIABLE FOR ANY
+  * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
+  * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
+  * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+****************************************************************************************************/		
+#include "stdlib.h"
+#include "stdio.h"
+#include "stdint.h"
+#include "oled.h"
+#include "gui.h"
+#include "test.h"
+#include "bmp.h"
+#include "DAVE.h" //only for __NOP()
+
+/********************************************************************************
+  function: Delay function
+  note:
+ delay_ms(xms) : Delay x ms
+ *******************************************************************************/
+void delay_ms(uint16_t xms)
+{
+	extern volatile uint32_t SysTickCounter;
+	uint32_t start= SysTickCounter;
+	while((SysTickCounter - start) < (uint32_t)(xms))
+	{
+		__NOP();
+	}
+}
+
+
+
+/*****************************************************************************
+ * @name       :void TEST_MainPage(void)
+ * @date       :2018-08-27 
+ * @function   :Drawing the main Interface of the Comprehensive Test Program
+ * @parameters :None
+ * @retvalue   :None
+******************************************************************************/
+void TEST_MainPage(void)
+{	
+	GUI_ShowString(37,0,"OLED TEST",8,1);
+	GUI_ShowString(25,1,"0.91\" SSD1306",8,1);
+	GUI_ShowString(46,2,"32X128",8,1);
+	GUI_ShowString(19,3,"www.lcdwiki.com",8,1);
+}
+
+/*****************************************************************************
+ * @name       :void Test_Color(void)
+ * @date       :2018-08-27 
+ * @function   :Color fill test(white,black)
+ * @parameters :None
+ * @retvalue   :None
+******************************************************************************/
+void Test_Color(uint16_t mode)
+{
+	 static uint16_t imode = 0;
+	 if (mode > 0) imode = mode;
+	 switch (++imode)
+	 {
+	 	 case 1:
+	     {
+		 GUI_Fill(0,0,WIDTH-1,7,0);
+		 GUI_ShowString(10,1,"BLACK",16,1);
+	     }
+	     break;
+	 	 case 2:
+	 	 {
+			 GUI_Fill(0,0,WIDTH-1,7,1);
+			 GUI_ShowString(10,1,"WHITE",16,0);
+	 	 }
+	 	 break;
+	 	 default:
+	 		 imode = 0;
+	 		 break;
+
+	 }
+}
+
+/*****************************************************************************
+ * @name       :void TEST_English(void)
+ * @date       :2018-08-27 
+ * @function   :English display test
+ * @parameters :None
+ * @retvalue   :None
+******************************************************************************/
+void TEST_English(uint16_t mode)
+{
+	 static uint16_t imode = 0;
+	 if (mode > 0) imode = mode;
+	 switch (++imode)
+	 {
+		 case 1:
+		 {
+			 GUI_ShowString(0,1,"6x8:abcdefghijklmnopqrstuvwxyz",8,1);
+		 }
+		 break;
+		 case 2:
+		 {
+			 GUI_ShowString(0,0,"8x16:abcdefghijklmnopqrstuvwxyz",16,1);
+		 }
+		 break;
+		 case 3:
+		 {
+			 OLED_Clear(0);
+			 GUI_ShowString(0,1,"6x8:ABCDEFGHIJKLMNOPQRSTUVWXYZ",8,1);
+		 }
+		 break;
+		 case 4:
+		 {
+			 GUI_ShowString(0,0,"8x16:ABCDEFGHIJKLMNOPQRSTUVWXYZ",16,1);
+		 }
+		 break;
+		 default:
+		 imode = 0;
+		 break;
+	 }
+
+}
+
+/*****************************************************************************
+ * @name       :void TEST_Number_Character(void) 
+ * @date       :2018-08-27 
+ * @function   :number and character display test
+ * @parameters :None
+ * @retvalue   :None
+******************************************************************************/
+void TEST_Number_Character(uint16_t mode)
+{
+	GUI_Fill(0,0,WIDTH-1,1,0);
+	GUI_ShowString(0,0,"6x8:!\"#$%&'()*+,-./:;<=>?@[]\\^_`~{}|",8,1);
+	GUI_ShowNum(68,1,1234567890,10,8,1);
+	GUI_Fill(0,2,WIDTH-1,3,1);
+	GUI_ShowString(0,2,"6x8:!\"#$%&'()*+,-./:;<=>?@[]\\^_`~{}|",8,0);
+	GUI_ShowNum(68,3,1234567890,10,8,0);
+	delay_ms(1000);
+	OLED_Clear(0); 
+  GUI_ShowString(0,0,"8x16:!\"#$%&'()*+,-./:;<=>?@[]\\^_`~{}|",16,1);
+	GUI_ShowNum(48,2,1234567890,10,16,1);
+	delay_ms(1500);
+	OLED_Clear(0);
+}
+
+/*****************************************************************************
+ * @name       :void TEST_Chinese(void)
+ * @date       :2018-08-27
+ * @function   :chinese display test
+ * @parameters :None
+ * @retvalue   :None
+******************************************************************************/
+void TEST_Chinese(uint16_t mode)
+{	
+	GUI_ShowString(45,0,"16x16",8,1);
+	GUI_ShowCHinese(16,2,16,"ȫ�����Ӽ���",1);
+	delay_ms(1000);
+	GUI_Fill(0,0,WIDTH-1,3,1);
+	GUI_ShowString(45,0,"16x16",8,0);
+	GUI_ShowCHinese(16,2,16,"ȫ�����Ӽ���",0);
+	delay_ms(1000);
+	OLED_Clear(0);
+	GUI_ShowString(45,0,"24x24",8,1);
+	GUI_ShowCHinese(16,1,24,"ȫ������",1);
+	delay_ms(1000);
+	OLED_Clear(0);
+	GUI_ShowCHinese(0,0,32,"ȫ������",1);	
+  delay_ms(1000);
+	OLED_Clear(0);
+}
+
+/*****************************************************************************
+ * @name       :void TEST_BMP(void)
+ * @date       :2018-08-27 
+ * @function   :BMP monochromatic picture display test
+ * @parameters :None
+ * @retvalue   :None
+******************************************************************************/
+void TEST_BMP(void)
+{
+	char* pic = &BMP2[0];
+	GUI_DrawBMP(0,0,128,32, pic, 1);
+	//GUI_DrawBMP(0,0,128,32, BMP3, 1);
+	//delay_ms(1000);
+	//GUI_DrawBMP(0,0,128,32, BMP4, 1);
+	//delay_ms(1000);
+}

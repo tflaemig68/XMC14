@@ -9,10 +9,11 @@
 
 
 #include "DAVE.h"                 //Declarations from DAVE Code Generation (includes SFR declaration)
-//#include "ssd1306.h"
 #include "oled.h"
 #include "gui.h"
 #include "test.h"
+
+//#define PWM_on  //		activation PWM_0 for Debug of 10ms Task on Pin 0.5
 
 
 #define milliSec 1000U
@@ -42,9 +43,11 @@ void Error(int32_t ErrNo)
 
 void Task10ms(void)
 {
+#ifdef PWM_on
 	PWM_SetDutyCycle(&PWM_0, (uint32_t) 10*(SysTickCounter % 1000U)); // set duty 10000 = 100% cycle to modulo SysTickCounter per sec
 	//I2C_MASTER_Transmit(&I2C_MASTER_0,true,SSD1306_ADDR,mem_address,1,true);
 	   // while(I2C_MASTER_IsTxBusy(&I2C_MASTER_0));
+#endif
 }
 
 void Task100ms(void)
@@ -144,6 +147,9 @@ int main(void)
   OLED_Clear(0);
   //TEST_MainPage();
 
+#ifndef PWM_on
+ PWM_Stop(&PWM_0);
+#endif
 
   /* Placeholder for user application code. The while loop below can be replaced with user application code. */
   while(1U)
@@ -154,7 +160,7 @@ int main(void)
 		  unsigned int disp_Time = (SysTickCounter/1000)%1000000;
 		  snprintf(str_time, sizeof(str_time), "%6d", disp_Time);
 		  //		  sprintf(str_time,"%6u/n", disp_Time);
-		  GUI_ShowString((u8)90,(u8)3,(char*)str_time,(u8)8,(u8)1);
+		  GUI_ShowString((u8)90,(u8)(OLED_HEIGHT/8)-1,(char*)str_time,(u8)8,(u8)1);
 		  run1sec -=1;
 	  }
 

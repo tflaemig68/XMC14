@@ -799,7 +799,7 @@
   64:../Libraries/OLED/test.c **** 	 {
   65:../Libraries/OLED/test.c **** 	 	 case 1:
   66:../Libraries/OLED/test.c **** 	     {
-  67:../Libraries/OLED/test.c **** 		 GUI_Fill(0,0,WIDTH-1,7,0);
+  67:../Libraries/OLED/test.c **** 		 GUI_Fill(0,0,OLED_WIDTH-1,7,0);
  731              	 .loc 1 67 0
  732 0036 0023     	 mov r3,#0
  733 0038 0093     	 str r3,[sp]
@@ -824,7 +824,7 @@
  749              	.L13:
   71:../Libraries/OLED/test.c **** 	 	 case 2:
   72:../Libraries/OLED/test.c **** 	 	 {
-  73:../Libraries/OLED/test.c **** 			 GUI_Fill(0,0,WIDTH-1,7,1);
+  73:../Libraries/OLED/test.c **** 			 GUI_Fill(0,0,OLED_WIDTH-1,7,1);
  750              	 .loc 1 73 0
  751 0058 0123     	 mov r3,#1
  752 005a 0093     	 str r3,[sp]
@@ -1148,7 +1148,7 @@
  137:../Libraries/OLED/test.c **** 	 {
  138:../Libraries/OLED/test.c **** 		 case 1:
  139:../Libraries/OLED/test.c **** 		 {
- 140:../Libraries/OLED/test.c **** 			GUI_Fill(0,0,WIDTH-1,1,0);
+ 140:../Libraries/OLED/test.c **** 			GUI_Fill(0,0,OLED_WIDTH-1,1,0);
  987              	 .loc 1 140 0
  988 0038 0023     	 mov r3,#0
  989 003a 0093     	 str r3,[sp]
@@ -1177,7 +1177,7 @@
  1010 0064 0121     	 mov r1,#1
  1011 0066 0A23     	 mov r3,#10
  1012 0068 FFF7FEFF 	 bl GUI_ShowNum
- 143:../Libraries/OLED/test.c **** 			GUI_Fill(0,2,WIDTH-1,3,1);
+ 143:../Libraries/OLED/test.c **** 			GUI_Fill(0,2,OLED_WIDTH-1,3,1);
  1013              	 .loc 1 143 0
  1014 006c 0123     	 mov r3,#1
  1015 006e 0093     	 str r3,[sp]
@@ -1408,7 +1408,7 @@
  1190              	.L42:
  184:../Libraries/OLED/test.c **** 		 case 2:
  185:../Libraries/OLED/test.c **** 		 {
- 186:../Libraries/OLED/test.c **** 			GUI_Fill(0,0,WIDTH-1,3,1);
+ 186:../Libraries/OLED/test.c **** 			GUI_Fill(0,0,OLED_WIDTH-1,3,1);
  1191              	 .loc 1 186 0
  1192 006c 0123     	 mov r3,#1
  1193 006e 0093     	 str r3,[sp]

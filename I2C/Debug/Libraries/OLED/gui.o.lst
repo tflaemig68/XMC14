@@ -3157,8 +3157,8 @@
   17:../Libraries/OLED/gui.c ****  * @name       :void GUI_Fill(u8 sx,u8 sy,u8 ex,u8 ey,u8 color)
   18:../Libraries/OLED/gui.c ****  * @date       :2018-08-27 
   19:../Libraries/OLED/gui.c ****  * @function   :fill the specified area
-  20:../Libraries/OLED/gui.c ****  * @parameters :sx:the bebinning x coordinate of the specified area
-  21:../Libraries/OLED/gui.c ****                 sy:the bebinning y coordinate of the specified area��
+  20:../Libraries/OLED/gui.c ****  * @parameters :sx:the beginning x coordinate of the specified area
+  21:../Libraries/OLED/gui.c ****                 sy:the beginning y coordinate of the specified area��
   22:../Libraries/OLED/gui.c **** 								   it must be set 0~3
   23:../Libraries/OLED/gui.c **** 								ex:the ending x coordinate of the specified area
   24:../Libraries/OLED/gui.c **** 								ey:the ending y coordinate of the specified area,
@@ -3420,7 +3420,7 @@
  3357 0044 1278     	 ldrb r2,[r2]
  3358 0046 203A     	 sub r2,r2,#32
  3359 0048 1A70     	 strb r2,[r3]
-  73:../Libraries/OLED/gui.c **** 		if(x>WIDTH-1)
+  73:../Libraries/OLED/gui.c **** 		if(x>OLED_WIDTH-1)
  3360              	 .loc 1 73 0
  3361 004a FB1D     	 add r3,r7,#7
  3362 004c 1B78     	 ldrb r3,[r3]
@@ -5236,7 +5236,7 @@
  4843 0086 1278     	 ldrb r2,[r2]
  4844 0088 8A18     	 add r2,r1,r2
  4845 008a 1A70     	 strb r2,[r3]
- 390:../Libraries/OLED/gui.c **** 		if(x>WIDTH-hsize)
+ 390:../Libraries/OLED/gui.c **** 		if(x>OLED_WIDTH-hsize)
  4846              	 .loc 1 390 0
  4847 008c FB1D     	 add r3,r7,#7
  4848 008e 1A78     	 ldrb r2,[r3]
@@ -5342,7 +5342,7 @@
  4926 0022 0A1C     	 add r2,r1,#0
  4927 0024 1A70     	 strb r2,[r3]
  414:../Libraries/OLED/gui.c ****  u8 i,j;
- 415:../Libraries/OLED/gui.c ****  u8 dat[WIDTH];
+ 415:../Libraries/OLED/gui.c ****  u8 dat[OLED_WIDTH];
  416:../Libraries/OLED/gui.c ****  for(i=0;i<(height+7)/8;i++)
  4928              	 .loc 1 416 0
  4929 0026 8F23     	 mov r3,#143

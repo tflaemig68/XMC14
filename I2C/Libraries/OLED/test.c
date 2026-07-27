@@ -64,13 +64,13 @@ void Test_Color(uint16_t mode)
 	 {
 	 	 case 1:
 	     {
-		 GUI_Fill(0,0,WIDTH-1,7,0);
+		 GUI_Fill(0,0,OLED_WIDTH-1,7,0);
 		 GUI_ShowString(10,1,"BLACK",16,1);
 	     }
 	     break;
 	 	 case 2:
 	 	 {
-			 GUI_Fill(0,0,WIDTH-1,7,1);
+			 GUI_Fill(0,0,OLED_WIDTH-1,7,1);
 			 GUI_ShowString(10,1,"WHITE",16,0);
 	 	 }
 	 	 break;
@@ -137,10 +137,10 @@ void TEST_Number_Character(uint16_t mode)
 	 {
 		 case 1:
 		 {
-			GUI_Fill(0,0,WIDTH-1,1,0);
+			GUI_Fill(0,0,OLED_WIDTH-1,1,0);
 			GUI_ShowString(0,0,"6x8:!\"#$%&'()*+,-./:;<=>?@[]\\^_`~{}|",8,1);
 			GUI_ShowNum(68,1,1234567890,10,8,1);
-			GUI_Fill(0,2,WIDTH-1,3,1);
+			GUI_Fill(0,2,OLED_WIDTH-1,3,1);
 			GUI_ShowString(0,2,"6x8:!\"#$%&'()*+,-./:;<=>?@[]\\^_`~{}|",8,0);
 			GUI_ShowNum(68,3,1234567890,10,8,0);
 		 }
@@ -183,7 +183,7 @@ void TEST_Chinese(uint16_t mode)
 		 break;
 		 case 2:
 		 {
-			GUI_Fill(0,0,WIDTH-1,3,1);
+			GUI_Fill(0,0,OLED_WIDTH-1,3,1);
 			GUI_ShowString(45,0,"16x16",8,0);
 			GUI_ShowCHinese(16,2,16,"ȫ�����Ӽ���",0);
 		 }

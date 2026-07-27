@@ -17,8 +17,8 @@
  * @name       :void GUI_Fill(u8 sx,u8 sy,u8 ex,u8 ey,u8 color)
  * @date       :2018-08-27 
  * @function   :fill the specified area
- * @parameters :sx:the bebinning x coordinate of the specified area
-                sy:the bebinning y coordinate of the specified area��
+ * @parameters :sx:the beginning x coordinate of the specified area
+                sy:the beginning y coordinate of the specified area��
 								   it must be set 0~3
 								ex:the ending x coordinate of the specified area
 								ey:the ending y coordinate of the specified area,
@@ -70,7 +70,7 @@ void GUI_ShowChar(u8 x,u8 y,u8 chr,u8 Char_Size,u8 mode)
 	  unsigned char c=0,i=0,j=0;
 	  u8 dat[8];
 		c=chr-' ';//�õ�ƫ�ƺ��ֵ			
-		if(x>WIDTH-1)
+		if(x>OLED_WIDTH-1)
 		{
 			x=0;
 			y=y+2;
@@ -387,7 +387,7 @@ void GUI_ShowCHinese(u8 x,u8 y,u8 hsize,char *str,u8 mode)
 			return;
 		}
 		x+=hsize;
-		if(x>WIDTH-hsize)
+		if(x>OLED_WIDTH-hsize)
 		{
 			x=0;
 			y+=hsize/8;
@@ -412,7 +412,7 @@ void GUI_ShowCHinese(u8 x,u8 y,u8 hsize,char *str,u8 mode)
 void GUI_DrawBMP(u8 x,u8 y,u8 width, u8 height, char* BMP)
 { 	
  u8 i,j;
- u8 dat[WIDTH];
+ u8 dat[OLED_WIDTH];
  for(i=0;i<(height+7)/8;i++)
  {
 		OLED_Set_Pos(x,y+i);

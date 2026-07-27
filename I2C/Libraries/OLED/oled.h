@@ -33,14 +33,26 @@
 //#include "sys.h"
  
 //-------------- OLED ---------------------
-#define PAGE_SIZE    8
-#define XLevelL		   0x00
-#define XLevelH		   0x10
+#define OLED_SSD1306
+#define OLED_WIDTH 	     128
+#define OLED_HEIGHT 	  64
+//#define OLED_HEIGHT 	  32  	// Half Height Display
+
+#if OLED_HEIGHT == 32
+  #define OLED_PAGES 4
+#elif OLED_HEIGHT == 64
+  #define OLED_PAGES 8
+#endif
+
+#define OLED_8Bit_ADDR	 0x78
+
+
+
+#define XLevelL		 0x00
+#define XLevelH		 0x10
 #define YLevel       0xB0
 #define	Brightness	 0xFF 
-#define WIDTH 	     128
-#define HEIGHT 	     32	
-#define OLED_8Bit_ADDR		 0x78
+
 
 #define OLED_CMD     0U	//
 #define OLED_DATA    1U	//д����

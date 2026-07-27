@@ -167,7 +167,7 @@ void OLED_Clear(unsigned dat)
 	{
 		color = 0;
 	}
-	for(i=0;i<(PAGE_SIZE/2);i++)  
+	for(i=0;i<(OLED_PAGES);i++)
 	{  
 
 
@@ -179,7 +179,7 @@ void OLED_Clear(unsigned dat)
 		DATA[2] = XLevelH;
 		OLED_WriteCmdS(DATA, length);
 
-		for(n=0;n<WIDTH;n++)
+		for(n=0;n<OLED_WIDTH;n++)
 		{
 			OLED_WriteData(color);
 		}
@@ -209,16 +209,21 @@ void OLED_Init(void)
 	0xFF,//--128
 	0xA1,//set segment remap
 	0xA6,//--normal / reverse
-	0xA8,//--set multiplex ratio(1 to 64)
-	0x1F,
-	0xD3,//-set display offset
-	0x00,
+#if OLED_HEIGHT == 32
+	0xA8,0x1F,   //--set multiplex ratio(1 to 64)
+#elif OLED_HEIGHT == 64
+	0xA8,0x3F,   //--set multiplex ratio(1 to 64)
+#endif
+	0xD3,0x00,  //-set display offset
 	0xD5,//set osc division
 	0xF0,
 	0xD9,//Set Pre-Charge Period
 	0x22,
-	0xDA,//set com pin configuartion
-	0x02,
+#if OLED_HEIGHT == 32
+	0xDA, 0x02,   //set com pin configuartion
+#elif OLED_HEIGHT == 64
+	0xDA, 0x12,   //set com pin configuartion
+#endif
 	0xDB,//set Vcomh
 	0x49,
 	0x8D,//set charge pump enable
@@ -228,7 +233,6 @@ void OLED_Init(void)
 	//OLED_Display_On(); // power on
 	unsigned length = sizeof(Data);
 	OLED_WriteCmdS(Data, length);
-
 }
 
 

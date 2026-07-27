@@ -1,4 +1,4 @@
-activeproject.background=LED
+activeproject.background=I2C
 activeproject.background.color=255,255,255
 com.ifx.davex.ce.ui.views.linkbutton=true
 com.ifx.davex.enable.log=false

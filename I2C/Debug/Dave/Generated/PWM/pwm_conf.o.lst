@@ -22,7 +22,7 @@
   24 0001 00       	 .byte 0
   25 0002 00       	 .byte 0
   26 0003 00       	 .byte 0
-  27 0004 03       	 .byte 3
+  27 0004 02       	 .byte 2
   28 0005 00       	 .byte 0
   29 0006 0000     	 .space 2
   30              	 .global PWM_0_gpio_out_config
@@ -43,8 +43,8 @@
   49 000c 00000000 	 .word PWM_0_compare_config
   50 0010 00000440 	 .word 1074003968
   51 0014 00000000 	 .word PWM_0_gpio_out_config
-  52 0018 62460000 	 .word 18018
-  53 001c C38C0000 	 .word 36035
+  52 0018 C05D0000 	 .word 24000
+  53 001c 7FBB0000 	 .word 47999
   54 0020 88130000 	 .word 5000
   55 0024 05000000 	 .word 5
   56 0028 00       	 .byte 0

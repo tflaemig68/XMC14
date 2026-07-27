@@ -2599,7 +2599,7 @@
  466 0022 1A70     	 strb r2,[r3]
  467              	.L23:
  169:../Libraries/OLED/oled.c **** 	}
- 170:../Libraries/OLED/oled.c **** 	for(i=0;i<(PAGE_SIZE/2);i++)  
+ 170:../Libraries/OLED/oled.c **** 	for(i=0;i<(OLED_PAGES);i++)
  468              	 .loc 2 170 0
  469 0024 1723     	 mov r3,#23
  470 0026 FB18     	 add r3,r7,r3
@@ -2644,7 +2644,7 @@
  499 0056 191C     	 mov r1,r3
  500 0058 FFF7FEFF 	 bl OLED_WriteCmdS
  181:../Libraries/OLED/oled.c **** 
- 182:../Libraries/OLED/oled.c **** 		for(n=0;n<WIDTH;n++)
+ 182:../Libraries/OLED/oled.c **** 		for(n=0;n<OLED_WIDTH;n++)
  501              	 .loc 2 182 0
  502 005c 1623     	 mov r3,#22
  503 005e FB18     	 add r3,r7,r3
@@ -2693,7 +2693,7 @@
  540 009a 1723     	 mov r3,#23
  541 009c FB18     	 add r3,r7,r3
  542 009e 1B78     	 ldrb r3,[r3]
- 543 00a0 032B     	 cmp r3,#3
+ 543 00a0 072B     	 cmp r3,#7
  544 00a2 C4D9     	 bls .L27
  185:../Libraries/OLED/oled.c **** 		}
  186:../Libraries/OLED/oled.c **** 
@@ -2719,7 +2719,7 @@
  562 0006 A1       	 .byte -95
  563 0007 A6       	 .byte -90
  564 0008 A8       	 .byte -88
- 565 0009 1F       	 .byte 31
+ 565 0009 3F       	 .byte 63
  566 000a D3       	 .byte -45
  567 000b 00       	 .byte 0
  568 000c D5       	 .byte -43
@@ -2727,7 +2727,7 @@
  570 000e D9       	 .byte -39
  571 000f 22       	 .byte 34
  572 0010 DA       	 .byte -38
- 573 0011 02       	 .byte 2
+ 573 0011 12       	 .byte 18
  574 0012 DB       	 .byte -37
  575 0013 49       	 .byte 73
  576 0014 8D       	 .byte -115
@@ -2785,37 +2785,41 @@
  209:../Libraries/OLED/oled.c **** 	0xFF,//--128
  210:../Libraries/OLED/oled.c **** 	0xA1,//set segment remap
  211:../Libraries/OLED/oled.c **** 	0xA6,//--normal / reverse
- 212:../Libraries/OLED/oled.c **** 	0xA8,//--set multiplex ratio(1 to 64)
- 213:../Libraries/OLED/oled.c **** 	0x1F,
- 214:../Libraries/OLED/oled.c **** 	0xD3,//-set display offset
- 215:../Libraries/OLED/oled.c **** 	0x00,
- 216:../Libraries/OLED/oled.c **** 	0xD5,//set osc division
- 217:../Libraries/OLED/oled.c **** 	0xF0,
- 218:../Libraries/OLED/oled.c **** 	0xD9,//Set Pre-Charge Period
- 219:../Libraries/OLED/oled.c **** 	0x22,
- 220:../Libraries/OLED/oled.c **** 	0xDA,//set com pin configuartion
- 221:../Libraries/OLED/oled.c **** 	0x02,
- 222:../Libraries/OLED/oled.c **** 	0xDB,//set Vcomh
- 223:../Libraries/OLED/oled.c **** 	0x49,
- 224:../Libraries/OLED/oled.c **** 	0x8D,//set charge pump enable
- 225:../Libraries/OLED/oled.c **** 	0x14,
- 226:../Libraries/OLED/oled.c **** 	0xAF//--turn on oled panel
- 227:../Libraries/OLED/oled.c **** 	};
- 228:../Libraries/OLED/oled.c **** 	//OLED_Display_On(); // power on
- 229:../Libraries/OLED/oled.c **** 	unsigned length = sizeof(Data);
- 610              	 .loc 2 229 0
+ 212:../Libraries/OLED/oled.c **** #if OLED_HEIGHT == 32
+ 213:../Libraries/OLED/oled.c **** 	0xA8,0x1F,   //--set multiplex ratio(1 to 64)
+ 214:../Libraries/OLED/oled.c **** #elif OLED_HEIGHT == 64
+ 215:../Libraries/OLED/oled.c **** 	0xA8,0x3F,   //--set multiplex ratio(1 to 64)
+ 216:../Libraries/OLED/oled.c **** #endif
+ 217:../Libraries/OLED/oled.c **** 	0xD3,0x00,  //-set display offset
+ 218:../Libraries/OLED/oled.c **** 	0xD5,//set osc division
+ 219:../Libraries/OLED/oled.c **** 	0xF0,
+ 220:../Libraries/OLED/oled.c **** 	0xD9,//Set Pre-Charge Period
+ 221:../Libraries/OLED/oled.c **** 	0x22,
+ 222:../Libraries/OLED/oled.c **** #if OLED_HEIGHT == 32
+ 223:../Libraries/OLED/oled.c **** 	0xDA, 0x02,   //set com pin configuartion
+ 224:../Libraries/OLED/oled.c **** #elif OLED_HEIGHT == 64
+ 225:../Libraries/OLED/oled.c **** 	0xDA, 0x12,   //set com pin configuartion
+ 226:../Libraries/OLED/oled.c **** #endif
+ 227:../Libraries/OLED/oled.c **** 	0xDB,//set Vcomh
+ 228:../Libraries/OLED/oled.c **** 	0x49,
+ 229:../Libraries/OLED/oled.c **** 	0x8D,//set charge pump enable
+ 230:../Libraries/OLED/oled.c **** 	0x14,
+ 231:../Libraries/OLED/oled.c **** 	0xAF//--turn on oled panel
+ 232:../Libraries/OLED/oled.c **** 	};
+ 233:../Libraries/OLED/oled.c **** 	//OLED_Display_On(); // power on
+ 234:../Libraries/OLED/oled.c **** 	unsigned length = sizeof(Data);
+ 610              	 .loc 2 234 0
  611 001a 1723     	 mov r3,#23
  612 001c FB61     	 str r3,[r7,#28]
- 230:../Libraries/OLED/oled.c **** 	OLED_WriteCmdS(Data, length);
- 613              	 .loc 2 230 0
+ 235:../Libraries/OLED/oled.c **** 	OLED_WriteCmdS(Data, length);
+ 613              	 .loc 2 235 0
  614 001e 3A1D     	 add r2,r7,#4
  615 0020 FB69     	 ldr r3,[r7,#28]
  616 0022 101C     	 mov r0,r2
  617 0024 191C     	 mov r1,r3
  618 0026 FFF7FEFF 	 bl OLED_WriteCmdS
- 231:../Libraries/OLED/oled.c **** 
- 232:../Libraries/OLED/oled.c **** }
- 619              	 .loc 2 232 0
+ 236:../Libraries/OLED/oled.c **** }
+ 619              	 .loc 2 236 0
  620 002a BD46     	 mov sp,r7
  621 002c 08B0     	 add sp,sp,#32
  622              	 

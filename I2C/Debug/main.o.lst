@@ -440,22 +440,23 @@
    9:../main.c     **** 
   10:../main.c     **** 
   11:../main.c     **** #include "DAVE.h"                 //Declarations from DAVE Code Generation (includes SFR declaratio
-  12:../main.c     **** //#include "ssd1306.h"
-  13:../main.c     **** #include "oled.h"
-  14:../main.c     **** #include "gui.h"
-  15:../main.c     **** #include "test.h"
-  16:../main.c     **** 
+  12:../main.c     **** #include "oled.h"
+  13:../main.c     **** #include "gui.h"
+  14:../main.c     **** #include "test.h"
+  15:../main.c     **** 
+  16:../main.c     **** //#define PWM_on  //		activation PWM_0 for Debug of 10ms Task on Pin 0.5
   17:../main.c     **** 
-  18:../main.c     **** #define milliSec 1000U
-  19:../main.c     **** #define LED1 XMC_GPIO_PORT0, 7
-  20:../main.c     **** #define LED2 XMC_GPIO_PORT0, 6
-  21:../main.c     **** 
-  22:../main.c     **** volatile uint32_t SysTickCounter = 0;
-  23:../main.c     **** uint16_t run1sec = 0;
-  24:../main.c     **** 
-  25:../main.c     **** void LED_init(void)
-  26:../main.c     **** {
- 123              	 .loc 2 26 0
+  18:../main.c     **** 
+  19:../main.c     **** #define milliSec 1000U
+  20:../main.c     **** #define LED1 XMC_GPIO_PORT0, 7
+  21:../main.c     **** #define LED2 XMC_GPIO_PORT0, 6
+  22:../main.c     **** 
+  23:../main.c     **** volatile uint32_t SysTickCounter = 0;
+  24:../main.c     **** uint16_t run1sec = 0;
+  25:../main.c     **** 
+  26:../main.c     **** void LED_init(void)
+  27:../main.c     **** {
+ 123              	 .loc 2 27 0
  124              	 .cfi_startproc
  125 0000 80B5     	 push {r7,lr}
  126              	.LCFI6:
@@ -468,8 +469,8 @@
  133 0004 00AF     	 add r7,sp,#0
  134              	.LCFI8:
  135              	 .cfi_def_cfa_register 7
-  27:../main.c     **** 	XMC_GPIO_CONFIG_t gpio_config =
- 136              	 .loc 2 27 0
+  28:../main.c     **** 	XMC_GPIO_CONFIG_t gpio_config =
+ 136              	 .loc 2 28 0
  137 0006 3B1C     	 mov r3,r7
  138 0008 0022     	 mov r2,#0
  139 000a 1A60     	 str r2,[r3]
@@ -482,29 +483,29 @@
  146 0018 8022     	 mov r2,#128
  147 001a 5202     	 lsl r2,r2,#9
  148 001c 5A60     	 str r2,[r3,#4]
-  28:../main.c     ****     {
-  29:../main.c     ****        .mode = XMC_GPIO_MODE_OUTPUT_PUSH_PULL,
-  30:../main.c     ****        .output_level = XMC_GPIO_OUTPUT_LEVEL_LOW
-  31:../main.c     ****     };
-  32:../main.c     **** 
-  33:../main.c     ****    XMC_GPIO_Init(LED1, &gpio_config);
- 149              	 .loc 2 33 0
+  29:../main.c     ****     {
+  30:../main.c     ****        .mode = XMC_GPIO_MODE_OUTPUT_PUSH_PULL,
+  31:../main.c     ****        .output_level = XMC_GPIO_OUTPUT_LEVEL_LOW
+  32:../main.c     ****     };
+  33:../main.c     **** 
+  34:../main.c     ****    XMC_GPIO_Init(LED1, &gpio_config);
+ 149              	 .loc 2 34 0
  150 001e 084A     	 ldr r2,.L6
  151 0020 3B1C     	 mov r3,r7
  152 0022 101C     	 mov r0,r2
  153 0024 0721     	 mov r1,#7
  154 0026 1A1C     	 mov r2,r3
  155 0028 FFF7FEFF 	 bl XMC_GPIO_Init
-  34:../main.c     ****    XMC_GPIO_Init(LED2, &gpio_config);
- 156              	 .loc 2 34 0
+  35:../main.c     ****    XMC_GPIO_Init(LED2, &gpio_config);
+ 156              	 .loc 2 35 0
  157 002c 044A     	 ldr r2,.L6
  158 002e 3B1C     	 mov r3,r7
  159 0030 101C     	 mov r0,r2
  160 0032 0621     	 mov r1,#6
  161 0034 1A1C     	 mov r2,r3
  162 0036 FFF7FEFF 	 bl XMC_GPIO_Init
-  35:../main.c     **** }
- 163              	 .loc 2 35 0
+  36:../main.c     **** }
+ 163              	 .loc 2 36 0
  164 003a BD46     	 mov sp,r7
  165 003c 02B0     	 add sp,sp,#8
  166              	 
@@ -522,10 +523,10 @@
  179              	 .thumb_func
  181              	Error:
  182              	.LFB233:
-  36:../main.c     **** 
-  37:../main.c     **** void Error(int32_t ErrNo)
-  38:../main.c     **** {
- 183              	 .loc 2 38 0
+  37:../main.c     **** 
+  38:../main.c     **** void Error(int32_t ErrNo)
+  39:../main.c     **** {
+ 183              	 .loc 2 39 0
  184              	 .cfi_startproc
  185 0000 80B5     	 push {r7,lr}
  186              	.LCFI9:
@@ -539,14 +540,14 @@
  194              	.LCFI11:
  195              	 .cfi_def_cfa_register 7
  196 0006 7860     	 str r0,[r7,#4]
-  39:../main.c     **** 	XMC_GPIO_SetOutputHigh(LED2);
- 197              	 .loc 2 39 0
+  40:../main.c     **** 	XMC_GPIO_SetOutputHigh(LED2);
+ 197              	 .loc 2 40 0
  198 0008 034B     	 ldr r3,.L9
  199 000a 181C     	 mov r0,r3
  200 000c 0621     	 mov r1,#6
  201 000e FFF7FEFF 	 bl XMC_GPIO_SetOutputHigh
-  40:../main.c     **** }
- 202              	 .loc 2 40 0
+  41:../main.c     **** }
+ 202              	 .loc 2 41 0
  203 0012 BD46     	 mov sp,r7
  204 0014 02B0     	 add sp,sp,#8
  205              	 
@@ -557,642 +558,629 @@
  210 0018 00000440 	 .word 1074003968
  211              	 .cfi_endproc
  212              	.LFE233:
- 214              	 .global __aeabi_uidivmod
- 215              	 .section .text.Task10ms,"ax",%progbits
- 216              	 .align 2
- 217              	 .global Task10ms
- 218              	 .code 16
- 219              	 .thumb_func
- 221              	Task10ms:
- 222              	.LFB234:
-  41:../main.c     **** 
+ 214              	 .section .text.Task10ms,"ax",%progbits
+ 215              	 .align 2
+ 216              	 .global Task10ms
+ 217              	 .code 16
+ 218              	 .thumb_func
+ 220              	Task10ms:
+ 221              	.LFB234:
   42:../main.c     **** 
-  43:../main.c     **** void Task10ms(void)
-  44:../main.c     **** {
- 223              	 .loc 2 44 0
- 224              	 .cfi_startproc
- 225 0000 80B5     	 push {r7,lr}
- 226              	.LCFI12:
- 227              	 .cfi_def_cfa_offset 8
- 228              	 .cfi_offset 7,-8
- 229              	 .cfi_offset 14,-4
- 230 0002 00AF     	 add r7,sp,#0
- 231              	.LCFI13:
- 232              	 .cfi_def_cfa_register 7
-  45:../main.c     **** 	PWM_SetDutyCycle(&PWM_0, (uint32_t) 10*(SysTickCounter % 1000U)); // set duty 10000 = 100% cycle t
- 233              	 .loc 2 45 0
- 234 0004 0A4B     	 ldr r3,.L12
- 235 0006 1B68     	 ldr r3,[r3]
- 236 0008 181C     	 mov r0,r3
- 237 000a FA23     	 mov r3,#250
- 238 000c 9900     	 lsl r1,r3,#2
- 239 000e FFF7FEFF 	 bl __aeabi_uidivmod
- 240 0012 0B1C     	 mov r3,r1
- 241 0014 1A1C     	 mov r2,r3
- 242 0016 131C     	 mov r3,r2
- 243 0018 9B00     	 lsl r3,r3,#2
- 244 001a 9B18     	 add r3,r3,r2
- 245 001c 5B00     	 lsl r3,r3,#1
- 246 001e 1A1C     	 mov r2,r3
- 247 0020 044B     	 ldr r3,.L12+4
- 248 0022 181C     	 mov r0,r3
- 249 0024 111C     	 mov r1,r2
- 250 0026 FFF7FEFF 	 bl PWM_SetDutyCycle
-  46:../main.c     **** 	//I2C_MASTER_Transmit(&I2C_MASTER_0,true,SSD1306_ADDR,mem_address,1,true);
-  47:../main.c     **** 	   // while(I2C_MASTER_IsTxBusy(&I2C_MASTER_0));
-  48:../main.c     **** }
- 251              	 .loc 2 48 0
- 252 002a BD46     	 mov sp,r7
- 253              	 
- 254 002c 80BD     	 pop {r7,pc}
- 255              	.L13:
- 256 002e C046     	 .align 2
- 257              	.L12:
- 258 0030 00000000 	 .word SysTickCounter
- 259 0034 00000000 	 .word PWM_0
- 260              	 .cfi_endproc
- 261              	.LFE234:
- 263              	 .section .text.Task100ms,"ax",%progbits
- 264              	 .align 2
- 265              	 .global Task100ms
- 266              	 .code 16
- 267              	 .thumb_func
- 269              	Task100ms:
- 270              	.LFB235:
-  49:../main.c     **** 
-  50:../main.c     **** void Task100ms(void)
-  51:../main.c     **** {
- 271              	 .loc 2 51 0
- 272              	 .cfi_startproc
- 273 0000 80B5     	 push {r7,lr}
- 274              	.LCFI14:
- 275              	 .cfi_def_cfa_offset 8
- 276              	 .cfi_offset 7,-8
- 277              	 .cfi_offset 14,-4
- 278 0002 00AF     	 add r7,sp,#0
- 279              	.LCFI15:
- 280              	 .cfi_def_cfa_register 7
+  43:../main.c     **** 
+  44:../main.c     **** void Task10ms(void)
+  45:../main.c     **** {
+ 222              	 .loc 2 45 0
+ 223              	 .cfi_startproc
+ 224 0000 80B5     	 push {r7,lr}
+ 225              	.LCFI12:
+ 226              	 .cfi_def_cfa_offset 8
+ 227              	 .cfi_offset 7,-8
+ 228              	 .cfi_offset 14,-4
+ 229 0002 00AF     	 add r7,sp,#0
+ 230              	.LCFI13:
+ 231              	 .cfi_def_cfa_register 7
+  46:../main.c     **** #ifdef PWM_on
+  47:../main.c     **** 	PWM_SetDutyCycle(&PWM_0, (uint32_t) 10*(SysTickCounter % 1000U)); // set duty 10000 = 100% cycle t
+  48:../main.c     **** 	//I2C_MASTER_Transmit(&I2C_MASTER_0,true,SSD1306_ADDR,mem_address,1,true);
+  49:../main.c     **** 	   // while(I2C_MASTER_IsTxBusy(&I2C_MASTER_0));
+  50:../main.c     **** #endif
+  51:../main.c     **** }
+ 232              	 .loc 2 51 0
+ 233 0004 BD46     	 mov sp,r7
+ 234              	 
+ 235 0006 80BD     	 pop {r7,pc}
+ 236              	 .cfi_endproc
+ 237              	.LFE234:
+ 239              	 .section .text.Task100ms,"ax",%progbits
+ 240              	 .align 2
+ 241              	 .global Task100ms
+ 242              	 .code 16
+ 243              	 .thumb_func
+ 245              	Task100ms:
+ 246              	.LFB235:
   52:../main.c     **** 
-  53:../main.c     **** }
- 281              	 .loc 2 53 0
- 282 0004 BD46     	 mov sp,r7
- 283              	 
- 284 0006 80BD     	 pop {r7,pc}
- 285              	 .cfi_endproc
- 286              	.LFE235:
- 288              	 .section .text.Task1s,"ax",%progbits
- 289              	 .align 2
- 290              	 .global Task1s
- 291              	 .code 16
- 292              	 .thumb_func
- 294              	Task1s:
- 295              	.LFB236:
-  54:../main.c     **** 
-  55:../main.c     **** void Task1s(void)
-  56:../main.c     **** {
- 296              	 .loc 2 56 0
- 297              	 .cfi_startproc
- 298 0000 80B5     	 push {r7,lr}
- 299              	.LCFI16:
- 300              	 .cfi_def_cfa_offset 8
- 301              	 .cfi_offset 7,-8
- 302              	 .cfi_offset 14,-4
- 303 0002 00AF     	 add r7,sp,#0
- 304              	.LCFI17:
- 305              	 .cfi_def_cfa_register 7
-  57:../main.c     **** 	XMC_GPIO_ToggleOutput(LED1);
- 306              	 .loc 2 57 0
- 307 0004 064B     	 ldr r3,.L16
- 308 0006 181C     	 mov r0,r3
- 309 0008 0721     	 mov r1,#7
- 310 000a FFF7FEFF 	 bl XMC_GPIO_ToggleOutput
-  58:../main.c     **** 	run1sec++;
- 311              	 .loc 2 58 0
- 312 000e 054B     	 ldr r3,.L16+4
- 313 0010 1B88     	 ldrh r3,[r3]
- 314 0012 0133     	 add r3,r3,#1
- 315 0014 9AB2     	 uxth r2,r3
- 316 0016 034B     	 ldr r3,.L16+4
- 317 0018 1A80     	 strh r2,[r3]
-  59:../main.c     **** }
- 318              	 .loc 2 59 0
- 319 001a BD46     	 mov sp,r7
- 320              	 
- 321 001c 80BD     	 pop {r7,pc}
- 322              	.L17:
- 323 001e C046     	 .align 2
- 324              	.L16:
- 325 0020 00000440 	 .word 1074003968
- 326 0024 00000000 	 .word run1sec
- 327              	 .cfi_endproc
- 328              	.LFE236:
- 330              	 .section .text.milliSec_Handler,"ax",%progbits
- 331              	 .align 2
- 332              	 .global milliSec_Handler
- 333              	 .code 16
- 334              	 .thumb_func
- 336              	milliSec_Handler:
- 337              	.LFB237:
-  60:../main.c     **** 
-  61:../main.c     **** void milliSec_Handler(void)
-  62:../main.c     **** {
- 338              	 .loc 2 62 0
- 339              	 .cfi_startproc
- 340 0000 80B5     	 push {r7,lr}
- 341              	.LCFI18:
- 342              	 .cfi_def_cfa_offset 8
- 343              	 .cfi_offset 7,-8
- 344              	 .cfi_offset 14,-4
- 345 0002 00AF     	 add r7,sp,#0
- 346              	.LCFI19:
- 347              	 .cfi_def_cfa_register 7
-  63:../main.c     ****     SysTickCounter++;
- 348              	 .loc 2 63 0
- 349 0004 124B     	 ldr r3,.L22
- 350 0006 1B68     	 ldr r3,[r3]
- 351 0008 5A1C     	 add r2,r3,#1
- 352 000a 114B     	 ldr r3,.L22
- 353 000c 1A60     	 str r2,[r3]
-  64:../main.c     ****    //int32_t DutyPWM_0 = SysTickCounter % 1000; //Modulo 1000
-  65:../main.c     ****     if ((SysTickCounter % 10U) == 0)
- 354              	 .loc 2 65 0
- 355 000e 104B     	 ldr r3,.L22
- 356 0010 1B68     	 ldr r3,[r3]
- 357 0012 181C     	 mov r0,r3
- 358 0014 0A21     	 mov r1,#10
- 359 0016 FFF7FEFF 	 bl __aeabi_uidivmod
- 360 001a 0B1E     	 sub r3,r1,#0
- 361 001c 01D1     	 bne .L19
-  66:../main.c     ****     {
-  67:../main.c     ****     	Task10ms();
- 362              	 .loc 2 67 0
- 363 001e FFF7FEFF 	 bl Task10ms
- 364              	.L19:
-  68:../main.c     ****     }
-  69:../main.c     ****     if ((SysTickCounter % 100U) == 0)
- 365              	 .loc 2 69 0
- 366 0022 0B4B     	 ldr r3,.L22
- 367 0024 1B68     	 ldr r3,[r3]
- 368 0026 181C     	 mov r0,r3
- 369 0028 6421     	 mov r1,#100
- 370 002a FFF7FEFF 	 bl __aeabi_uidivmod
- 371 002e 0B1E     	 sub r3,r1,#0
- 372 0030 01D1     	 bne .L20
-  70:../main.c     ****     {
-  71:../main.c     ****       	Task100ms();
- 373              	 .loc 2 71 0
- 374 0032 FFF7FEFF 	 bl Task100ms
- 375              	.L20:
-  72:../main.c     ****     }
-  73:../main.c     ****     if ((SysTickCounter % 1000U) == 0)
- 376              	 .loc 2 73 0
- 377 0036 064B     	 ldr r3,.L22
- 378 0038 1B68     	 ldr r3,[r3]
- 379 003a 181C     	 mov r0,r3
- 380 003c FA23     	 mov r3,#250
- 381 003e 9900     	 lsl r1,r3,#2
- 382 0040 FFF7FEFF 	 bl __aeabi_uidivmod
- 383 0044 0B1E     	 sub r3,r1,#0
- 384 0046 01D1     	 bne .L18
-  74:../main.c     ****     {
-  75:../main.c     **** 		Task1s();
- 385              	 .loc 2 75 0
- 386 0048 FFF7FEFF 	 bl Task1s
- 387              	.L18:
-  76:../main.c     ****     }
-  77:../main.c     **** 
-  78:../main.c     **** }
- 388              	 .loc 2 78 0
- 389 004c BD46     	 mov sp,r7
- 390              	 
- 391 004e 80BD     	 pop {r7,pc}
- 392              	.L23:
- 393              	 .align 2
- 394              	.L22:
- 395 0050 00000000 	 .word SysTickCounter
- 396              	 .cfi_endproc
- 397              	.LFE237:
- 399              	 .section .text.NACK_Handler,"ax",%progbits
- 400              	 .align 2
- 401              	 .global NACK_Handler
- 402              	 .code 16
- 403              	 .thumb_func
- 405              	NACK_Handler:
- 406              	.LFB238:
-  79:../main.c     **** 
-  80:../main.c     **** void NACK_Handler(void)
-  81:../main.c     **** {
- 407              	 .loc 2 81 0
- 408              	 .cfi_startproc
- 409 0000 80B5     	 push {r7,lr}
- 410              	.LCFI20:
- 411              	 .cfi_def_cfa_offset 8
- 412              	 .cfi_offset 7,-8
- 413              	 .cfi_offset 14,-4
- 414 0002 00AF     	 add r7,sp,#0
- 415              	.LCFI21:
- 416              	 .cfi_def_cfa_register 7
-  82:../main.c     **** 	Error(1);
- 417              	 .loc 2 82 0
- 418 0004 0120     	 mov r0,#1
- 419 0006 FFF7FEFF 	 bl Error
-  83:../main.c     **** }
- 420              	 .loc 2 83 0
- 421 000a BD46     	 mov sp,r7
- 422              	 
- 423 000c 80BD     	 pop {r7,pc}
- 424              	 .cfi_endproc
- 425              	.LFE238:
- 427              	 .global __aeabi_uidiv
- 428 000e C046     	 .section .rodata
- 429              	 .align 2
- 430              	.LC9:
- 431 0000 25366400 	 .ascii "%6d\000"
- 432              	 .align 2
- 433              	.LC4:
- 434 0004 44484257 	 .ascii "DHBW Stuttgart\000"
- 434      20537475 
- 434      74746761 
- 434      727400
- 435 0013 00       	 .section .text.main,"ax",%progbits
- 436              	 .align 2
- 437              	 .global main
- 438              	 .code 16
- 439              	 .thumb_func
- 441              	main:
- 442              	.LFB239:
-  84:../main.c     **** 
-  85:../main.c     **** 
-  86:../main.c     **** 
-  87:../main.c     **** /**
+  53:../main.c     **** void Task100ms(void)
+  54:../main.c     **** {
+ 247              	 .loc 2 54 0
+ 248              	 .cfi_startproc
+ 249 0000 80B5     	 push {r7,lr}
+ 250              	.LCFI14:
+ 251              	 .cfi_def_cfa_offset 8
+ 252              	 .cfi_offset 7,-8
+ 253              	 .cfi_offset 14,-4
+ 254 0002 00AF     	 add r7,sp,#0
+ 255              	.LCFI15:
+ 256              	 .cfi_def_cfa_register 7
+  55:../main.c     **** 
+  56:../main.c     **** }
+ 257              	 .loc 2 56 0
+ 258 0004 BD46     	 mov sp,r7
+ 259              	 
+ 260 0006 80BD     	 pop {r7,pc}
+ 261              	 .cfi_endproc
+ 262              	.LFE235:
+ 264              	 .section .text.Task1s,"ax",%progbits
+ 265              	 .align 2
+ 266              	 .global Task1s
+ 267              	 .code 16
+ 268              	 .thumb_func
+ 270              	Task1s:
+ 271              	.LFB236:
+  57:../main.c     **** 
+  58:../main.c     **** void Task1s(void)
+  59:../main.c     **** {
+ 272              	 .loc 2 59 0
+ 273              	 .cfi_startproc
+ 274 0000 80B5     	 push {r7,lr}
+ 275              	.LCFI16:
+ 276              	 .cfi_def_cfa_offset 8
+ 277              	 .cfi_offset 7,-8
+ 278              	 .cfi_offset 14,-4
+ 279 0002 00AF     	 add r7,sp,#0
+ 280              	.LCFI17:
+ 281              	 .cfi_def_cfa_register 7
+  60:../main.c     **** 	XMC_GPIO_ToggleOutput(LED1);
+ 282              	 .loc 2 60 0
+ 283 0004 064B     	 ldr r3,.L14
+ 284 0006 181C     	 mov r0,r3
+ 285 0008 0721     	 mov r1,#7
+ 286 000a FFF7FEFF 	 bl XMC_GPIO_ToggleOutput
+  61:../main.c     **** 	run1sec++;
+ 287              	 .loc 2 61 0
+ 288 000e 054B     	 ldr r3,.L14+4
+ 289 0010 1B88     	 ldrh r3,[r3]
+ 290 0012 0133     	 add r3,r3,#1
+ 291 0014 9AB2     	 uxth r2,r3
+ 292 0016 034B     	 ldr r3,.L14+4
+ 293 0018 1A80     	 strh r2,[r3]
+  62:../main.c     **** }
+ 294              	 .loc 2 62 0
+ 295 001a BD46     	 mov sp,r7
+ 296              	 
+ 297 001c 80BD     	 pop {r7,pc}
+ 298              	.L15:
+ 299 001e C046     	 .align 2
+ 300              	.L14:
+ 301 0020 00000440 	 .word 1074003968
+ 302 0024 00000000 	 .word run1sec
+ 303              	 .cfi_endproc
+ 304              	.LFE236:
+ 306              	 .global __aeabi_uidivmod
+ 307              	 .section .text.milliSec_Handler,"ax",%progbits
+ 308              	 .align 2
+ 309              	 .global milliSec_Handler
+ 310              	 .code 16
+ 311              	 .thumb_func
+ 313              	milliSec_Handler:
+ 314              	.LFB237:
+  63:../main.c     **** 
+  64:../main.c     **** void milliSec_Handler(void)
+  65:../main.c     **** {
+ 315              	 .loc 2 65 0
+ 316              	 .cfi_startproc
+ 317 0000 80B5     	 push {r7,lr}
+ 318              	.LCFI18:
+ 319              	 .cfi_def_cfa_offset 8
+ 320              	 .cfi_offset 7,-8
+ 321              	 .cfi_offset 14,-4
+ 322 0002 00AF     	 add r7,sp,#0
+ 323              	.LCFI19:
+ 324              	 .cfi_def_cfa_register 7
+  66:../main.c     ****     SysTickCounter++;
+ 325              	 .loc 2 66 0
+ 326 0004 124B     	 ldr r3,.L20
+ 327 0006 1B68     	 ldr r3,[r3]
+ 328 0008 5A1C     	 add r2,r3,#1
+ 329 000a 114B     	 ldr r3,.L20
+ 330 000c 1A60     	 str r2,[r3]
+  67:../main.c     ****    //int32_t DutyPWM_0 = SysTickCounter % 1000; //Modulo 1000
+  68:../main.c     ****     if ((SysTickCounter % 10U) == 0)
+ 331              	 .loc 2 68 0
+ 332 000e 104B     	 ldr r3,.L20
+ 333 0010 1B68     	 ldr r3,[r3]
+ 334 0012 181C     	 mov r0,r3
+ 335 0014 0A21     	 mov r1,#10
+ 336 0016 FFF7FEFF 	 bl __aeabi_uidivmod
+ 337 001a 0B1E     	 sub r3,r1,#0
+ 338 001c 01D1     	 bne .L17
+  69:../main.c     ****     {
+  70:../main.c     ****     	Task10ms();
+ 339              	 .loc 2 70 0
+ 340 001e FFF7FEFF 	 bl Task10ms
+ 341              	.L17:
+  71:../main.c     ****     }
+  72:../main.c     ****     if ((SysTickCounter % 100U) == 0)
+ 342              	 .loc 2 72 0
+ 343 0022 0B4B     	 ldr r3,.L20
+ 344 0024 1B68     	 ldr r3,[r3]
+ 345 0026 181C     	 mov r0,r3
+ 346 0028 6421     	 mov r1,#100
+ 347 002a FFF7FEFF 	 bl __aeabi_uidivmod
+ 348 002e 0B1E     	 sub r3,r1,#0
+ 349 0030 01D1     	 bne .L18
+  73:../main.c     ****     {
+  74:../main.c     ****       	Task100ms();
+ 350              	 .loc 2 74 0
+ 351 0032 FFF7FEFF 	 bl Task100ms
+ 352              	.L18:
+  75:../main.c     ****     }
+  76:../main.c     ****     if ((SysTickCounter % 1000U) == 0)
+ 353              	 .loc 2 76 0
+ 354 0036 064B     	 ldr r3,.L20
+ 355 0038 1B68     	 ldr r3,[r3]
+ 356 003a 181C     	 mov r0,r3
+ 357 003c FA23     	 mov r3,#250
+ 358 003e 9900     	 lsl r1,r3,#2
+ 359 0040 FFF7FEFF 	 bl __aeabi_uidivmod
+ 360 0044 0B1E     	 sub r3,r1,#0
+ 361 0046 01D1     	 bne .L16
+  77:../main.c     ****     {
+  78:../main.c     **** 		Task1s();
+ 362              	 .loc 2 78 0
+ 363 0048 FFF7FEFF 	 bl Task1s
+ 364              	.L16:
+  79:../main.c     ****     }
+  80:../main.c     **** 
+  81:../main.c     **** }
+ 365              	 .loc 2 81 0
+ 366 004c BD46     	 mov sp,r7
+ 367              	 
+ 368 004e 80BD     	 pop {r7,pc}
+ 369              	.L21:
+ 370              	 .align 2
+ 371              	.L20:
+ 372 0050 00000000 	 .word SysTickCounter
+ 373              	 .cfi_endproc
+ 374              	.LFE237:
+ 376              	 .section .text.NACK_Handler,"ax",%progbits
+ 377              	 .align 2
+ 378              	 .global NACK_Handler
+ 379              	 .code 16
+ 380              	 .thumb_func
+ 382              	NACK_Handler:
+ 383              	.LFB238:
+  82:../main.c     **** 
+  83:../main.c     **** void NACK_Handler(void)
+  84:../main.c     **** {
+ 384              	 .loc 2 84 0
+ 385              	 .cfi_startproc
+ 386 0000 80B5     	 push {r7,lr}
+ 387              	.LCFI20:
+ 388              	 .cfi_def_cfa_offset 8
+ 389              	 .cfi_offset 7,-8
+ 390              	 .cfi_offset 14,-4
+ 391 0002 00AF     	 add r7,sp,#0
+ 392              	.LCFI21:
+ 393              	 .cfi_def_cfa_register 7
+  85:../main.c     **** 	Error(1);
+ 394              	 .loc 2 85 0
+ 395 0004 0120     	 mov r0,#1
+ 396 0006 FFF7FEFF 	 bl Error
+  86:../main.c     **** }
+ 397              	 .loc 2 86 0
+ 398 000a BD46     	 mov sp,r7
+ 399              	 
+ 400 000c 80BD     	 pop {r7,pc}
+ 401              	 .cfi_endproc
+ 402              	.LFE238:
+ 404              	 .global __aeabi_uidiv
+ 405 000e C046     	 .section .rodata
+ 406              	 .align 2
+ 407              	.LC8:
+ 408 0000 25366400 	 .ascii "%6d\000"
+ 409              	 .align 2
+ 410              	.LC2:
+ 411 0004 44484257 	 .ascii "DHBW Stuttgart\000"
+ 411      20537475 
+ 411      74746761 
+ 411      727400
+ 412 0013 00       	 .section .text.main,"ax",%progbits
+ 413              	 .align 2
+ 414              	 .global main
+ 415              	 .code 16
+ 416              	 .thumb_func
+ 418              	main:
+ 419              	.LFB239:
+  87:../main.c     **** 
   88:../main.c     **** 
-  89:../main.c     ****  * @brief main() - Application entry point
-  90:../main.c     ****  *
-  91:../main.c     ****  * <b>Details of function</b><br>
-  92:../main.c     ****  * This routine is the application entry point. It is invoked by the device startup code. It is res
-  93:../main.c     ****  * invoking the APP initialization dispatcher routine - DAVE_Init() and hosting the place-holder fo
-  94:../main.c     ****  * code.
-  95:../main.c     ****  */
-  96:../main.c     **** int main(void)
-  97:../main.c     **** {
- 443              	 .loc 2 97 0
- 444              	 .cfi_startproc
- 445 0000 90B5     	 push {r4,r7,lr}
- 446              	.LCFI22:
- 447              	 .cfi_def_cfa_offset 12
- 448              	 .cfi_offset 4,-12
- 449              	 .cfi_offset 7,-8
- 450              	 .cfi_offset 14,-4
- 451 0002 8FB0     	 sub sp,sp,#60
- 452              	.LCFI23:
- 453              	 .cfi_def_cfa_offset 72
- 454 0004 02AF     	 add r7,sp,#8
- 455              	.LCFI24:
- 456              	 .cfi_def_cfa 7,64
-  98:../main.c     ****   DAVE_STATUS_t status;
-  99:../main.c     ****   uint32_t TimerId;
- 100:../main.c     ****   uint32_t update_5SecTimer;
- 101:../main.c     ****   uint32_t run_status = 0;
- 457              	 .loc 2 101 0
- 458 0006 0023     	 mov r3,#0
- 459 0008 BB62     	 str r3,[r7,#40]
- 102:../main.c     ****   char str[]= "DHBW Stuttgart";
- 460              	 .loc 2 102 0
- 461 000a 0C23     	 mov r3,#12
- 462 000c FB18     	 add r3,r7,r3
- 463 000e 504A     	 ldr r2,.L40
- 464 0010 13CA     	 ldmia r2!,{r0,r1,r4}
- 465 0012 13C3     	 stmia r3!,{r0,r1,r4}
- 466 0014 1188     	 ldrh r1,[r2]
- 467 0016 1980     	 strh r1,[r3]
- 468 0018 9278     	 ldrb r2,[r2,#2]
- 469 001a 9A70     	 strb r2,[r3,#2]
- 103:../main.c     ****   char str_time[8];
- 104:../main.c     **** 
- 105:../main.c     **** 
- 106:../main.c     ****   status = DAVE_Init();           /* Initialization of DAVE APPs  */
- 470              	 .loc 2 106 0
- 471 001c 2723     	 mov r3,#39
- 472 001e FC18     	 add r4,r7,r3
- 473 0020 FFF7FEFF 	 bl DAVE_Init
- 474 0024 031C     	 mov r3,r0
- 475 0026 2370     	 strb r3,[r4]
- 107:../main.c     ****   LED_init();
- 476              	 .loc 2 107 0
- 477 0028 FFF7FEFF 	 bl LED_init
+  89:../main.c     **** 
+  90:../main.c     **** /**
+  91:../main.c     **** 
+  92:../main.c     ****  * @brief main() - Application entry point
+  93:../main.c     ****  *
+  94:../main.c     ****  * <b>Details of function</b><br>
+  95:../main.c     ****  * This routine is the application entry point. It is invoked by the device startup code. It is res
+  96:../main.c     ****  * invoking the APP initialization dispatcher routine - DAVE_Init() and hosting the place-holder fo
+  97:../main.c     ****  * code.
+  98:../main.c     ****  */
+  99:../main.c     **** int main(void)
+ 100:../main.c     **** {
+ 420              	 .loc 2 100 0
+ 421              	 .cfi_startproc
+ 422 0000 90B5     	 push {r4,r7,lr}
+ 423              	.LCFI22:
+ 424              	 .cfi_def_cfa_offset 12
+ 425              	 .cfi_offset 4,-12
+ 426              	 .cfi_offset 7,-8
+ 427              	 .cfi_offset 14,-4
+ 428 0002 8FB0     	 sub sp,sp,#60
+ 429              	.LCFI23:
+ 430              	 .cfi_def_cfa_offset 72
+ 431 0004 02AF     	 add r7,sp,#8
+ 432              	.LCFI24:
+ 433              	 .cfi_def_cfa 7,64
+ 101:../main.c     ****   DAVE_STATUS_t status;
+ 102:../main.c     ****   uint32_t TimerId;
+ 103:../main.c     ****   uint32_t update_5SecTimer;
+ 104:../main.c     ****   uint32_t run_status = 0;
+ 434              	 .loc 2 104 0
+ 435 0006 0023     	 mov r3,#0
+ 436 0008 BB62     	 str r3,[r7,#40]
+ 105:../main.c     ****   char str[]= "DHBW Stuttgart";
+ 437              	 .loc 2 105 0
+ 438 000a 0C23     	 mov r3,#12
+ 439 000c FB18     	 add r3,r7,r3
+ 440 000e 524A     	 ldr r2,.L38
+ 441 0010 13CA     	 ldmia r2!,{r0,r1,r4}
+ 442 0012 13C3     	 stmia r3!,{r0,r1,r4}
+ 443 0014 1188     	 ldrh r1,[r2]
+ 444 0016 1980     	 strh r1,[r3]
+ 445 0018 9278     	 ldrb r2,[r2,#2]
+ 446 001a 9A70     	 strb r2,[r3,#2]
+ 106:../main.c     ****   char str_time[8];
+ 107:../main.c     **** 
  108:../main.c     **** 
- 109:../main.c     ****   //XMC_GPIO_SetMode(P2_11, XMC_GPIO_MODE_INPUT_PULL_UP);
- 110:../main.c     **** 
- 111:../main.c     ****   DAVE_APP_VERSION_t version = I2C_MASTER_GetAppVersion();
- 478              	 .loc 2 111 0
- 479 002c FFF7FEFF 	 bl I2C_MASTER_GetAppVersion
- 480 0030 031C     	 mov r3,r0
- 481 0032 1A1C     	 mov r2,r3
- 482 0034 3B1C     	 mov r3,r7
- 483 0036 111C     	 add r1,r2,#0
- 484 0038 1970     	 strb r1,[r3]
- 485 003a 1104     	 lsl r1,r2,#16
- 486 003c 090E     	 lsr r1,r1,#24
- 487 003e 5970     	 strb r1,[r3,#1]
- 488 0040 1202     	 lsl r2,r2,#8
- 489 0042 120E     	 lsr r2,r2,#24
- 490 0044 9A70     	 strb r2,[r3,#2]
- 112:../main.c     ****   if(version.major == 4U)
- 113:../main.c     ****   {
- 114:../main.c     **** 	 //I2C_MASTER_0_init();
- 115:../main.c     **** 	 //I2C_MASTER_Transmit(&I2C_MASTER_0,true,0x78,mem_address,1,true);
- 116:../main.c     ****   }
- 117:../main.c     **** 
- 118:../main.c     ****   // SYSTIMER APP Initialized during DAVE Initialization
- 119:../main.c     ****   // Create Software timer
- 120:../main.c     ****   TimerId = (uint32_t)SYSTIMER_CreateTimer(milliSec,SYSTIMER_MODE_PERIODIC,(void*)milliSec_Handler,
- 491              	 .loc 2 120 0
- 492 0046 FA23     	 mov r3,#250
- 493 0048 9A00     	 lsl r2,r3,#2
- 494 004a 424B     	 ldr r3,.L40+4
- 495 004c 101C     	 mov r0,r2
- 496 004e 0121     	 mov r1,#1
- 497 0050 1A1C     	 mov r2,r3
- 498 0052 0023     	 mov r3,#0
- 499 0054 FFF7FEFF 	 bl SYSTIMER_CreateTimer
- 500 0058 031C     	 mov r3,r0
- 501 005a 3B62     	 str r3,[r7,#32]
- 121:../main.c     ****   if (TimerId != 0U)
- 502              	 .loc 2 121 0
- 503 005c 3B6A     	 ldr r3,[r7,#32]
- 504 005e 002B     	 cmp r3,#0
- 505 0060 03D0     	 beq .L26
- 122:../main.c     ****   {
- 123:../main.c     **** 	//software timer is created successfully
- 124:../main.c     **** 	//Add user code here
- 125:../main.c     **** 	SYSTIMER_StartTimer(TimerId);
- 506              	 .loc 2 125 0
- 507 0062 3B6A     	 ldr r3,[r7,#32]
- 508 0064 181C     	 mov r0,r3
- 509 0066 FFF7FEFF 	 bl SYSTIMER_StartTimer
- 510              	.L26:
- 126:../main.c     ****   }
- 127:../main.c     ****   else
- 128:../main.c     ****   {
- 129:../main.c     **** 	// //software timer creation is failed
- 130:../main.c     ****   }
- 131:../main.c     **** 
- 132:../main.c     ****   if (status != DAVE_STATUS_SUCCESS)
- 511              	 .loc 2 132 0
- 512 006a 2723     	 mov r3,#39
- 513 006c FB18     	 add r3,r7,r3
- 514 006e 1B78     	 ldrb r3,[r3]
- 515 0070 002B     	 cmp r3,#0
- 516 0072 00D0     	 beq .L27
- 517              	.L28:
- 133:../main.c     ****   {
- 134:../main.c     ****     /* Placeholder for error handler code. The while loop below can be replaced with an user error 
- 135:../main.c     ****     XMC_DEBUG("DAVE APPs initialization failed\n");
- 136:../main.c     **** 
- 137:../main.c     ****     while(1U)
- 138:../main.c     ****     {
+ 109:../main.c     ****   status = DAVE_Init();           /* Initialization of DAVE APPs  */
+ 447              	 .loc 2 109 0
+ 448 001c 2723     	 mov r3,#39
+ 449 001e FC18     	 add r4,r7,r3
+ 450 0020 FFF7FEFF 	 bl DAVE_Init
+ 451 0024 031C     	 mov r3,r0
+ 452 0026 2370     	 strb r3,[r4]
+ 110:../main.c     ****   LED_init();
+ 453              	 .loc 2 110 0
+ 454 0028 FFF7FEFF 	 bl LED_init
+ 111:../main.c     **** 
+ 112:../main.c     ****   //XMC_GPIO_SetMode(P2_11, XMC_GPIO_MODE_INPUT_PULL_UP);
+ 113:../main.c     **** 
+ 114:../main.c     ****   DAVE_APP_VERSION_t version = I2C_MASTER_GetAppVersion();
+ 455              	 .loc 2 114 0
+ 456 002c FFF7FEFF 	 bl I2C_MASTER_GetAppVersion
+ 457 0030 031C     	 mov r3,r0
+ 458 0032 1A1C     	 mov r2,r3
+ 459 0034 3B1C     	 mov r3,r7
+ 460 0036 111C     	 add r1,r2,#0
+ 461 0038 1970     	 strb r1,[r3]
+ 462 003a 1104     	 lsl r1,r2,#16
+ 463 003c 090E     	 lsr r1,r1,#24
+ 464 003e 5970     	 strb r1,[r3,#1]
+ 465 0040 1202     	 lsl r2,r2,#8
+ 466 0042 120E     	 lsr r2,r2,#24
+ 467 0044 9A70     	 strb r2,[r3,#2]
+ 115:../main.c     ****   if(version.major == 4U)
+ 116:../main.c     ****   {
+ 117:../main.c     **** 	 //I2C_MASTER_0_init();
+ 118:../main.c     **** 	 //I2C_MASTER_Transmit(&I2C_MASTER_0,true,0x78,mem_address,1,true);
+ 119:../main.c     ****   }
+ 120:../main.c     **** 
+ 121:../main.c     ****   // SYSTIMER APP Initialized during DAVE Initialization
+ 122:../main.c     ****   // Create Software timer
+ 123:../main.c     ****   TimerId = (uint32_t)SYSTIMER_CreateTimer(milliSec,SYSTIMER_MODE_PERIODIC,(void*)milliSec_Handler,
+ 468              	 .loc 2 123 0
+ 469 0046 FA23     	 mov r3,#250
+ 470 0048 9A00     	 lsl r2,r3,#2
+ 471 004a 444B     	 ldr r3,.L38+4
+ 472 004c 101C     	 mov r0,r2
+ 473 004e 0121     	 mov r1,#1
+ 474 0050 1A1C     	 mov r2,r3
+ 475 0052 0023     	 mov r3,#0
+ 476 0054 FFF7FEFF 	 bl SYSTIMER_CreateTimer
+ 477 0058 031C     	 mov r3,r0
+ 478 005a 3B62     	 str r3,[r7,#32]
+ 124:../main.c     ****   if (TimerId != 0U)
+ 479              	 .loc 2 124 0
+ 480 005c 3B6A     	 ldr r3,[r7,#32]
+ 481 005e 002B     	 cmp r3,#0
+ 482 0060 03D0     	 beq .L24
+ 125:../main.c     ****   {
+ 126:../main.c     **** 	//software timer is created successfully
+ 127:../main.c     **** 	//Add user code here
+ 128:../main.c     **** 	SYSTIMER_StartTimer(TimerId);
+ 483              	 .loc 2 128 0
+ 484 0062 3B6A     	 ldr r3,[r7,#32]
+ 485 0064 181C     	 mov r0,r3
+ 486 0066 FFF7FEFF 	 bl SYSTIMER_StartTimer
+ 487              	.L24:
+ 129:../main.c     ****   }
+ 130:../main.c     ****   else
+ 131:../main.c     ****   {
+ 132:../main.c     **** 	// //software timer creation is failed
+ 133:../main.c     ****   }
+ 134:../main.c     **** 
+ 135:../main.c     ****   if (status != DAVE_STATUS_SUCCESS)
+ 488              	 .loc 2 135 0
+ 489 006a 2723     	 mov r3,#39
+ 490 006c FB18     	 add r3,r7,r3
+ 491 006e 1B78     	 ldrb r3,[r3]
+ 492 0070 002B     	 cmp r3,#0
+ 493 0072 00D0     	 beq .L25
+ 494              	.L26:
+ 136:../main.c     ****   {
+ 137:../main.c     ****     /* Placeholder for error handler code. The while loop below can be replaced with an user error 
+ 138:../main.c     ****     XMC_DEBUG("DAVE APPs initialization failed\n");
  139:../main.c     **** 
- 140:../main.c     ****     }
- 518              	 .loc 2 140 0 discriminator 1
- 519 0074 FEE7     	 b .L28
- 520              	.L27:
- 141:../main.c     ****   }
- 142:../main.c     ****   delay_ms(500);
- 521              	 .loc 2 142 0
- 522 0076 FA23     	 mov r3,#250
- 523 0078 5B00     	 lsl r3,r3,#1
- 524 007a 181C     	 mov r0,r3
- 525 007c FFF7FEFF 	 bl delay_ms
- 143:../main.c     ****   OLED_Init();
- 526              	 .loc 2 143 0
- 527 0080 FFF7FEFF 	 bl OLED_Init
- 144:../main.c     ****   OLED_Clear(0);
- 528              	 .loc 2 144 0
- 529 0084 0020     	 mov r0,#0
- 530 0086 FFF7FEFF 	 bl OLED_Clear
- 531              	.L39:
- 145:../main.c     ****   //TEST_MainPage();
- 146:../main.c     **** 
- 147:../main.c     **** 
- 148:../main.c     ****   /* Placeholder for user application code. The while loop below can be replaced with user applicat
- 149:../main.c     ****   while(1U)
- 150:../main.c     ****   {
- 151:../main.c     **** 
- 152:../main.c     **** 	  if (run1sec > 0)
- 532              	 .loc 2 152 0
- 533 008a 334B     	 ldr r3,.L40+8
- 534 008c 1B88     	 ldrh r3,[r3]
- 535 008e 002B     	 cmp r3,#0
- 536 0090 22D0     	 beq .L29
- 537              	.LBB2:
- 153:../main.c     **** 	  {
- 154:../main.c     **** 		  unsigned int disp_Time = (SysTickCounter/1000)%1000000;
- 538              	 .loc 2 154 0
- 539 0092 324B     	 ldr r3,.L40+12
- 540 0094 1B68     	 ldr r3,[r3]
- 541 0096 181C     	 mov r0,r3
- 542 0098 FA23     	 mov r3,#250
- 543 009a 9900     	 lsl r1,r3,#2
- 544 009c FFF7FEFF 	 bl __aeabi_uidiv
- 545 00a0 031C     	 mov r3,r0
- 546 00a2 181C     	 mov r0,r3
- 547 00a4 2E49     	 ldr r1,.L40+16
- 548 00a6 FFF7FEFF 	 bl __aeabi_uidivmod
- 549 00aa 0B1C     	 mov r3,r1
- 550 00ac FB61     	 str r3,[r7,#28]
- 155:../main.c     **** 		  snprintf(str_time, sizeof(str_time), "%6d", disp_Time);
- 551              	 .loc 2 155 0
- 552 00ae 391D     	 add r1,r7,#4
- 553 00b0 2C4A     	 ldr r2,.L40+20
- 554 00b2 FB69     	 ldr r3,[r7,#28]
- 555 00b4 081C     	 mov r0,r1
- 556 00b6 0821     	 mov r1,#8
- 557 00b8 FFF7FEFF 	 bl snprintf
- 156:../main.c     **** 		  //		  sprintf(str_time,"%6u/n", disp_Time);
- 157:../main.c     **** 		  GUI_ShowString((u8)90,(u8)3,(char*)str_time,(u8)8,(u8)1);
- 558              	 .loc 2 157 0
- 559 00bc 3A1D     	 add r2,r7,#4
- 560 00be 0123     	 mov r3,#1
- 561 00c0 0093     	 str r3,[sp]
- 562 00c2 5A20     	 mov r0,#90
- 563 00c4 0321     	 mov r1,#3
- 564 00c6 0823     	 mov r3,#8
- 565 00c8 FFF7FEFF 	 bl GUI_ShowString
- 158:../main.c     **** 		  run1sec -=1;
- 566              	 .loc 2 158 0
- 567 00cc 224B     	 ldr r3,.L40+8
- 568 00ce 1B88     	 ldrh r3,[r3]
- 569 00d0 013B     	 sub r3,r3,#1
- 570 00d2 9AB2     	 uxth r2,r3
- 571 00d4 204B     	 ldr r3,.L40+8
- 572 00d6 1A80     	 strh r2,[r3]
- 573              	.L29:
- 574              	.LBE2:
- 159:../main.c     **** 	  }
- 160:../main.c     **** 
- 161:../main.c     **** 
- 162:../main.c     **** 	  if((SysTickCounter - update_5SecTimer) >= 5000)
- 575              	 .loc 2 162 0
- 576 00d8 204B     	 ldr r3,.L40+12
- 577 00da 1A68     	 ldr r2,[r3]
- 578 00dc FB6A     	 ldr r3,[r7,#44]
- 579 00de D31A     	 sub r3,r2,r3
- 580 00e0 214A     	 ldr r2,.L40+24
- 581 00e2 9342     	 cmp r3,r2
- 582 00e4 32D9     	 bls .L30
- 163:../main.c     **** 	  {
- 164:../main.c     **** 		  update_5SecTimer = SysTickCounter;
- 583              	 .loc 2 164 0
- 584 00e6 1D4B     	 ldr r3,.L40+12
- 585 00e8 1B68     	 ldr r3,[r3]
- 586 00ea FB62     	 str r3,[r7,#44]
- 165:../main.c     **** 		  switch (run_status++)
- 587              	 .loc 2 165 0
- 588 00ec BB6A     	 ldr r3,[r7,#40]
- 589 00ee 5A1C     	 add r2,r3,#1
- 590 00f0 BA62     	 str r2,[r7,#40]
- 591 00f2 052B     	 cmp r3,#5
- 592 00f4 24D8     	 bhi .L31
- 593 00f6 9A00     	 lsl r2,r3,#2
- 594 00f8 1C4B     	 ldr r3,.L40+28
- 595 00fa D318     	 add r3,r2,r3
- 596 00fc 1B68     	 ldr r3,[r3]
- 597 00fe 9F46     	 mov pc,r3
- 598              	 .section .rodata.main,"a",%progbits
- 599              	 .align 2
- 600              	.L33:
- 601 0000 00010000 	 .word .L32
- 602 0004 1A010000 	 .word .L34
- 603 0008 22010000 	 .word .L35
- 604 000c 2A010000 	 .word .L36
- 605 0010 32010000 	 .word .L37
- 606 0014 3A010000 	 .word .L38
- 607              	 .section .text.main
- 608              	.L32:
- 166:../main.c     **** 		  {
- 167:../main.c     **** 			  case 0:
- 168:../main.c     **** 			  OLED_Clear(0);
- 609              	 .loc 2 168 0
- 610 0100 0020     	 mov r0,#0
- 611 0102 FFF7FEFF 	 bl OLED_Clear
- 169:../main.c     **** 			  GUI_ShowString((u8)0,(u8)0,(char*)str,(u8)16,(u8)1);
- 612              	 .loc 2 169 0
- 613 0106 0C23     	 mov r3,#12
- 614 0108 FA18     	 add r2,r7,r3
- 615 010a 0123     	 mov r3,#1
- 616 010c 0093     	 str r3,[sp]
- 617 010e 0020     	 mov r0,#0
- 618 0110 0021     	 mov r1,#0
- 619 0112 1023     	 mov r3,#16
- 620 0114 FFF7FEFF 	 bl GUI_ShowString
- 170:../main.c     **** 
- 171:../main.c     **** 			  //TEST_MainPage();
- 172:../main.c     **** 			  break;
- 621              	 .loc 2 172 0
- 622 0118 18E0     	 b .L30
- 623              	.L34:
- 173:../main.c     **** 			  case 1:
- 174:../main.c     **** 			  {
- 175:../main.c     **** 			     Test_Color(0);
- 624              	 .loc 2 175 0
- 625 011a 0020     	 mov r0,#0
- 626 011c FFF7FEFF 	 bl Test_Color
- 176:../main.c     **** 			  }
- 177:../main.c     **** 			  break;
- 627              	 .loc 2 177 0
- 628 0120 14E0     	 b .L30
- 629              	.L35:
- 178:../main.c     **** 			  case 2:
- 179:../main.c     **** 			  {
- 180:../main.c     **** 				 TEST_English(0);
- 630              	 .loc 2 180 0
- 631 0122 0020     	 mov r0,#0
- 632 0124 FFF7FEFF 	 bl TEST_English
- 181:../main.c     **** 			  }
- 182:../main.c     **** 			  break;
- 633              	 .loc 2 182 0
- 634 0128 10E0     	 b .L30
- 635              	.L36:
- 183:../main.c     **** 			  case 3:
- 184:../main.c     **** 			  TEST_Number_Character(0);
- 636              	 .loc 2 184 0
- 637 012a 0020     	 mov r0,#0
- 638 012c FFF7FEFF 	 bl TEST_Number_Character
- 185:../main.c     **** 			  break;
- 639              	 .loc 2 185 0
- 640 0130 0CE0     	 b .L30
- 641              	.L37:
- 186:../main.c     **** 			  case 4:
- 187:../main.c     **** 			  TEST_Chinese(0);
- 642              	 .loc 2 187 0
- 643 0132 0020     	 mov r0,#0
- 644 0134 FFF7FEFF 	 bl TEST_Chinese
+ 140:../main.c     ****     while(1U)
+ 141:../main.c     ****     {
+ 142:../main.c     **** 
+ 143:../main.c     ****     }
+ 495              	 .loc 2 143 0 discriminator 1
+ 496 0074 FEE7     	 b .L26
+ 497              	.L25:
+ 144:../main.c     ****   }
+ 145:../main.c     ****   delay_ms(500);
+ 498              	 .loc 2 145 0
+ 499 0076 FA23     	 mov r3,#250
+ 500 0078 5B00     	 lsl r3,r3,#1
+ 501 007a 181C     	 mov r0,r3
+ 502 007c FFF7FEFF 	 bl delay_ms
+ 146:../main.c     ****   OLED_Init();
+ 503              	 .loc 2 146 0
+ 504 0080 FFF7FEFF 	 bl OLED_Init
+ 147:../main.c     ****   OLED_Clear(0);
+ 505              	 .loc 2 147 0
+ 506 0084 0020     	 mov r0,#0
+ 507 0086 FFF7FEFF 	 bl OLED_Clear
+ 148:../main.c     ****   //TEST_MainPage();
+ 149:../main.c     **** 
+ 150:../main.c     **** #ifndef PWM_on
+ 151:../main.c     ****  PWM_Stop(&PWM_0);
+ 508              	 .loc 2 151 0
+ 509 008a 354B     	 ldr r3,.L38+8
+ 510 008c 181C     	 mov r0,r3
+ 511 008e FFF7FEFF 	 bl PWM_Stop
+ 512              	.L37:
+ 152:../main.c     **** #endif
+ 153:../main.c     **** 
+ 154:../main.c     ****   /* Placeholder for user application code. The while loop below can be replaced with user applicat
+ 155:../main.c     ****   while(1U)
+ 156:../main.c     ****   {
+ 157:../main.c     **** 
+ 158:../main.c     **** 	  if (run1sec > 0)
+ 513              	 .loc 2 158 0
+ 514 0092 344B     	 ldr r3,.L38+12
+ 515 0094 1B88     	 ldrh r3,[r3]
+ 516 0096 002B     	 cmp r3,#0
+ 517 0098 22D0     	 beq .L27
+ 518              	.LBB2:
+ 159:../main.c     **** 	  {
+ 160:../main.c     **** 		  unsigned int disp_Time = (SysTickCounter/1000)%1000000;
+ 519              	 .loc 2 160 0
+ 520 009a 334B     	 ldr r3,.L38+16
+ 521 009c 1B68     	 ldr r3,[r3]
+ 522 009e 181C     	 mov r0,r3
+ 523 00a0 FA23     	 mov r3,#250
+ 524 00a2 9900     	 lsl r1,r3,#2
+ 525 00a4 FFF7FEFF 	 bl __aeabi_uidiv
+ 526 00a8 031C     	 mov r3,r0
+ 527 00aa 181C     	 mov r0,r3
+ 528 00ac 2F49     	 ldr r1,.L38+20
+ 529 00ae FFF7FEFF 	 bl __aeabi_uidivmod
+ 530 00b2 0B1C     	 mov r3,r1
+ 531 00b4 FB61     	 str r3,[r7,#28]
+ 161:../main.c     **** 		  snprintf(str_time, sizeof(str_time), "%6d", disp_Time);
+ 532              	 .loc 2 161 0
+ 533 00b6 391D     	 add r1,r7,#4
+ 534 00b8 2D4A     	 ldr r2,.L38+24
+ 535 00ba FB69     	 ldr r3,[r7,#28]
+ 536 00bc 081C     	 mov r0,r1
+ 537 00be 0821     	 mov r1,#8
+ 538 00c0 FFF7FEFF 	 bl snprintf
+ 162:../main.c     **** 		  //		  sprintf(str_time,"%6u/n", disp_Time);
+ 163:../main.c     **** 		  GUI_ShowString((u8)90,(u8)(OLED_HEIGHT/8)-1,(char*)str_time,(u8)8,(u8)1);
+ 539              	 .loc 2 163 0
+ 540 00c4 3A1D     	 add r2,r7,#4
+ 541 00c6 0123     	 mov r3,#1
+ 542 00c8 0093     	 str r3,[sp]
+ 543 00ca 5A20     	 mov r0,#90
+ 544 00cc 0721     	 mov r1,#7
+ 545 00ce 0823     	 mov r3,#8
+ 546 00d0 FFF7FEFF 	 bl GUI_ShowString
+ 164:../main.c     **** 		  run1sec -=1;
+ 547              	 .loc 2 164 0
+ 548 00d4 234B     	 ldr r3,.L38+12
+ 549 00d6 1B88     	 ldrh r3,[r3]
+ 550 00d8 013B     	 sub r3,r3,#1
+ 551 00da 9AB2     	 uxth r2,r3
+ 552 00dc 214B     	 ldr r3,.L38+12
+ 553 00de 1A80     	 strh r2,[r3]
+ 554              	.L27:
+ 555              	.LBE2:
+ 165:../main.c     **** 	  }
+ 166:../main.c     **** 
+ 167:../main.c     **** 
+ 168:../main.c     **** 	  if((SysTickCounter - update_5SecTimer) >= 5000)
+ 556              	 .loc 2 168 0
+ 557 00e0 214B     	 ldr r3,.L38+16
+ 558 00e2 1A68     	 ldr r2,[r3]
+ 559 00e4 FB6A     	 ldr r3,[r7,#44]
+ 560 00e6 D31A     	 sub r3,r2,r3
+ 561 00e8 224A     	 ldr r2,.L38+28
+ 562 00ea 9342     	 cmp r3,r2
+ 563 00ec 32D9     	 bls .L28
+ 169:../main.c     **** 	  {
+ 170:../main.c     **** 		  update_5SecTimer = SysTickCounter;
+ 564              	 .loc 2 170 0
+ 565 00ee 1E4B     	 ldr r3,.L38+16
+ 566 00f0 1B68     	 ldr r3,[r3]
+ 567 00f2 FB62     	 str r3,[r7,#44]
+ 171:../main.c     **** 		  switch (run_status++)
+ 568              	 .loc 2 171 0
+ 569 00f4 BB6A     	 ldr r3,[r7,#40]
+ 570 00f6 5A1C     	 add r2,r3,#1
+ 571 00f8 BA62     	 str r2,[r7,#40]
+ 572 00fa 052B     	 cmp r3,#5
+ 573 00fc 24D8     	 bhi .L29
+ 574 00fe 9A00     	 lsl r2,r3,#2
+ 575 0100 1D4B     	 ldr r3,.L38+32
+ 576 0102 D318     	 add r3,r2,r3
+ 577 0104 1B68     	 ldr r3,[r3]
+ 578 0106 9F46     	 mov pc,r3
+ 579              	 .section .rodata.main,"a",%progbits
+ 580              	 .align 2
+ 581              	.L31:
+ 582 0000 08010000 	 .word .L30
+ 583 0004 22010000 	 .word .L32
+ 584 0008 2A010000 	 .word .L33
+ 585 000c 32010000 	 .word .L34
+ 586 0010 3A010000 	 .word .L35
+ 587 0014 42010000 	 .word .L36
+ 588              	 .section .text.main
+ 589              	.L30:
+ 172:../main.c     **** 		  {
+ 173:../main.c     **** 			  case 0:
+ 174:../main.c     **** 			  OLED_Clear(0);
+ 590              	 .loc 2 174 0
+ 591 0108 0020     	 mov r0,#0
+ 592 010a FFF7FEFF 	 bl OLED_Clear
+ 175:../main.c     **** 			  GUI_ShowString((u8)0,(u8)0,(char*)str,(u8)16,(u8)1);
+ 593              	 .loc 2 175 0
+ 594 010e 0C23     	 mov r3,#12
+ 595 0110 FA18     	 add r2,r7,r3
+ 596 0112 0123     	 mov r3,#1
+ 597 0114 0093     	 str r3,[sp]
+ 598 0116 0020     	 mov r0,#0
+ 599 0118 0021     	 mov r1,#0
+ 600 011a 1023     	 mov r3,#16
+ 601 011c FFF7FEFF 	 bl GUI_ShowString
+ 176:../main.c     **** 
+ 177:../main.c     **** 			  //TEST_MainPage();
+ 178:../main.c     **** 			  break;
+ 602              	 .loc 2 178 0
+ 603 0120 18E0     	 b .L28
+ 604              	.L32:
+ 179:../main.c     **** 			  case 1:
+ 180:../main.c     **** 			  {
+ 181:../main.c     **** 			     Test_Color(0);
+ 605              	 .loc 2 181 0
+ 606 0122 0020     	 mov r0,#0
+ 607 0124 FFF7FEFF 	 bl Test_Color
+ 182:../main.c     **** 			  }
+ 183:../main.c     **** 			  break;
+ 608              	 .loc 2 183 0
+ 609 0128 14E0     	 b .L28
+ 610              	.L33:
+ 184:../main.c     **** 			  case 2:
+ 185:../main.c     **** 			  {
+ 186:../main.c     **** 				 TEST_English(0);
+ 611              	 .loc 2 186 0
+ 612 012a 0020     	 mov r0,#0
+ 613 012c FFF7FEFF 	 bl TEST_English
+ 187:../main.c     **** 			  }
  188:../main.c     **** 			  break;
- 645              	 .loc 2 188 0
- 646 0138 08E0     	 b .L30
- 647              	.L38:
- 189:../main.c     **** 			  case 5:
- 190:../main.c     **** 			  TEST_BMP();
- 648              	 .loc 2 190 0
- 649 013a FFF7FEFF 	 bl TEST_BMP
+ 614              	 .loc 2 188 0
+ 615 0130 10E0     	 b .L28
+ 616              	.L34:
+ 189:../main.c     **** 			  case 3:
+ 190:../main.c     **** 			  TEST_Number_Character(0);
+ 617              	 .loc 2 190 0
+ 618 0132 0020     	 mov r0,#0
+ 619 0134 FFF7FEFF 	 bl TEST_Number_Character
  191:../main.c     **** 			  break;
- 650              	 .loc 2 191 0
- 651 013e 05E0     	 b .L30
- 652              	.L31:
- 192:../main.c     **** 
- 193:../main.c     **** 			  default:
- 194:../main.c     **** 			  {
- 195:../main.c     **** 			  run_status = 0;
- 653              	 .loc 2 195 0
- 654 0140 0023     	 mov r3,#0
- 655 0142 BB62     	 str r3,[r7,#40]
- 196:../main.c     **** 			  OLED_Clear(1);
- 656              	 .loc 2 196 0
- 657 0144 0120     	 mov r0,#1
- 658 0146 FFF7FEFF 	 bl OLED_Clear
- 197:../main.c     **** 			  }
- 198:../main.c     **** 			  break;
- 659              	 .loc 2 198 0
- 660 014a C046     	 mov r8,r8
- 661              	.L30:
- 199:../main.c     **** 		  }
- 200:../main.c     **** 
- 201:../main.c     **** 	  }
- 202:../main.c     **** 
- 203:../main.c     ****   }
- 662              	 .loc 2 203 0
- 663 014c 9DE7     	 b .L39
- 664              	.L41:
- 665 014e C046     	 .align 2
- 666              	.L40:
- 667 0150 04000000 	 .word .LC4
- 668 0154 00000000 	 .word milliSec_Handler
- 669 0158 00000000 	 .word run1sec
- 670 015c 00000000 	 .word SysTickCounter
- 671 0160 40420F00 	 .word 1000000
- 672 0164 00000000 	 .word .LC9
- 673 0168 87130000 	 .word 4999
- 674 016c 00000000 	 .word .L33
- 675              	 .cfi_endproc
- 676              	.LFE239:
- 678              	 .text
- 679              	.Letext0:
- 680              	 .file 3 "c:\\infineon\\tools\\dave ide\\450\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
- 681              	 .file 4 "c:\\infineon\\tools\\dave ide\\450\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
- 682              	 .file 5 "D:/GITHUB/XMC14/I2C/Libraries/CMSIS/Infineon/XMC1400_series/Include/XMC1400.h"
- 683              	 .file 6 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc1_scu.h"
- 684              	 .file 7 "D:/GITHUB/XMC14/I2C/Dave/Generated/DAVE_Common.h"
- 685              	 .file 8 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc1_gpio.h"
- 686              	 .file 9 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc_usic.h"
- 687              	 .file 10 "D:/GITHUB/XMC14/I2C/Dave/Generated/SYSTIMER/systimer.h"
- 688              	 .file 11 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc_ccu4.h"
- 689              	 .file 12 "D:/GITHUB/XMC14/I2C/Dave/Generated/GLOBAL_CCU4/global_ccu4.h"
- 690              	 .file 13 "D:/GITHUB/XMC14/I2C/Dave/Generated/PWM/pwm.h"
- 691              	 .file 14 "D:/GITHUB/XMC14/I2C/Dave/Generated/DAVE.h"
- 692              	 .file 15 "D:/GITHUB/XMC14/I2C/Libraries/CMSIS/Include/cmsis_gcc.h"
- 693              	 .file 16 "D:/GITHUB/XMC14/I2C/Libraries/CMSIS/Infineon/XMC1400_series/Include/system_XMC1400.h"
- 694              	 .file 17 "D:/GITHUB/XMC14/I2C/Dave/Generated/PWM/PWM_Extern.h"
- 695              	 .file 18 "<built-in>"
+ 620              	 .loc 2 191 0
+ 621 0138 0CE0     	 b .L28
+ 622              	.L35:
+ 192:../main.c     **** 			  case 4:
+ 193:../main.c     **** 			  TEST_Chinese(0);
+ 623              	 .loc 2 193 0
+ 624 013a 0020     	 mov r0,#0
+ 625 013c FFF7FEFF 	 bl TEST_Chinese
+ 194:../main.c     **** 			  break;
+ 626              	 .loc 2 194 0
+ 627 0140 08E0     	 b .L28
+ 628              	.L36:
+ 195:../main.c     **** 			  case 5:
+ 196:../main.c     **** 			  TEST_BMP();
+ 629              	 .loc 2 196 0
+ 630 0142 FFF7FEFF 	 bl TEST_BMP
+ 197:../main.c     **** 			  break;
+ 631              	 .loc 2 197 0
+ 632 0146 05E0     	 b .L28
+ 633              	.L29:
+ 198:../main.c     **** 
+ 199:../main.c     **** 			  default:
+ 200:../main.c     **** 			  {
+ 201:../main.c     **** 			  run_status = 0;
+ 634              	 .loc 2 201 0
+ 635 0148 0023     	 mov r3,#0
+ 636 014a BB62     	 str r3,[r7,#40]
+ 202:../main.c     **** 			  OLED_Clear(1);
+ 637              	 .loc 2 202 0
+ 638 014c 0120     	 mov r0,#1
+ 639 014e FFF7FEFF 	 bl OLED_Clear
+ 203:../main.c     **** 			  }
+ 204:../main.c     **** 			  break;
+ 640              	 .loc 2 204 0
+ 641 0152 C046     	 mov r8,r8
+ 642              	.L28:
+ 205:../main.c     **** 		  }
+ 206:../main.c     **** 
+ 207:../main.c     **** 	  }
+ 208:../main.c     **** 
+ 209:../main.c     ****   }
+ 643              	 .loc 2 209 0
+ 644 0154 9DE7     	 b .L37
+ 645              	.L39:
+ 646 0156 C046     	 .align 2
+ 647              	.L38:
+ 648 0158 04000000 	 .word .LC2
+ 649 015c 00000000 	 .word milliSec_Handler
+ 650 0160 00000000 	 .word PWM_0
+ 651 0164 00000000 	 .word run1sec
+ 652 0168 00000000 	 .word SysTickCounter
+ 653 016c 40420F00 	 .word 1000000
+ 654 0170 00000000 	 .word .LC8
+ 655 0174 87130000 	 .word 4999
+ 656 0178 00000000 	 .word .L31
+ 657              	 .cfi_endproc
+ 658              	.LFE239:
+ 660              	 .text
+ 661              	.Letext0:
+ 662              	 .file 3 "c:\\infineon\\tools\\dave ide\\450\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 663              	 .file 4 "c:\\infineon\\tools\\dave ide\\450\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+ 664              	 .file 5 "D:/GITHUB/XMC14/I2C/Libraries/CMSIS/Infineon/XMC1400_series/Include/XMC1400.h"
+ 665              	 .file 6 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc1_scu.h"
+ 666              	 .file 7 "D:/GITHUB/XMC14/I2C/Dave/Generated/DAVE_Common.h"
+ 667              	 .file 8 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc1_gpio.h"
+ 668              	 .file 9 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc_usic.h"
+ 669              	 .file 10 "D:/GITHUB/XMC14/I2C/Dave/Generated/SYSTIMER/systimer.h"
+ 670              	 .file 11 "D:/GITHUB/XMC14/I2C/Libraries/XMCLib/inc/xmc_ccu4.h"
+ 671              	 .file 12 "D:/GITHUB/XMC14/I2C/Dave/Generated/GLOBAL_CCU4/global_ccu4.h"
+ 672              	 .file 13 "D:/GITHUB/XMC14/I2C/Dave/Generated/PWM/pwm.h"
+ 673              	 .file 14 "D:/GITHUB/XMC14/I2C/Dave/Generated/DAVE.h"
+ 674              	 .file 15 "D:/GITHUB/XMC14/I2C/Libraries/CMSIS/Include/cmsis_gcc.h"
+ 675              	 .file 16 "D:/GITHUB/XMC14/I2C/Libraries/CMSIS/Infineon/XMC1400_series/Include/system_XMC1400.h"
+ 676              	 .file 17 "D:/GITHUB/XMC14/I2C/Dave/Generated/PWM/PWM_Extern.h"
+ 677              	 .file 18 "<built-in>"
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
     {standard input}:18     .text.XMC_GPIO_SetOutputHigh:00000000 $t
@@ -1210,31 +1198,28 @@ DEFINED SYMBOLS
     {standard input}:176    .text.Error:00000000 $t
     {standard input}:181    .text.Error:00000000 Error
     {standard input}:210    .text.Error:00000018 $d
-    {standard input}:216    .text.Task10ms:00000000 $t
-    {standard input}:221    .text.Task10ms:00000000 Task10ms
-    {standard input}:258    .text.Task10ms:00000030 $d
-    {standard input}:264    .text.Task100ms:00000000 $t
-    {standard input}:269    .text.Task100ms:00000000 Task100ms
-    {standard input}:289    .text.Task1s:00000000 $t
-    {standard input}:294    .text.Task1s:00000000 Task1s
-    {standard input}:325    .text.Task1s:00000020 $d
-    {standard input}:331    .text.milliSec_Handler:00000000 $t
-    {standard input}:336    .text.milliSec_Handler:00000000 milliSec_Handler
-    {standard input}:395    .text.milliSec_Handler:00000050 $d
-    {standard input}:400    .text.NACK_Handler:00000000 $t
-    {standard input}:405    .text.NACK_Handler:00000000 NACK_Handler
-    {standard input}:429    .rodata:00000000 $d
-    {standard input}:436    .text.main:00000000 $t
-    {standard input}:441    .text.main:00000000 main
-    {standard input}:599    .rodata.main:00000000 $d
-    {standard input}:667    .text.main:00000150 $d
+    {standard input}:215    .text.Task10ms:00000000 $t
+    {standard input}:220    .text.Task10ms:00000000 Task10ms
+    {standard input}:240    .text.Task100ms:00000000 $t
+    {standard input}:245    .text.Task100ms:00000000 Task100ms
+    {standard input}:265    .text.Task1s:00000000 $t
+    {standard input}:270    .text.Task1s:00000000 Task1s
+    {standard input}:301    .text.Task1s:00000020 $d
+    {standard input}:308    .text.milliSec_Handler:00000000 $t
+    {standard input}:313    .text.milliSec_Handler:00000000 milliSec_Handler
+    {standard input}:372    .text.milliSec_Handler:00000050 $d
+    {standard input}:377    .text.NACK_Handler:00000000 $t
+    {standard input}:382    .text.NACK_Handler:00000000 NACK_Handler
+    {standard input}:406    .rodata:00000000 $d
+    {standard input}:413    .text.main:00000000 $t
+    {standard input}:418    .text.main:00000000 main
+    {standard input}:580    .rodata.main:00000000 $d
+    {standard input}:648    .text.main:00000158 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
 XMC_GPIO_Init
 __aeabi_uidivmod
-PWM_SetDutyCycle
-PWM_0
 __aeabi_uidiv
 DAVE_Init
 I2C_MASTER_GetAppVersion
@@ -1243,6 +1228,7 @@ SYSTIMER_StartTimer
 delay_ms
 OLED_Init
 OLED_Clear
+PWM_Stop
 snprintf
 GUI_ShowString
 Test_Color
@@ -1250,3 +1236,4 @@ TEST_English
 TEST_Number_Character
 TEST_Chinese
 TEST_BMP
+PWM_0

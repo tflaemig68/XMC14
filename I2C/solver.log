@@ -430,3 +430,328 @@ Jul 09, 2026 11:41:06 AM java.util.logging.LogManager$RootLogger log
 INFO: [/devicepackage/0/13, /devicepackage/0/23, /devicepackage/0/24, /devicepackage/0/36, /devicepackage/0/35]
 
 
+Jul 26, 2026 3:49:17 PM java.util.logging.LogManager$RootLogger log
+INFO: Start of solver :getOutputSignals() : Sun Jul 26 15:49:17 CEST 2026
+
+
+Jul 26, 2026 3:49:17 PM java.util.logging.LogManager$RootLogger log
+INFO: 
+timeout(reserved_resource_group_output_signals([reserved([p,0,pad,14],'cpu_ctrl_xmc1$1638132965$0'),
+reserved([p,0,pad,15],'cpu_ctrl_xmc1$1638132966$0'),
+reserved([cpu,0,exception,hardfault],'cpu_ctrl_xmc1$01591368925$0'),
+reserved([scu,0,ccu,config],'clock_xmc1$031780984$0'),
+reserved([usic,_,channel,_],'i2c_master$0517290200$0'),
+reserved([cpu,0,nvic,interrupt,_],'i2c_master$0125508489$0'),
+reserved([p,_,pad,_],'i2c_master$0125934497$0'),
+reserved([p,_,pad,_],'i2c_master$0125934517$0'),
+reserved([devicepackage,0,_],'i2c_master$01076929067$0'),
+uri([devicepackage,0,13],'i2c_master$01076929067$0'),
+reserved([devicepackage,0,_],'i2c_master$01076929087$0'),
+uri([devicepackage,0,14],'i2c_master$01076929087$0'),
+reserved([cpu,0,systick],'systimer$0137142936$0'),
+reserved([ccu4,GLOBAL_CCU40sv0,global],'global_ccu4$01760137752$0'),
+reserved([scu,_,gcu,ccu4_global_enable,GLOBAL_CCU40sv0],'global_ccu4$89752826$0'),
+reserved([ccu4,_,cc4,_],'pwm$190007462$0'),
+reserved([p,_,pad,_],'pwm$296065386$0'),
+reserved([devicepackage,0,_],'pwm$01578993036$0'),
+uri([devicepackage,0,34],'pwm$01578993036$0'),
+signal('clock_xmc1$031780984$0',frtc,'clock_xmc1$031780984$0$frtc'),
+signal('clock_xmc1$031780984$0',dco2_clk,'clock_xmc1$031780984$0$dco2_clk'),
+signal('clock_xmc1$031780984$0',osc_lp_clk,'clock_xmc1$031780984$0$osc_lp_clk'),
+signal('clock_xmc1$031780984$0',osc_hp_xtal1,'clock_xmc1$031780984$0$osc_hp_xtal1'),
+signal('clock_xmc1$031780984$0',osc_hp_xtal2,'clock_xmc1$031780984$0$osc_hp_xtal2'),
+signal('clock_xmc1$031780984$0',osc_lp_xtal1,'clock_xmc1$031780984$0$osc_lp_xtal1'),
+signal('clock_xmc1$031780984$0',osc_lp_xtal2,'clock_xmc1$031780984$0$osc_lp_xtal2'),
+signal('i2c_master$0125934497$0',pad,'i2c_master$0125934497$0$pad'),
+signal('i2c_master$0125934517$0',pad,'i2c_master$0125934517$0$pad'),
+signal('i2c_master$0517290200$0',dout0,'i2c_master$0517290200$0$dout0'),
+signal('i2c_master$0517290200$0',dx0ins,'i2c_master$0517290200$0$dx0ins'),
+signal('i2c_master$0517290200$0',dx1ins,'i2c_master$0517290200$0$dx1ins'),
+signal('i2c_master$0517290200$0',sclkout,'i2c_master$0517290200$0$sclkout'),
+signal('i2c_master$0517290200$0',standard_transmit_buffer_int,'i2c_master$0517290200$0$standard_transmit_buffer_int'),
+signal('i2c_master$0517290200$0',standard_receive_buffer_int,'i2c_master$0517290200$0$standard_receive_buffer_int'),
+signal('i2c_master$0517290200$0',alternate_receive_buffer_int,'i2c_master$0517290200$0$alternate_receive_buffer_int'),
+signal('i2c_master$0517290200$0',protocol_specific_int,'i2c_master$0517290200$0$protocol_specific_int'),
+signal('i2c_master$0125508489$0',signal_in,'i2c_master$0125508489$0$signal_in'),
+signal('i2c_master$01076929067$0',pin,'i2c_master$01076929067$0$pin'),
+signal('i2c_master$01076929087$0',pin,'i2c_master$01076929087$0$pin'),
+signal('global_ccu4$01760137752$0',global_signal,'global_ccu4$01760137752$0$global_signal'),
+signal('global_ccu4$01760137752$0',clk,'global_ccu4$01760137752$0$clk'),
+signal('global_ccu4$89752826$0',gsc_enable,'global_ccu4$89752826$0$gsc_enable'),
+signal('pwm$190007462$0',global_signal,'pwm$190007462$0$global_signal'),
+signal('pwm$190007462$0',cmds_cmus,'pwm$190007462$0$cmds_cmus'),
+signal('pwm$190007462$0',pmus_omds,'pwm$190007462$0$pmus_omds'),
+signal('pwm$190007462$0',st,'pwm$190007462$0$st'),
+signal('pwm$190007462$0',out,'pwm$190007462$0$out'),
+signal('pwm$296065386$0',pad,'pwm$296065386$0$pad'),
+signal('pwm$01578993036$0',pin,'pwm$01578993036$0$pin'),
+connected('clock_xmc1$031780984$0$dco2_clk','clock_xmc1$031780984$0$frtc',1),
+connected('i2c_master$01076929087$0$pin','i2c_master$0125934517$0$pad',1),
+connected('i2c_master$01076929067$0$pin','i2c_master$0125934497$0$pad',1),
+connected('i2c_master$0517290200$0$sclkout','i2c_master$0125934517$0$pad',1),
+connected('i2c_master$0517290200$0$dout0','i2c_master$0125934497$0$pad',1),
+connected('i2c_master$0517290200$0$protocol_specific_int','i2c_master$0125508489$0$signal_in',1),
+connected('i2c_master$0125934517$0$pad','i2c_master$01076929087$0$pin',1),
+connected('i2c_master$0125934517$0$pad','i2c_master$0517290200$0$dx1ins',1),
+connected('i2c_master$0125934497$0$pad','i2c_master$01076929067$0$pin',1),
+connected('i2c_master$0125934497$0$pad','i2c_master$0517290200$0$dx0ins',1),
+connected('pwm$01578993036$0$pin','pwm$296065386$0$pad',1),
+connected('pwm$190007462$0$out','pwm$296065386$0$pad',1),
+connected('pwm$296065386$0$pad','pwm$01578993036$0$pin',1),
+connected('global_ccu4$01760137752$0$global_signal','pwm$190007462$0$global_signal',1),
+register_value('i2c_master$0517290200$0',tbctr_size,4),
+register_value('i2c_master$0517290200$0',rbctr_size,4)], 'pwm','0', Output_signals),15,writeln(timeout),all_solution, Timer, Due, Remainder).
+
+
+
+Jul 26, 2026 3:49:17 PM java.util.logging.LogManager$RootLogger log
+INFO: 
+End of solver : getOutputSignals() :  Difference in ms 96
+
+
+Jul 26, 2026 3:49:31 PM java.util.logging.LogManager$RootLogger log
+INFO: Start of solver :getFeasiblePins() : Sun Jul 26 15:49:31 CEST 2026
+
+
+Jul 26, 2026 3:49:31 PM java.util.logging.LogManager$RootLogger log
+INFO: 
+timeout(ask_feasible_mapping([reserved([p,0,pad,14],'cpu_ctrl_xmc1$1638132965$0'),
+reserved([p,0,pad,15],'cpu_ctrl_xmc1$1638132966$0'),
+reserved([cpu,0,exception,hardfault],'cpu_ctrl_xmc1$01591368925$0'),
+reserved([scu,0,ccu,config],'clock_xmc1$031780984$0'),
+reserved([usic,_,channel,_],'i2c_master$0517290200$0'),
+reserved([cpu,0,nvic,interrupt,_],'i2c_master$0125508489$0'),
+reserved([p,_,pad,_],'i2c_master$0125934497$0'),
+reserved([p,_,pad,_],'i2c_master$0125934517$0'),
+reserved([devicepackage,0,_],'i2c_master$01076929067$0'),
+uri([devicepackage,0,13],'i2c_master$01076929067$0'),
+reserved([devicepackage,0,_],'i2c_master$01076929087$0'),
+uri([devicepackage,0,14],'i2c_master$01076929087$0'),
+reserved([cpu,0,systick],'systimer$0137142936$0'),
+reserved([ccu4,GLOBAL_CCU40sv0,global],'global_ccu4$01760137752$0'),
+reserved([scu,_,gcu,ccu4_global_enable,GLOBAL_CCU40sv0],'global_ccu4$89752826$0'),
+reserved([ccu4,_,cc4,_],'pwm$190007462$0'),
+reserved([p,_,pad,_],'pwm$296065386$0'),
+reserved([devicepackage,0,_],'pwm$01578993036$0'),
+signal('clock_xmc1$031780984$0',frtc,'clock_xmc1$031780984$0$frtc'),
+signal('clock_xmc1$031780984$0',dco2_clk,'clock_xmc1$031780984$0$dco2_clk'),
+signal('clock_xmc1$031780984$0',osc_lp_clk,'clock_xmc1$031780984$0$osc_lp_clk'),
+signal('clock_xmc1$031780984$0',osc_hp_xtal1,'clock_xmc1$031780984$0$osc_hp_xtal1'),
+signal('clock_xmc1$031780984$0',osc_hp_xtal2,'clock_xmc1$031780984$0$osc_hp_xtal2'),
+signal('clock_xmc1$031780984$0',osc_lp_xtal1,'clock_xmc1$031780984$0$osc_lp_xtal1'),
+signal('clock_xmc1$031780984$0',osc_lp_xtal2,'clock_xmc1$031780984$0$osc_lp_xtal2'),
+signal('i2c_master$0125934497$0',pad,'i2c_master$0125934497$0$pad'),
+signal('i2c_master$0125934517$0',pad,'i2c_master$0125934517$0$pad'),
+signal('i2c_master$0517290200$0',dout0,'i2c_master$0517290200$0$dout0'),
+signal('i2c_master$0517290200$0',dx0ins,'i2c_master$0517290200$0$dx0ins'),
+signal('i2c_master$0517290200$0',dx1ins,'i2c_master$0517290200$0$dx1ins'),
+signal('i2c_master$0517290200$0',sclkout,'i2c_master$0517290200$0$sclkout'),
+signal('i2c_master$0517290200$0',standard_transmit_buffer_int,'i2c_master$0517290200$0$standard_transmit_buffer_int'),
+signal('i2c_master$0517290200$0',standard_receive_buffer_int,'i2c_master$0517290200$0$standard_receive_buffer_int'),
+signal('i2c_master$0517290200$0',alternate_receive_buffer_int,'i2c_master$0517290200$0$alternate_receive_buffer_int'),
+signal('i2c_master$0517290200$0',protocol_specific_int,'i2c_master$0517290200$0$protocol_specific_int'),
+signal('i2c_master$0125508489$0',signal_in,'i2c_master$0125508489$0$signal_in'),
+signal('i2c_master$01076929067$0',pin,'i2c_master$01076929067$0$pin'),
+signal('i2c_master$01076929087$0',pin,'i2c_master$01076929087$0$pin'),
+signal('global_ccu4$01760137752$0',global_signal,'global_ccu4$01760137752$0$global_signal'),
+signal('global_ccu4$01760137752$0',clk,'global_ccu4$01760137752$0$clk'),
+signal('global_ccu4$89752826$0',gsc_enable,'global_ccu4$89752826$0$gsc_enable'),
+signal('pwm$190007462$0',global_signal,'pwm$190007462$0$global_signal'),
+signal('pwm$190007462$0',cmds_cmus,'pwm$190007462$0$cmds_cmus'),
+signal('pwm$190007462$0',pmus_omds,'pwm$190007462$0$pmus_omds'),
+signal('pwm$190007462$0',st,'pwm$190007462$0$st'),
+signal('pwm$190007462$0',out,'pwm$190007462$0$out'),
+signal('pwm$296065386$0',pad,'pwm$296065386$0$pad'),
+signal('pwm$01578993036$0',pin,'pwm$01578993036$0$pin'),
+connected('clock_xmc1$031780984$0$dco2_clk','clock_xmc1$031780984$0$frtc',1),
+connected('i2c_master$01076929087$0$pin','i2c_master$0125934517$0$pad',1),
+connected('i2c_master$01076929067$0$pin','i2c_master$0125934497$0$pad',1),
+connected('i2c_master$0517290200$0$sclkout','i2c_master$0125934517$0$pad',1),
+connected('i2c_master$0517290200$0$dout0','i2c_master$0125934497$0$pad',1),
+connected('i2c_master$0517290200$0$protocol_specific_int','i2c_master$0125508489$0$signal_in',1),
+connected('i2c_master$0125934517$0$pad','i2c_master$01076929087$0$pin',1),
+connected('i2c_master$0125934517$0$pad','i2c_master$0517290200$0$dx1ins',1),
+connected('i2c_master$0125934497$0$pad','i2c_master$01076929067$0$pin',1),
+connected('i2c_master$0125934497$0$pad','i2c_master$0517290200$0$dx0ins',1),
+connected('pwm$01578993036$0$pin','pwm$296065386$0$pad',1),
+connected('pwm$190007462$0$out','pwm$296065386$0$pad',1),
+connected('pwm$296065386$0$pad','pwm$01578993036$0$pin',1),
+connected('global_ccu4$01760137752$0$global_signal','pwm$190007462$0$global_signal',1),
+register_value('i2c_master$0517290200$0',tbctr_size,4),
+register_value('i2c_master$0517290200$0',rbctr_size,4)],'pwm$01578993036$0',Result),15,writeln(timeout),all_solution, Timer, Due, Remainder).
+
+
+
+Jul 26, 2026 3:49:31 PM java.util.logging.LogManager$RootLogger log
+INFO: 
+End of solver : getFeasiblePins() :  Difference in ms 125
+
+
+Jul 26, 2026 3:49:31 PM java.util.logging.LogManager$RootLogger log
+INFO: [/devicepackage/0/4, /devicepackage/0/48, /devicepackage/0/2, /devicepackage/0/47, /devicepackage/0/3, /devicepackage/0/1, /devicepackage/0/40, /devicepackage/0/16, /devicepackage/0/21, /devicepackage/0/20, /devicepackage/0/26, /devicepackage/0/29, /devicepackage/0/28, /devicepackage/0/23, /devicepackage/0/22, /devicepackage/0/25, /devicepackage/0/24, /devicepackage/0/32, /devicepackage/0/31, /devicepackage/0/30, /devicepackage/0/39, /devicepackage/0/36, /devicepackage/0/35, /devicepackage/0/34, /devicepackage/0/33]
+
+
+Jul 26, 2026 6:50:23 PM java.util.logging.LogManager$RootLogger log
+INFO: Start of solver :getFeasiblePins() : Sun Jul 26 18:50:23 CEST 2026
+
+
+Jul 26, 2026 6:50:23 PM java.util.logging.LogManager$RootLogger log
+INFO: 
+timeout(ask_feasible_mapping([reserved([p,0,pad,14],'cpu_ctrl_xmc1$1638132965$0'),
+reserved([p,0,pad,15],'cpu_ctrl_xmc1$1638132966$0'),
+reserved([cpu,0,exception,hardfault],'cpu_ctrl_xmc1$01591368925$0'),
+reserved([scu,0,ccu,config],'clock_xmc1$031780984$0'),
+reserved([usic,_,channel,_],'i2c_master$0517290200$0'),
+reserved([cpu,0,nvic,interrupt,_],'i2c_master$0125508489$0'),
+reserved([p,_,pad,_],'i2c_master$0125934497$0'),
+reserved([p,_,pad,_],'i2c_master$0125934517$0'),
+reserved([devicepackage,0,_],'i2c_master$01076929067$0'),
+uri([devicepackage,0,13],'i2c_master$01076929067$0'),
+reserved([devicepackage,0,_],'i2c_master$01076929087$0'),
+uri([devicepackage,0,14],'i2c_master$01076929087$0'),
+reserved([cpu,0,systick],'systimer$0137142936$0'),
+reserved([ccu4,GLOBAL_CCU40sv0,global],'global_ccu4$01760137752$0'),
+reserved([scu,_,gcu,ccu4_global_enable,GLOBAL_CCU40sv0],'global_ccu4$89752826$0'),
+reserved([ccu4,_,cc4,_],'pwm$190007462$0'),
+reserved([p,_,pad,_],'pwm$296065386$0'),
+reserved([devicepackage,0,_],'pwm$01578993036$0'),
+signal('clock_xmc1$031780984$0',frtc,'clock_xmc1$031780984$0$frtc'),
+signal('clock_xmc1$031780984$0',dco2_clk,'clock_xmc1$031780984$0$dco2_clk'),
+signal('clock_xmc1$031780984$0',osc_lp_clk,'clock_xmc1$031780984$0$osc_lp_clk'),
+signal('clock_xmc1$031780984$0',osc_hp_xtal1,'clock_xmc1$031780984$0$osc_hp_xtal1'),
+signal('clock_xmc1$031780984$0',osc_hp_xtal2,'clock_xmc1$031780984$0$osc_hp_xtal2'),
+signal('clock_xmc1$031780984$0',osc_lp_xtal1,'clock_xmc1$031780984$0$osc_lp_xtal1'),
+signal('clock_xmc1$031780984$0',osc_lp_xtal2,'clock_xmc1$031780984$0$osc_lp_xtal2'),
+signal('i2c_master$0125934497$0',pad,'i2c_master$0125934497$0$pad'),
+signal('i2c_master$0125934517$0',pad,'i2c_master$0125934517$0$pad'),
+signal('i2c_master$0517290200$0',dout0,'i2c_master$0517290200$0$dout0'),
+signal('i2c_master$0517290200$0',dx0ins,'i2c_master$0517290200$0$dx0ins'),
+signal('i2c_master$0517290200$0',dx1ins,'i2c_master$0517290200$0$dx1ins'),
+signal('i2c_master$0517290200$0',sclkout,'i2c_master$0517290200$0$sclkout'),
+signal('i2c_master$0517290200$0',standard_transmit_buffer_int,'i2c_master$0517290200$0$standard_transmit_buffer_int'),
+signal('i2c_master$0517290200$0',standard_receive_buffer_int,'i2c_master$0517290200$0$standard_receive_buffer_int'),
+signal('i2c_master$0517290200$0',alternate_receive_buffer_int,'i2c_master$0517290200$0$alternate_receive_buffer_int'),
+signal('i2c_master$0517290200$0',protocol_specific_int,'i2c_master$0517290200$0$protocol_specific_int'),
+signal('i2c_master$0125508489$0',signal_in,'i2c_master$0125508489$0$signal_in'),
+signal('i2c_master$01076929067$0',pin,'i2c_master$01076929067$0$pin'),
+signal('i2c_master$01076929087$0',pin,'i2c_master$01076929087$0$pin'),
+signal('global_ccu4$01760137752$0',global_signal,'global_ccu4$01760137752$0$global_signal'),
+signal('global_ccu4$01760137752$0',clk,'global_ccu4$01760137752$0$clk'),
+signal('global_ccu4$89752826$0',gsc_enable,'global_ccu4$89752826$0$gsc_enable'),
+signal('pwm$190007462$0',global_signal,'pwm$190007462$0$global_signal'),
+signal('pwm$190007462$0',cmds_cmus,'pwm$190007462$0$cmds_cmus'),
+signal('pwm$190007462$0',pmus_omds,'pwm$190007462$0$pmus_omds'),
+signal('pwm$190007462$0',st,'pwm$190007462$0$st'),
+signal('pwm$190007462$0',out,'pwm$190007462$0$out'),
+signal('pwm$296065386$0',pad,'pwm$296065386$0$pad'),
+signal('pwm$01578993036$0',pin,'pwm$01578993036$0$pin'),
+connected('clock_xmc1$031780984$0$dco2_clk','clock_xmc1$031780984$0$frtc',1),
+connected('i2c_master$01076929087$0$pin','i2c_master$0125934517$0$pad',1),
+connected('i2c_master$01076929067$0$pin','i2c_master$0125934497$0$pad',1),
+connected('i2c_master$0517290200$0$sclkout','i2c_master$0125934517$0$pad',1),
+connected('i2c_master$0517290200$0$dout0','i2c_master$0125934497$0$pad',1),
+connected('i2c_master$0517290200$0$protocol_specific_int','i2c_master$0125508489$0$signal_in',1),
+connected('i2c_master$0125934517$0$pad','i2c_master$01076929087$0$pin',1),
+connected('i2c_master$0125934517$0$pad','i2c_master$0517290200$0$dx1ins',1),
+connected('i2c_master$0125934497$0$pad','i2c_master$01076929067$0$pin',1),
+connected('i2c_master$0125934497$0$pad','i2c_master$0517290200$0$dx0ins',1),
+connected('pwm$01578993036$0$pin','pwm$296065386$0$pad',1),
+connected('pwm$190007462$0$out','pwm$296065386$0$pad',1),
+connected('pwm$296065386$0$pad','pwm$01578993036$0$pin',1),
+connected('global_ccu4$01760137752$0$global_signal','pwm$190007462$0$global_signal',1),
+register_value('i2c_master$0517290200$0',tbctr_size,4),
+register_value('i2c_master$0517290200$0',rbctr_size,4)],'pwm$01578993036$0',Result),15,writeln(timeout),all_solution, Timer, Due, Remainder).
+
+
+
+Jul 26, 2026 6:50:23 PM java.util.logging.LogManager$RootLogger log
+INFO: 
+End of solver : getFeasiblePins() :  Difference in ms 118
+
+
+Jul 26, 2026 6:50:23 PM java.util.logging.LogManager$RootLogger log
+INFO: [/devicepackage/0/4, /devicepackage/0/48, /devicepackage/0/2, /devicepackage/0/47, /devicepackage/0/3, /devicepackage/0/1, /devicepackage/0/40, /devicepackage/0/16, /devicepackage/0/21, /devicepackage/0/20, /devicepackage/0/26, /devicepackage/0/29, /devicepackage/0/28, /devicepackage/0/23, /devicepackage/0/22, /devicepackage/0/25, /devicepackage/0/24, /devicepackage/0/32, /devicepackage/0/31, /devicepackage/0/30, /devicepackage/0/39, /devicepackage/0/36, /devicepackage/0/35, /devicepackage/0/34, /devicepackage/0/33]
+
+
+Jul 26, 2026 6:50:26 PM java.util.logging.LogManager$RootLogger log
+INFO: Start of solver :getFeasiblePins() : Sun Jul 26 18:50:26 CEST 2026
+
+
+Jul 26, 2026 6:50:26 PM java.util.logging.LogManager$RootLogger log
+INFO: 
+timeout(ask_feasible_mapping([reserved([p,0,pad,14],'cpu_ctrl_xmc1$1638132965$0'),
+reserved([p,0,pad,15],'cpu_ctrl_xmc1$1638132966$0'),
+reserved([cpu,0,exception,hardfault],'cpu_ctrl_xmc1$01591368925$0'),
+reserved([scu,0,ccu,config],'clock_xmc1$031780984$0'),
+reserved([usic,_,channel,_],'i2c_master$0517290200$0'),
+reserved([cpu,0,nvic,interrupt,_],'i2c_master$0125508489$0'),
+reserved([p,_,pad,_],'i2c_master$0125934497$0'),
+reserved([p,_,pad,_],'i2c_master$0125934517$0'),
+reserved([devicepackage,0,_],'i2c_master$01076929067$0'),
+uri([devicepackage,0,13],'i2c_master$01076929067$0'),
+reserved([devicepackage,0,_],'i2c_master$01076929087$0'),
+uri([devicepackage,0,14],'i2c_master$01076929087$0'),
+reserved([cpu,0,systick],'systimer$0137142936$0'),
+reserved([ccu4,GLOBAL_CCU40sv0,global],'global_ccu4$01760137752$0'),
+reserved([scu,_,gcu,ccu4_global_enable,GLOBAL_CCU40sv0],'global_ccu4$89752826$0'),
+reserved([ccu4,_,cc4,_],'pwm$190007462$0'),
+reserved([p,_,pad,_],'pwm$296065386$0'),
+reserved([devicepackage,0,_],'pwm$01578993036$0'),
+signal('clock_xmc1$031780984$0',frtc,'clock_xmc1$031780984$0$frtc'),
+signal('clock_xmc1$031780984$0',dco2_clk,'clock_xmc1$031780984$0$dco2_clk'),
+signal('clock_xmc1$031780984$0',osc_lp_clk,'clock_xmc1$031780984$0$osc_lp_clk'),
+signal('clock_xmc1$031780984$0',osc_hp_xtal1,'clock_xmc1$031780984$0$osc_hp_xtal1'),
+signal('clock_xmc1$031780984$0',osc_hp_xtal2,'clock_xmc1$031780984$0$osc_hp_xtal2'),
+signal('clock_xmc1$031780984$0',osc_lp_xtal1,'clock_xmc1$031780984$0$osc_lp_xtal1'),
+signal('clock_xmc1$031780984$0',osc_lp_xtal2,'clock_xmc1$031780984$0$osc_lp_xtal2'),
+signal('i2c_master$0125934497$0',pad,'i2c_master$0125934497$0$pad'),
+signal('i2c_master$0125934517$0',pad,'i2c_master$0125934517$0$pad'),
+signal('i2c_master$0517290200$0',dout0,'i2c_master$0517290200$0$dout0'),
+signal('i2c_master$0517290200$0',dx0ins,'i2c_master$0517290200$0$dx0ins'),
+signal('i2c_master$0517290200$0',dx1ins,'i2c_master$0517290200$0$dx1ins'),
+signal('i2c_master$0517290200$0',sclkout,'i2c_master$0517290200$0$sclkout'),
+signal('i2c_master$0517290200$0',standard_transmit_buffer_int,'i2c_master$0517290200$0$standard_transmit_buffer_int'),
+signal('i2c_master$0517290200$0',standard_receive_buffer_int,'i2c_master$0517290200$0$standard_receive_buffer_int'),
+signal('i2c_master$0517290200$0',alternate_receive_buffer_int,'i2c_master$0517290200$0$alternate_receive_buffer_int'),
+signal('i2c_master$0517290200$0',protocol_specific_int,'i2c_master$0517290200$0$protocol_specific_int'),
+signal('i2c_master$0125508489$0',signal_in,'i2c_master$0125508489$0$signal_in'),
+signal('i2c_master$01076929067$0',pin,'i2c_master$01076929067$0$pin'),
+signal('i2c_master$01076929087$0',pin,'i2c_master$01076929087$0$pin'),
+signal('global_ccu4$01760137752$0',global_signal,'global_ccu4$01760137752$0$global_signal'),
+signal('global_ccu4$01760137752$0',clk,'global_ccu4$01760137752$0$clk'),
+signal('global_ccu4$89752826$0',gsc_enable,'global_ccu4$89752826$0$gsc_enable'),
+signal('pwm$190007462$0',global_signal,'pwm$190007462$0$global_signal'),
+signal('pwm$190007462$0',cmds_cmus,'pwm$190007462$0$cmds_cmus'),
+signal('pwm$190007462$0',pmus_omds,'pwm$190007462$0$pmus_omds'),
+signal('pwm$190007462$0',st,'pwm$190007462$0$st'),
+signal('pwm$190007462$0',out,'pwm$190007462$0$out'),
+signal('pwm$296065386$0',pad,'pwm$296065386$0$pad'),
+signal('pwm$01578993036$0',pin,'pwm$01578993036$0$pin'),
+connected('clock_xmc1$031780984$0$dco2_clk','clock_xmc1$031780984$0$frtc',1),
+connected('i2c_master$01076929087$0$pin','i2c_master$0125934517$0$pad',1),
+connected('i2c_master$01076929067$0$pin','i2c_master$0125934497$0$pad',1),
+connected('i2c_master$0517290200$0$sclkout','i2c_master$0125934517$0$pad',1),
+connected('i2c_master$0517290200$0$dout0','i2c_master$0125934497$0$pad',1),
+connected('i2c_master$0517290200$0$protocol_specific_int','i2c_master$0125508489$0$signal_in',1),
+connected('i2c_master$0125934517$0$pad','i2c_master$01076929087$0$pin',1),
+connected('i2c_master$0125934517$0$pad','i2c_master$0517290200$0$dx1ins',1),
+connected('i2c_master$0125934497$0$pad','i2c_master$01076929067$0$pin',1),
+connected('i2c_master$0125934497$0$pad','i2c_master$0517290200$0$dx0ins',1),
+connected('pwm$01578993036$0$pin','pwm$296065386$0$pad',1),
+connected('pwm$190007462$0$out','pwm$296065386$0$pad',1),
+connected('pwm$296065386$0$pad','pwm$01578993036$0$pin',1),
+connected('global_ccu4$01760137752$0$global_signal','pwm$190007462$0$global_signal',1),
+register_value('i2c_master$0517290200$0',tbctr_size,4),
+register_value('i2c_master$0517290200$0',rbctr_size,4)],'pwm$01578993036$0',Result),15,writeln(timeout),all_solution, Timer, Due, Remainder).
+
+
+
+Jul 26, 2026 6:50:26 PM java.util.logging.LogManager$RootLogger log
+INFO: 
+End of solver : getFeasiblePins() :  Difference in ms 110
+
+
+Jul 26, 2026 6:50:26 PM java.util.logging.LogManager$RootLogger log
+INFO: [/devicepackage/0/4, /devicepackage/0/48, /devicepackage/0/2, /devicepackage/0/47, /devicepackage/0/3, /devicepackage/0/1, /devicepackage/0/40, /devicepackage/0/16, /devicepackage/0/21, /devicepackage/0/20, /devicepackage/0/26, /devicepackage/0/29, /devicepackage/0/28, /devicepackage/0/23, /devicepackage/0/22, /devicepackage/0/25, /devicepackage/0/24, /devicepackage/0/32, /devicepackage/0/31, /devicepackage/0/30, /devicepackage/0/39, /devicepackage/0/36, /devicepackage/0/35, /devicepackage/0/34, /devicepackage/0/33]
+
+

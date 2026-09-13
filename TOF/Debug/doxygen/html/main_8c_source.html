@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>TOF fuer Einsteiger: main.c Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">TOF fuer Einsteiger
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="annotated.html"><span>Klassen</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typdefinitionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Aufzählungen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Aufzählungswerte</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Makrodefinitionen</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">main.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="main_8c.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;DAVE.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="i2c_t_o_f_8h.html" title="VL53L0X-Entfernungssensor: Schnittstelle und Datentypen.">Libraries/TOF/i2cTOF.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;Libraries/OLED/oled.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;Libraries/OLED/gui.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;Libraries/OLED/test.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="main_8c.html#a8aa85ae9867fabf70ec72cd3bf6fb6b9">   27</a></span>&#160;<span class="preprocessor">#define LED1 XMC_GPIO_PORT0, 7</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="main_8c.html#ad09fe5bf321b9a2de26bd5e5b9af6424">   29</a></span>&#160;<span class="preprocessor">#define LED2 XMC_GPIO_PORT0, 6</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="main_8c.html#a696110b28f7e1c4567a2b9421cf10441">   31</a></span>&#160;<span class="preprocessor">#define TOF_PROFILE TOF_DEFAULT_MODE_D</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="tof__dave__port_8inc.html#a538854b06be9b14ee04d43b6341526db">   38</a></span>&#160;<span class="keyword">volatile</span> uint32_t <a class="code" href="main_8c.html#a538854b06be9b14ee04d43b6341526db" title="Seit Timerstart vergangene Millisekunden.">SysTickCounter</a> = 0U;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="main_8c.html#a2c14ae6c1be812dd83c3cdd01f871d4c">   40</a></span>&#160;<a class="code" href="struct_t_o_f_sensor.html" title="Buendelt Bus, Einstellungen und Ergebnis eines Sensors.">TOFSensor_t</a> <a class="code" href="main_8c.html#a2c14ae6c1be812dd83c3cdd01f871d4c" title="Bus, Einstellungen und letzter Messwert des einzigen Sensors.">TOF_Sensor_1</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26">   42</a></span>&#160;<span class="keyword">volatile</span> <span class="keywordtype">bool</span> <a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="main_8c.html#ae38d19b198689bf5e05911de9e29fbc2">   44</a></span>&#160;<span class="keyword">volatile</span> uint32_t <a class="code" href="main_8c.html#ae38d19b198689bf5e05911de9e29fbc2" title="Anzahl erkannter TOF-Fehler; im Debugger beobachtbar.">tof_error_count</a> = 0U;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="main_8c.html#a0adbabcbc326079477bb65bf59220b85">   52</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="main_8c.html#a0adbabcbc326079477bb65bf59220b85" title="Timer-Callback: erhoeht jede Millisekunde den Zeitzaehler.">milliSec_Handler</a>(<span class="keywordtype">void</span> *args)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">/* Bewusst unbenutzt: verhindert eine entsprechende Compilerwarnung. */</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    (void)args;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    ++<a class="code" href="main_8c.html#a538854b06be9b14ee04d43b6341526db" title="Seit Timerstart vergangene Millisekunden.">SysTickCounter</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="code" href="main_8c.html#a42ceb6e2a33ea279f41bc4a16d7b47c4">   66</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a42ceb6e2a33ea279f41bc4a16d7b47c4" title="Schaltet bei einem vom DAVE-Handler gemeldeten NACK die Fehler-LED ein.">NACK_Handler</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    XMC_GPIO_SetOutputHigh(<a class="code" href="main_8c.html#ad09fe5bf321b9a2de26bd5e5b9af6424" title="Port/Pin-Paar der Fehler-LED (P0.6).">LED2</a>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="main_8c.html#aa01936e3aca89d1b9f8a86f7c3eab2b6">   78</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="main_8c.html#aa01936e3aca89d1b9f8a86f7c3eab2b6" title="Schreibt eine Statuszeile oder Entfernung auf das OLED.">show_status</a>(<span class="keywordtype">char</span> *text)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    GUI_ShowString(0, 2, text, 16, 1);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">   90</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Initialisiert das Board und bearbeitet die regelmaessigen Aufgaben.">main</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">/* const: Diese gemeinsam fuer beide LEDs verwendeten Einstellungen bleiben gleich. */</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">const</span> XMC_GPIO_CONFIG_t led_config = {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        .mode = XMC_GPIO_MODE_OUTPUT_PUSH_PULL,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        .output_level = XMC_GPIO_OUTPUT_LEVEL_LOW</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    };</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">/* DAVE_Init() richtet die im Projekt konfigurierten APPs ein. */</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    DAVE_STATUS_t status = DAVE_Init();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    uint32_t timer_id;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">/* Zeitstempel der letzten Ausfuehrung, keine herunterzaehlenden Timer. */</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    uint32_t last_measurement = 0U;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    uint32_t last_display = 0U;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    uint32_t last_led = 0U;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    uint32_t last_pwm = 0U;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">/* Platz fuer bis zu 21 Zeichen und das abschliessende Nullzeichen. */</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">char</span> line[22];</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    XMC_GPIO_Init(<a class="code" href="main_8c.html#a8aa85ae9867fabf70ec72cd3bf6fb6b9" title="Port/Pin-Paar der LED fuer das Lebenszeichen (P0.7).">LED1</a>, &amp;led_config);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    XMC_GPIO_Init(<a class="code" href="main_8c.html#ad09fe5bf321b9a2de26bd5e5b9af6424" title="Port/Pin-Paar der Fehler-LED (P0.6).">LED2</a>, &amp;led_config);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">if</span> (status != DAVE_STATUS_SUCCESS) {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        XMC_GPIO_SetOutputHigh(<a class="code" href="main_8c.html#ad09fe5bf321b9a2de26bd5e5b9af6424" title="Port/Pin-Paar der Fehler-LED (P0.6).">LED2</a>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="comment">/* Ohne funktionierende Hardware oder Zeitbasis hier bewusst anhalten. */</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">while</span> (1U) { }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="comment">/* SYSTIMER erwartet Mikrosekunden: 1000 us entsprechen 1 ms.</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">     * Die zurueckgegebene ID identifiziert den angelegten Softwaretimer. */</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    timer_id = SYSTIMER_CreateTimer(1000U, SYSTIMER_MODE_PERIODIC,</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                                   <a class="code" href="main_8c.html#a0adbabcbc326079477bb65bf59220b85" title="Timer-Callback: erhoeht jede Millisekunde den Zeitzaehler.">milliSec_Handler</a>, NULL);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">if</span> ((timer_id == 0U) || (SYSTIMER_StartTimer(timer_id) != SYSTIMER_STATUS_SUCCESS)) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        XMC_GPIO_SetOutputHigh(<a class="code" href="main_8c.html#ad09fe5bf321b9a2de26bd5e5b9af6424" title="Port/Pin-Paar der Fehler-LED (P0.6).">LED2</a>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="comment">/* Ohne funktionierende Hardware oder Zeitbasis hier bewusst anhalten. */</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">while</span> (1U) { }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="comment">/* Erst warten, wenn der Zeitzaehler laeuft; Sensor und Display starten mit. */</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    delay_ms(500U);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    OLED_Init();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    OLED_Clear(0);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    GUI_ShowString(0, 0, <span class="stringliteral">&quot;VL53L0X TOF&quot;</span>, 16, 1);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="main_8c.html#aa01936e3aca89d1b9f8a86f7c3eab2b6" title="Schreibt eine Statuszeile oder Entfernung auf das OLED.">show_status</a>(<span class="stringliteral">&quot;Initialisierung &quot;</span>);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="comment">/* &amp; liefert die Adresse einer Variablen. So kann die Bibliothek die</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">     * Originalstruktur beschreiben und das vorhandene DAVE-Handle verwenden. */</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="i2c_t_o_f_8c.html#afe190388f7295267d70e2e74748b97f1" title="Legt die Anfangswerte einer Sensorstruktur im RAM an.">initTOFSensorData</a>(&amp;TOF_Sensor_1, &amp;I2C_MASTER_0,</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                      <a class="code" href="i2c_t_o_f_8h.html#a55ef6eb707bed6571b566a641f212b7da2f1e915301ccb62bba90c1d740cb39bb" title="VL53LOX sensor address.">TOF_ADDR_VL53LOX</a>, <a class="code" href="main_8c.html#a696110b28f7e1c4567a2b9421cf10441" title="Standardprofil mit 30 ms Messbudget.">TOF_PROFILE</a>, 0U);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="comment">/* Reihenfolge: Sensor pruefen/kalibrieren, Profil setzen, Dauermessung starten.</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">     * Jeder folgende Schritt wird nur nach Erfolg des vorherigen ausgefuehrt. */</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a> = <a class="code" href="i2c_t_o_f_8c.html#a843cf245c7d427dc924d493e9c8fd81a" title="Prueft und initialisiert den VL53L0X.">TOF_init</a>(&amp;TOF_Sensor_1);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a>) {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a> = <a class="code" href="i2c_t_o_f_8c.html#af2c5f65ada0ae910861e5c5dc6f7ebf1" title="Uebertraegt das in der Struktur gewaehlte Messprofil.">TOF_set_ranging_profile</a>(&amp;TOF_Sensor_1);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a>) {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        TOF_Sensor_1.<a class="code" href="struct_t_o_f_sensor.html#acadb7c77128f7da848dd6c659245ee09" title="Freigabewunsch der Anwendung; kein automatischer Hardware-Ein/Aus-Schalter.">enableTOFSensor</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a> = <a class="code" href="i2c_t_o_f_8c.html#a49752b429ba1c075a898f9eb9334fbcb" title="Startet wiederholte Messungen ohne weitere Startbefehle.">TOF_start_continuous</a>(&amp;TOF_Sensor_1);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a>) {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        TOF_Sensor_1.<a class="code" href="struct_t_o_f_sensor.html#acadb7c77128f7da848dd6c659245ee09" title="Freigabewunsch der Anwendung; kein automatischer Hardware-Ein/Aus-Schalter.">enableTOFSensor</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        ++<a class="code" href="main_8c.html#ae38d19b198689bf5e05911de9e29fbc2" title="Anzahl erkannter TOF-Fehler; im Debugger beobachtbar.">tof_error_count</a>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        XMC_GPIO_SetOutputHigh(<a class="code" href="main_8c.html#ad09fe5bf321b9a2de26bd5e5b9af6424" title="Port/Pin-Paar der Fehler-LED (P0.6).">LED2</a>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <a class="code" href="main_8c.html#aa01936e3aca89d1b9f8a86f7c3eab2b6" title="Schreibt eine Statuszeile oder Entfernung auf das OLED.">show_status</a>(<span class="stringliteral">&quot;TOF Init-Fehler  &quot;</span>);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment">/* 1U ist immer wahr: Ein Mikrocontroller arbeitet normalerweise dauerhaft. */</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">while</span> (1U) {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="comment">/* Einmal lesen: Alle Aufgaben dieses Durchlaufs nutzen denselben Zeitwert.</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">         * Unsigned-Subtraktion funktioniert auch ueber den Zaehlerueberlauf,</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">         * solange die betrachteten Zeitabstaende kleiner als ein Umlauf sind. */</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        uint32_t now = <a class="code" href="main_8c.html#a538854b06be9b14ee04d43b6341526db" title="Seit Timerstart vergangene Millisekunden.">SysTickCounter</a>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="comment">/* &amp;&amp; verlangt beide Bedingungen: Sensor bereit UND genug Zeit vergangen.</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">         * Die 5 ms Zugabe sind ein kleiner Abstand zum vorgesehenen Messbudget. */</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a> &amp;&amp; (uint32_t)(now - last_measurement) &gt;=</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                         TOF_Sensor_1.<a class="code" href="struct_t_o_f_sensor.html#a3fadb0d83e3e932d9c33b04a4ee6653e" title="Messabstand in ms; 0 bedeutet Messungen direkt nacheinander.">Ranging_Profile_time</a> + 5U) {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            last_measurement = now;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="comment">/* ! kehrt den Wahrheitswert um: Dieser Zweig behandelt einen Fehler. */</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="i2c_t_o_f_8c.html#a6001239ce4ed2c4f604ce7803b849b8c" title="Liest eine Entfernung im laufenden Dauerbetrieb.">TOF_read_continuous_distance</a>(&amp;TOF_Sensor_1)) {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                ++<a class="code" href="main_8c.html#ae38d19b198689bf5e05911de9e29fbc2" title="Anzahl erkannter TOF-Fehler; im Debugger beobachtbar.">tof_error_count</a>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                TOF_Sensor_1.<a class="code" href="struct_t_o_f_sensor.html#acadb7c77128f7da848dd6c659245ee09" title="Freigabewunsch der Anwendung; kein automatischer Hardware-Ein/Aus-Schalter.">enableTOFSensor</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                XMC_GPIO_SetOutputHigh(<a class="code" href="main_8c.html#ad09fe5bf321b9a2de26bd5e5b9af6424" title="Port/Pin-Paar der Fehler-LED (P0.6).">LED2</a>);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                <a class="code" href="main_8c.html#aa01936e3aca89d1b9f8a86f7c3eab2b6" title="Schreibt eine Statuszeile oder Entfernung auf das OLED.">show_status</a>(<span class="stringliteral">&quot;TOF Lesefehler   &quot;</span>);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="comment">/* Langsamere Anzeige spart Buszeit; die Messung darf haeufiger erfolgen. */</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">if</span> ((uint32_t)(now - last_display) &gt;= 100U) {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            last_display = now;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a>) {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                <span class="keywordflow">if</span> (TOF_Sensor_1.<a class="code" href="struct_t_o_f_sensor.html#af0d765e18d8101cf6ff594d7808c2af9" title="Letzte Entfernung in mm oder TOF_VL53L0X_OUT_OF_RANGE.">distanceFromTOF</a> == TOF_VL53L0X_OUT_OF_RANGE) {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                    <a class="code" href="main_8c.html#aa01936e3aca89d1b9f8a86f7c3eab2b6" title="Schreibt eine Statuszeile oder Entfernung auf das OLED.">show_status</a>(<span class="stringliteral">&quot;Ausser Reichw.   &quot;</span>);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                    <span class="comment">/* snprintf begrenzt die Ausgabe auf die Puffergroesse.</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment">                     * %5u formatiert eine positive Ganzzahl mit mindestens 5 Stellen. */</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                    snprintf(line, <span class="keyword">sizeof</span>(line), <span class="stringliteral">&quot;%5u mm        &quot;</span>,</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                             (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)TOF_Sensor_1.<a class="code" href="struct_t_o_f_sensor.html#af0d765e18d8101cf6ff594d7808c2af9" title="Letzte Entfernung in mm oder TOF_VL53L0X_OUT_OF_RANGE.">distanceFromTOF</a>);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                    <a class="code" href="main_8c.html#aa01936e3aca89d1b9f8a86f7c3eab2b6" title="Schreibt eine Statuszeile oder Entfernung auf das OLED.">show_status</a>(line);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            snprintf(line, <span class="keyword">sizeof</span>(line), <span class="stringliteral">&quot;Zeit: %6lu s&quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)(now / 1000U));</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            GUI_ShowString(0, OLED_HEIGHT / 8 - 1, line, 8, 1);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">if</span> ((uint32_t)(now - last_led) &gt;= 1000U) {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            last_led = now;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            XMC_GPIO_ToggleOutput(<a class="code" href="main_8c.html#a8aa85ae9867fabf70ec72cd3bf6fb6b9" title="Port/Pin-Paar der LED fuer das Lebenszeichen (P0.7).">LED1</a>);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="comment">/* PWM veraendert das Verhaeltnis von Ein- zu Ausschaltzeit am Ausgang.</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">         * % 1000 liefert den Rest der Division, also Werte von 0 bis 999.</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment">         * DAVE verwendet fuer den Tastgrad 0 bis 10000 (= 0 bis 100 Prozent). */</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">if</span> ((uint32_t)(now - last_pwm) &gt;= 10U) {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            last_pwm = now;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            PWM_SetDutyCycle(&amp;PWM_0, 10U * (now % 1000U));</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Son Sep 13 2026 16:48:40 für TOF fuer Einsteiger von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.3.1
+</small></address>
+</body>
+</html>

@@ -13,7 +13,7 @@
 #include "gui.h"
 #include "test.h"
 
-//#define PWM_on  //		activation PWM_0 for Debug of 10ms Task on Pin 0.5
+#define PWM_on  //		activation PWM_0 for Debug of 10ms Task on Pin 0.5
 
 
 #define milliSec 1000U
@@ -64,7 +64,7 @@ void Task1s(void)
 void milliSec_Handler(void)
 {
     SysTickCounter++;
-   //int32_t DutyPWM_0 = SysTickCounter % 1000; //Modulo 1000
+    //int32_t DutyPWM_0 = SysTickCounter % 1000; // Modulo 1000
     if ((SysTickCounter % 10U) == 0)
     {
     	Task10ms();

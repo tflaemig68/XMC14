@@ -1,0 +1,11 @@
+17:04:33 **** Incremental Build of configuration Debug for project TOF ****
+"\"C:\\Infineon\\Tools\\DAVE IDE\\450\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j8 all 
+'Invoking: ARM-GCC Print Size'
+"C:/Infineon/Tools/DAVE IDE/450/eclipse/ARM-GCC-49/bin/arm-none-eabi-size" --format=berkeley "TOF.elf"
+   text	   data	    bss	    dec	    hex	filename
+  29268	    184	   1468	  30920	   78c8	TOF.elf
+'Finished building: TOF.siz'
+
+
+17:04:33 Build Finished (took 686ms)
+

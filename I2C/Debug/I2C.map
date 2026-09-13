@@ -1351,22 +1351,28 @@ Discarded input sections
  .text          0x00000000        0x0 ./Dave/Generated/PWM/pwm.o
  .data          0x00000000        0x0 ./Dave/Generated/PWM/pwm.o
  .bss           0x00000000        0x0 ./Dave/Generated/PWM/pwm.o
+ .text.XMC_CCU4_DisableClock
+                0x00000000       0x20 ./Dave/Generated/PWM/pwm.o
  .text.XMC_CCU4_SLICE_IsTimerRunning
                 0x00000000       0x20 ./Dave/Generated/PWM/pwm.o
+ .text.XMC_CCU4_SLICE_StopTimer
+                0x00000000       0x14 ./Dave/Generated/PWM/pwm.o
+ .text.XMC_CCU4_SLICE_ClearTimer
+                0x00000000       0x14 ./Dave/Generated/PWM/pwm.o
  .text.XMC_CCU4_SLICE_ClearEvent
                 0x00000000       0x24 ./Dave/Generated/PWM/pwm.o
  .text.XMC_CCU4_SLICE_GetEvent
                 0x00000000       0x30 ./Dave/Generated/PWM/pwm.o
- .text.PWM_lCCU4_SetDutyCycle
-                0x00000000       0x88 ./Dave/Generated/PWM/pwm.o
+ .text.PWM_lCCU4_Stop
+                0x00000000       0x48 ./Dave/Generated/PWM/pwm.o
  .text.PWM_lCCU4_SetFreq
                 0x00000000      0x124 ./Dave/Generated/PWM/pwm.o
  .text.PWM_lCCU4_SetFreqAndDutyCycle
                 0x00000000      0x134 ./Dave/Generated/PWM/pwm.o
  .text.PWM_GetAppVersion
                 0x00000000       0x60 ./Dave/Generated/PWM/pwm.o
- .text.PWM_SetDutyCycle
-                0x00000000       0x40 ./Dave/Generated/PWM/pwm.o
+ .text.PWM_Stop
+                0x00000000       0x20 ./Dave/Generated/PWM/pwm.o
  .text.PWM_SetFreq
                 0x00000000       0x40 ./Dave/Generated/PWM/pwm.o
  .text.PWM_SetFreqAndDutyCycle
@@ -1661,7 +1667,7 @@ END GROUP
                 0x00000400                stack_size = DEFINED (stack_size)?stack_size:0x400
                 0x00000004                no_init_size = 0x4
 
-.text           0x10001000     0x5438
+.text           0x10001000     0x5474
                 0x10001000                sText = .
  *(.reset)
  .reset         0x10001000       0xa0 ./Startup/startup_XMC1400.o
@@ -1913,197 +1919,191 @@ END GROUP
                 0x100039d0                SYSTIMER_StartTimer
  .text.XMC_CCU4_EnableClock
                 0x10003a5c       0x20 ./Dave/Generated/PWM/pwm.o
- .text.XMC_CCU4_DisableClock
-                0x10003a7c       0x20 ./Dave/Generated/PWM/pwm.o
  .text.XMC_CCU4_SLICE_StartTimer
-                0x10003a9c       0x14 ./Dave/Generated/PWM/pwm.o
- .text.XMC_CCU4_SLICE_StopTimer
-                0x10003ab0       0x14 ./Dave/Generated/PWM/pwm.o
- .text.XMC_CCU4_SLICE_ClearTimer
-                0x10003ac4       0x14 ./Dave/Generated/PWM/pwm.o
+                0x10003a7c       0x14 ./Dave/Generated/PWM/pwm.o
  .text.XMC_CCU4_SLICE_SetTimerPeriodMatch
-                0x10003ad8       0x1c ./Dave/Generated/PWM/pwm.o
+                0x10003a90       0x1c ./Dave/Generated/PWM/pwm.o
  .text.XMC_CCU4_SLICE_SetTimerCompareMatch
-                0x10003af4       0x1c ./Dave/Generated/PWM/pwm.o
+                0x10003aac       0x1c ./Dave/Generated/PWM/pwm.o
  .text.XMC_CCU4_EnableShadowTransfer
-                0x10003b10       0x18 ./Dave/Generated/PWM/pwm.o
+                0x10003ac8       0x18 ./Dave/Generated/PWM/pwm.o
  .text.XMC_CCU4_SLICE_EnableEvent
-                0x10003b28       0x2c ./Dave/Generated/PWM/pwm.o
+                0x10003ae0       0x2c ./Dave/Generated/PWM/pwm.o
  .text.PWM_lCCU4_Init
-                0x10003b54       0xd4 ./Dave/Generated/PWM/pwm.o
-                0x10003b54                PWM_lCCU4_Init
+                0x10003b0c       0xd4 ./Dave/Generated/PWM/pwm.o
+                0x10003b0c                PWM_lCCU4_Init
  .text.PWM_lCCU4_ConfigInterrupts
-                0x10003c28       0x64 ./Dave/Generated/PWM/pwm.o
-                0x10003c28                PWM_lCCU4_ConfigInterrupts
+                0x10003be0       0x64 ./Dave/Generated/PWM/pwm.o
+                0x10003be0                PWM_lCCU4_ConfigInterrupts
  .text.PWM_lCCU4_Start
-                0x10003c8c       0x48 ./Dave/Generated/PWM/pwm.o
-                0x10003c8c                PWM_lCCU4_Start
- .text.PWM_lCCU4_Stop
-                0x10003cd4       0x48 ./Dave/Generated/PWM/pwm.o
-                0x10003cd4                PWM_lCCU4_Stop
+                0x10003c44       0x48 ./Dave/Generated/PWM/pwm.o
+                0x10003c44                PWM_lCCU4_Start
+ .text.PWM_lCCU4_SetDutyCycle
+                0x10003c8c       0x88 ./Dave/Generated/PWM/pwm.o
+                0x10003c8c                PWM_lCCU4_SetDutyCycle
  .text.PWM_Init
-                0x10003d1c       0x38 ./Dave/Generated/PWM/pwm.o
-                0x10003d1c                PWM_Init
+                0x10003d14       0x38 ./Dave/Generated/PWM/pwm.o
+                0x10003d14                PWM_Init
  .text.PWM_Start
-                0x10003d54       0x20 ./Dave/Generated/PWM/pwm.o
-                0x10003d54                PWM_Start
- .text.PWM_Stop
-                0x10003d74       0x20 ./Dave/Generated/PWM/pwm.o
-                0x10003d74                PWM_Stop
+                0x10003d4c       0x20 ./Dave/Generated/PWM/pwm.o
+                0x10003d4c                PWM_Start
+ .text.PWM_SetDutyCycle
+                0x10003d6c       0x40 ./Dave/Generated/PWM/pwm.o
+                0x10003d6c                PWM_SetDutyCycle
  .text.XMC_USIC_CH_TXFIFO_IsFull
-                0x10003d94       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x10003dac       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.XMC_USIC_CH_TXFIFO_IsEmpty
-                0x10003db8       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x10003dd0       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.XMC_I2C_CH_GetStatusFlag
-                0x10003ddc       0x14 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x10003df4       0x14 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.XMC_I2C_CH_ClearStatusFlag
-                0x10003df0       0x1c ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x10003e08       0x1c ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_IsTXFIFOFull
-                0x10003e0c       0x1c ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x10003e24       0x1c ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_TransmitByte
-                0x10003e28       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x10003e40       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_SendStop
-                0x10003e4c       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x10003e64       0x24 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_SendStart
-                0x10003e70       0x38 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x10003e88       0x38 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_SendRepeatedStart
-                0x10003ea8       0x38 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x10003ec0       0x38 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_GetAppVersion
-                0x10003ee0       0x60 ./Dave/Generated/I2C_MASTER/i2c_master.o
-                0x10003ee0                I2C_MASTER_GetAppVersion
+                0x10003ef8       0x60 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x10003ef8                I2C_MASTER_GetAppVersion
  .text.I2C_MASTER_Init
-                0x10003f40       0x38 ./Dave/Generated/I2C_MASTER/i2c_master.o
-                0x10003f40                I2C_MASTER_Init
+                0x10003f58       0x38 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x10003f58                I2C_MASTER_Init
  .text.I2C_MASTER_GetFlagStatus
-                0x10003f78       0x28 ./Dave/Generated/I2C_MASTER/i2c_master.o
-                0x10003f78                I2C_MASTER_GetFlagStatus
+                0x10003f90       0x28 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x10003f90                I2C_MASTER_GetFlagStatus
  .text.I2C_MASTER_ClearFlag
-                0x10003fa0       0x20 ./Dave/Generated/I2C_MASTER/i2c_master.o
-                0x10003fa0                I2C_MASTER_ClearFlag
+                0x10003fb8       0x20 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x10003fb8                I2C_MASTER_ClearFlag
  .text.I2C_MASTER_Transmit
-                0x10003fc0       0x68 ./Dave/Generated/I2C_MASTER/i2c_master.o
-                0x10003fc0                I2C_MASTER_Transmit
+                0x10003fd8       0x68 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x10003fd8                I2C_MASTER_Transmit
  .text.I2C_MASTER_lSendStart_Or_RepeatedStart
-                0x10004028       0x64 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x10004040       0x64 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.I2C_MASTER_ProtocolHandler
-                0x1000408c       0x90 ./Dave/Generated/I2C_MASTER/i2c_master.o
-                0x1000408c                I2C_MASTER_ProtocolHandler
+                0x100040a4       0x90 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x100040a4                I2C_MASTER_ProtocolHandler
  .text.I2C_MASTER_AbortTransmit
-                0x1000411c       0x58 ./Dave/Generated/I2C_MASTER/i2c_master.o
-                0x1000411c                I2C_MASTER_AbortTransmit
+                0x10004134       0x58 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x10004134                I2C_MASTER_AbortTransmit
  .text.I2C_MASTER_lStartTransmitPolling
-                0x10004174      0x1d4 ./Dave/Generated/I2C_MASTER/i2c_master.o
+                0x1000418c      0x1d4 ./Dave/Generated/I2C_MASTER/i2c_master.o
  .text.__NVIC_EnableIRQ
-                0x10004348       0x34 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x10004360       0x34 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.__NVIC_SetPriority
-                0x1000437c       0xd4 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x10004394       0xd4 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.XMC_USIC_CH_SetInputSource
-                0x10004450       0x48 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x10004468       0x48 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.XMC_USIC_CH_EnableInputDigitalFilter
-                0x10004498       0x34 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x100044b0       0x34 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.XMC_USIC_CH_EnableInputSync
-                0x100044cc       0x34 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x100044e4       0x34 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.XMC_USIC_CH_SetMode
-                0x10004500       0x28 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x10004518       0x28 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.XMC_I2C_CH_Init
-                0x10004528       0x20 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x10004540       0x20 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.XMC_I2C_CH_Start
-                0x10004548       0x18 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x10004560       0x18 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.I2C_MASTER_0_disable_io
-                0x10004560       0x24 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x10004578       0x24 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.I2C_MASTER_0_enable_io
-                0x10004584       0x28 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x1000459c       0x28 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .text.I2C_MASTER_0_init
-                0x100045ac      0x108 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
-                0x100045ac                I2C_MASTER_0_init
+                0x100045c4      0x108 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x100045c4                I2C_MASTER_0_init
  .text.IRQ9_Handler
-                0x100046b4       0x14 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
-                0x100046b4                IRQ9_Handler
+                0x100046cc       0x14 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x100046cc                IRQ9_Handler
  .text.XMC_CCU4_StartPrescaler
-                0x100046c8       0x18 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
+                0x100046e0       0x18 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
  .text.GLOBAL_CCU4_Init
-                0x100046e0       0x40 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
-                0x100046e0                GLOBAL_CCU4_Init
+                0x100046f8       0x40 ./Dave/Generated/GLOBAL_CCU4/global_ccu4.o
+                0x100046f8                GLOBAL_CCU4_Init
  .text.SystemCoreSetup
-                0x10004720       0x18 ./Dave/Generated/CPU_CTRL_XMC1/cpu_ctrl_xmc1_conf.o
-                0x10004720                SystemCoreSetup
+                0x10004738       0x18 ./Dave/Generated/CPU_CTRL_XMC1/cpu_ctrl_xmc1_conf.o
+                0x10004738                SystemCoreSetup
  .text.CLOCK_XMC1_Init
-                0x10004738       0x84 ./Dave/Generated/CLOCK_XMC1/clock_xmc1.o
-                0x10004738                CLOCK_XMC1_Init
+                0x10004750       0x84 ./Dave/Generated/CLOCK_XMC1/clock_xmc1.o
+                0x10004750                CLOCK_XMC1_Init
  .text.SystemCoreClockSetup
-                0x100047bc       0x24 ./Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.o
-                0x100047bc                SystemCoreClockSetup
+                0x100047d4       0x24 ./Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.o
+                0x100047d4                SystemCoreClockSetup
  .text.DAVE_Init
-                0x100047e0       0x78 ./Dave/Generated/DAVE.o
-                0x100047e0                DAVE_Init
+                0x100047f8       0x78 ./Dave/Generated/DAVE.o
+                0x100047f8                DAVE_Init
  .text.XMC_GPIO_SetOutputHigh
-                0x10004858       0x20 ./main.o
+                0x10004870       0x20 ./main.o
  .text.XMC_GPIO_ToggleOutput
-                0x10004878       0x24 ./main.o
+                0x10004890       0x24 ./main.o
  .text.LED_init
-                0x1000489c       0x44 ./main.o
-                0x1000489c                LED_init
- .text.Error    0x100048e0       0x1c ./main.o
-                0x100048e0                Error
+                0x100048b4       0x44 ./main.o
+                0x100048b4                LED_init
+ .text.Error    0x100048f8       0x1c ./main.o
+                0x100048f8                Error
  .text.Task10ms
-                0x100048fc        0x8 ./main.o
-                0x100048fc                Task10ms
+                0x10004914       0x38 ./main.o
+                0x10004914                Task10ms
  .text.Task100ms
-                0x10004904        0x8 ./main.o
-                0x10004904                Task100ms
- .text.Task1s   0x1000490c       0x28 ./main.o
-                0x1000490c                Task1s
+                0x1000494c        0x8 ./main.o
+                0x1000494c                Task100ms
+ .text.Task1s   0x10004954       0x28 ./main.o
+                0x10004954                Task1s
  .text.milliSec_Handler
-                0x10004934       0x54 ./main.o
-                0x10004934                milliSec_Handler
+                0x1000497c       0x54 ./main.o
+                0x1000497c                milliSec_Handler
  .text.NACK_Handler
-                0x10004988       0x10 ./main.o
-                0x10004988                NACK_Handler
- .text.main     0x10004998      0x17c ./main.o
-                0x10004998                main
- .text.__errno  0x10004b14        0xc c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
-                0x10004b14                __errno
+                0x100049d0       0x10 ./main.o
+                0x100049d0                NACK_Handler
+ .text.main     0x100049e0      0x170 ./main.o
+                0x100049e0                main
+ .text.__errno  0x10004b50        0xc c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+                0x10004b50                __errno
  .text.__libc_init_array
-                0x10004b20       0x4c c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
-                0x10004b20                __libc_init_array
- .text.memcpy   0x10004b6c       0x12 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy.o)
-                0x10004b6c                memcpy
- *fill*         0x10004b7e        0x2 
+                0x10004b5c       0x4c c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+                0x10004b5c                __libc_init_array
+ .text.memcpy   0x10004ba8       0x12 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy.o)
+                0x10004ba8                memcpy
+ *fill*         0x10004bba        0x2 
  .text.snprintf
-                0x10004b80       0x68 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-snprintf.o)
-                0x10004b80                sniprintf
-                0x10004b80                snprintf
+                0x10004bbc       0x68 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-snprintf.o)
+                0x10004bbc                sniprintf
+                0x10004bbc                snprintf
  .text.__ssputs_r
-                0x10004be8       0xc0 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
-                0x10004be8                __ssputs_r
+                0x10004c24       0xc0 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x10004c24                __ssputs_r
  .text._svfprintf_r
-                0x10004ca8      0x1ec c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
-                0x10004ca8                _svfiprintf_r
-                0x10004ca8                _svfprintf_r
+                0x10004ce4      0x1ec c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x10004ce4                _svfiprintf_r
+                0x10004ce4                _svfprintf_r
  .text._printf_common
-                0x10004e94       0xdc c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x10004e94                _printf_common
+                0x10004ed0       0xdc c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x10004ed0                _printf_common
  .text._printf_i
-                0x10004f70      0x230 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x10004f70                _printf_i
- .text.memchr   0x100051a0       0x16 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memchr.o)
-                0x100051a0                memchr
- .text.memmove  0x100051b6       0x28 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memmove.o)
-                0x100051b6                memmove
- *fill*         0x100051de        0x2 
- .text._free_r  0x100051e0       0x8c c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o)
-                0x100051e0                _free_r
+                0x10004fac      0x230 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x10004fac                _printf_i
+ .text.memchr   0x100051dc       0x16 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memchr.o)
+                0x100051dc                memchr
+ .text.memmove  0x100051f2       0x28 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memmove.o)
+                0x100051f2                memmove
+ *fill*         0x1000521a        0x2 
+ .text._free_r  0x1000521c       0x8c c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o)
+                0x1000521c                _free_r
  .text._malloc_r
-                0x1000526c       0xb0 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
-                0x1000526c                _malloc_r
+                0x100052a8       0xb0 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
+                0x100052a8                _malloc_r
  .text._realloc_r
-                0x1000531c       0x4c c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-reallocr.o)
-                0x1000531c                _realloc_r
- .text._sbrk_r  0x10005368       0x24 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o)
-                0x10005368                _sbrk_r
+                0x10005358       0x4c c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-reallocr.o)
+                0x10005358                _realloc_r
+ .text._sbrk_r  0x100053a4       0x24 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o)
+                0x100053a4                _sbrk_r
  .text._malloc_usable_size_r
-                0x1000538c       0x16 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-msizer.o)
-                0x1000538c                _malloc_usable_size_r
+                0x100053c8       0x16 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-msizer.o)
+                0x100053c8                _malloc_usable_size_r
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -2117,69 +2117,69 @@ END GROUP
  *(SORT(.dtors.*))
  *(.dtors)
  *(.rodata .rodata.*)
- *fill*         0x100053a2        0x2 
+ *fill*         0x100053de        0x2 
  .rodata.XMC_CCU4_SLICE_SetInterruptNode
-                0x100053a4       0x30 ./Libraries/XMCLib/src/xmc_ccu4.o
- .rodata.F6x8   0x100053d4      0x23c ./Libraries/OLED/gui.o
-                0x100053d4                F6x8
- .rodata.F8X16  0x10005610      0x5f0 ./Libraries/OLED/gui.o
-                0x10005610                F8X16
+                0x100053e0       0x30 ./Libraries/XMCLib/src/xmc_ccu4.o
+ .rodata.F6x8   0x10005410      0x23c ./Libraries/OLED/gui.o
+                0x10005410                F6x8
+ .rodata.F8X16  0x1000564c      0x5f0 ./Libraries/OLED/gui.o
+                0x1000564c                F8X16
  .rodata.cfont16
-                0x10005c00       0xcc ./Libraries/OLED/gui.o
-                0x10005c00                cfont16
+                0x10005c3c       0xcc ./Libraries/OLED/gui.o
+                0x10005c3c                cfont16
  .rodata.cfont24
-                0x10005ccc      0x128 ./Libraries/OLED/gui.o
-                0x10005ccc                cfont24
+                0x10005d08      0x128 ./Libraries/OLED/gui.o
+                0x10005d08                cfont24
  .rodata.cfont32
-                0x10005df4      0x208 ./Libraries/OLED/gui.o
-                0x10005df4                cfont32
- .rodata        0x10005ffc       0x18 ./Libraries/OLED/oled.o
- .rodata.BMP2   0x10006014      0x200 ./Libraries/OLED/test.o
-                0x10006014                BMP2
- .rodata        0x10006214      0x15c ./Libraries/OLED/test.o
+                0x10005e30      0x208 ./Libraries/OLED/gui.o
+                0x10005e30                cfont32
+ .rodata        0x10006038       0x18 ./Libraries/OLED/oled.o
+ .rodata.BMP2   0x10006050      0x200 ./Libraries/OLED/test.o
+                0x10006050                BMP2
+ .rodata        0x10006250      0x15c ./Libraries/OLED/test.o
  .rodata.PWM_0_compare_config
-                0x10006370        0x8 ./Dave/Generated/PWM/pwm_conf.o
-                0x10006370                PWM_0_compare_config
+                0x100063ac        0x8 ./Dave/Generated/PWM/pwm_conf.o
+                0x100063ac                PWM_0_compare_config
  .rodata.PWM_0_gpio_out_config
-                0x10006378        0x8 ./Dave/Generated/PWM/pwm_conf.o
-                0x10006378                PWM_0_gpio_out_config
+                0x100063b4        0x8 ./Dave/Generated/PWM/pwm_conf.o
+                0x100063b4                PWM_0_gpio_out_config
  .rodata.I2C_MASTER_0_sda_pin_config
-                0x10006380        0x8 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x100063bc        0x8 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .rodata.I2C_MASTER_0_scl_pin_config
-                0x10006388        0x8 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x100063c4        0x8 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .rodata.I2C_MASTER_0_channel_config
-                0x10006390        0x8 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
-                0x10006390                I2C_MASTER_0_channel_config
+                0x100063cc        0x8 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x100063cc                I2C_MASTER_0_channel_config
  .rodata.I2C_MASTER_0_config
-                0x10006398       0x2c ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
-                0x10006398                I2C_MASTER_0_config
- .rodata        0x100063c4       0x10 ./Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.o
- .rodata        0x100063d4       0x14 ./main.o
- .rodata.main   0x100063e8       0x18 ./main.o
+                0x100063d4       0x2c ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x100063d4                I2C_MASTER_0_config
+ .rodata        0x10006400       0x10 ./Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.o
+ .rodata        0x10006410       0x14 ./main.o
+ .rodata.main   0x10006424       0x18 ./main.o
  .rodata.str1.1
-                0x10006400        0x2 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+                0x1000643c        0x2 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
  .rodata.str1.1
-                0x10006402       0x11 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x1000643e       0x11 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
  .rodata.str1.1
-                0x10006413       0x22 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x1000644f       0x22 c:/infineon/tools/dave ide/450/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
  *(.gnu.linkonce.r*)
  *(vtable)
-                0x10006438                . = ALIGN (0x4)
- *fill*         0x10006435        0x3 
+                0x10006474                . = ALIGN (0x4)
+ *fill*         0x10006471        0x3 
 
-.glue_7         0x10006438        0x0
+.glue_7         0x10006474        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x10006438        0x0
+.glue_7t        0x10006474        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x10006438        0x0
+.vfp11_veneer   0x10006474        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x10006438        0x0
+.v4_bx          0x10006474        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x10006438        0x0
+.iplt           0x10006474        0x0
  .iplt          0x00000000        0x0 ./Startup/startup_XMC1400.o
 
 .eh_frame_hdr
@@ -2190,15 +2190,15 @@ END GROUP
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x10006438                . = ALIGN (0x4)
-                0x10006438                __exidx_start = .
+                0x10006474                . = ALIGN (0x4)
+                0x10006474                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x10006438                __exidx_end = .
-                0x10006438                . = ALIGN (0x4)
+                0x10006474                __exidx_end = .
+                0x10006474                . = ALIGN (0x4)
 
-.VENEER_Code    0x2000000c      0x144 load address 0x10006438
+.VENEER_Code    0x2000000c      0x144 load address 0x10006474
                 0x2000000c                . = ALIGN (0x4)
                 0x2000000c                VeneerStart = .
  *(.XmcVeneerCode)
@@ -2242,10 +2242,10 @@ END GROUP
                 0x200000bc                IRQ31_Veener
                 0x20000150                . = ALIGN (0x4)
                 0x20000150                VeneerEnd = .
-                0x10006438                eROData = LOADADDR (.VENEER_Code)
+                0x10006474                eROData = LOADADDR (.VENEER_Code)
                 0x00000144                VeneerSize = (ABSOLUTE (VeneerEnd) - ABSOLUTE (VeneerStart))
 
-.rel.dyn        0x20000150        0x0 load address 0x1000657c
+.rel.dyn        0x20000150        0x0 load address 0x100065b8
  .rel.iplt      0x00000000        0x0 ./Startup/startup_XMC1400.o
 
 Stack           0x20000150      0x400 load address 0x00000000
@@ -2254,7 +2254,7 @@ Stack           0x20000150      0x400 load address 0x00000000
  *fill*         0x20000150      0x400 
                 0x20000550                __initial_sp = .
 
-.data           0x20000550       0xb4 load address 0x1000657c
+.data           0x20000550       0xb4 load address 0x100065b8
                 0x20000550                . = ALIGN (0x4)
                 0x20000550                __data_start = .
  *(.data)
@@ -2290,24 +2290,24 @@ Stack           0x20000150      0x400 load address 0x00000000
                 0x20000604                PROVIDE (__fini_array_end, .)
                 0x20000604                . = ALIGN (0x4)
                 0x20000604                __data_end = .
-                0x1000657c                DataLoadAddr = LOADADDR (.data)
+                0x100065b8                DataLoadAddr = LOADADDR (.data)
                 0x000000b4                __data_size = (__data_end - __data_start)
 
-.igot.plt       0x20000604        0x0 load address 0x10006630
+.igot.plt       0x20000604        0x0 load address 0x1000666c
  .igot.plt      0x00000000        0x0 ./Startup/startup_XMC1400.o
 
-.ram_code       0x20000604        0x0 load address 0x10006630
+.ram_code       0x20000604        0x0 load address 0x1000666c
                 0x20000604                . = ALIGN (0x4)
                 0x20000604                __ram_code_start = .
  *(.ram_code)
                 0x20000604                . = ALIGN (0x4)
                 0x20000604                __ram_code_end = .
-                0x10006630                __ram_code_load = LOADADDR (.ram_code)
+                0x1000666c                __ram_code_load = LOADADDR (.ram_code)
                 0x00000000                __ram_code_size = (__ram_code_end - __ram_code_start)
-                0x00005630                __text_size = ((((__exidx_end - sText) + VeneerSize) + __data_size) + __ram_code_size)
-                0x10006630                eText = (sText + __text_size)
+                0x0000566c                __text_size = ((((__exidx_end - sText) + VeneerSize) + __data_size) + __ram_code_size)
+                0x1000666c                eText = (sText + __text_size)
 
-.bss            0x20000604      0x18c load address 0x10006630
+.bss            0x20000604      0x18c load address 0x1000666c
                 0x20000604                . = ALIGN (0x4)
                 0x20000604                __bss_start = .
  *(.bss)
@@ -2517,7 +2517,7 @@ Stack           0x20000150      0x400 load address 0x00000000
  .debug_abbrev  0x0000280c      0x1da ./Dave/Generated/DAVE.o
  .debug_abbrev  0x000029e6      0x28e ./main.o
 
-.debug_line     0x00000000     0x4fa7
+.debug_line     0x00000000     0x4faa
  *(.debug_line)
  .debug_line    0x00000000       0xe2 ./Startup/startup_XMC1400.o
  .debug_line    0x000000e2      0x1ef ./Startup/system_XMC1400.o
@@ -2544,7 +2544,7 @@ Stack           0x20000150      0x400 load address 0x00000000
  .debug_line    0x00004453      0x21f ./Dave/Generated/CLOCK_XMC1/clock_xmc1.o
  .debug_line    0x00004672      0x1f6 ./Dave/Generated/CLOCK_XMC1/clock_xmc1_conf.o
  .debug_line    0x00004868      0x356 ./Dave/Generated/DAVE.o
- .debug_line    0x00004bbe      0x3e9 ./main.o
+ .debug_line    0x00004bbe      0x3ec ./main.o
 
 .debug_frame    0x00000000     0x2908
  *(.debug_frame)

@@ -1,0 +1,1642 @@
+   1              	 .cpu cortex-m0
+   2              	 .fpu softvfp
+   3              	 .eabi_attribute 20,1
+   4              	 .eabi_attribute 21,1
+   5              	 .eabi_attribute 23,3
+   6              	 .eabi_attribute 24,1
+   7              	 .eabi_attribute 25,1
+   8              	 .eabi_attribute 26,1
+   9              	 .eabi_attribute 30,6
+  10              	 .eabi_attribute 34,0
+  11              	 .eabi_attribute 18,4
+  12              	 .code 16
+  13              	 .file "test.c"
+  14              	 .text
+  15              	.Ltext0:
+  16              	 .cfi_sections .debug_frame
+  17              	 .global BMP2
+  18              	 .section .rodata.BMP2,"a",%progbits
+  19              	 .align 2
+  22              	BMP2:
+  23 0000 00       	 .byte 0
+  24 0001 00       	 .byte 0
+  25 0002 00       	 .byte 0
+  26 0003 00       	 .byte 0
+  27 0004 00       	 .byte 0
+  28 0005 F8       	 .byte -8
+  29 0006 FC       	 .byte -4
+  30 0007 0C       	 .byte 12
+  31 0008 0C       	 .byte 12
+  32 0009 0C       	 .byte 12
+  33 000a 0C       	 .byte 12
+  34 000b 0C       	 .byte 12
+  35 000c 0C       	 .byte 12
+  36 000d 0C       	 .byte 12
+  37 000e 0C       	 .byte 12
+  38 000f 0C       	 .byte 12
+  39 0010 0C       	 .byte 12
+  40 0011 FC       	 .byte -4
+  41 0012 F8       	 .byte -8
+  42 0013 00       	 .byte 0
+  43 0014 00       	 .byte 0
+  44 0015 F8       	 .byte -8
+  45 0016 FC       	 .byte -4
+  46 0017 0C       	 .byte 12
+  47 0018 0C       	 .byte 12
+  48 0019 0C       	 .byte 12
+  49 001a 0C       	 .byte 12
+  50 001b 0C       	 .byte 12
+  51 001c 0C       	 .byte 12
+  52 001d 0C       	 .byte 12
+  53 001e 0C       	 .byte 12
+  54 001f 0C       	 .byte 12
+  55 0020 0C       	 .byte 12
+  56 0021 FC       	 .byte -4
+  57 0022 F8       	 .byte -8
+  58 0023 00       	 .byte 0
+  59 0024 00       	 .byte 0
+  60 0025 00       	 .byte 0
+  61 0026 00       	 .byte 0
+  62 0027 00       	 .byte 0
+  63 0028 00       	 .byte 0
+  64 0029 00       	 .byte 0
+  65 002a 00       	 .byte 0
+  66 002b 00       	 .byte 0
+  67 002c 00       	 .byte 0
+  68 002d 00       	 .byte 0
+  69 002e F8       	 .byte -8
+  70 002f FC       	 .byte -4
+  71 0030 0C       	 .byte 12
+  72 0031 0C       	 .byte 12
+  73 0032 0C       	 .byte 12
+  74 0033 0C       	 .byte 12
+  75 0034 0C       	 .byte 12
+  76 0035 0C       	 .byte 12
+  77 0036 0C       	 .byte 12
+  78 0037 0C       	 .byte 12
+  79 0038 0C       	 .byte 12
+  80 0039 0C       	 .byte 12
+  81 003a 0C       	 .byte 12
+  82 003b 0C       	 .byte 12
+  83 003c 00       	 .byte 0
+  84 003d 00       	 .byte 0
+  85 003e F8       	 .byte -8
+  86 003f FC       	 .byte -4
+  87 0040 0C       	 .byte 12
+  88 0041 0C       	 .byte 12
+  89 0042 0C       	 .byte 12
+  90 0043 0C       	 .byte 12
+  91 0044 0C       	 .byte 12
+  92 0045 0C       	 .byte 12
+  93 0046 0C       	 .byte 12
+  94 0047 0C       	 .byte 12
+  95 0048 0C       	 .byte 12
+  96 0049 0C       	 .byte 12
+  97 004a 3C       	 .byte 60
+  98 004b 38       	 .byte 56
+  99 004c 00       	 .byte 0
+ 100 004d 00       	 .byte 0
+ 101 004e 00       	 .byte 0
+ 102 004f 00       	 .byte 0
+ 103 0050 06       	 .byte 6
+ 104 0051 0E       	 .byte 14
+ 105 0052 1A       	 .byte 26
+ 106 0053 32       	 .byte 50
+ 107 0054 FE       	 .byte -2
+ 108 0055 FE       	 .byte -2
+ 109 0056 32       	 .byte 50
+ 110 0057 1A       	 .byte 26
+ 111 0058 0E       	 .byte 14
+ 112 0059 86       	 .byte -122
+ 113 005a 00       	 .byte 0
+ 114 005b C0       	 .byte -64
+ 115 005c 00       	 .byte 0
+ 116 005d E0       	 .byte -32
+ 117 005e 00       	 .byte 0
+ 118 005f F0       	 .byte -16
+ 119 0060 00       	 .byte 0
+ 120 0061 00       	 .byte 0
+ 121 0062 00       	 .byte 0
+ 122 0063 88       	 .byte -120
+ 123 0064 50       	 .byte 80
+ 124 0065 FE       	 .byte -2
+ 125 0066 22       	 .byte 34
+ 126 0067 54       	 .byte 84
+ 127 0068 88       	 .byte -120
+ 128 0069 00       	 .byte 0
+ 129 006a 00       	 .byte 0
+ 130 006b 00       	 .byte 0
+ 131 006c FE       	 .byte -2
+ 132 006d 02       	 .byte 2
+ 133 006e FA       	 .byte -6
+ 134 006f FA       	 .byte -6
+ 135 0070 FA       	 .byte -6
+ 136 0071 FA       	 .byte -6
+ 137 0072 FA       	 .byte -6
+ 138 0073 FA       	 .byte -6
+ 139 0074 FA       	 .byte -6
+ 140 0075 FA       	 .byte -6
+ 141 0076 FA       	 .byte -6
+ 142 0077 FA       	 .byte -6
+ 143 0078 02       	 .byte 2
+ 144 0079 02       	 .byte 2
+ 145 007a 02       	 .byte 2
+ 146 007b 02       	 .byte 2
+ 147 007c FE       	 .byte -2
+ 148 007d 88       	 .byte -120
+ 149 007e F8       	 .byte -8
+ 150 007f 00       	 .byte 0
+ 151 0080 00       	 .byte 0
+ 152 0081 00       	 .byte 0
+ 153 0082 00       	 .byte 0
+ 154 0083 00       	 .byte 0
+ 155 0084 00       	 .byte 0
+ 156 0085 FF       	 .byte -1
+ 157 0086 FF       	 .byte -1
+ 158 0087 00       	 .byte 0
+ 159 0088 00       	 .byte 0
+ 160 0089 00       	 .byte 0
+ 161 008a 00       	 .byte 0
+ 162 008b 00       	 .byte 0
+ 163 008c 00       	 .byte 0
+ 164 008d 00       	 .byte 0
+ 165 008e 00       	 .byte 0
+ 166 008f 00       	 .byte 0
+ 167 0090 00       	 .byte 0
+ 168 0091 FF       	 .byte -1
+ 169 0092 FF       	 .byte -1
+ 170 0093 00       	 .byte 0
+ 171 0094 00       	 .byte 0
+ 172 0095 E7       	 .byte -25
+ 173 0096 E7       	 .byte -25
+ 174 0097 18       	 .byte 24
+ 175 0098 18       	 .byte 24
+ 176 0099 18       	 .byte 24
+ 177 009a 18       	 .byte 24
+ 178 009b 18       	 .byte 24
+ 179 009c 18       	 .byte 24
+ 180 009d 18       	 .byte 24
+ 181 009e 18       	 .byte 24
+ 182 009f 18       	 .byte 24
+ 183 00a0 18       	 .byte 24
+ 184 00a1 E7       	 .byte -25
+ 185 00a2 E7       	 .byte -25
+ 186 00a3 00       	 .byte 0
+ 187 00a4 00       	 .byte 0
+ 188 00a5 00       	 .byte 0
+ 189 00a6 00       	 .byte 0
+ 190 00a7 87       	 .byte -121
+ 191 00a8 87       	 .byte -121
+ 192 00a9 87       	 .byte -121
+ 193 00aa 00       	 .byte 0
+ 194 00ab 00       	 .byte 0
+ 195 00ac 00       	 .byte 0
+ 196 00ad 00       	 .byte 0
+ 197 00ae 03       	 .byte 3
+ 198 00af 03       	 .byte 3
+ 199 00b0 03       	 .byte 3
+ 200 00b1 03       	 .byte 3
+ 201 00b2 03       	 .byte 3
+ 202 00b3 03       	 .byte 3
+ 203 00b4 03       	 .byte 3
+ 204 00b5 03       	 .byte 3
+ 205 00b6 03       	 .byte 3
+ 206 00b7 03       	 .byte 3
+ 207 00b8 03       	 .byte 3
+ 208 00b9 03       	 .byte 3
+ 209 00ba FF       	 .byte -1
+ 210 00bb FE       	 .byte -2
+ 211 00bc 00       	 .byte 0
+ 212 00bd 00       	 .byte 0
+ 213 00be FF       	 .byte -1
+ 214 00bf FF       	 .byte -1
+ 215 00c0 0C       	 .byte 12
+ 216 00c1 0C       	 .byte 12
+ 217 00c2 0C       	 .byte 12
+ 218 00c3 0C       	 .byte 12
+ 219 00c4 0C       	 .byte 12
+ 220 00c5 0C       	 .byte 12
+ 221 00c6 0C       	 .byte 12
+ 222 00c7 0C       	 .byte 12
+ 223 00c8 0C       	 .byte 12
+ 224 00c9 0C       	 .byte 12
+ 225 00ca FC       	 .byte -4
+ 226 00cb F8       	 .byte -8
+ 227 00cc 00       	 .byte 0
+ 228 00cd 00       	 .byte 0
+ 229 00ce 00       	 .byte 0
+ 230 00cf 00       	 .byte 0
+ 231 00d0 80       	 .byte -128
+ 232 00d1 80       	 .byte -128
+ 233 00d2 00       	 .byte 0
+ 234 00d3 80       	 .byte -128
+ 235 00d4 03       	 .byte 3
+ 236 00d5 83       	 .byte -125
+ 237 00d6 80       	 .byte -128
+ 238 00d7 03       	 .byte 3
+ 239 00d8 00       	 .byte 0
+ 240 00d9 03       	 .byte 3
+ 241 00da 00       	 .byte 0
+ 242 00db 03       	 .byte 3
+ 243 00dc 00       	 .byte 0
+ 244 00dd 03       	 .byte 3
+ 245 00de 00       	 .byte 0
+ 246 00df 03       	 .byte 3
+ 247 00e0 00       	 .byte 0
+ 248 00e1 00       	 .byte 0
+ 249 00e2 00       	 .byte 0
+ 250 00e3 80       	 .byte -128
+ 251 00e4 80       	 .byte -128
+ 252 00e5 03       	 .byte 3
+ 253 00e6 02       	 .byte 2
+ 254 00e7 01       	 .byte 1
+ 255 00e8 00       	 .byte 0
+ 256 00e9 00       	 .byte 0
+ 257 00ea 00       	 .byte 0
+ 258 00eb 00       	 .byte 0
+ 259 00ec 03       	 .byte 3
+ 260 00ed 02       	 .byte 2
+ 261 00ee 02       	 .byte 2
+ 262 00ef 02       	 .byte 2
+ 263 00f0 02       	 .byte 2
+ 264 00f1 02       	 .byte 2
+ 265 00f2 02       	 .byte 2
+ 266 00f3 02       	 .byte 2
+ 267 00f4 02       	 .byte 2
+ 268 00f5 02       	 .byte 2
+ 269 00f6 02       	 .byte 2
+ 270 00f7 02       	 .byte 2
+ 271 00f8 02       	 .byte 2
+ 272 00f9 02       	 .byte 2
+ 273 00fa 02       	 .byte 2
+ 274 00fb 02       	 .byte 2
+ 275 00fc 03       	 .byte 3
+ 276 00fd 00       	 .byte 0
+ 277 00fe 00       	 .byte 0
+ 278 00ff 00       	 .byte 0
+ 279 0100 00       	 .byte 0
+ 280 0101 00       	 .byte 0
+ 281 0102 00       	 .byte 0
+ 282 0103 00       	 .byte 0
+ 283 0104 00       	 .byte 0
+ 284 0105 0F       	 .byte 15
+ 285 0106 1F       	 .byte 31
+ 286 0107 18       	 .byte 24
+ 287 0108 18       	 .byte 24
+ 288 0109 18       	 .byte 24
+ 289 010a 98       	 .byte -104
+ 290 010b 98       	 .byte -104
+ 291 010c 98       	 .byte -104
+ 292 010d 98       	 .byte -104
+ 293 010e 18       	 .byte 24
+ 294 010f 18       	 .byte 24
+ 295 0110 98       	 .byte -104
+ 296 0111 9F       	 .byte -97
+ 297 0112 8F       	 .byte -113
+ 298 0113 80       	 .byte -128
+ 299 0114 80       	 .byte -128
+ 300 0115 0F       	 .byte 15
+ 301 0116 1F       	 .byte 31
+ 302 0117 18       	 .byte 24
+ 303 0118 98       	 .byte -104
+ 304 0119 98       	 .byte -104
+ 305 011a 18       	 .byte 24
+ 306 011b 18       	 .byte 24
+ 307 011c 18       	 .byte 24
+ 308 011d 18       	 .byte 24
+ 309 011e 98       	 .byte -104
+ 310 011f 98       	 .byte -104
+ 311 0120 98       	 .byte -104
+ 312 0121 9F       	 .byte -97
+ 313 0122 0F       	 .byte 15
+ 314 0123 00       	 .byte 0
+ 315 0124 00       	 .byte 0
+ 316 0125 00       	 .byte 0
+ 317 0126 00       	 .byte 0
+ 318 0127 03       	 .byte 3
+ 319 0128 03       	 .byte 3
+ 320 0129 03       	 .byte 3
+ 321 012a 80       	 .byte -128
+ 322 012b 80       	 .byte -128
+ 323 012c 00       	 .byte 0
+ 324 012d 00       	 .byte 0
+ 325 012e 1E       	 .byte 30
+ 326 012f 1E       	 .byte 30
+ 327 0130 98       	 .byte -104
+ 328 0131 98       	 .byte -104
+ 329 0132 98       	 .byte -104
+ 330 0133 98       	 .byte -104
+ 331 0134 18       	 .byte 24
+ 332 0135 18       	 .byte 24
+ 333 0136 18       	 .byte 24
+ 334 0137 18       	 .byte 24
+ 335 0138 18       	 .byte 24
+ 336 0139 18       	 .byte 24
+ 337 013a 1F       	 .byte 31
+ 338 013b 0F       	 .byte 15
+ 339 013c 80       	 .byte -128
+ 340 013d 80       	 .byte -128
+ 341 013e 0F       	 .byte 15
+ 342 013f 1F       	 .byte 31
+ 343 0140 18       	 .byte 24
+ 344 0141 18       	 .byte 24
+ 345 0142 98       	 .byte -104
+ 346 0143 98       	 .byte -104
+ 347 0144 98       	 .byte -104
+ 348 0145 98       	 .byte -104
+ 349 0146 18       	 .byte 24
+ 350 0147 18       	 .byte 24
+ 351 0148 18       	 .byte 24
+ 352 0149 18       	 .byte 24
+ 353 014a 1F       	 .byte 31
+ 354 014b 0F       	 .byte 15
+ 355 014c 00       	 .byte 0
+ 356 014d 00       	 .byte 0
+ 357 014e 00       	 .byte 0
+ 358 014f 00       	 .byte 0
+ 359 0150 3F       	 .byte 63
+ 360 0151 C0       	 .byte -64
+ 361 0152 70       	 .byte 112
+ 362 0153 0F       	 .byte 15
+ 363 0154 70       	 .byte 112
+ 364 0155 C0       	 .byte -64
+ 365 0156 3F       	 .byte 63
+ 366 0157 00       	 .byte 0
+ 367 0158 F0       	 .byte -16
+ 368 0159 28       	 .byte 40
+ 369 015a 28       	 .byte 40
+ 370 015b 28       	 .byte 40
+ 371 015c 28       	 .byte 40
+ 372 015d 30       	 .byte 48
+ 373 015e 00       	 .byte 0
+ 374 015f E0       	 .byte -32
+ 375 0160 10       	 .byte 16
+ 376 0161 08       	 .byte 8
+ 377 0162 08       	 .byte 8
+ 378 0163 08       	 .byte 8
+ 379 0164 FF       	 .byte -1
+ 380 0165 00       	 .byte 0
+ 381 0166 00       	 .byte 0
+ 382 0167 08       	 .byte 8
+ 383 0168 F8       	 .byte -8
+ 384 0169 10       	 .byte 16
+ 385 016a 08       	 .byte 8
+ 386 016b 08       	 .byte 8
+ 387 016c 08       	 .byte 8
+ 388 016d F0       	 .byte -16
+ 389 016e 00       	 .byte 0
+ 390 016f 00       	 .byte 0
+ 391 0170 F0       	 .byte -16
+ 392 0171 28       	 .byte 40
+ 393 0172 28       	 .byte 40
+ 394 0173 28       	 .byte 40
+ 395 0174 28       	 .byte 40
+ 396 0175 30       	 .byte 48
+ 397 0176 00       	 .byte 0
+ 398 0177 30       	 .byte 48
+ 399 0178 48       	 .byte 72
+ 400 0179 48       	 .byte 72
+ 401 017a 48       	 .byte 72
+ 402 017b 48       	 .byte 72
+ 403 017c 90       	 .byte -112
+ 404 017d 00       	 .byte 0
+ 405 017e 00       	 .byte 0
+ 406 017f 00       	 .byte 0
+ 407 0180 00       	 .byte 0
+ 408 0181 00       	 .byte 0
+ 409 0182 00       	 .byte 0
+ 410 0183 00       	 .byte 0
+ 411 0184 00       	 .byte 0
+ 412 0185 00       	 .byte 0
+ 413 0186 00       	 .byte 0
+ 414 0187 00       	 .byte 0
+ 415 0188 00       	 .byte 0
+ 416 0189 21       	 .byte 33
+ 417 018a 30       	 .byte 48
+ 418 018b 28       	 .byte 40
+ 419 018c 24       	 .byte 36
+ 420 018d 22       	 .byte 34
+ 421 018e 21       	 .byte 33
+ 422 018f 00       	 .byte 0
+ 423 0190 3F       	 .byte 63
+ 424 0191 20       	 .byte 32
+ 425 0192 20       	 .byte 32
+ 426 0193 20       	 .byte 32
+ 427 0194 20       	 .byte 32
+ 428 0195 1F       	 .byte 31
+ 429 0196 00       	 .byte 0
+ 430 0197 21       	 .byte 33
+ 431 0198 20       	 .byte 32
+ 432 0199 3F       	 .byte 63
+ 433 019a 20       	 .byte 32
+ 434 019b 20       	 .byte 32
+ 435 019c 00       	 .byte 0
+ 436 019d 1B       	 .byte 27
+ 437 019e 24       	 .byte 36
+ 438 019f 24       	 .byte 36
+ 439 01a0 24       	 .byte 36
+ 440 01a1 24       	 .byte 36
+ 441 01a2 1B       	 .byte 27
+ 442 01a3 00       	 .byte 0
+ 443 01a4 00       	 .byte 0
+ 444 01a5 30       	 .byte 48
+ 445 01a6 30       	 .byte 48
+ 446 01a7 00       	 .byte 0
+ 447 01a8 00       	 .byte 0
+ 448 01a9 21       	 .byte 33
+ 449 01aa 20       	 .byte 32
+ 450 01ab 3F       	 .byte 63
+ 451 01ac 20       	 .byte 32
+ 452 01ad 20       	 .byte 32
+ 453 01ae 00       	 .byte 0
+ 454 01af 1F       	 .byte 31
+ 455 01b0 20       	 .byte 32
+ 456 01b1 20       	 .byte 32
+ 457 01b2 20       	 .byte 32
+ 458 01b3 20       	 .byte 32
+ 459 01b4 1F       	 .byte 31
+ 460 01b5 00       	 .byte 0
+ 461 01b6 00       	 .byte 0
+ 462 01b7 30       	 .byte 48
+ 463 01b8 30       	 .byte 48
+ 464 01b9 00       	 .byte 0
+ 465 01ba 00       	 .byte 0
+ 466 01bb 21       	 .byte 33
+ 467 01bc 20       	 .byte 32
+ 468 01bd 3F       	 .byte 63
+ 469 01be 20       	 .byte 32
+ 470 01bf 20       	 .byte 32
+ 471 01c0 00       	 .byte 0
+ 472 01c1 1F       	 .byte 31
+ 473 01c2 20       	 .byte 32
+ 474 01c3 20       	 .byte 32
+ 475 01c4 20       	 .byte 32
+ 476 01c5 20       	 .byte 32
+ 477 01c6 1F       	 .byte 31
+ 478 01c7 00       	 .byte 0
+ 479 01c8 00       	 .byte 0
+ 480 01c9 00       	 .byte 0
+ 481 01ca 00       	 .byte 0
+ 482 01cb 00       	 .byte 0
+ 483 01cc 00       	 .byte 0
+ 484 01cd 00       	 .byte 0
+ 485 01ce 00       	 .byte 0
+ 486 01cf 00       	 .byte 0
+ 487 01d0 00       	 .byte 0
+ 488 01d1 03       	 .byte 3
+ 489 01d2 00       	 .byte 0
+ 490 01d3 00       	 .byte 0
+ 491 01d4 00       	 .byte 0
+ 492 01d5 03       	 .byte 3
+ 493 01d6 00       	 .byte 0
+ 494 01d7 00       	 .byte 0
+ 495 01d8 01       	 .byte 1
+ 496 01d9 02       	 .byte 2
+ 497 01da 02       	 .byte 2
+ 498 01db 02       	 .byte 2
+ 499 01dc 02       	 .byte 2
+ 500 01dd 01       	 .byte 1
+ 501 01de 00       	 .byte 0
+ 502 01df 00       	 .byte 0
+ 503 01e0 01       	 .byte 1
+ 504 01e1 02       	 .byte 2
+ 505 01e2 02       	 .byte 2
+ 506 01e3 01       	 .byte 1
+ 507 01e4 03       	 .byte 3
+ 508 01e5 02       	 .byte 2
+ 509 01e6 00       	 .byte 0
+ 510 01e7 02       	 .byte 2
+ 511 01e8 03       	 .byte 3
+ 512 01e9 02       	 .byte 2
+ 513 01ea 00       	 .byte 0
+ 514 01eb 00       	 .byte 0
+ 515 01ec 02       	 .byte 2
+ 516 01ed 03       	 .byte 3
+ 517 01ee 02       	 .byte 2
+ 518 01ef 00       	 .byte 0
+ 519 01f0 01       	 .byte 1
+ 520 01f1 02       	 .byte 2
+ 521 01f2 02       	 .byte 2
+ 522 01f3 02       	 .byte 2
+ 523 01f4 02       	 .byte 2
+ 524 01f5 01       	 .byte 1
+ 525 01f6 00       	 .byte 0
+ 526 01f7 01       	 .byte 1
+ 527 01f8 02       	 .byte 2
+ 528 01f9 02       	 .byte 2
+ 529 01fa 02       	 .byte 2
+ 530 01fb 02       	 .byte 2
+ 531 01fc 01       	 .byte 1
+ 532 01fd 00       	 .byte 0
+ 533 01fe 00       	 .byte 0
+ 534 01ff 00       	 .byte 0
+ 535              	 .section .text.delay_ms,"ax",%progbits
+ 536              	 .align 2
+ 537              	 .global delay_ms
+ 538              	 .code 16
+ 539              	 .thumb_func
+ 541              	delay_ms:
+ 542              	.LFB232:
+ 543              	 .file 1 "../Libraries/OLED/test.c"
+   1:../Libraries/OLED/test.c **** /**************************************************************************************************
+   2:../Libraries/OLED/test.c ****   * @attention
+   3:../Libraries/OLED/test.c ****   *
+   4:../Libraries/OLED/test.c ****   * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+   5:../Libraries/OLED/test.c ****   * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
+   6:../Libraries/OLED/test.c ****   * TIME. AS A RESULT, QD electronic SHALL NOT BE HELD LIABLE FOR ANY
+   7:../Libraries/OLED/test.c ****   * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
+   8:../Libraries/OLED/test.c ****   * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
+   9:../Libraries/OLED/test.c ****   * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+  10:../Libraries/OLED/test.c **** ***************************************************************************************************
+  11:../Libraries/OLED/test.c **** #include "stdlib.h"
+  12:../Libraries/OLED/test.c **** #include "stdio.h"
+  13:../Libraries/OLED/test.c **** #include "stdint.h"
+  14:../Libraries/OLED/test.c **** #include "oled.h"
+  15:../Libraries/OLED/test.c **** #include "gui.h"
+  16:../Libraries/OLED/test.c **** #include "test.h"
+  17:../Libraries/OLED/test.c **** #include "bmp.h"
+  18:../Libraries/OLED/test.c **** #include "DAVE.h" //only for __NOP()
+  19:../Libraries/OLED/test.c **** 
+  20:../Libraries/OLED/test.c **** /********************************************************************************
+  21:../Libraries/OLED/test.c ****   function: Delay function
+  22:../Libraries/OLED/test.c ****   note:
+  23:../Libraries/OLED/test.c ****  delay_ms(xms) : Delay x ms
+  24:../Libraries/OLED/test.c ****  *******************************************************************************/
+  25:../Libraries/OLED/test.c **** void delay_ms(uint16_t xms)
+  26:../Libraries/OLED/test.c **** {
+ 544              	 .loc 1 26 0
+ 545              	 .cfi_startproc
+ 546 0000 80B5     	 push {r7,lr}
+ 547              	.LCFI0:
+ 548              	 .cfi_def_cfa_offset 8
+ 549              	 .cfi_offset 7,-8
+ 550              	 .cfi_offset 14,-4
+ 551 0002 84B0     	 sub sp,sp,#16
+ 552              	.LCFI1:
+ 553              	 .cfi_def_cfa_offset 24
+ 554 0004 00AF     	 add r7,sp,#0
+ 555              	.LCFI2:
+ 556              	 .cfi_def_cfa_register 7
+ 557 0006 021C     	 mov r2,r0
+ 558 0008 BB1D     	 add r3,r7,#6
+ 559 000a 1A80     	 strh r2,[r3]
+  27:../Libraries/OLED/test.c **** 	extern volatile uint32_t SysTickCounter;
+  28:../Libraries/OLED/test.c **** 	uint32_t start= SysTickCounter;
+ 560              	 .loc 1 28 0
+ 561 000c 074B     	 ldr r3,.L4
+ 562 000e 1B68     	 ldr r3,[r3]
+ 563 0010 FB60     	 str r3,[r7,#12]
+  29:../Libraries/OLED/test.c **** 	while((SysTickCounter - start) < (uint32_t)(xms))
+ 564              	 .loc 1 29 0
+ 565 0012 00E0     	 b .L2
+ 566              	.L3:
+  30:../Libraries/OLED/test.c **** 	{
+  31:../Libraries/OLED/test.c **** 		__NOP();
+ 567              	 .loc 1 31 0
+ 568              	
+ 569 0014 C046     	 nop
+ 570              	
+ 571              	 .code 16
+ 572              	.L2:
+  29:../Libraries/OLED/test.c **** 	while((SysTickCounter - start) < (uint32_t)(xms))
+ 573              	 .loc 1 29 0
+ 574 0016 054B     	 ldr r3,.L4
+ 575 0018 1A68     	 ldr r2,[r3]
+ 576 001a FB68     	 ldr r3,[r7,#12]
+ 577 001c D21A     	 sub r2,r2,r3
+ 578 001e BB1D     	 add r3,r7,#6
+ 579 0020 1B88     	 ldrh r3,[r3]
+ 580 0022 9A42     	 cmp r2,r3
+ 581 0024 F6D3     	 bcc .L3
+  32:../Libraries/OLED/test.c **** 	}
+  33:../Libraries/OLED/test.c **** }
+ 582              	 .loc 1 33 0
+ 583 0026 BD46     	 mov sp,r7
+ 584 0028 04B0     	 add sp,sp,#16
+ 585              	 
+ 586 002a 80BD     	 pop {r7,pc}
+ 587              	.L5:
+ 588              	 .align 2
+ 589              	.L4:
+ 590 002c 00000000 	 .word SysTickCounter
+ 591              	 .cfi_endproc
+ 592              	.LFE232:
+ 594              	 .section .rodata
+ 595              	 .align 2
+ 596              	.LC1:
+ 597 0000 4F4C4544 	 .ascii "OLED TEST\000"
+ 597      20544553 
+ 597      5400
+ 598 000a 0000     	 .align 2
+ 599              	.LC3:
+ 600 000c 302E3931 	 .ascii "0.91\" SSD1306\000"
+ 600      22205353 
+ 600      44313330 
+ 600      3600
+ 601 001a 0000     	 .align 2
+ 602              	.LC5:
+ 603 001c 33325831 	 .ascii "32X128\000"
+ 603      323800
+ 604 0023 00       	 .align 2
+ 605              	.LC7:
+ 606 0024 7777772E 	 .ascii "www.lcdwiki.com\000"
+ 606      6C636477 
+ 606      696B692E 
+ 606      636F6D00 
+ 607              	 .section .text.TEST_MainPage,"ax",%progbits
+ 608              	 .align 2
+ 609              	 .global TEST_MainPage
+ 610              	 .code 16
+ 611              	 .thumb_func
+ 613              	TEST_MainPage:
+ 614              	.LFB233:
+  34:../Libraries/OLED/test.c **** 
+  35:../Libraries/OLED/test.c **** 
+  36:../Libraries/OLED/test.c **** 
+  37:../Libraries/OLED/test.c **** /*****************************************************************************
+  38:../Libraries/OLED/test.c ****  * @name       :void TEST_MainPage(void)
+  39:../Libraries/OLED/test.c ****  * @date       :2018-08-27 
+  40:../Libraries/OLED/test.c ****  * @function   :Drawing the main Interface of the Comprehensive Test Program
+  41:../Libraries/OLED/test.c ****  * @parameters :None
+  42:../Libraries/OLED/test.c ****  * @retvalue   :None
+  43:../Libraries/OLED/test.c **** ******************************************************************************/
+  44:../Libraries/OLED/test.c **** void TEST_MainPage(void)
+  45:../Libraries/OLED/test.c **** {	
+ 615              	 .loc 1 45 0
+ 616              	 .cfi_startproc
+ 617 0000 80B5     	 push {r7,lr}
+ 618              	.LCFI3:
+ 619              	 .cfi_def_cfa_offset 8
+ 620              	 .cfi_offset 7,-8
+ 621              	 .cfi_offset 14,-4
+ 622 0002 82B0     	 sub sp,sp,#8
+ 623              	.LCFI4:
+ 624              	 .cfi_def_cfa_offset 16
+ 625 0004 02AF     	 add r7,sp,#8
+ 626              	.LCFI5:
+ 627              	 .cfi_def_cfa 7,8
+  46:../Libraries/OLED/test.c **** 	GUI_ShowString(37,0,"OLED TEST",8,1);
+ 628              	 .loc 1 46 0
+ 629 0006 114A     	 ldr r2,.L7
+ 630 0008 0123     	 mov r3,#1
+ 631 000a 0093     	 str r3,[sp]
+ 632 000c 2520     	 mov r0,#37
+ 633 000e 0021     	 mov r1,#0
+ 634 0010 0823     	 mov r3,#8
+ 635 0012 FFF7FEFF 	 bl GUI_ShowString
+  47:../Libraries/OLED/test.c **** 	GUI_ShowString(25,1,"0.91\" SSD1306",8,1);
+ 636              	 .loc 1 47 0
+ 637 0016 0E4A     	 ldr r2,.L7+4
+ 638 0018 0123     	 mov r3,#1
+ 639 001a 0093     	 str r3,[sp]
+ 640 001c 1920     	 mov r0,#25
+ 641 001e 0121     	 mov r1,#1
+ 642 0020 0823     	 mov r3,#8
+ 643 0022 FFF7FEFF 	 bl GUI_ShowString
+  48:../Libraries/OLED/test.c **** 	GUI_ShowString(46,2,"32X128",8,1);
+ 644              	 .loc 1 48 0
+ 645 0026 0B4A     	 ldr r2,.L7+8
+ 646 0028 0123     	 mov r3,#1
+ 647 002a 0093     	 str r3,[sp]
+ 648 002c 2E20     	 mov r0,#46
+ 649 002e 0221     	 mov r1,#2
+ 650 0030 0823     	 mov r3,#8
+ 651 0032 FFF7FEFF 	 bl GUI_ShowString
+  49:../Libraries/OLED/test.c **** 	GUI_ShowString(19,3,"www.lcdwiki.com",8,1);
+ 652              	 .loc 1 49 0
+ 653 0036 084A     	 ldr r2,.L7+12
+ 654 0038 0123     	 mov r3,#1
+ 655 003a 0093     	 str r3,[sp]
+ 656 003c 1320     	 mov r0,#19
+ 657 003e 0321     	 mov r1,#3
+ 658 0040 0823     	 mov r3,#8
+ 659 0042 FFF7FEFF 	 bl GUI_ShowString
+  50:../Libraries/OLED/test.c **** }
+ 660              	 .loc 1 50 0
+ 661 0046 BD46     	 mov sp,r7
+ 662              	 
+ 663 0048 80BD     	 pop {r7,pc}
+ 664              	.L8:
+ 665 004a C046     	 .align 2
+ 666              	.L7:
+ 667 004c 00000000 	 .word .LC1
+ 668 0050 0C000000 	 .word .LC3
+ 669 0054 1C000000 	 .word .LC5
+ 670 0058 24000000 	 .word .LC7
+ 671              	 .cfi_endproc
+ 672              	.LFE233:
+ 674              	 .section .rodata
+ 675              	 .align 2
+ 676              	.LC10:
+ 677 0034 424C4143 	 .ascii "BLACK\000"
+ 677      4B00
+ 678 003a 0000     	 .align 2
+ 679              	.LC12:
+ 680 003c 57484954 	 .ascii "WHITE\000"
+ 680      4500
+ 681              	 .section .text.Test_Color,"ax",%progbits
+ 682              	 .align 2
+ 683              	 .global Test_Color
+ 684              	 .code 16
+ 685              	 .thumb_func
+ 687              	Test_Color:
+ 688              	.LFB234:
+  51:../Libraries/OLED/test.c **** 
+  52:../Libraries/OLED/test.c **** /*****************************************************************************
+  53:../Libraries/OLED/test.c ****  * @name       :void Test_Color(void)
+  54:../Libraries/OLED/test.c ****  * @date       :2018-08-27 
+  55:../Libraries/OLED/test.c ****  * @function   :Color fill test(white,black)
+  56:../Libraries/OLED/test.c ****  * @parameters :None
+  57:../Libraries/OLED/test.c ****  * @retvalue   :None
+  58:../Libraries/OLED/test.c **** ******************************************************************************/
+  59:../Libraries/OLED/test.c **** void Test_Color(uint16_t mode)
+  60:../Libraries/OLED/test.c **** {
+ 689              	 .loc 1 60 0
+ 690              	 .cfi_startproc
+ 691 0000 80B5     	 push {r7,lr}
+ 692              	.LCFI6:
+ 693              	 .cfi_def_cfa_offset 8
+ 694              	 .cfi_offset 7,-8
+ 695              	 .cfi_offset 14,-4
+ 696 0002 84B0     	 sub sp,sp,#16
+ 697              	.LCFI7:
+ 698              	 .cfi_def_cfa_offset 24
+ 699 0004 02AF     	 add r7,sp,#8
+ 700              	.LCFI8:
+ 701              	 .cfi_def_cfa 7,16
+ 702 0006 021C     	 mov r2,r0
+ 703 0008 BB1D     	 add r3,r7,#6
+ 704 000a 1A80     	 strh r2,[r3]
+  61:../Libraries/OLED/test.c **** 	 static uint16_t imode = 0;
+  62:../Libraries/OLED/test.c **** 	 if (mode > 0) imode = mode;
+ 705              	 .loc 1 62 0
+ 706 000c BB1D     	 add r3,r7,#6
+ 707 000e 1B88     	 ldrh r3,[r3]
+ 708 0010 002B     	 cmp r3,#0
+ 709 0012 03D0     	 beq .L10
+ 710              	 .loc 1 62 0 is_stmt 0 discriminator 1
+ 711 0014 1C4B     	 ldr r3,.L16
+ 712 0016 BA1D     	 add r2,r7,#6
+ 713 0018 1288     	 ldrh r2,[r2]
+ 714 001a 1A80     	 strh r2,[r3]
+ 715              	.L10:
+  63:../Libraries/OLED/test.c **** 	 switch (++imode)
+ 716              	 .loc 1 63 0 is_stmt 1
+ 717 001c 1A4B     	 ldr r3,.L16
+ 718 001e 1B88     	 ldrh r3,[r3]
+ 719 0020 0133     	 add r3,r3,#1
+ 720 0022 9AB2     	 uxth r2,r3
+ 721 0024 184B     	 ldr r3,.L16
+ 722 0026 1A80     	 strh r2,[r3]
+ 723 0028 174B     	 ldr r3,.L16
+ 724 002a 1B88     	 ldrh r3,[r3]
+ 725 002c 012B     	 cmp r3,#1
+ 726 002e 02D0     	 beq .L12
+ 727 0030 022B     	 cmp r3,#2
+ 728 0032 11D0     	 beq .L13
+ 729 0034 21E0     	 b .L15
+ 730              	.L12:
+  64:../Libraries/OLED/test.c **** 	 {
+  65:../Libraries/OLED/test.c **** 	 	 case 1:
+  66:../Libraries/OLED/test.c **** 	     {
+  67:../Libraries/OLED/test.c **** 		 GUI_Fill(0,0,OLED_WIDTH-1,7,0);
+ 731              	 .loc 1 67 0
+ 732 0036 0023     	 mov r3,#0
+ 733 0038 0093     	 str r3,[sp]
+ 734 003a 0020     	 mov r0,#0
+ 735 003c 0021     	 mov r1,#0
+ 736 003e 7F22     	 mov r2,#127
+ 737 0040 0723     	 mov r3,#7
+ 738 0042 FFF7FEFF 	 bl GUI_Fill
+  68:../Libraries/OLED/test.c **** 		 GUI_ShowString(10,1,"BLACK",16,1);
+ 739              	 .loc 1 68 0
+ 740 0046 114A     	 ldr r2,.L16+4
+ 741 0048 0123     	 mov r3,#1
+ 742 004a 0093     	 str r3,[sp]
+ 743 004c 0A20     	 mov r0,#10
+ 744 004e 0121     	 mov r1,#1
+ 745 0050 1023     	 mov r3,#16
+ 746 0052 FFF7FEFF 	 bl GUI_ShowString
+  69:../Libraries/OLED/test.c **** 	     }
+  70:../Libraries/OLED/test.c **** 	     break;
+ 747              	 .loc 1 70 0
+ 748 0056 14E0     	 b .L9
+ 749              	.L13:
+  71:../Libraries/OLED/test.c **** 	 	 case 2:
+  72:../Libraries/OLED/test.c **** 	 	 {
+  73:../Libraries/OLED/test.c **** 			 GUI_Fill(0,0,OLED_WIDTH-1,7,1);
+ 750              	 .loc 1 73 0
+ 751 0058 0123     	 mov r3,#1
+ 752 005a 0093     	 str r3,[sp]
+ 753 005c 0020     	 mov r0,#0
+ 754 005e 0021     	 mov r1,#0
+ 755 0060 7F22     	 mov r2,#127
+ 756 0062 0723     	 mov r3,#7
+ 757 0064 FFF7FEFF 	 bl GUI_Fill
+  74:../Libraries/OLED/test.c **** 			 GUI_ShowString(10,1,"WHITE",16,0);
+ 758              	 .loc 1 74 0
+ 759 0068 094A     	 ldr r2,.L16+8
+ 760 006a 0023     	 mov r3,#0
+ 761 006c 0093     	 str r3,[sp]
+ 762 006e 0A20     	 mov r0,#10
+ 763 0070 0121     	 mov r1,#1
+ 764 0072 1023     	 mov r3,#16
+ 765 0074 FFF7FEFF 	 bl GUI_ShowString
+  75:../Libraries/OLED/test.c **** 	 	 }
+  76:../Libraries/OLED/test.c **** 	 	 break;
+ 766              	 .loc 1 76 0
+ 767 0078 03E0     	 b .L9
+ 768              	.L15:
+  77:../Libraries/OLED/test.c **** 	 	 default:
+  78:../Libraries/OLED/test.c **** 	 		 imode = 0;
+ 769              	 .loc 1 78 0
+ 770 007a 034B     	 ldr r3,.L16
+ 771 007c 0022     	 mov r2,#0
+ 772 007e 1A80     	 strh r2,[r3]
+  79:../Libraries/OLED/test.c **** 	 		 break;
+ 773              	 .loc 1 79 0
+ 774 0080 C046     	 mov r8,r8
+ 775              	.L9:
+  80:../Libraries/OLED/test.c **** 
+  81:../Libraries/OLED/test.c **** 	 }
+  82:../Libraries/OLED/test.c **** }
+ 776              	 .loc 1 82 0
+ 777 0082 BD46     	 mov sp,r7
+ 778 0084 02B0     	 add sp,sp,#8
+ 779              	 
+ 780 0086 80BD     	 pop {r7,pc}
+ 781              	.L17:
+ 782              	 .align 2
+ 783              	.L16:
+ 784 0088 00000000 	 .word imode.8844
+ 785 008c 34000000 	 .word .LC10
+ 786 0090 3C000000 	 .word .LC12
+ 787              	 .cfi_endproc
+ 788              	.LFE234:
+ 790              	 .section .rodata
+ 791 0042 0000     	 .align 2
+ 792              	.LC15:
+ 793 0044 3678383A 	 .ascii "6x8:abcdefghijklmnopqrstuvwxyz\000"
+ 793      61626364 
+ 793      65666768 
+ 793      696A6B6C 
+ 793      6D6E6F70 
+ 794 0063 00       	 .align 2
+ 795              	.LC17:
+ 796 0064 38783136 	 .ascii "8x16:abcdefghijklmnopqrstuvwxyz\000"
+ 796      3A616263 
+ 796      64656667 
+ 796      68696A6B 
+ 796      6C6D6E6F 
+ 797              	 .align 2
+ 798              	.LC19:
+ 799 0084 3678383A 	 .ascii "6x8:ABCDEFGHIJKLMNOPQRSTUVWXYZ\000"
+ 799      41424344 
+ 799      45464748 
+ 799      494A4B4C 
+ 799      4D4E4F50 
+ 800 00a3 00       	 .align 2
+ 801              	.LC21:
+ 802 00a4 38783136 	 .ascii "8x16:ABCDEFGHIJKLMNOPQRSTUVWXYZ\000"
+ 802      3A414243 
+ 802      44454647 
+ 802      48494A4B 
+ 802      4C4D4E4F 
+ 803              	 .section .text.TEST_English,"ax",%progbits
+ 804              	 .align 2
+ 805              	 .global TEST_English
+ 806              	 .code 16
+ 807              	 .thumb_func
+ 809              	TEST_English:
+ 810              	.LFB235:
+  83:../Libraries/OLED/test.c **** 
+  84:../Libraries/OLED/test.c **** /*****************************************************************************
+  85:../Libraries/OLED/test.c ****  * @name       :void TEST_English(void)
+  86:../Libraries/OLED/test.c ****  * @date       :2018-08-27 
+  87:../Libraries/OLED/test.c ****  * @function   :English display test
+  88:../Libraries/OLED/test.c ****  * @parameters :None
+  89:../Libraries/OLED/test.c ****  * @retvalue   :None
+  90:../Libraries/OLED/test.c **** ******************************************************************************/
+  91:../Libraries/OLED/test.c **** void TEST_English(uint16_t mode)
+  92:../Libraries/OLED/test.c **** {
+ 811              	 .loc 1 92 0
+ 812              	 .cfi_startproc
+ 813 0000 80B5     	 push {r7,lr}
+ 814              	.LCFI9:
+ 815              	 .cfi_def_cfa_offset 8
+ 816              	 .cfi_offset 7,-8
+ 817              	 .cfi_offset 14,-4
+ 818 0002 84B0     	 sub sp,sp,#16
+ 819              	.LCFI10:
+ 820              	 .cfi_def_cfa_offset 24
+ 821 0004 02AF     	 add r7,sp,#8
+ 822              	.LCFI11:
+ 823              	 .cfi_def_cfa 7,16
+ 824 0006 021C     	 mov r2,r0
+ 825 0008 BB1D     	 add r3,r7,#6
+ 826 000a 1A80     	 strh r2,[r3]
+  93:../Libraries/OLED/test.c **** 	 static uint16_t imode = 0;
+  94:../Libraries/OLED/test.c **** 	 if (mode > 0) imode = mode;
+ 827              	 .loc 1 94 0
+ 828 000c BB1D     	 add r3,r7,#6
+ 829 000e 1B88     	 ldrh r3,[r3]
+ 830 0010 002B     	 cmp r3,#0
+ 831 0012 03D0     	 beq .L19
+ 832              	 .loc 1 94 0 is_stmt 0 discriminator 1
+ 833 0014 224B     	 ldr r3,.L27
+ 834 0016 BA1D     	 add r2,r7,#6
+ 835 0018 1288     	 ldrh r2,[r2]
+ 836 001a 1A80     	 strh r2,[r3]
+ 837              	.L19:
+  95:../Libraries/OLED/test.c **** 	 switch (++imode)
+ 838              	 .loc 1 95 0 is_stmt 1
+ 839 001c 204B     	 ldr r3,.L27
+ 840 001e 1B88     	 ldrh r3,[r3]
+ 841 0020 0133     	 add r3,r3,#1
+ 842 0022 9AB2     	 uxth r2,r3
+ 843 0024 1E4B     	 ldr r3,.L27
+ 844 0026 1A80     	 strh r2,[r3]
+ 845 0028 1D4B     	 ldr r3,.L27
+ 846 002a 1B88     	 ldrh r3,[r3]
+ 847 002c 022B     	 cmp r3,#2
+ 848 002e 11D0     	 beq .L21
+ 849 0030 02DC     	 bgt .L22
+ 850 0032 012B     	 cmp r3,#1
+ 851 0034 05D0     	 beq .L23
+ 852 0036 2BE0     	 b .L20
+ 853              	.L22:
+ 854 0038 032B     	 cmp r3,#3
+ 855 003a 14D0     	 beq .L24
+ 856 003c 042B     	 cmp r3,#4
+ 857 003e 1ED0     	 beq .L25
+ 858 0040 26E0     	 b .L20
+ 859              	.L23:
+  96:../Libraries/OLED/test.c **** 	 {
+  97:../Libraries/OLED/test.c **** 		 case 1:
+  98:../Libraries/OLED/test.c **** 		 {
+  99:../Libraries/OLED/test.c **** 			 GUI_ShowString(0,1,"6x8:abcdefghijklmnopqrstuvwxyz",8,1);
+ 860              	 .loc 1 99 0
+ 861 0042 184A     	 ldr r2,.L27+4
+ 862 0044 0123     	 mov r3,#1
+ 863 0046 0093     	 str r3,[sp]
+ 864 0048 0020     	 mov r0,#0
+ 865 004a 0121     	 mov r1,#1
+ 866 004c 0823     	 mov r3,#8
+ 867 004e FFF7FEFF 	 bl GUI_ShowString
+ 100:../Libraries/OLED/test.c **** 		 }
+ 101:../Libraries/OLED/test.c **** 		 break;
+ 868              	 .loc 1 101 0
+ 869 0052 21E0     	 b .L18
+ 870              	.L21:
+ 102:../Libraries/OLED/test.c **** 		 case 2:
+ 103:../Libraries/OLED/test.c **** 		 {
+ 104:../Libraries/OLED/test.c **** 			 GUI_ShowString(0,0,"8x16:abcdefghijklmnopqrstuvwxyz",16,1);
+ 871              	 .loc 1 104 0
+ 872 0054 144A     	 ldr r2,.L27+8
+ 873 0056 0123     	 mov r3,#1
+ 874 0058 0093     	 str r3,[sp]
+ 875 005a 0020     	 mov r0,#0
+ 876 005c 0021     	 mov r1,#0
+ 877 005e 1023     	 mov r3,#16
+ 878 0060 FFF7FEFF 	 bl GUI_ShowString
+ 105:../Libraries/OLED/test.c **** 		 }
+ 106:../Libraries/OLED/test.c **** 		 break;
+ 879              	 .loc 1 106 0
+ 880 0064 18E0     	 b .L18
+ 881              	.L24:
+ 107:../Libraries/OLED/test.c **** 		 case 3:
+ 108:../Libraries/OLED/test.c **** 		 {
+ 109:../Libraries/OLED/test.c **** 			 OLED_Clear(0);
+ 882              	 .loc 1 109 0
+ 883 0066 0020     	 mov r0,#0
+ 884 0068 FFF7FEFF 	 bl OLED_Clear
+ 110:../Libraries/OLED/test.c **** 			 GUI_ShowString(0,1,"6x8:ABCDEFGHIJKLMNOPQRSTUVWXYZ",8,1);
+ 885              	 .loc 1 110 0
+ 886 006c 0F4A     	 ldr r2,.L27+12
+ 887 006e 0123     	 mov r3,#1
+ 888 0070 0093     	 str r3,[sp]
+ 889 0072 0020     	 mov r0,#0
+ 890 0074 0121     	 mov r1,#1
+ 891 0076 0823     	 mov r3,#8
+ 892 0078 FFF7FEFF 	 bl GUI_ShowString
+ 111:../Libraries/OLED/test.c **** 		 }
+ 112:../Libraries/OLED/test.c **** 		 break;
+ 893              	 .loc 1 112 0
+ 894 007c 0CE0     	 b .L18
+ 895              	.L25:
+ 113:../Libraries/OLED/test.c **** 		 case 4:
+ 114:../Libraries/OLED/test.c **** 		 {
+ 115:../Libraries/OLED/test.c **** 			 GUI_ShowString(0,0,"8x16:ABCDEFGHIJKLMNOPQRSTUVWXYZ",16,1);
+ 896              	 .loc 1 115 0
+ 897 007e 0C4A     	 ldr r2,.L27+16
+ 898 0080 0123     	 mov r3,#1
+ 899 0082 0093     	 str r3,[sp]
+ 900 0084 0020     	 mov r0,#0
+ 901 0086 0021     	 mov r1,#0
+ 902 0088 1023     	 mov r3,#16
+ 903 008a FFF7FEFF 	 bl GUI_ShowString
+ 116:../Libraries/OLED/test.c **** 		 }
+ 117:../Libraries/OLED/test.c **** 		 break;
+ 904              	 .loc 1 117 0
+ 905 008e 03E0     	 b .L18
+ 906              	.L20:
+ 118:../Libraries/OLED/test.c **** 		 default:
+ 119:../Libraries/OLED/test.c **** 		 imode = 0;
+ 907              	 .loc 1 119 0
+ 908 0090 034B     	 ldr r3,.L27
+ 909 0092 0022     	 mov r2,#0
+ 910 0094 1A80     	 strh r2,[r3]
+ 120:../Libraries/OLED/test.c **** 		 break;
+ 911              	 .loc 1 120 0
+ 912 0096 C046     	 mov r8,r8
+ 913              	.L18:
+ 121:../Libraries/OLED/test.c **** 	 }
+ 122:../Libraries/OLED/test.c **** 
+ 123:../Libraries/OLED/test.c **** }
+ 914              	 .loc 1 123 0
+ 915 0098 BD46     	 mov sp,r7
+ 916 009a 02B0     	 add sp,sp,#8
+ 917              	 
+ 918 009c 80BD     	 pop {r7,pc}
+ 919              	.L28:
+ 920 009e C046     	 .align 2
+ 921              	.L27:
+ 922 00a0 00000000 	 .word imode.8852
+ 923 00a4 44000000 	 .word .LC15
+ 924 00a8 64000000 	 .word .LC17
+ 925 00ac 84000000 	 .word .LC19
+ 926 00b0 A4000000 	 .word .LC21
+ 927              	 .cfi_endproc
+ 928              	.LFE235:
+ 930              	 .section .rodata
+ 931              	 .align 2
+ 932              	.LC24:
+ 933 00c4 3678383A 	 .ascii "6x8:!\"#$%&'()*+,-./:;<=>?@[]\\^_`~{}|\000"
+ 933      21222324 
+ 933      25262728 
+ 933      292A2B2C 
+ 933      2D2E2F3A 
+ 934 00e9 000000   	 .align 2
+ 935              	.LC26:
+ 936 00ec 38783136 	 .ascii "8x16:!\"#$%&'()*+,-./:;<=>?@[]\\^_`~{}|\000"
+ 936      3A212223 
+ 936      24252627 
+ 936      28292A2B 
+ 936      2C2D2E2F 
+ 937              	 .section .text.TEST_Number_Character,"ax",%progbits
+ 938              	 .align 2
+ 939              	 .global TEST_Number_Character
+ 940              	 .code 16
+ 941              	 .thumb_func
+ 943              	TEST_Number_Character:
+ 944              	.LFB236:
+ 124:../Libraries/OLED/test.c **** 
+ 125:../Libraries/OLED/test.c **** /*****************************************************************************
+ 126:../Libraries/OLED/test.c ****  * @name       :void TEST_Number_Character(void) 
+ 127:../Libraries/OLED/test.c ****  * @date       :2018-08-27 
+ 128:../Libraries/OLED/test.c ****  * @function   :number and character display test
+ 129:../Libraries/OLED/test.c ****  * @parameters :None
+ 130:../Libraries/OLED/test.c ****  * @retvalue   :None
+ 131:../Libraries/OLED/test.c **** ******************************************************************************/
+ 132:../Libraries/OLED/test.c **** void TEST_Number_Character(uint16_t mode)
+ 133:../Libraries/OLED/test.c **** {
+ 945              	 .loc 1 133 0
+ 946              	 .cfi_startproc
+ 947 0000 80B5     	 push {r7,lr}
+ 948              	.LCFI12:
+ 949              	 .cfi_def_cfa_offset 8
+ 950              	 .cfi_offset 7,-8
+ 951              	 .cfi_offset 14,-4
+ 952 0002 84B0     	 sub sp,sp,#16
+ 953              	.LCFI13:
+ 954              	 .cfi_def_cfa_offset 24
+ 955 0004 02AF     	 add r7,sp,#8
+ 956              	.LCFI14:
+ 957              	 .cfi_def_cfa 7,16
+ 958 0006 021C     	 mov r2,r0
+ 959 0008 BB1D     	 add r3,r7,#6
+ 960 000a 1A80     	 strh r2,[r3]
+ 134:../Libraries/OLED/test.c **** 	 static uint16_t imode = 0;
+ 135:../Libraries/OLED/test.c **** 	 if (mode > 0) imode = mode;
+ 961              	 .loc 1 135 0
+ 962 000c BB1D     	 add r3,r7,#6
+ 963 000e 1B88     	 ldrh r3,[r3]
+ 964 0010 002B     	 cmp r3,#0
+ 965 0012 03D0     	 beq .L30
+ 966              	 .loc 1 135 0 is_stmt 0 discriminator 1
+ 967 0014 334B     	 ldr r3,.L37
+ 968 0016 BA1D     	 add r2,r7,#6
+ 969 0018 1288     	 ldrh r2,[r2]
+ 970 001a 1A80     	 strh r2,[r3]
+ 971              	.L30:
+ 136:../Libraries/OLED/test.c **** 	 switch (++imode)
+ 972              	 .loc 1 136 0 is_stmt 1
+ 973 001c 314B     	 ldr r3,.L37
+ 974 001e 1B88     	 ldrh r3,[r3]
+ 975 0020 0133     	 add r3,r3,#1
+ 976 0022 9AB2     	 uxth r2,r3
+ 977 0024 2F4B     	 ldr r3,.L37
+ 978 0026 1A80     	 strh r2,[r3]
+ 979 0028 2E4B     	 ldr r3,.L37
+ 980 002a 1B88     	 ldrh r3,[r3]
+ 981 002c 022B     	 cmp r3,#2
+ 982 002e 38D0     	 beq .L32
+ 983 0030 032B     	 cmp r3,#3
+ 984 0032 4CD0     	 beq .L33
+ 985 0034 012B     	 cmp r3,#1
+ 986 0036 4ED1     	 bne .L36
+ 137:../Libraries/OLED/test.c **** 	 {
+ 138:../Libraries/OLED/test.c **** 		 case 1:
+ 139:../Libraries/OLED/test.c **** 		 {
+ 140:../Libraries/OLED/test.c **** 			GUI_Fill(0,0,OLED_WIDTH-1,1,0);
+ 987              	 .loc 1 140 0
+ 988 0038 0023     	 mov r3,#0
+ 989 003a 0093     	 str r3,[sp]
+ 990 003c 0020     	 mov r0,#0
+ 991 003e 0021     	 mov r1,#0
+ 992 0040 7F22     	 mov r2,#127
+ 993 0042 0123     	 mov r3,#1
+ 994 0044 FFF7FEFF 	 bl GUI_Fill
+ 141:../Libraries/OLED/test.c **** 			GUI_ShowString(0,0,"6x8:!\"#$%&'()*+,-./:;<=>?@[]\\^_`~{}|",8,1);
+ 995              	 .loc 1 141 0
+ 996 0048 274A     	 ldr r2,.L37+4
+ 997 004a 0123     	 mov r3,#1
+ 998 004c 0093     	 str r3,[sp]
+ 999 004e 0020     	 mov r0,#0
+ 1000 0050 0021     	 mov r1,#0
+ 1001 0052 0823     	 mov r3,#8
+ 1002 0054 FFF7FEFF 	 bl GUI_ShowString
+ 142:../Libraries/OLED/test.c **** 			GUI_ShowNum(68,1,1234567890,10,8,1);
+ 1003              	 .loc 1 142 0
+ 1004 0058 244A     	 ldr r2,.L37+8
+ 1005 005a 0823     	 mov r3,#8
+ 1006 005c 0093     	 str r3,[sp]
+ 1007 005e 0123     	 mov r3,#1
+ 1008 0060 0193     	 str r3,[sp,#4]
+ 1009 0062 4420     	 mov r0,#68
+ 1010 0064 0121     	 mov r1,#1
+ 1011 0066 0A23     	 mov r3,#10
+ 1012 0068 FFF7FEFF 	 bl GUI_ShowNum
+ 143:../Libraries/OLED/test.c **** 			GUI_Fill(0,2,OLED_WIDTH-1,3,1);
+ 1013              	 .loc 1 143 0
+ 1014 006c 0123     	 mov r3,#1
+ 1015 006e 0093     	 str r3,[sp]
+ 1016 0070 0020     	 mov r0,#0
+ 1017 0072 0221     	 mov r1,#2
+ 1018 0074 7F22     	 mov r2,#127
+ 1019 0076 0323     	 mov r3,#3
+ 1020 0078 FFF7FEFF 	 bl GUI_Fill
+ 144:../Libraries/OLED/test.c **** 			GUI_ShowString(0,2,"6x8:!\"#$%&'()*+,-./:;<=>?@[]\\^_`~{}|",8,0);
+ 1021              	 .loc 1 144 0
+ 1022 007c 1A4A     	 ldr r2,.L37+4
+ 1023 007e 0023     	 mov r3,#0
+ 1024 0080 0093     	 str r3,[sp]
+ 1025 0082 0020     	 mov r0,#0
+ 1026 0084 0221     	 mov r1,#2
+ 1027 0086 0823     	 mov r3,#8
+ 1028 0088 FFF7FEFF 	 bl GUI_ShowString
+ 145:../Libraries/OLED/test.c **** 			GUI_ShowNum(68,3,1234567890,10,8,0);
+ 1029              	 .loc 1 145 0
+ 1030 008c 174A     	 ldr r2,.L37+8
+ 1031 008e 0823     	 mov r3,#8
+ 1032 0090 0093     	 str r3,[sp]
+ 1033 0092 0023     	 mov r3,#0
+ 1034 0094 0193     	 str r3,[sp,#4]
+ 1035 0096 4420     	 mov r0,#68
+ 1036 0098 0321     	 mov r1,#3
+ 1037 009a 0A23     	 mov r3,#10
+ 1038 009c FFF7FEFF 	 bl GUI_ShowNum
+ 146:../Libraries/OLED/test.c **** 		 }
+ 147:../Libraries/OLED/test.c **** 		 break;
+ 1039              	 .loc 1 147 0
+ 1040 00a0 1DE0     	 b .L29
+ 1041              	.L32:
+ 148:../Libraries/OLED/test.c **** 		 case 2:
+ 149:../Libraries/OLED/test.c **** 		 {
+ 150:../Libraries/OLED/test.c **** 			 OLED_Clear(0);
+ 1042              	 .loc 1 150 0
+ 1043 00a2 0020     	 mov r0,#0
+ 1044 00a4 FFF7FEFF 	 bl OLED_Clear
+ 151:../Libraries/OLED/test.c **** 			 GUI_ShowString(0,0,"8x16:!\"#$%&'()*+,-./:;<=>?@[]\\^_`~{}|",16,1);
+ 1045              	 .loc 1 151 0
+ 1046 00a8 114A     	 ldr r2,.L37+12
+ 1047 00aa 0123     	 mov r3,#1
+ 1048 00ac 0093     	 str r3,[sp]
+ 1049 00ae 0020     	 mov r0,#0
+ 1050 00b0 0021     	 mov r1,#0
+ 1051 00b2 1023     	 mov r3,#16
+ 1052 00b4 FFF7FEFF 	 bl GUI_ShowString
+ 152:../Libraries/OLED/test.c **** 			 GUI_ShowNum(48,2,1234567890,10,16,1);
+ 1053              	 .loc 1 152 0
+ 1054 00b8 0C4A     	 ldr r2,.L37+8
+ 1055 00ba 1023     	 mov r3,#16
+ 1056 00bc 0093     	 str r3,[sp]
+ 1057 00be 0123     	 mov r3,#1
+ 1058 00c0 0193     	 str r3,[sp,#4]
+ 1059 00c2 3020     	 mov r0,#48
+ 1060 00c4 0221     	 mov r1,#2
+ 1061 00c6 0A23     	 mov r3,#10
+ 1062 00c8 FFF7FEFF 	 bl GUI_ShowNum
+ 153:../Libraries/OLED/test.c **** 		 }
+ 154:../Libraries/OLED/test.c **** 		 break;
+ 1063              	 .loc 1 154 0
+ 1064 00cc 07E0     	 b .L29
+ 1065              	.L33:
+ 155:../Libraries/OLED/test.c **** 		 case 3:
+ 156:../Libraries/OLED/test.c **** 			 OLED_Clear(0);
+ 1066              	 .loc 1 156 0
+ 1067 00ce 0020     	 mov r0,#0
+ 1068 00d0 FFF7FEFF 	 bl OLED_Clear
+ 157:../Libraries/OLED/test.c **** 		 break;
+ 1069              	 .loc 1 157 0
+ 1070 00d4 03E0     	 b .L29
+ 1071              	.L36:
+ 158:../Libraries/OLED/test.c **** 		 default:
+ 159:../Libraries/OLED/test.c **** 		 imode = 0;
+ 1072              	 .loc 1 159 0
+ 1073 00d6 034B     	 ldr r3,.L37
+ 1074 00d8 0022     	 mov r2,#0
+ 1075 00da 1A80     	 strh r2,[r3]
+ 160:../Libraries/OLED/test.c **** 		 break;
+ 1076              	 .loc 1 160 0
+ 1077 00dc C046     	 mov r8,r8
+ 1078              	.L29:
+ 161:../Libraries/OLED/test.c **** 	 }
+ 162:../Libraries/OLED/test.c **** }
+ 1079              	 .loc 1 162 0
+ 1080 00de BD46     	 mov sp,r7
+ 1081 00e0 02B0     	 add sp,sp,#8
+ 1082              	 
+ 1083 00e2 80BD     	 pop {r7,pc}
+ 1084              	.L38:
+ 1085              	 .align 2
+ 1086              	.L37:
+ 1087 00e4 00000000 	 .word imode.8862
+ 1088 00e8 C4000000 	 .word .LC24
+ 1089 00ec D2029649 	 .word 1234567890
+ 1090 00f0 EC000000 	 .word .LC26
+ 1091              	 .cfi_endproc
+ 1092              	.LFE236:
+ 1094              	 .section .rodata
+ 1095 0112 0000     	 .align 2
+ 1096              	.LC29:
+ 1097 0114 31367831 	 .ascii "16x16\000"
+ 1097      3600
+ 1098 011a 0000     	 .align 2
+ 1099              	.LC31:
+ 1100 011c C8ABEFBF 	 .ascii "\310\253\357\277\275\357\277\275\357\277\275\357\277"
+ 1100      BDEFBFBD 
+ 1100      EFBFBDEF 
+ 1100      BF
+ 1101 0129 BDEFBFBD 	 .ascii "\275\357\277\275\323\274\357\277\275\357\277\275\357"
+ 1101      D3BCEFBF 
+ 1101      BDEFBFBD 
+ 1101      EF
+ 1102 0136 BFBD00   	 .ascii "\277\275\000"
+ 1103 0139 000000   	 .align 2
+ 1104              	.LC33:
+ 1105 013c 32347832 	 .ascii "24x24\000"
+ 1105      3400
+ 1106 0142 0000     	 .align 2
+ 1107              	.LC35:
+ 1108 0144 C8ABEFBF 	 .ascii "\310\253\357\277\275\357\277\275\357\277\275\357\277"
+ 1108      BDEFBFBD 
+ 1108      EFBFBDEF 
+ 1108      BF
+ 1109 0151 BDEFBFBD 	 .ascii "\275\357\277\275\357\277\275\000"
+ 1109      EFBFBD00 
+ 1110 0159 000000   	 .section .text.TEST_Chinese,"ax",%progbits
+ 1111              	 .align 2
+ 1112              	 .global TEST_Chinese
+ 1113              	 .code 16
+ 1114              	 .thumb_func
+ 1116              	TEST_Chinese:
+ 1117              	.LFB237:
+ 163:../Libraries/OLED/test.c **** 
+ 164:../Libraries/OLED/test.c **** /*****************************************************************************
+ 165:../Libraries/OLED/test.c ****  * @name       :void TEST_Chinese(void)
+ 166:../Libraries/OLED/test.c ****  * @date       :2018-08-27
+ 167:../Libraries/OLED/test.c ****  * @function   :chinese display test
+ 168:../Libraries/OLED/test.c ****  * @parameters :None
+ 169:../Libraries/OLED/test.c ****  * @retvalue   :None
+ 170:../Libraries/OLED/test.c **** ******************************************************************************/
+ 171:../Libraries/OLED/test.c **** void TEST_Chinese(uint16_t mode)
+ 172:../Libraries/OLED/test.c **** {	
+ 1118              	 .loc 1 172 0
+ 1119              	 .cfi_startproc
+ 1120 0000 90B5     	 push {r4,r7,lr}
+ 1121              	.LCFI15:
+ 1122              	 .cfi_def_cfa_offset 12
+ 1123              	 .cfi_offset 4,-12
+ 1124              	 .cfi_offset 7,-8
+ 1125              	 .cfi_offset 14,-4
+ 1126 0002 85B0     	 sub sp,sp,#20
+ 1127              	.LCFI16:
+ 1128              	 .cfi_def_cfa_offset 32
+ 1129 0004 02AF     	 add r7,sp,#8
+ 1130              	.LCFI17:
+ 1131              	 .cfi_def_cfa 7,24
+ 1132 0006 021C     	 mov r2,r0
+ 1133 0008 BB1D     	 add r3,r7,#6
+ 1134 000a 1A80     	 strh r2,[r3]
+ 173:../Libraries/OLED/test.c **** 	 static uint16_t imode = 0;
+ 174:../Libraries/OLED/test.c **** 	 if (mode > 0) imode = mode;
+ 1135              	 .loc 1 174 0
+ 1136 000c BB1D     	 add r3,r7,#6
+ 1137 000e 1B88     	 ldrh r3,[r3]
+ 1138 0010 002B     	 cmp r3,#0
+ 1139 0012 03D0     	 beq .L40
+ 1140              	 .loc 1 174 0 is_stmt 0 discriminator 1
+ 1141 0014 344B     	 ldr r3,.L48
+ 1142 0016 BA1D     	 add r2,r7,#6
+ 1143 0018 1288     	 ldrh r2,[r2]
+ 1144 001a 1A80     	 strh r2,[r3]
+ 1145              	.L40:
+ 175:../Libraries/OLED/test.c **** 	 OLED_Clear(0);
+ 1146              	 .loc 1 175 0 is_stmt 1
+ 1147 001c 0020     	 mov r0,#0
+ 1148 001e FFF7FEFF 	 bl OLED_Clear
+ 176:../Libraries/OLED/test.c **** 	 switch (++imode)
+ 1149              	 .loc 1 176 0
+ 1150 0022 314B     	 ldr r3,.L48
+ 1151 0024 1B88     	 ldrh r3,[r3]
+ 1152 0026 0133     	 add r3,r3,#1
+ 1153 0028 9AB2     	 uxth r2,r3
+ 1154 002a 2F4B     	 ldr r3,.L48
+ 1155 002c 1A80     	 strh r2,[r3]
+ 1156 002e 2E4B     	 ldr r3,.L48
+ 1157 0030 1B88     	 ldrh r3,[r3]
+ 1158 0032 022B     	 cmp r3,#2
+ 1159 0034 1AD0     	 beq .L42
+ 1160 0036 02DC     	 bgt .L43
+ 1161 0038 012B     	 cmp r3,#1
+ 1162 003a 05D0     	 beq .L44
+ 1163 003c 4CE0     	 b .L41
+ 1164              	.L43:
+ 1165 003e 032B     	 cmp r3,#3
+ 1166 0040 2ED0     	 beq .L45
+ 1167 0042 042B     	 cmp r3,#4
+ 1168 0044 3ED0     	 beq .L46
+ 1169 0046 47E0     	 b .L41
+ 1170              	.L44:
+ 177:../Libraries/OLED/test.c **** 	 {
+ 178:../Libraries/OLED/test.c **** 		 case 1:
+ 179:../Libraries/OLED/test.c **** 		 {
+ 180:../Libraries/OLED/test.c **** 			GUI_ShowString(45,0,"16x16",8,1);
+ 1171              	 .loc 1 180 0
+ 1172 0048 284A     	 ldr r2,.L48+4
+ 1173 004a 0123     	 mov r3,#1
+ 1174 004c 0093     	 str r3,[sp]
+ 1175 004e 2D20     	 mov r0,#45
+ 1176 0050 0021     	 mov r1,#0
+ 1177 0052 0823     	 mov r3,#8
+ 1178 0054 FFF7FEFF 	 bl GUI_ShowString
+ 181:../Libraries/OLED/test.c **** 			GUI_ShowCHinese(16,2,16,"ȫ�����Ӽ���",1);
+ 1179              	 .loc 1 181 0
+ 1180 0058 254C     	 ldr r4,.L48+8
+ 1181 005a 0123     	 mov r3,#1
+ 1182 005c 0093     	 str r3,[sp]
+ 1183 005e 1020     	 mov r0,#16
+ 1184 0060 0221     	 mov r1,#2
+ 1185 0062 1022     	 mov r2,#16
+ 1186 0064 231C     	 mov r3,r4
+ 1187 0066 FFF7FEFF 	 bl GUI_ShowCHinese
+ 182:../Libraries/OLED/test.c **** 		 }
+ 183:../Libraries/OLED/test.c **** 		 break;
+ 1188              	 .loc 1 183 0
+ 1189 006a 39E0     	 b .L39
+ 1190              	.L42:
+ 184:../Libraries/OLED/test.c **** 		 case 2:
+ 185:../Libraries/OLED/test.c **** 		 {
+ 186:../Libraries/OLED/test.c **** 			GUI_Fill(0,0,OLED_WIDTH-1,3,1);
+ 1191              	 .loc 1 186 0
+ 1192 006c 0123     	 mov r3,#1
+ 1193 006e 0093     	 str r3,[sp]
+ 1194 0070 0020     	 mov r0,#0
+ 1195 0072 0021     	 mov r1,#0
+ 1196 0074 7F22     	 mov r2,#127
+ 1197 0076 0323     	 mov r3,#3
+ 1198 0078 FFF7FEFF 	 bl GUI_Fill
+ 187:../Libraries/OLED/test.c **** 			GUI_ShowString(45,0,"16x16",8,0);
+ 1199              	 .loc 1 187 0
+ 1200 007c 1B4A     	 ldr r2,.L48+4
+ 1201 007e 0023     	 mov r3,#0
+ 1202 0080 0093     	 str r3,[sp]
+ 1203 0082 2D20     	 mov r0,#45
+ 1204 0084 0021     	 mov r1,#0
+ 1205 0086 0823     	 mov r3,#8
+ 1206 0088 FFF7FEFF 	 bl GUI_ShowString
+ 188:../Libraries/OLED/test.c **** 			GUI_ShowCHinese(16,2,16,"ȫ�����Ӽ���",0);
+ 1207              	 .loc 1 188 0
+ 1208 008c 184C     	 ldr r4,.L48+8
+ 1209 008e 0023     	 mov r3,#0
+ 1210 0090 0093     	 str r3,[sp]
+ 1211 0092 1020     	 mov r0,#16
+ 1212 0094 0221     	 mov r1,#2
+ 1213 0096 1022     	 mov r2,#16
+ 1214 0098 231C     	 mov r3,r4
+ 1215 009a FFF7FEFF 	 bl GUI_ShowCHinese
+ 189:../Libraries/OLED/test.c **** 		 }
+ 190:../Libraries/OLED/test.c **** 		 break;
+ 1216              	 .loc 1 190 0
+ 1217 009e 1FE0     	 b .L39
+ 1218              	.L45:
+ 191:../Libraries/OLED/test.c **** 		 case 3:
+ 192:../Libraries/OLED/test.c **** 		 {
+ 193:../Libraries/OLED/test.c **** 			GUI_ShowString(45,0,"24x24",8,1);
+ 1219              	 .loc 1 193 0
+ 1220 00a0 144A     	 ldr r2,.L48+12
+ 1221 00a2 0123     	 mov r3,#1
+ 1222 00a4 0093     	 str r3,[sp]
+ 1223 00a6 2D20     	 mov r0,#45
+ 1224 00a8 0021     	 mov r1,#0
+ 1225 00aa 0823     	 mov r3,#8
+ 1226 00ac FFF7FEFF 	 bl GUI_ShowString
+ 194:../Libraries/OLED/test.c **** 			GUI_ShowCHinese(16,1,24,"ȫ������",1);
+ 1227              	 .loc 1 194 0
+ 1228 00b0 114C     	 ldr r4,.L48+16
+ 1229 00b2 0123     	 mov r3,#1
+ 1230 00b4 0093     	 str r3,[sp]
+ 1231 00b6 1020     	 mov r0,#16
+ 1232 00b8 0121     	 mov r1,#1
+ 1233 00ba 1822     	 mov r2,#24
+ 1234 00bc 231C     	 mov r3,r4
+ 1235 00be FFF7FEFF 	 bl GUI_ShowCHinese
+ 195:../Libraries/OLED/test.c **** 		 }
+ 196:../Libraries/OLED/test.c **** 		 break;
+ 1236              	 .loc 1 196 0
+ 1237 00c2 0DE0     	 b .L39
+ 1238              	.L46:
+ 197:../Libraries/OLED/test.c **** 		 case 4:
+ 198:../Libraries/OLED/test.c **** 		 {
+ 199:../Libraries/OLED/test.c **** 			GUI_ShowCHinese(0,0,32,"ȫ������",1);
+ 1239              	 .loc 1 199 0
+ 1240 00c4 0C4C     	 ldr r4,.L48+16
+ 1241 00c6 0123     	 mov r3,#1
+ 1242 00c8 0093     	 str r3,[sp]
+ 1243 00ca 0020     	 mov r0,#0
+ 1244 00cc 0021     	 mov r1,#0
+ 1245 00ce 2022     	 mov r2,#32
+ 1246 00d0 231C     	 mov r3,r4
+ 1247 00d2 FFF7FEFF 	 bl GUI_ShowCHinese
+ 200:../Libraries/OLED/test.c **** 		 }
+ 201:../Libraries/OLED/test.c **** 		 break;
+ 1248              	 .loc 1 201 0
+ 1249 00d6 03E0     	 b .L39
+ 1250              	.L41:
+ 202:../Libraries/OLED/test.c **** 		 default:
+ 203:../Libraries/OLED/test.c **** 		 {
+ 204:../Libraries/OLED/test.c **** 			 imode = 0;
+ 1251              	 .loc 1 204 0
+ 1252 00d8 034B     	 ldr r3,.L48
+ 1253 00da 0022     	 mov r2,#0
+ 1254 00dc 1A80     	 strh r2,[r3]
+ 205:../Libraries/OLED/test.c **** 		 }
+ 206:../Libraries/OLED/test.c **** 		 break;
+ 1255              	 .loc 1 206 0
+ 1256 00de C046     	 mov r8,r8
+ 1257              	.L39:
+ 207:../Libraries/OLED/test.c **** 	 }
+ 208:../Libraries/OLED/test.c **** }
+ 1258              	 .loc 1 208 0
+ 1259 00e0 BD46     	 mov sp,r7
+ 1260 00e2 03B0     	 add sp,sp,#12
+ 1261              	 
+ 1262 00e4 90BD     	 pop {r4,r7,pc}
+ 1263              	.L49:
+ 1264 00e6 C046     	 .align 2
+ 1265              	.L48:
+ 1266 00e8 00000000 	 .word imode.8871
+ 1267 00ec 14010000 	 .word .LC29
+ 1268 00f0 1C010000 	 .word .LC31
+ 1269 00f4 3C010000 	 .word .LC33
+ 1270 00f8 44010000 	 .word .LC35
+ 1271              	 .cfi_endproc
+ 1272              	.LFE237:
+ 1274              	 .section .text.TEST_BMP,"ax",%progbits
+ 1275              	 .align 2
+ 1276              	 .global TEST_BMP
+ 1277              	 .code 16
+ 1278              	 .thumb_func
+ 1280              	TEST_BMP:
+ 1281              	.LFB238:
+ 209:../Libraries/OLED/test.c **** 
+ 210:../Libraries/OLED/test.c **** /*****************************************************************************
+ 211:../Libraries/OLED/test.c ****  * @name       :void TEST_BMP(void)
+ 212:../Libraries/OLED/test.c ****  * @date       :2018-08-27 
+ 213:../Libraries/OLED/test.c ****  * @function   :BMP monochromatic picture display test
+ 214:../Libraries/OLED/test.c ****  * @parameters :None
+ 215:../Libraries/OLED/test.c ****  * @retvalue   :None
+ 216:../Libraries/OLED/test.c **** ******************************************************************************/
+ 217:../Libraries/OLED/test.c **** void TEST_BMP(void)
+ 218:../Libraries/OLED/test.c **** {
+ 1282              	 .loc 1 218 0
+ 1283              	 .cfi_startproc
+ 1284 0000 80B5     	 push {r7,lr}
+ 1285              	.LCFI18:
+ 1286              	 .cfi_def_cfa_offset 8
+ 1287              	 .cfi_offset 7,-8
+ 1288              	 .cfi_offset 14,-4
+ 1289 0002 84B0     	 sub sp,sp,#16
+ 1290              	.LCFI19:
+ 1291              	 .cfi_def_cfa_offset 24
+ 1292 0004 02AF     	 add r7,sp,#8
+ 1293              	.LCFI20:
+ 1294              	 .cfi_def_cfa 7,16
+ 219:../Libraries/OLED/test.c **** 	char *pic;
+ 220:../Libraries/OLED/test.c **** 	pic= (char*)BMP2;
+ 1295              	 .loc 1 220 0
+ 1296 0006 064B     	 ldr r3,.L51
+ 1297 0008 7B60     	 str r3,[r7,#4]
+ 221:../Libraries/OLED/test.c **** 	GUI_DrawBMP(0,0,128,32, pic);
+ 1298              	 .loc 1 221 0
+ 1299 000a 7B68     	 ldr r3,[r7,#4]
+ 1300 000c 0093     	 str r3,[sp]
+ 1301 000e 0020     	 mov r0,#0
+ 1302 0010 0021     	 mov r1,#0
+ 1303 0012 8022     	 mov r2,#128
+ 1304 0014 2023     	 mov r3,#32
+ 1305 0016 FFF7FEFF 	 bl GUI_DrawBMP
+ 222:../Libraries/OLED/test.c **** 	//GUI_DrawBMP(0,0,128,32, BMP3, 1);
+ 223:../Libraries/OLED/test.c **** 	//delay_ms(1000);
+ 224:../Libraries/OLED/test.c **** 	//GUI_DrawBMP(0,0,128,32, BMP4, 1);
+ 225:../Libraries/OLED/test.c **** 	//delay_ms(1000);
+ 226:../Libraries/OLED/test.c **** }
+ 1306              	 .loc 1 226 0
+ 1307 001a BD46     	 mov sp,r7
+ 1308 001c 02B0     	 add sp,sp,#8
+ 1309              	 
+ 1310 001e 80BD     	 pop {r7,pc}
+ 1311              	.L52:
+ 1312              	 .align 2
+ 1313              	.L51:
+ 1314 0020 00000000 	 .word BMP2
+ 1315              	 .cfi_endproc
+ 1316              	.LFE238:
+ 1318              	 .section .bss.imode.8844,"aw",%nobits
+ 1319              	 .align 1
+ 1322              	imode.8844:
+ 1323 0000 0000     	 .space 2
+ 1324              	 .section .bss.imode.8852,"aw",%nobits
+ 1325              	 .align 1
+ 1328              	imode.8852:
+ 1329 0000 0000     	 .space 2
+ 1330              	 .section .bss.imode.8862,"aw",%nobits
+ 1331              	 .align 1
+ 1334              	imode.8862:
+ 1335 0000 0000     	 .space 2
+ 1336              	 .section .bss.imode.8871,"aw",%nobits
+ 1337              	 .align 1
+ 1340              	imode.8871:
+ 1341 0000 0000     	 .space 2
+ 1342              	 .text
+ 1343              	.Letext0:
+ 1344              	 .file 2 "c:\\infineon\\tools\\dave ide\\450\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 1345              	 .file 3 "c:\\infineon\\tools\\dave ide\\450\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+ 1346              	 .file 4 "../Libraries/OLED/bmp.h"
+ 1347              	 .file 5 "D:/GITHUB/XMC14/TOF/Libraries/CMSIS/Include/cmsis_gcc.h"
+ 1348              	 .file 6 "D:/GITHUB/XMC14/TOF/Libraries/CMSIS/Infineon/XMC1400_series/Include/system_XMC1400.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 test.c
+    {standard input}:22     .rodata.BMP2:00000000 BMP2
+    {standard input}:19     .rodata.BMP2:00000000 $d
+    {standard input}:536    .text.delay_ms:00000000 $t
+    {standard input}:541    .text.delay_ms:00000000 delay_ms
+    {standard input}:590    .text.delay_ms:0000002c $d
+    {standard input}:595    .rodata:00000000 $d
+    {standard input}:608    .text.TEST_MainPage:00000000 $t
+    {standard input}:613    .text.TEST_MainPage:00000000 TEST_MainPage
+    {standard input}:667    .text.TEST_MainPage:0000004c $d
+    {standard input}:682    .text.Test_Color:00000000 $t
+    {standard input}:687    .text.Test_Color:00000000 Test_Color
+    {standard input}:784    .text.Test_Color:00000088 $d
+    {standard input}:1322   .bss.imode.8844:00000000 imode.8844
+    {standard input}:804    .text.TEST_English:00000000 $t
+    {standard input}:809    .text.TEST_English:00000000 TEST_English
+    {standard input}:922    .text.TEST_English:000000a0 $d
+    {standard input}:1328   .bss.imode.8852:00000000 imode.8852
+    {standard input}:938    .text.TEST_Number_Character:00000000 $t
+    {standard input}:943    .text.TEST_Number_Character:00000000 TEST_Number_Character
+    {standard input}:1087   .text.TEST_Number_Character:000000e4 $d
+    {standard input}:1334   .bss.imode.8862:00000000 imode.8862
+    {standard input}:1111   .text.TEST_Chinese:00000000 $t
+    {standard input}:1116   .text.TEST_Chinese:00000000 TEST_Chinese
+    {standard input}:1266   .text.TEST_Chinese:000000e8 $d
+    {standard input}:1340   .bss.imode.8871:00000000 imode.8871
+    {standard input}:1275   .text.TEST_BMP:00000000 $t
+    {standard input}:1280   .text.TEST_BMP:00000000 TEST_BMP
+    {standard input}:1314   .text.TEST_BMP:00000020 $d
+    {standard input}:1319   .bss.imode.8844:00000000 $d
+    {standard input}:1325   .bss.imode.8852:00000000 $d
+    {standard input}:1331   .bss.imode.8862:00000000 $d
+    {standard input}:1337   .bss.imode.8871:00000000 $d
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+SysTickCounter
+GUI_ShowString
+GUI_Fill
+OLED_Clear
+GUI_ShowNum
+GUI_ShowCHinese
+GUI_DrawBMP

@@ -30,6 +30,17 @@
 /** @brief Standardprofil mit 30 ms Messbudget. */
 #define TOF_PROFILE TOF_DEFAULT_MODE_D
 
+/** @brief Anzahl gueltiger Messwerte im gleitenden Mittelwert. */
+#define TOF_MEAN_WINDOW_SIZE 10U
+
+/* Die Summe passt bei maximal 65535 Werten vom Typ uint16_t in uint32_t. */
+#if (TOF_MEAN_WINDOW_SIZE < 1U) || (TOF_MEAN_WINDOW_SIZE > 65535U)
+#error "TOF_MEAN_WINDOW_SIZE muss zwischen 1 und 65535 liegen"
+#endif
+//#define TOF_PROFILE TOF_HIGH_ACCURACY_MODE_A
+
+#define DisplayRate (TOF_Sensor_1.Ranging_Profile_time + 5U)*4
+
 /**
  * @brief Seit Timerstart vergangene Millisekunden.
  * @details volatile zeigt dem Compiler, dass ein Interrupt den Wert aendern
@@ -42,6 +53,59 @@ TOFSensor_t TOF_Sensor_1;
 volatile bool initedTOF = false;
 /** @brief Anzahl erkannter TOF-Fehler; im Debugger beobachtbar. */
 volatile uint32_t tof_error_count = 0U;
+
+/**
+ * @brief Berechnet den gleitenden Mittelwert der letzten gueltigen TOF-Messwerte.
+ * @param[in] distance_mm Neuer Messwert in mm oder TOF_VL53L0X_OUT_OF_RANGE.
+ * @return Auf ganze Millimeter gerundeter Mittelwert; bei ungueltigem Eingang
+ *         TOF_VL53L0X_OUT_OF_RANGE, ohne den bisherigen Verlauf zu veraendern.
+ *
+ * @details Ein Ringpuffer speichert bis zu TOF_MEAN_WINDOW_SIZE Werte. Ist er
+ * voll, ersetzt jeder neue Messwert den aeltesten. Die Summe wird dabei durch
+ * Abziehen des alten und Addieren des neuen Wertes aktualisiert. Dadurch muss
+ * nicht bei jedem Aufruf der gesamte Puffer erneut addiert werden.
+ *
+ * Beim Start wird nur durch die Anzahl bereits vorhandener Werte geteilt:
+ * Der erste Mittelwert entspricht daher genau dem ersten Messwert. Fehlende
+ * Werte werden nicht als Null mitgezaehlt. Ungueltige Werte werden uebersprungen;
+ * nach einer Messluecke bleiben die letzten gueltigen Werte im Fenster erhalten.
+ *
+ * @note Genau einmal je erfolgreich gelesener Messung im Hauptprogramm aufrufen,
+ * nicht bei jeder Displayaktualisierung. Die statischen Variablen behalten ihren
+ * Inhalt zwischen Aufrufen. Der Filter gehoert zu einem einzigen Sensor und wird
+ * beim Programmstart automatisch mit Null initialisiert.
+ */
+static uint16_t TOF_MovingAverage(uint16_t distance_mm)
+{
+    static uint16_t samples[TOF_MEAN_WINDOW_SIZE] = {0};
+    static uint32_t sum = 0U;
+    static uint16_t next_index = 0U;
+    static uint16_t sample_count = 0U;
+
+    /* Reichweitenfehler sind keine Entfernungen und duerfen die Summe nicht aendern. */
+    if (distance_mm == TOF_VL53L0X_OUT_OF_RANGE) {
+        return TOF_VL53L0X_OUT_OF_RANGE;
+    }
+
+    if (sample_count < TOF_MEAN_WINDOW_SIZE) {
+        ++sample_count;
+    } else {
+        /* Am Schreibplatz steht bei vollem Puffer der aelteste Messwert. */
+        sum -= samples[next_index];
+    }
+    samples[next_index] = distance_mm;
+    sum += distance_mm;
+
+    /* Nach dem letzten Feld wieder beim ersten beginnen: ein Ringpuffer. */
+    ++next_index;
+    if (next_index >= TOF_MEAN_WINDOW_SIZE) {
+        next_index = 0U;
+    }
+
+    /* Halben Divisor addieren: Ganzzahldivision rundet so zum naechsten mm.
+     * sample_count ist hier mindestens 1; eine Division durch 0 ist ausgeschlossen. */
+    return (uint16_t)((sum + sample_count / 2U) / sample_count);
+}
 
 /**
  * @brief Timer-Callback: erhoeht jede Millisekunde den Zeitzaehler.
@@ -102,6 +166,8 @@ int main(void)
     uint32_t last_display = 0U;
     uint32_t last_led = 0U;
     uint32_t last_pwm = 0U;
+    /* Separater Anzeigewert: distanceFromTOF bleibt der ungefilterte Sensorwert. */
+    uint16_t distance_mean_mm = TOF_VL53L0X_OUT_OF_RANGE;
     /* Platz fuer bis zu 21 Zeichen und das abschliessende Nullzeichen. */
     char line[22];
 
@@ -167,19 +233,22 @@ int main(void)
                 TOF_Sensor_1.enableTOFSensor = false;
                 XMC_GPIO_SetOutputHigh(LED2);
                 show_status("TOF Lesefehler   ");
+            } else {
+                /* Jede neue Messung genau einmal in die Mittelwertbildung geben. */
+                distance_mean_mm = TOF_MovingAverage(TOF_Sensor_1.distanceFromTOF);
             }
         }
         /* Langsamere Anzeige spart Buszeit; die Messung darf haeufiger erfolgen. */
-        if ((uint32_t)(now - last_display) >= 200U) {
+        if ((uint32_t)(now - last_display) >= DisplayRate) {
             last_display = now;
             if (initedTOF) {
-                if (TOF_Sensor_1.distanceFromTOF == TOF_VL53L0X_OUT_OF_RANGE) {
+                if (distance_mean_mm == TOF_VL53L0X_OUT_OF_RANGE) {
                     show_status("Ausser Reichw.   ");
                 } else {
                     /* snprintf begrenzt die Ausgabe auf die Puffergroesse.
                      * %5u formatiert eine positive Ganzzahl mit mindestens 5 Stellen. */
                     snprintf(line, sizeof(line), "%5u mm        ",
-                             (unsigned int)TOF_Sensor_1.distanceFromTOF);
+                             (unsigned int)distance_mean_mm);
                     show_status(line);
                 }
             }

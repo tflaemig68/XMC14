@@ -39,7 +39,9 @@
 #endif
 //#define TOF_PROFILE TOF_HIGH_ACCURACY_MODE_A
 
-#define DisplayRate (TOF_Sensor_1.Ranging_Profile_time + 5U)*4
+
+/** @brief erst nach jedem 4. Messwert wird der Anzeigewert aktualisert */
+#define DisplayRate 4*(TOF_Sensor_1.Ranging_Profile_time + 5U)
 
 /**
  * @brief Seit Timerstart vergangene Millisekunden.

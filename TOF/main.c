@@ -31,7 +31,7 @@
 #define TOF_PROFILE TOF_DEFAULT_MODE_D
 
 /** @brief Anzahl gueltiger Messwerte im gleitenden Mittelwert. */
-#define TOF_MEAN_WINDOW_SIZE 10U
+#define TOF_MEAN_WINDOW_SIZE 4U
 
 /* Die Summe passt bei maximal 65535 Werten vom Typ uint16_t in uint32_t. */
 #if (TOF_MEAN_WINDOW_SIZE < 1U) || (TOF_MEAN_WINDOW_SIZE > 65535U)
@@ -42,6 +42,9 @@
 
 /** @brief erst nach jedem 4. Messwert wird der Anzeigewert aktualisert */
 #define DisplayRate 4*(TOF_Sensor_1.Ranging_Profile_time + 5U)
+
+/** @brief Maximale Höhe be der das PWM Signal für eine Gebläseansteuerung auf PWM0 einsetzt . */
+#define MAX_HEIGHT_mm 300U
 
 /**
  * @brief Seit Timerstart vergangene Millisekunden.
@@ -146,6 +149,7 @@ static void show_status(char *text)
     GUI_ShowString(0, 2, text, 16, 1);
 }
 
+
 /**
  * @brief Initialisiert das Board und bearbeitet die regelmaessigen Aufgaben.
  * @return Kein regulaerer Ruecksprung: die Anwendung bleibt in der Endlosschleife.
@@ -170,6 +174,8 @@ int main(void)
     uint32_t last_pwm = 0U;
     /* Separater Anzeigewert: distanceFromTOF bleibt der ungefilterte Sensorwert. */
     uint16_t distance_mean_mm = TOF_VL53L0X_OUT_OF_RANGE;
+    /* pwm Wert 0 ..10000 entspricht 0..100%*/
+    uint16_t PWM_Value;
     /* Platz fuer bis zu 21 Zeichen und das abschliessende Nullzeichen. */
     char line[22];
 
@@ -264,9 +270,22 @@ int main(void)
         /* PWM veraendert das Verhaeltnis von Ein- zu Ausschaltzeit am Ausgang.
          * % 1000 liefert den Rest der Division, also Werte von 0 bis 999.
          * DAVE verwendet fuer den Tastgrad 0 bis 10000 (= 0 bis 100 Prozent). */
-        if ((uint32_t)(now - last_pwm) >= 10U) {
+        if ((uint32_t)(now - last_pwm) >= 200U)
+        {
             last_pwm = now;
-            PWM_SetDutyCycle(&PWM_0, 10U * (now % 1000U));
+            if (distance_mean_mm <= MAX_HEIGHT_mm)
+            {
+            	PWM_Value = 100U*(MAX_HEIGHT_mm-distance_mean_mm)/MAX_HEIGHT_mm;
+
+            }
+            else
+            {
+            	PWM_Value = 0U;
+            }
+             PWM_SetDutyCycle(&PWM_0, 100*PWM_Value);
+             snprintf(line, sizeof(line), "%3u %% ", PWM_Value);
+             GUI_ShowString(0, OLED_HEIGHT / 8 - 3, line, 8, 1);
         }
+
     }
 }

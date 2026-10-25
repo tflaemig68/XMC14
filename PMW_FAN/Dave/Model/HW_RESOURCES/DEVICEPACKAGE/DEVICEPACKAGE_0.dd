@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ResourceModel:DevicePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" URI="http://resources/VQFN48.0.0/devicepackage/0">
+  <provided xsi:type="ResourceModel:ResourceGroup" name="25" URI="http://resources/vqfn48.0.0/devicepackage/0/25">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin25"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="36" URI="http://resources/vqfn48.0.0/devicepackage/0/36">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM/v4_1_12/PWM_0.app#//@hwResources.3"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin36"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="26" URI="http://resources/vqfn48.0.0/devicepackage/0/26">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin26"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="35" URI="http://resources/vqfn48.0.0/devicepackage/0/35">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/PWM/v4_1_12/PWM_1.app#//@hwResources.3"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin35"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="24" URI="http://resources/vqfn48.0.0/devicepackage/0/24">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin24"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="34" URI="http://resources/vqfn48.0.0/devicepackage/0/34">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN48.0.0/devicepackage/0/pin34"/>
+  </provided>
+</ResourceModel:DevicePackage>

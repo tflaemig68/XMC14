@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Project MotherSystem_Version="" Name="I2C" Path="D:\GITHUB\XMC14\I2C">
+<Project MotherSystem_Version="" Name="TOF" Path="D:\GITHUB\XMC14\TOF">
     <COMPILER>
         <Name>ARM_GCC_HOME</Name>
         <Version/>
@@ -189,6 +189,7 @@
         <Path/>
         <Path>\Dave\Generated</Path>
         <Path>\Libraries</Path>
+        <Path>\Libraries\OLED</Path>
     </Include_Path>
     <Preprocessor_Symbols>
         <Assembler_Symbol>XMC1404_Q040x0200=</Assembler_Symbol>

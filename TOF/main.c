@@ -8,6 +8,32 @@
  * vergangenen Millisekunden. Die Vorlage stammt aus TOFTest/Src/main.c
  * des STM32-Cube-Projekts; hier werden DAVE-APPs verwendet.
  *
+ * @par PWM0 als abstandsabhaengiger Sollwert fuer die Geblaeseansteuerung
+ * Die DAVE-APP PWM_0 gibt das PWM-Signal an P0.5 aus. Je kleiner der geglaettete
+ * Abstand distance_mean_mm, desto groesser der berechnete Tastgrad. Ein Tastgrad
+ * von 50 Prozent bedeutet, dass das Signal innerhalb jeder PWM-Periode halb so
+ * lange aktiv wie die gesamte Periode ist; er ist keine gemessene Geblaesedrehzahl.
+ * Die Anwendung berechnet den Sollwert nach jeweils mindestens 200 ms neu.
+ * Dieses Aktualisierungsintervall ist nicht die Periodendauer des PWM-Signals;
+ * die Hardware erzeugt die PWM zwischen den Aktualisierungen selbststaendig.
+ *
+ * Fuer einen Abstand d bis MAX_HEIGHT_mm gilt mit ganzzahliger Division:
+ * PWM_Value = 100 * (MAX_HEIGHT_mm - d) / MAX_HEIGHT_mm.
+ * Bei MAX_HEIGHT_mm = 300 ergeben sich beispielsweise:
+ * - 0 mm: 100 Prozent, DAVE-Wert 10000.
+ * - 150 mm: 50 Prozent, DAVE-Wert 5000.
+ * - 300 mm und groessere Abstaende: 0 Prozent, DAVE-Wert 0.
+ *
+ * @par Start- und Fehlerverhalten des PWM-Ausgangs
+ * Die aktuelle DAVE-Konfiguration startet PWM_0 bereits bei DAVE_Init() mit
+ * 50 Prozent Tastgrad. Der erste abstandsabhaengige Sollwert wird erst nach
+ * der Initialisierung in der Hauptschleife gesetzt. Der Ersatzwert
+ * TOF_VL53L0X_OUT_OF_RANGE (8190) liegt oberhalb der aktuellen Hoehengrenze
+ * und ergibt beim naechsten PWM-Update 0 Prozent. Bei einem I2C-Lesefehler
+ * bleibt dagegen der letzte Mittelwert erhalten: Der PWM-Zweig prueft
+ * initedTOF nicht und berechnet weiter den Sollwert aus diesem alten Wert.
+ * Ein Initialisierungs-Halt vor der Hauptschleife setzt keinen neuen Tastgrad.
+ *
  * @par Lesereihenfolge fuer Einsteiger
  * Zuerst main() und TOFSensor_t lesen, dann TOF_init() und
  * TOF_read_continuous_distance(). Die Einzelheiten des I2C-Protokolls
@@ -40,10 +66,24 @@
 //#define TOF_PROFILE TOF_HIGH_ACCURACY_MODE_A
 
 
-/** @brief erst nach jedem 4. Messwert wird der Anzeigewert aktualisert */
+/**
+ * @brief Zeitabstand der Distanzanzeige in ms: vier nominelle Messintervalle.
+ * @details Im Standardprofil sind das 4 * (30 + 5) = 140 ms. Es werden keine
+ * Messwerte gezaehlt; geprueft wird die verstrichene Zeit. Die PWM-Prozentanzeige
+ * wird unabhaengig davon im PWM-Zweig nach jeweils mindestens 200 ms erneuert.
+ */
 #define DisplayRate 4*(TOF_Sensor_1.Ranging_Profile_time + 5U)
 
-/** @brief Maximale Höhe be der das PWM Signal für eine Gebläseansteuerung auf PWM0 einsetzt . */
+/**
+ * @brief Obere Abstandsgrenze in mm fuer einen positiven PWM-Sollwert.
+ * @details Unterhalb der Grenze nimmt der Tastgrad bei kleinerem Abstand linear
+ * zu. Genau an der Grenze und darueber ist er 0 Prozent. Die Bezeichnung Hoehe
+ * meint hier unmittelbar den vom TOF-Sensor gemessenen, geglaetteten Abstand;
+ * eine Umrechnung auf eine andere geometrische Bezugshoehe findet nicht statt.
+ * @pre Der Wert muss groesser als 0 sein, da durch ihn dividiert wird.
+ * Fuer die bestehende Behandlung ungueltiger Messungen muss er ausserdem
+ * kleiner als TOF_VL53L0X_OUT_OF_RANGE bleiben.
+ */
 #define MAX_HEIGHT_mm 300U
 
 /**
@@ -171,10 +211,13 @@ int main(void)
     uint32_t last_measurement = 0U;
     uint32_t last_display = 0U;
     uint32_t last_led = 0U;
+    /* Zeitstempel des letzten PWM-Sollwertupdates; Mindestabstand 200 ms. */
     uint32_t last_pwm = 0U;
-    /* Separater Anzeigewert: distanceFromTOF bleibt der ungefilterte Sensorwert. */
+    /* Gemeinsamer Mittelwert fuer Distanzanzeige und PWM-Sollwert.
+     * distanceFromTOF bleibt der ungefilterte Sensorwert. */
     uint16_t distance_mean_mm = TOF_VL53L0X_OUT_OF_RANGE;
-    /* pwm Wert 0 ..10000 entspricht 0..100%*/
+    /* Tastgrad in ganzen Prozent (0 bis 100), zugleich Wert der Prozentanzeige.
+     * Erst beim DAVE-Aufruf wird mit 100 auf den Bereich 0 bis 10000 skaliert. */
     uint16_t PWM_Value;
     /* Platz fuer bis zu 21 Zeichen und das abschliessende Nullzeichen. */
     char line[22];
@@ -267,22 +310,34 @@ int main(void)
             last_led = now;
             XMC_GPIO_ToggleOutput(LED1);
         }
-        /* PWM veraendert das Verhaeltnis von Ein- zu Ausschaltzeit am Ausgang.
-         * % 1000 liefert den Rest der Division, also Werte von 0 bis 999.
-         * DAVE verwendet fuer den Tastgrad 0 bis 10000 (= 0 bis 100 Prozent). */
+        /* Abstandsabhaengigen PWM-Sollwert nach mindestens 200 ms aktualisieren.
+         * Blockierende Sensor- oder Displayzugriffe koennen das Intervall verlaengern.
+         * Dieser Zweig laeuft auch bei initedTOF == false. Bei einem Lesefehler
+         * bleibt deshalb der zuvor gespeicherte Mittelwert fuer PWM massgeblich. */
         if ((uint32_t)(now - last_pwm) >= 200U)
         {
             last_pwm = now;
+            /* Die Bereichspruefung verhindert eine negative Differenz bei
+             * vorzeichenlosen Zahlen. Am Grenzwert selbst ist die Differenz 0. */
             if (distance_mean_mm <= MAX_HEIGHT_mm)
             {
+                /* Zuerst multiplizieren, dann dividieren, um vorzeitigen
+                 * Genauigkeitsverlust zu vermeiden. Nachkommastellen entfallen:
+                 * z.B. 100 mm bei 300 mm Grenze ergeben 66 statt 66,67 Prozent. */
             	PWM_Value = 100U*(MAX_HEIGHT_mm-distance_mean_mm)/MAX_HEIGHT_mm;
 
             }
             else
             {
+                /* Abstand oberhalb der Grenze, einschliesslich Ersatzwert 8190. */
             	PWM_Value = 0U;
             }
+             /* DAVE erwartet Hundertstel-Prozent: 1 Prozent entspricht 100.
+              * Der Aufruf aendert den Tastgrad, nicht die konfigurierte PWM-Frequenz. */
              PWM_SetDutyCycle(&PWM_0, 100*PWM_Value);
+             /* %3u: Prozentzahl mit mindestens drei Stellen; %%: ein Prozentzeichen.
+              * Angezeigt wird der berechnete Sollwert, keine Rueckmessung am Ausgang.
+              * Die Ausgabe steht auf OLED-Seite 5 (bei 64 Pixel Displayhoehe). */
              snprintf(line, sizeof(line), "%3u %% ", PWM_Value);
              GUI_ShowString(0, OLED_HEIGHT / 8 - 3, line, 8, 1);
         }

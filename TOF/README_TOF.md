@@ -12,14 +12,54 @@ als automatisch startender Distanztest auf dem vorhandenen SSD1306-OLED umgesetz
 - SSD1306: 7-Bit-Adresse 0x3C, bestehende OLED-Bibliothek verwendet 0x78.
 - Sensor und OLED teilen den Bus; passende Pull-ups und gemeinsame Masse vorausgesetzt.
 - LED P0.7: Lebenszeichen im Sekundentakt. LED P0.6: Fehler.
-- PWM_0 bleibt als Debug-Ausgang aktiv und wird alle 10 ms aktualisiert.
+- PWM_0 an P0.5: abstandsabhaengiger Sollwert fuer die Geblaeseansteuerung;
+  Aktualisierung nach jeweils mindestens 200 ms.
 
 Nach 500 ms Startzeit: OLED initialisieren, Sensor-ID pruefen, Sensor initialisieren
 und kalibrieren, Standardprofil (30 ms Messbudget) setzen, kontinuierlich messen.
-Messwerte werden etwa alle 35 ms gelesen und alle 100 ms angezeigt. Messwerte
+Messwerte werden im Standardprofil etwa alle 35 ms gelesen. Der gleitende
+Mittelwert verwendet aktuell vier gueltige Messwerte (TOF_MEAN_WINDOW_SIZE).
+Die Distanzanzeige wird nach jeweils mindestens 140 ms aktualisiert (DisplayRate). Messwerte
 8190/8191 werden als ausserhalb der Reichweite angezeigt. Bei TOF-Fehlern bleibt
 die Fehleranzeige stehen; nach Beheben des Fehlers das Board neu starten.
 TOF_Sensor_1, initedTOF und tof_error_count sind im Debugger sichtbar.
+
+## PWM0 fuer die Geblaeseansteuerung
+
+PWM_0 gibt an P0.5 einen Tastgrad aus, der vom geglaetteten TOF-Abstand abhaengt.
+Der Abstand wird direkt als Hoehe verwendet, ohne geometrische Umrechnung.
+Die Grenze MAX_HEIGHT_mm betraegt aktuell 300 mm. Bis einschliesslich dieser
+Grenze wird in ganzen Prozent gerechnet:
+
+`PWM_Value = 100 * (MAX_HEIGHT_mm - distance_mean_mm) / MAX_HEIGHT_mm`
+
+Oberhalb der Grenze ist PWM_Value gleich 0. Die Ganzzahldivision schneidet
+Nachkommastellen ab. Der DAVE-Aufruf erhaelt `100 * PWM_Value`, weil die APP
+Hundertstel-Prozent im Wertebereich 0 bis 10000 erwartet.
+
+| Geglaetteter Abstand | PWM_Value | Wert fuer DAVE |
+| --- | --- | --- |
+| 0 mm | 100 % | 10000 |
+| 100 mm | 66 % | 6600 |
+| 150 mm | 50 % | 5000 |
+| 300 mm oder mehr | 0 % | 0 |
+
+Der Sollwert und seine Prozentanzeige werden nach jeweils mindestens 200 ms
+aktualisiert. Sensor- und Displayzugriffe koennen dieses Intervall verlaengern.
+Die Hardware erzeugt das PWM-Signal unabhaengig davon fortlaufend; seine
+Frequenz wird durch die DAVE-Konfiguration bestimmt. Die Prozentanzeige steht
+auf OLED-Seite 5 und zeigt den berechneten Tastgrad, keine gemessene Drehzahl
+oder Rueckmeldung des Geblaeses.
+
+Die aktuelle DAVE-Konfiguration startet PWM_0 bereits bei DAVE_Init() mit 50 %.
+Erst nach der Initialisierung setzt die Hauptschleife den abstandsabhaengigen
+Wert. Der Ersatzwert 8190 fuer eine ungueltige Distanz ergibt mit der aktuellen
+Hoehengrenze beim naechsten PWM-Update 0 %. Bei einem I2C-Lesefehler bleibt
+hingegen der letzte Mittelwert gespeichert; der PWM-Zweig laeuft ohne Pruefung
+von initedTOF weiter. Ein Halt vor der Hauptschleife setzt keinen neuen Tastgrad.
+Dies beschreibt das vorhandene Verhalten; die Dokumentation aendert es nicht.
+MAX_HEIGHT_mm muss groesser als 0 und fuer die bestehende Fehlerwertbehandlung
+kleiner als TOF_VL53L0X_OUT_OF_RANGE sein.
 
 ## Portierung
 

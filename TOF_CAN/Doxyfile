@@ -1,7 +1,7 @@
 PROJECT_NAME = "TOF_CAN fuer Einsteiger"
 OUTPUT_DIRECTORY = Debug/doxygen
 OUTPUT_LANGUAGE = German
-INPUT = Libraries/OLED/gui.c Libraries/OLED/gui.h Libraries/CAN/CANlib.c Libraries/CAN/CANlib.h main.c Libraries/TOF/i2cTOF.c Libraries/TOF/i2cTOF.h Libraries/TOF/tof_dave_port.inc
+INPUT = Libraries/UART Libraries/OLED/gui.c Libraries/OLED/gui.h Libraries/CAN/CANlib.c Libraries/CAN/CANlib.h main.c Libraries/TOF/i2cTOF.c Libraries/TOF/i2cTOF.h Libraries/TOF/tof_dave_port.inc
 FILE_PATTERNS = *.c *.h *.inc
 EXTENSION_MAPPING = inc=C
 INPUT_ENCODING = UTF-8

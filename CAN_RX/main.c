@@ -4,7 +4,7 @@
  * @details Abgeleitet vom DAVE4-Projekt TOF fuer KIT_XMC14_2Go. Die CAN-Bibliothek
  * ersetzt den TOF-Sensor. Die Anzeige zeigt ID, Format, DLC und bis zu acht Bytes
  * hexadezimal. TOF_CAN-Frames mit DLC 8 liefern zusaetzlich eine Entfernung
- * aus Byte 1/2 (Little Endian). Unter 300 mm erscheint ein Oszilloskop.
+ * aus Byte 3/4 (C-Indizes 2/3, Little Endian). Unter 300 mm erscheint ein Oszilloskop.
  *
  * CANlib.h legt Empfangs-ID, ID-Laenge und Bitrate fest. CANlib verwendet CAN0,
  * RX=P1.1 und TX=P1.0 mit dem eingebauten Transceiver. Die Hardware bestaetigt
@@ -36,6 +36,10 @@ static bool scope_active = false;
 uint16_t CAN_TOFDistance_mm = UINT16_MAX;
 /** @brief Untere vier Bits von Byte 0; keine eigene Zeitbasis. */
 uint8_t CAN_TOFCounter = 0U;
+/** @brief PWM-Sollwert aus Byte 2 als vorzeichenbehaftete ganze Prozent. */
+int8_t CAN_PWMPercent = 0;
+/** @brief true fuer das letzte vollstaendige Paket; Aktualitaet separat pruefen. */
+static bool have_payload = false;
 
 /** @brief Millisekunden seit Timerstart; auch von delay_ms() verwendet. */
 volatile uint32_t SysTickCounter = 0U;
@@ -98,11 +102,22 @@ static void show_data(uint8_t page, uint8_t first, bool have_message)
 }
 
 /**
+ * @brief Wandelt das PWM-Datenbyte portabel aus 8-Bit-Zweierkomplement um.
+ * @param[in] raw Byte 2 des Frames (C-Index 1).
+ * @return Vorzeichenbehafteter PWM-Wert -128..127; TOF_CAN sendet 0..100 Prozent.
+ */
+static int8_t CAN_DecodePWM(uint8_t raw)
+{
+    return (int8_t)(raw <= 127U ? (int16_t)raw : (int16_t)raw - 256);
+}
+
+/**
  * @brief Dekodiert das TOF_CAN-Paket ohne ungueltige Daten als Abstand zu nutzen.
  * @param[in] message Neue Botschaft mit ID/Format, DLC und Nutzdaten.
  * @param[out] distance_mm Entfernung in mm; bleibt bei false unveraendert.
  * @return true fuer passendes ID-Format, exakt DLC 8 und einen Wert != 0xFFFF.
- * @details Byte 0 Bit 0..3 ist der Zaehler, Byte 1/2 ist uint16 Little Endian.
+ * @details C-Indizes: data[0] Bit 0..3 ist der Zaehler, data[1] ist PWM,
+ * data[2..3] ist die Hoehe als uint16 Little Endian.
  * Reservierte Bits/Bytes werden ignoriert. DLC 9..15 wird trotz acht physischer
  * Datenbytes abgewiesen, da das TOF_CAN-Protokoll explizit DLC 8 verwendet.
  */
@@ -114,8 +129,8 @@ static bool CAN_DecodeTOF(const CANLIB_Message_t *message, uint16_t *distance_mm
         message->dlc != 8U || message->length != 8U) {
         return false;
     }
-    value = (uint16_t)((uint16_t)message->data[1] |
-                      ((uint16_t)message->data[2] << 8U));
+    value = (uint16_t)((uint16_t)message->data[2] |
+                      ((uint16_t)message->data[3] << 8U));
     if (value == UINT16_MAX) { return false; }
     *distance_mm = value;
     return true;
@@ -221,7 +236,9 @@ int main(void)
             new_message = true;
             CAN_TOFDistance_mm = UINT16_MAX;
             have_tof = CAN_DecodeTOF(&CAN_LastMessage, &CAN_TOFDistance_mm);
-            CAN_TOFCounter = (uint8_t)(CAN_LastMessage.data[0] & 0x0FU);
+            have_payload = CAN_LastMessage.dlc == 8U && CAN_LastMessage.length == 8U;
+            CAN_TOFCounter = have_payload ? (uint8_t)(CAN_LastMessage.data[0] & 0x0FU) : 0U;
+            CAN_PWMPercent = have_payload ? CAN_DecodePWM(CAN_LastMessage.data[1]) : 0;
         }
         now = SysTickCounter;
         state = CANLIB_GetState();
@@ -272,7 +289,12 @@ int main(void)
             else if (!have_tof) { status = "TOF-DATEN UNGUELTIG"; }
             if (oled_error) { status = "OLED I2C-FEHLER"; }
             show_line(6U, status);
-            snprintf(line, sizeof(line), "Zeit: %lu s", (unsigned long)(now / 1000U));
+            if (have_payload) {
+                snprintf(line, sizeof(line), "PWM:%4d %% CNT:%2u",
+                         (int)CAN_PWMPercent, (unsigned int)CAN_TOFCounter);
+            } else {
+                snprintf(line, sizeof(line), "Zeit: %lu s", (unsigned long)(now / 1000U));
+            }
             show_line(7U, line);
         }
         if ((uint32_t)(now - last_led) >= 1000U) {

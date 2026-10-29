@@ -73,8 +73,8 @@ werden nicht als Nutzdaten angezeigt; nur Datenframes aktualisieren das RX-Objek
 
 Classic CAN mit 0 bis 8 Datenbytes wird unterstuetzt, kein CAN FD. Ein DLC von
 9 bis 15 bedeutet bei Classic CAN acht Datenbytes und wird so dargestellt.
-Es ist kein Datenformat vorgegeben; deshalb werden Bytes in Busreihenfolge
-hexadezimal angezeigt, ohne Annahmen zu Zahlenformat oder Endianness.
+Die Rohdaten werden in Busreihenfolge angezeigt. Zusaetzlich dekodiert die
+Anwendung das unten beschriebene TOF_CAN-Format fuer die Oszilloskopansicht.
 
 ## OLED-Anzeige
 
@@ -87,7 +87,7 @@ hexadezimal angezeigt, ohne Annahmen zu Zahlenformat oder Endianness.
 | 4 | D4: Datenbytes 4 bis 7 |
 | 5 | RX: abgeholte Frames, L: beobachtete Ueberlaufmeldungen |
 | 6 | WARTE AUF ID, AKTIV, ALT, CAN WARNUNG oder BUS OFF |
-| 7 | Laufzeit in Sekunden |
+| 7 | PWM in Prozent und Botschaftszaehler; ohne vollstaendiges Paket Laufzeit |
 
 Nicht vorhandene Bytes erscheinen als --. DLC 0 loescht daher auch die Anzeige
 vorheriger Nutzdaten. Die Anzeige wird etwa alle 100 ms aktualisiert. Ohne neue
@@ -152,3 +152,43 @@ Empfangstest mit CANalyzer. DAVE-Import und Flashen wurden nicht ausgefuehrt.
 Im Projektverzeichnis doxygen Doxyfile ausfuehren. Einstieg:
 Debug/doxygen/html/index.html. Die Anwendung und CANlib besitzen deutsche
 Doxygen-Kommentare fuer Einsteiger.
+
+
+## TOF_CAN-Datenformat und Oszilloskop
+
+CAN_RX verwendet jetzt dasselbe acht Byte lange Paket wie TOF_CAN:
+
+| Byte (ab 1) | C-Index | Inhalt |
+| --- | --- | --- |
+| 1 | data[0] | Botschaftszaehler in Bit 0..3, 0..15 |
+| 2 | data[1] | PWM als int8_t, ganze Prozent |
+| 3–4 | data[2..3] | Hoehe als uint16_t, Little Endian, mm |
+| 5–8 | data[4..7] | Reserviert |
+
+Beispiel `05 32 96 00 00 00 00 00`: Zaehler 5, PWM 50 %, Hoehe 150 mm.
+Der Wert 0xFFFF kennzeichnet eine ungueltige Hoehe. Nur passende ID/ID-Laenge
+und DLC exakt 8 werden als TOF-Paket angenommen. Reservierte Bits werden ignoriert.
+PWM wird vorzeichenrichtig dekodiert (0xFF = -1, 0x80 = -128); der Sender nutzt
+aktuell 0..100 %. CAN_PWMPercent und CAN_TOFCounter sind im Debugger sichtbar.
+Die Textansicht zeigt PWM und Zaehler in der letzten Zeile. Alte Werte bleiben
+bei Empfangsausfall sichtbar und werden durch die Statuszeile ALT gekennzeichnet.
+
+Eine gueltige empfangene Hoehe unter 300 mm aktiviert das Oszilloskop.
+Ein neu abgeholter Frame erzeugt genau einen Punkt; ohne neue Botschaft wird
+nicht weitergezeichnet. Ab 300 mm, bei ungueltigem Paket/0xFFFF, CAN-Warnung,
+Bus-off, OLED-Fehler oder nach CANLIB_RX_TIMEOUT_MS (1000 ms) ohne Empfang
+erscheint wieder die Textansicht. Es gibt keine Hysterese. CAN_TOF_SCOPE_LIMIT_MM
+in main.c legt die Umschaltgrenze und Y-Skala fest.
+
+Die GUI aus TOF_CAN schreibt pro Punkt nur zwei Spalten (zwoelf Grafikbytes).
+Ein Durchlauf hat 128 Punkte; bei 100 ms Sendeintervall nominal 12,8 Sekunden.
+Empfangsluecken werden nicht als Leerstellen eingefuegt. Die Zeitachse zaehlt
+abgeholte Frames und ist keine exakte Echtzeitachse. CAN_RX zeichnet den vom
+Sender uebertragenen geglaetteten Wert, nicht dessen lokalen Sensorrohwert.
+Die PWM-Hardware in CAN_RX bleibt deaktiviert; der empfangene PWM-Wert wird
+nur ausgewertet und angezeigt, nicht auf einen Ausgang uebertragen.
+
+Tests/receive_test.c prueft die neue Bytebelegung, signed PWM, 299/300-mm-Grenze,
+ungueltige DLC/IDs, Fehlerwert und Timeout. Tests/validate_receive.py benoetigt
+unicorn und pyelftools zur Ausfuehrung des ARM-Codes mit simuliertem Speicher.
+Firmware: Release/CAN_RX.elf und Release/CAN_RX.hex. Ein Hardwaretest steht aus.

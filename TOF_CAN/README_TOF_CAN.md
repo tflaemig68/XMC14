@@ -1,4 +1,4 @@
-# TOF_CAN – TOF-Messwert auf Classic CAN
+# TOF_CAN â€“ TOF-Messwert auf Classic CAN
 
 Eigenstaendiges DAVE4-Projekt fuer KIT_XMC14_2Go / XMC1404-Q040x0200,
 kopiert aus TOF. Die CANlib stammt aus CAN_RX und wurde nur in diesem neuen
@@ -8,7 +8,7 @@ Die Details zu Sensor, I2C und PWM stehen in README_TOF.md.
 
 ## Projekt in DAVE4 verwenden
 
-1. File → Import → General → Existing Projects into Workspace.
+1. File â†’ Import â†’ General â†’ Existing Projects into Workspace.
 2. D:/GITHUB/XMC14/TOF_CAN als Root Directory auswaehlen.
 3. TOF_CAN importieren; bei bestehendem Verzeichnis keine weitere Kopie anlegen.
 4. Als aktives Projekt setzen und Build Project ausfuehren.
@@ -46,35 +46,40 @@ Die CAN-Uebertragung beginnt nach Abschluss der Sensorinitialisierung.
 
 ## Datenformat: DLC = 8
 
-Bitnummern beziehen sich jeweils auf das Byte; Bit 0 ist das niederwertigste Bit.
-Der 4-Bit-Zaehler liegt am Anfang des Nutzdatenlayouts (Startbit 0).
-Danach folgen vier reservierte Bits, sodass die Entfernung byteweise beginnt.
-Die acht Bytes werden explizit gepackt, ohne C-Bitfelder oder Struktur-Casts.
+Die Nummerierung unten beginnt bei 1; C-Arrayindizes beginnen bei 0.
+Der bisherige 4-Bit-Zaehler (0..15) bleibt im ersten Byte erhalten.
 
-| Byte | Bits | Inhalt |
+| Byte | C-Index | Inhalt |
 | --- | --- | --- |
-| 0 | 0–3 | Botschaftszaehler 0, 1, …, 15, 0, … |
-| 0 | 4–7 | Reserviert, immer 0 |
-| 1 | 0–7 | Abstand uint16_t, niederwertiges Byte |
-| 2 | 0–7 | Abstand uint16_t, hoeherwertiges Byte |
-| 3–7 | alle | Reserviert, immer 0 |
+| 1 | data[0] | Botschaftszaehler 0..15, obere vier Bits 0 |
+| 2 | data[1] | PWM als int8_t, ganze Prozent (aktuell 0..100) |
+| 3 | data[2] | Hoehe uint16_t, niederwertiges Byte |
+| 4 | data[3] | Hoehe uint16_t, hoeherwertiges Byte |
+| 5–8 | data[4..7] | Reserviert, 0 |
 
-Entfernung: Little Endian / Intel, Startbit 8, Laenge 16, unsigned,
-Faktor 1, Offset 0, Einheit mm. Zaehler: Intel, Startbit 0, Laenge 4.
+Hoehe bezeichnet den geglaetteten TOF-Abstand in mm. Little Endian / Intel,
+Startbit 16, Laenge 16, unsigned, Faktor 1, Offset 0. PWM: Startbit 8,
+Laenge 8, signed, Faktor 1, Offset 0, Einheit Prozent.
+Zaehler: Startbit 0, Laenge 4. Er erhoeht sich nur bei angenommenem Auftrag.
 
-Beispiel: Zaehler 5 und 300 mm ergeben `05 2C 01 00 00 00 00 00`.
-Bei Zaehler 15 und ungueltiger Messung: `0F FF FF 00 00 00 00 00`.
-Ein empfangener Wert von 65535 / 0xFFFF bedeutet: noch kein gueltiger Messwert,
-Sensorinitialisierung fehlgeschlagen, Lesefehler oder ausserhalb der Reichweite.
-Dieser Wert darf nicht als reale Entfernung angezeigt werden.
-
-Dekodierung auf Empfaengerseite (erst nach Pruefung von ID, Format und DLC 8):
+Beispiel: Zaehler 5, PWM 50 Prozent und Hoehe 150 mm:
+`05 32 96 00 00 00 00 00`.
+0xFFFF bleibt der Ersatzwert fuer eine ungueltige Hoehe.
+Gesendet wird nach einem eventuell faelligen PWM-Update, sodass der PWM-Wert
+dem zuletzt gesetzten Sollwert entspricht. Vor dem ersten Update gilt der
+DAVE-Startwert von 50 Prozent. Bei Sensorfehlern bleibt das bestehende
+PWM-Verhalten erhalten; ein ungueltiger Abstand erzwingt keinen neuen PWM-Wert.
 
 ```c
 uint8_t counter = data[0] & 0x0FU;
-uint16_t distance_mm = (uint16_t)data[1] | ((uint16_t)data[2] << 8U);
+int8_t pwm_percent = (int8_t)data[1];
+uint16_t distance_mm = (uint16_t)data[2] | ((uint16_t)data[3] << 8U);
 /* distance_mm == UINT16_MAX bedeutet ungueltig. */
 ```
+
+Achtung: CAN_RX verwendet noch das bisherige Format mit Hoehe in data[1..2].
+Vor gemeinsamem Betrieb muss dessen Decoder auf data[2..3] angepasst werden.
+Diese Aenderung betrifft ausschliesslich TOF_CAN.
 
 ## Sendefunktion und Fehlerverhalten
 
@@ -114,10 +119,10 @@ Sensor und OLED bleiben an SDA=P2.10 und SCL=P2.11 angeschlossen.
 
 1. Gegenknoten auf Classic CAN, 500 kbit/s, Standard-ID 0x123 einstellen.
 2. Firmware laden und starten. DLC muss 8 sein, Byte 0 muss von 00 bis 0F laufen.
-3. Abstand veraendern; Byte 1/2 als uint16 Little Endian dekodieren und mit dem
+3. Abstand veraendern; Byte 3/4 (C-Indizes 2/3) als uint16 Little Endian dekodieren und mit dem
    geglaetteten OLED-Wert vergleichen. Wegen unterschiedlicher Aktualisierung
    koennen Momentaufnahmen voneinander abweichen.
-4. Ungueltige Entfernung pruefen: Byte 1/2 muessen FF FF enthalten.
+4. Ungueltige Entfernung pruefen: Byte 3/4 muessen FF FF enthalten.
 5. Ohne ACK pruefen, dass Anzeige und Messschleife weiterarbeiten und der
    offene CAN-Auftrag nicht ueberschrieben wird. Bus-off erfordert Neustart.
 
@@ -195,3 +200,9 @@ Validierung der Erweiterung:
 - Die CAN-Konfigurationspruefungen laufen weiterhin durch.
 - Doxygen umfasst nun auch gui.c/gui.h; HTML unter Debug/doxygen/html/index.html.
 - Umschaltung und tatsaechliche I2C-Laufzeiten sind noch am Board zu pruefen.
+
+
+## UART Ein-/Ausgabe
+
+USB-COM ueber P2.1/P2.2, binaere Hoehe/Sollwert/PWM-Telemetrie und
+einstellbarer Hoehensollwert: siehe [README_UART.md](README_UART.md).

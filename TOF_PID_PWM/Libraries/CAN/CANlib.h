@@ -18,12 +18,12 @@
 
 /** @brief Exakt zu empfangende ID, ohne Verschiebung oder zusaetzliche Flagbits. */
 #ifndef CANLIB_RX_ID
-#define CANLIB_RX_ID 0x123UL
+#define CANLIB_RX_ID 0x100UL
 #endif
 
-/** @brief Sende-ID; passend zur Empfangs-ID des Projekts CAN_RX vorbelegt. */
+/** @brief Standard-Sende-ID; die Anwendung sendet gruppenabhaengig mit SendWithId. */
 #ifndef CANLIB_TX_ID
-#define CANLIB_TX_ID 0x123UL
+#define CANLIB_TX_ID 0x101UL
 #endif
 
 /** @brief Busgeschwindigkeit in Bit/s; Sender und Empfaenger muessen uebereinstimmen. */
@@ -117,6 +117,16 @@ typedef enum {
  * ACCEPTED bestaetigt nur die Uebergabe, nicht die erfolgreiche Busuebertragung.
  */
 CANLIB_TxResult_t CANLIB_Send(const uint8_t *data, uint8_t length);
+
+/** @brief Startet einen Sendeauftrag mit einer zur Laufzeit gewaehlten ID.
+ * @param[in] id Unverschobener Identifier innerhalb CANLIB_ID_MASK.
+ * @param[in] data Datenpuffer mit mindestens length Bytes.
+ * @param[in] length Nutzdatenlaenge 0..8.
+ * @return ACCEPTED, BUSY oder ERROR wie bei CANLIB_Send().
+ * @details Prueft BUSY vor Aenderung von ID oder Daten. Ein laufender Auftrag
+ * behaelt auch bei Gruppenwechsel seine bisherige ID bis zum Abschluss.
+ */
+CANLIB_TxResult_t CANLIB_SendWithId(uint32_t id, const uint8_t *data, uint8_t length);
 
 /** @brief Liefert den CAN-Knotenzustand. @return Aktueller Betriebszustand. */
 CANLIB_State_t CANLIB_GetState(void);

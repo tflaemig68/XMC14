@@ -15,7 +15,7 @@ with tempfile.TemporaryDirectory(prefix='scope-test-') as tmp:
     output = Path(tmp)/'scope.elf'
     command = [gcc, '-mcpu=cortex-m0', '-mthumb', '-std=gnu99', '-O1',
                '-ffunction-sections', '-fdata-sections', '-nostdlib',
-               '-I', str(root), str(root/'Tests/receive_test.c'),
+               '-I', str(root), str(root/'Tests/receive_test.c'), str(root/'Libraries/CAN/GroupMonitor.c'),
                '-lgcc',
                '-Wl,--gc-sections,-e,receive_test,-Ttext=0x10000,-Tdata=0x20000000',
                '-o', str(output)]
@@ -40,4 +40,4 @@ with tempfile.TemporaryDirectory(prefix='scope-test-') as tmp:
     assert cpu.reg_read(UC_ARM_REG_PC) == 0x2F000, 'Emulation did not finish'
     result = cpu.reg_read(UC_ARM_REG_R0)
     assert result == 0, f'Scope assertion failed at C line {result}'
-    print('PASS: TOF decoding, DLC/ID checks, 299/300 threshold, timeout/wrap, error states')
+    print('PASS: 32-group decoding, sorted presence/expiry, 60-second ISE/expiry, invalid/legacy data, clock wrap, 5-second pagination, six-digit ISE limit, common random target/5-second timing/BUSY/source change')

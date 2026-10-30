@@ -1,0 +1,54 @@
+{
+  "meaning": "Executed Thumb instructions including init + 100 steps; NOT cycles or board runtime",
+  "compiler": "DAVE GCC 4.9, -Os, cortex-m0",
+  "results": [
+    {
+      "case": "PI fixed 50ms",
+      "reference": {
+        "instructions": 335222,
+        "soft_float_divisions": 198
+      },
+      "optimized": {
+        "instructions": 84404,
+        "soft_float_divisions": 0
+      },
+      "instruction_reduction_percent": 74.8
+    },
+    {
+      "case": "PID fixed 50ms",
+      "reference": {
+        "instructions": 341977,
+        "soft_float_divisions": 198
+      },
+      "optimized": {
+        "instructions": 137975,
+        "soft_float_divisions": 2
+      },
+      "instruction_reduction_percent": 59.7
+    },
+    {
+      "case": "PI jitter 50/51/52ms",
+      "reference": {
+        "instructions": 357395,
+        "soft_float_divisions": 198
+      },
+      "optimized": {
+        "instructions": 131293,
+        "soft_float_divisions": 0
+      },
+      "instruction_reduction_percent": 63.3
+    },
+    {
+      "case": "PID jitter 50/51/52ms",
+      "reference": {
+        "instructions": 364068,
+        "soft_float_divisions": 198
+      },
+      "optimized": {
+        "instructions": 270313,
+        "soft_float_divisions": 200
+      },
+      "instruction_reduction_percent": 25.8
+    }
+  ]
+}

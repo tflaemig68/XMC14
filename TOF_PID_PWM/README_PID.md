@@ -1,3 +1,6 @@
+> Aktuelles CAN-Protokoll: [CAN_Spezifikation.md](CAN_Spezifikation.md).
+> TX: 0x100 + Gruppe; ohne Gruppe kein Senden. UART-Sollwert 0 waehlt CAN als Quelle.
+
 # Hoehenregelung TOF_PID_PWM
 
 PID.c/PID.h basieren auf Libraries/regler.c.demo von Prof Flaemig,
@@ -20,10 +23,12 @@ und die benoetigte Halteleistung haengen vom realen Geblaeseaufbau ab.
 
 Regelschritte erfolgen fruehestens alle 50 ms und nur mit neuer Messung.
 Die tatsaechlich verstrichene Zeit wird als TA in Sekunden verwendet.
-ISUM speichert im Unterschied zur Vorlage bereits das zeitgewichtete Integral.
+ISUM speichert seit der Laufzeitoptimierung direkt den mit KI gewichteten
+I-Stellwert in Prozent; derivative enthaelt den gewichteten D-Stellwert.
 Der D-Anteil wird mit einer Zeitkonstante von 0.1 s gefiltert.
 Ausgangsbegrenzung 0..100 Prozent, bedingte Integration gegen Windup.
-Bei Sollwertwechsel wird der Regler zurueckgesetzt (auch der I-Anteil).
+Bei reinem Sollwertwechsel bleibt der I-Anteil erhalten; nur das D-Gedaechtnis
+wird zur Vermeidung eines Sollwertsprung-Impulses geloescht.
 CAN und UART melden den auf ganze Prozent gerundeten PWM-Wert.
 
 Bei Sensorfehler, Reichweitenfehler, Messwertalter ab 250 ms oder einer
@@ -41,3 +46,12 @@ Ein Test am Board und die Abstimmung der Regelstrecke stehen aus.
 
 UART kann ausserdem KP/KI/KD mit Aufloesung 0,01 gemeinsam mit Gruppe und
 Sollwert setzen. Gruppe ist nur Kennzeichnung. Siehe UART_Spezifikation.md.
+
+Hinweis zur Reglerkorrektur vom 30.10.2026: Reine Sollwertaenderungen
+ueber UART oder CAN loeschen den I-Anteil nicht mehr. Ein vollstaendiger Reset
+erfolgt weiterhin bei Gruppen-/Quellen-/Verstaerkungsaenderungen sowie
+Messfehlern und den vorhandenen Zeitueberschreitungen.
+
+Laufzeitoptimierung und Vergleich: [PID_Optimierung.md](PID_Optimierung.md).
+KI*TA, KD/TA und D-Filterkoeffizient werden zwischengespeichert; bei KD=0
+entfaellt die D-Rechnung. ISUM und derivative sind jetzt direkt Stellwertanteile.

@@ -1,3 +1,6 @@
+> Aktuelles CAN-Protokoll: [CAN_Spezifikation.md](CAN_Spezifikation.md).
+> TX: 0x100 + Gruppe; ohne Gruppe kein Senden. UART-Sollwert 0 waehlt CAN als Quelle.
+
 # UART Ein-/Ausgabe fuer TOF_PID_PWM
 
 Vollstaendige aktuelle Schnittstelle: [UART_Spezifikation.md](UART_Spezifikation.md).
@@ -78,7 +81,8 @@ Sollwert: int16_t 0..300 mm. KP/KI/KD: int16_t mit Aufloesung 0,01,
 Reglerwert = Rohwert / 100. Negative Parameter sind zulaessig.
 CRC-16/CCITT-FALSE ueber die ersten 11 Bytes, CRC Little Endian.
 Alle Felder werden nur gemeinsam nach erfolgreicher Pruefung uebernommen.
-Geaenderte Reglerparameter oder Sollwerte loeschen das PID-Gedaechtnis.
+Geaenderte Reglerparameter loeschen das PID-Gedaechtnis. Reine Sollwertwechsel
+behalten den I-Anteil und loeschen nur das D-Gedaechtnis.
 Alle Werte sind fluechtig; es gibt keine 32 getrennten Reglerspeicher.
 Alte 6-Byte-Befehle werden nicht mehr unterstuetzt.
 
@@ -112,3 +116,8 @@ Herstellerunterlagen:
 - [Infineon RX-Routing DX3 nach DX0](https://community.infineon.com/t5/XMC/xmc2go-and-xmclib-for-UART-in-dave-4/td-p/297533)
 - [XMC1400 Datenblatt: UART bis 12 Mbit/s](https://documentation.infineon.com/xmc1000/docs/zir1764741941297)
 - [Infineon UART-Beispiel mit 115200 Baud](https://github.com/Infineon/mtb-example-xmc-uart-transmit/blob/master/README.md)
+
+Hinweis zur Reglerkorrektur vom 30.10.2026: Reine Sollwertaenderungen
+ueber UART oder CAN loeschen den I-Anteil nicht mehr. Ein vollstaendiger Reset
+erfolgt weiterhin bei Gruppen-/Quellen-/Verstaerkungsaenderungen sowie
+Messfehlern und den vorhandenen Zeitueberschreitungen.

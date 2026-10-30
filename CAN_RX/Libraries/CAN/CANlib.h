@@ -1,8 +1,8 @@
 /**
  * @file CANlib.h
- * @brief Parametrierbarer Classic-CAN-Sender und -Empfaenger fuer KIT_XMC14_2Go.
+ * @brief Classic-CAN-Empfaenger fuer 32 Gruppen fuer KIT_XMC14_2Go.
  * @details Die ID identifiziert eine Botschaft, nicht die Adresse eines Geraetes.
- * CANlib benutzt CAN-Knoten 0 und Message Objects 0 (RX) und 1 (TX) exklusiv. I2C und OLED werden
+ * CANlib benutzt CAN-Knoten 0 und 17 Empfangsobjekte und ein Sendeobjekt. I2C und OLED werden
  * weiterhin durch DAVE initialisiert. Es ist keine zusaetzliche CAN-DAVE-APP noetig.
  */
 #ifndef CANLIB_H
@@ -16,14 +16,14 @@
 #define CANLIB_ID_BITS 11U
 #endif
 
-/** @brief Exakt zu empfangende ID, ohne Verschiebung oder zusaetzliche Flagbits. */
+/** @brief Erste Gruppen-ID; weitere 31 IDs folgen aufsteigend. */
 #ifndef CANLIB_RX_ID
-#define CANLIB_RX_ID 0x123UL
+#define CANLIB_RX_ID 0x101UL
 #endif
 
-/** @brief Sende-ID; passend zur Empfangs-ID des Projekts CAN_RX vorbelegt. */
+/** @brief In diesem Monitor unbenutzte Sende-ID; passend zur Empfangs-ID des Projekts CAN_RX vorbelegt. */
 #ifndef CANLIB_TX_ID
-#define CANLIB_TX_ID 0x123UL
+#define CANLIB_TX_ID 0x101UL
 #endif
 
 /** @brief Busgeschwindigkeit in Bit/s; Sender und Empfaenger muessen uebereinstimmen. */
@@ -48,6 +48,14 @@
 #error "CANLIB_BITRATE muss zwischen 1 und 1000000 Bit/s liegen"
 #endif
 
+/** @brief Anzahl parallel empfangener Gruppen. */
+#define CANLIB_RX_GROUPS 32U
+#if (CANLIB_RX_ID & 1UL) == 0UL
+#error "CANLIB_RX_ID muss fuer die Zweierfilter ungerade sein"
+#endif
+#if CANLIB_RX_ID > CANLIB_ID_MASK - 31UL
+#error "CANLIB_RX_ID Gruppenbereich passt nicht zur ID-Laenge"
+#endif
 /** @brief Zeit ohne neue passende Botschaft bis zur Anzeige ALT, in Millisekunden. */
 #define CANLIB_RX_TIMEOUT_MS 1000UL
 
@@ -74,12 +82,12 @@ typedef enum {
 } CANLIB_State_t;
 
 /**
- * @brief Initialisiert CAN0, Pins, Bitzeit, Empfangsfilter und Sendeobjekt.
+ * @brief Initialisiert CAN0, Pins, Bitzeit 17 Empfangsobjekte und ein Sendeobjekt.
  * @pre DAVE_Init() muss erfolgreich ausgefuehrt worden sein.
  * @return true bei Erfolg, false falls die Bitzeit nicht einstellbar ist.
  * @note Einmal beim Start aufrufen. RX=P1.1, TX=P1.0/ALT9 passen zum
  * eingebauten Transceiver des KIT_XMC14_2Go. Der Knoten bestaetigt empfangene
- * Frames mit ACK und sendet Daten erst nach CANLIB_Send(). Kein Silent Mode.
+ * Frames mit ACK. Die Bibliothek sendet Sollwertframes auf ID 0x100. Kein Silent Mode.
  */
 bool CANLIB_Init(void);
 
@@ -87,34 +95,20 @@ bool CANLIB_Init(void);
  * @brief Fragt ohne Warten auf eine neue Botschaft das Empfangsobjekt ab.
  * @param[out] message Gueltiger Ergebnispuffer; wird nur bei true beschrieben.
  * @return true fuer eine neue passende Datenbotschaft, andernfalls false.
- * @details Hoechstens drei Leseversuche verhindern eine Endlosschleife bei
+ * @details Je Gruppe verhindern hoechstens drei Leseversuche eine Endlosschleife bei
  * gleichzeitigem Hardwareempfang. Im Hauptprogramm moeglichst oft aufrufen.
- * Ein einzelnes Hardwareobjekt speichert den neuesten Frame; waehrend langsamer
+ * Je Empfangsfilter (teilweise zwei Gruppen) bleibt der neueste Frame gespeichert; waehrend langsamer
  * Displayzugriffe koennen aeltere Frames ueberschrieben werden. Dies ist eine
  * Anzeige der letzten Botschaft, kein verlustfreier CAN-Logger.
  */
 bool CANLIB_Receive(CANLIB_Message_t *message);
 
-/** @brief Ergebnis der Uebergabe an das einzelne Sendeobjekt. */
-typedef enum {
-    CANLIB_TX_ACCEPTED, /**< Auftrag angenommen; noch keine Empfangsbestaetigung! */
-    CANLIB_TX_BUSY,     /**< Voriger Auftrag laeuft; Daten unveraendert lassen. */
-    CANLIB_TX_ERROR     /**< Ungueltige Parameter, nicht bereit oder Bus-off. */
-} CANLIB_TxResult_t;
-
-/**
- * @brief Startet eine Classic-CAN-Datenbotschaft mit CANLIB_TX_ID.
- * @param[in] data Zeiger auf mindestens length Bytes; darf nicht NULL sein.
- * @param[in] length Anzahl Nutzdatenbytes von 0 bis 8 (gleich DLC).
- * @return ACCEPTED bei angenommenem Auftrag, BUSY bei belegtem Objekt,
- *         ERROR bei ungueltigen Parametern oder nicht betriebsbereitem CAN.
- * @details Kopiert die Daten sofort; der Aufrufer darf seinen Puffer danach
- * wiederverwenden. Wartet nicht auf Bus oder ACK und hat keine Warteschlange.
- * Bei BUSY/ERROR bleibt der bisherige Auftrag unveraendert. Die Hardware
- * wiederholt fehlgeschlagene Uebertragungen automatisch. Ohne ACK kann das
- * Objekt dauerhaft belegt bleiben. Bus-off erfordert einen Board-Neustart.
- * @note Nur aus der Hauptschleife aufrufen, nicht gleichzeitig aus Interrupts.
- * ACCEPTED bestaetigt nur die Uebergabe, nicht die erfolgreiche Busuebertragung.
+/** @brief Ergebnis eines nicht blockierenden Sendeauftrags. */
+typedef enum { CANLIB_TX_ACCEPTED, CANLIB_TX_BUSY, CANLIB_TX_ERROR } CANLIB_TxResult_t;
+/** @brief Sendet einen Sollwertframe auf ID 0x100.
+ * @param[in] data Nutzdatenpuffer.
+ * @param[in] length Nutzdatenlaenge 0..8.
+ * @return ACCEPTED, BUSY oder ERROR; keine Bestaetigung vom Empfaenger.
  */
 CANLIB_TxResult_t CANLIB_Send(const uint8_t *data, uint8_t length);
 

@@ -1,7 +1,7 @@
 PROJECT_NAME = "CAN_RX - KIT_XMC14_2Go"
 OUTPUT_DIRECTORY = Debug/doxygen
 OUTPUT_LANGUAGE = German
-INPUT = Libraries/OLED/gui.c Libraries/OLED/gui.h main.c Libraries/CAN/CANlib.c Libraries/CAN/CANlib.h README_CAN_RX.md
+INPUT = Libraries/UART UART_Spezifikation.md Libraries/CAN/GroupMonitor.c Libraries/CAN/GroupMonitor.h Libraries/OLED/gui.c Libraries/OLED/gui.h main.c Libraries/CAN/CANlib.c Libraries/CAN/CANlib.h README_CAN_RX.md
 FILE_PATTERNS = *.c *.h *.md
 INPUT_ENCODING = UTF-8
 EXTRACT_ALL = NO

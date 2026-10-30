@@ -1,7 +1,10 @@
+> Aktuelles CAN-Protokoll: [CAN_Spezifikation.md](CAN_Spezifikation.md).
+> TX: 0x100 + Gruppe; ohne Gruppe kein Senden. UART-Sollwert 0 waehlt CAN als Quelle.
+
 > Projekt TOF_PID_PWM: Die hier beschriebene lineare PWM-Kennlinie ist durch
 > den PID-Hoehenregler ersetzt. Aktuelle Regelung und Startverhalten: [README_PID.md](README_PID.md).
 
-# TOF_CAN ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ TOF-Messwert auf Classic CAN
+# TOF_CAN ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ TOF-Messwert auf Classic CAN
 
 Eigenstaendiges DAVE4-Projekt fuer KIT_XMC14_2Go / XMC1404-Q040x0200,
 kopiert aus TOF. Die CANlib stammt aus CAN_RX und wurde nur in diesem neuen
@@ -11,7 +14,7 @@ Die Details zu Sensor, I2C und PWM stehen in README_TOF.md.
 
 ## Projekt in DAVE4 verwenden
 
-1. File ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ Import ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ General ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ Existing Projects into Workspace.
+1. File ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ Import ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ General ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ Existing Projects into Workspace.
 2. D:/GITHUB/XMC14/TOF_CAN als Root Directory auswaehlen.
 3. TOF_CAN importieren; bei bestehendem Verzeichnis keine weitere Kopie anlegen.
 4. Als aktives Projekt setzen und Build Project ausfuehren.
@@ -58,7 +61,7 @@ Der bisherige 4-Bit-Zaehler (0..15) bleibt im ersten Byte erhalten.
 | 2 | data[1] | PWM als int8_t, ganze Prozent (aktuell 0..100) |
 | 3 | data[2] | Hoehe uint16_t, niederwertiges Byte |
 | 4 | data[3] | Hoehe uint16_t, hoeherwertiges Byte |
-| 5Ã¢â‚¬â€œ8 | data[4..7] | Reserviert, 0 |
+| 5ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“8 | data[4..7] | Reserviert, 0 |
 
 Hoehe bezeichnet den geglaetteten TOF-Abstand in mm. Little Endian / Intel,
 Startbit 16, Laenge 16, unsigned, Faktor 1, Offset 0. PWM: Startbit 8,

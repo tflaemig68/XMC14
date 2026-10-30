@@ -42,6 +42,20 @@ int pid_test(void)
     p.KP=INFINITY; CHECK(near(PIDrun(&p,10.0f),0.0f));
     CHECK(near(PIDrun(NULL,10.0f),0.0f));
     PIDclear(NULL); PIDinit(NULL,0,0,0,0);
+    /* I = KI * sum(e * dt): 130 mm, KI .1, 50 ms -> .65 percent per step. */
+    PIDinit(&p,0.1f,0.1f,0.0f,0.05f);
+    for (int i=0;i<100;++i) {
+        PIDresetDerivative(&p); /* A changing profile must not clear I. */
+        result=PIDrun(&p,130.0f);
+    }
+    CHECK(result>77.99f && result<78.01f); /* P=13, I=65 after 5 seconds. */
+    PIDresetDerivative(NULL);
+    /* A setpoint transition suppresses D kick, but retains the I state. */
+    PIDinit(&p,0.0f,1.0f,1.0f,0.1f);
+    CHECK(near(PIDrun(&p,10.0f),1.0f));
+    PIDresetDerivative(&p);
+    CHECK(near(p.ISUM,1.0f));
+    CHECK(near(PIDrun(&p,20.0f),3.0f));
     /* Simple positive plant: a constant load needs nonzero steady PWM. */
     PIDinit(&p,0.333333f,0.1f,0.02f,0.1f);
     float height=0.0f;

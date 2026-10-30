@@ -156,7 +156,12 @@ uint32_t CANLIB_GetOverrunCount(void)
 
 CANLIB_TxResult_t CANLIB_Send(const uint8_t *data, uint8_t length)
 {
-    if (!initialized || data == NULL || length > 8U ||
+    return CANLIB_SendWithId(CANLIB_TX_ID, data, length);
+}
+
+CANLIB_TxResult_t CANLIB_SendWithId(uint32_t id, const uint8_t *data, uint8_t length)
+{
+    if (!initialized || data == NULL || length > 8U || id > CANLIB_ID_MASK ||
         CANLIB_GetState() == CANLIB_STATE_BUS_OFF) {
         return CANLIB_TX_ERROR;
     }
@@ -165,6 +170,7 @@ CANLIB_TxResult_t CANLIB_Send(const uint8_t *data, uint8_t length)
     if (XMC_CAN_MO_GetStatus(&tx_object) & XMC_CAN_MO_STATUS_TX_REQUEST) {
         return CANLIB_TX_BUSY;
     }
+    XMC_CAN_MO_SetIdentifier(&tx_object, id);
     tx_object.can_data_length = length;
     tx_object.can_data[0] = 0U;
     tx_object.can_data[1] = 0U;

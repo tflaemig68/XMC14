@@ -15,8 +15,8 @@
 #define UARTPROTO_COMMAND_SIZE 13U
 /** @brief Gemeinsam uebernommene Parameter; keine rohe Struktur uebertragen! */
 typedef struct {
-    uint8_t group; /**< Gruppennummer 1..32; Kennzeichnung, kein Adressfilter. */
-    int16_t setpoint; /**< Hoehensollwert 0..300 mm. */
+    uint8_t group; /**< Gruppennummer 1..32; waehlt CAN-TX-ID und CAN-Sollwertgruppe. */
+    int16_t setpoint; /**< Hoehensollwert 1..300 mm; 0 waehlt CAN. */
     int16_t kp; /**< P-Verstaerkung mal 100, -32768..32767. */
     int16_t ki; /**< I-Verstaerkung mal 100, -32768..32767. */
     int16_t kd; /**< D-Verstaerkung mal 100, -32768..32767. */

@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>TOF_PID_PWM mit XMC14_2GO: PID-Laufzeitoptimierung, 30.10.2026</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">TOF_PID_PWM mit XMC14_2GO
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="pages.html"><span>Zusätzliche&#160;Informationen</span></a></li>
+      <li><a href="annotated.html"><span>Klassen</span></a></li>
+      <li><a href="files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typdefinitionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Aufzählungen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Aufzählungswerte</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Makrodefinitionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Seiten</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PID-Laufzeitoptimierung, 30.10.2026 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2>Umsetzung</h2>
+<p>Die Positionsform bleibt bestehen. Vorberechnet werden KI*TA, KD/TA und TA/(filter_time+TA). Ein Cache erkennt Aenderungen an KI, KD, TA und Filterzeit. Bei konstanten Parametern hat der Regelschritt keine Division; der erste PID-Aufruf bei Initialisierung berechnet die Koeffizienten. Bei KD=0 werden weder D-Koeffizienten dividiert noch D-Schritte ausgefuehrt. Bei veraenderter realer Abtastzeit wird der Cache neu berechnet, keine Jitterzeit unterschlagen. Auch main rechnet Millisekunden mit *0.001f statt /1000.0f in Sekunden um.</p>
+<p>Der I-Anteil lautet jetzt I_k=I_alt+(KI*TA)*e. ISUM speichert bereits den gewichteten I-Stellwert in Prozent, nicht mehr Integral(e dt) in mm*s. Der gefilterte D-Zustand speichert ebenso bereits den D-Stellwert in Prozent. Diese Einheiten sind in <a class="el" href="_p_i_d_8h.html" title="Zeitdiskreter PID-Regler mit begrenztem Ausgang.">PID.h</a> dokumentiert. Im Debugger muss ISUM deshalb nicht nochmals mit KI multipliziert werden. Bei KI=0 wird ISUM auf 0 gesetzt.</p>
+<p>Bei Sollwertwechseln bleibt I erhalten, D wird wie zuvor neu gestartet. Verstaerkungswechsel erfordern PIDclear, wie in TOF_UARTApply umgesetzt: Ein gespeicherter gewichteter Zustand darf sonst nicht mit einem neuen KI/KD verwechselt werden. Gruppen-/Quellen-/Fehlerresets bleiben erhalten.</p>
+<p>Anti-Windup ist weiterhin bedingte Integration: Ein neuer I-Schritt, der den Gesamtausgang weiter ueber 100 oder unter 0 treiben wuerde, wird verworfen. Entgegengesetzte Schritte koennen den Integrator wieder abbauen. Der Ausgang wird anschliessend begrenzt. Endlichkeitspruefungen sichern Koeffizienten, Integrator und Ausgang gegen NaN/Unendlich ab. Es wird kein zusaetzlicher, willkuerlicher I-Grenzwert eingefuehrt, der das bisherige Verhalten aendern wuerde. Die IEEE-754-Endlichkeitspruefung und Cachevergleiche verwenden Integer-Bitmuster statt vieler Software-Float-Vergleiche. Dies setzt den im XMC-ARM-GCC verwendeten 32-Bit-IEEE-754-float voraus. Es wird kein -ffast-math eingeschaltet.</p>
+<p>Die alternative Rekursion y_k=y_alt+q0*e_k+q1*e_alt+q2*e_alt2 wird nicht verwendet. Sie waere fuer den ungefilterten PID bei konstantem TA mit q0=KP+KI*TA+KD/TA, q1=-KP-2*KD/TA, q2=KD/TA herleitbar. Variable Zeit, D-Tiefpass und Anti-Windup wuerden eine angepasste Herleitung erfordern. Die vorgesehene Vorberechnung wurde stattdessen in die vorhandene Positionsform uebernommen. Fixed Point wird nicht eingefuehrt.</p>
+<h2>Vergleich mit vorherigem Code</h2>
+<p>Tests/pid_reference.c bewahrt die Rechenfassung unmittelbar vor Optimierung als Testreferenz. Sie wird durch den Tests-Quellausschluss nicht in die Firmware gelinkt. Tests/validate_pid_compare.py vergleicht 8000 Schritte: P/PI/PID, wechselnde Zeiten, positive/negative Verstaerkungen, Ausgangssaettigung, Tiefpass und Reset. Ausgang sowie entsprechend gewichtete I-/D-Zustaende werden mit einer absoluten Toleranz von 0.02 Prozentpunkten verglichen. Diese ist kleiner als die 1-Prozent-Ausgabequantisierung. Die Rechnung ist wegen geaenderter float-Operationsreihenfolge nicht bitidentisch; unmittelbar an einer Rundungsgrenze kann auch die gerundete PWM um 1 Prozentpunkt abweichen.</p>
+<p>Die bestehenden PID-Rechentests und UART-/CAN-Sollwerttests bestehen ebenfalls, insbesondere der zuvor korrigierte Integratorerhalt bei laufendem Profil.</p>
+<h2>Instruktionsvergleich</h2>
+<p>Tests/benchmark_pid.py baut mit DAVE GCC 4.9, Cortex-M0, -Os wie im Projekt. Pro Fall werden Initialisierung plus 100 Regelschritte im Unicorn-Emulator gezaehlt, einschliesslich der eingebundenen Software-Float-Routinen. Die Vergleichssignale und Parameter sind in Tests/pid_benchmark.c festgelegt.</p>
+<table class="doxtable">
+<tr>
+<th>Fall </th><th align="right">Vorher: Instruktionen </th><th align="right">Optimiert </th><th align="right">Reduktion </th><th align="right">Float-Divisionen vorher / optimiert </th></tr>
+<tr>
+<td>PI, konstant 50 ms </td><td align="right">335222 </td><td align="right">84404 </td><td align="right">74.8 % </td><td align="right">198 / 0 </td></tr>
+<tr>
+<td>PID, konstant 50 ms </td><td align="right">341977 </td><td align="right">137975 </td><td align="right">59.7 % </td><td align="right">198 / 2 </td></tr>
+<tr>
+<td>PI, wechselnd 50/51/52 ms </td><td align="right">357395 </td><td align="right">131293 </td><td align="right">63.3 % </td><td align="right">198 / 0 </td></tr>
+<tr>
+<td>PID, wechselnd 50/51/52 ms </td><td align="right">364068 </td><td align="right">270313 </td><td align="right">25.8 % </td><td align="right">198 / 200 </td></tr>
+</table>
+<p>Bei konstantem TA sind die zwei PID-Divisionen nur in der Initialisierung enthalten. Mit wechselndem TA und aktivem D-Anteil muessen die Koeffizienten jedes Mal aktualisiert werden; die Reduktion stammt dann vor allem aus weniger Multiplikationen, Vergleichen und der gewichteten Zustandsdarstellung.</p>
+<p><b>Diese Zahlen sind keine Taktzyklen, keine Mikrosekunden und kein gemessener Hardware-Beschleunigungsfaktor.</b> Instruktionslaufzeiten, Flash-Wartezeiten und Interrupts werden durch diese Zaehler nicht abgebildet. Fuer echte Laufzeitmessung auf dem XMC1404 PIDrun mit einem GPIO-Puls einklammern und am Oszilloskop messen. Referenz und Optimierung dabei mit gleichen Eingaben und Compileroptionen messen. Die Rohdaten stehen in Tests/pid_benchmark_results.json.</p>
+<h2>Code und Verwendung</h2>
+<p><a class="el" href="_p_i_d_8c.html" title="PID mit vorberechneten Zeitkoeffizienten, Anti-Windup und D-Tiefpass.">Libraries/PID.c</a> dokumentiert die Gleichungen und Gruende direkt am Code. <a class="el" href="_p_i_d_8h.html" title="Zeitdiskreter PID-Regler mit begrenztem Ausgang.">Libraries/PID.h</a> beschreibt alle Zustands- und Cachefelder. Nur PIDinit/PIDrun und die Resetfunktionen verwenden; Cachefelder nicht von aussen aendern. Der Cache vergroessert den Reglerzustand um einige Worte; die vorher benoetigten Software-Float-Bibliotheken koennen fuer andere Funktionen weiterhin im ELF bleiben.</p>
+<p>Firmware neu bauen und flashen; die Abstimmung an der realen Regelstrecke bleibt zu pruefen. Der Softwarevergleich ersetzt diese Messung nicht. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Fre Okt 30 2026 19:21:11 für TOF_PID_PWM mit XMC14_2GO von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.3.1
+</small></address>
+</body>
+</html>

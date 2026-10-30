@@ -1,0 +1,596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>TOF_PID_PWM mit XMC14_2GO: Libraries/CAN/CANlib.h-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">TOF_PID_PWM mit XMC14_2GO
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="pages.html"><span>Zusätzliche&#160;Informationen</span></a></li>
+      <li><a href="annotated.html"><span>Klassen</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typdefinitionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Aufzählungen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Aufzählungswerte</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Makrodefinitionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Seiten</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d2d5b60bd20db849a9486835a2715aa.html">Libraries</a></li><li class="navelem"><a class="el" href="dir_9c7b7fbee450d6e62180a70fed9066a0.html">CAN</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Klassen</a> &#124;
+<a href="#define-members">Makrodefinitionen</a> &#124;
+<a href="#enum-members">Aufzählungen</a> &#124;
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">CANlib.h-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Parametrierbarer Classic-CAN-Sender und -Empfaenger fuer KIT_XMC14_2Go.  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br/>
+<code>#include &lt;stdint.h&gt;</code><br/>
+</div>
+<p><a href="_c_a_nlib_8h_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a_n_l_i_b___message__t.html">CANLIB_Message_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kopie einer vollstaendig empfangenen Datenbotschaft.  <a href="struct_c_a_n_l_i_b___message__t.html#details">Mehr ...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:af07e75ad88d76fda840ad9ab6cb7a92b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af07e75ad88d76fda840ad9ab6cb7a92b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_a_nlib_8h.html#af07e75ad88d76fda840ad9ab6cb7a92b">CANLIB_ID_BITS</a>&#160;&#160;&#160;11U</td></tr>
+<tr class="memdesc:af07e75ad88d76fda840ad9ab6cb7a92b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Laenge des Identifiers: 11 (Standard) oder 29 (Extended) Bit. <br/></td></tr>
+<tr class="separator:af07e75ad88d76fda840ad9ab6cb7a92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd4c7b490a2f75f53ddc6bdc4f45745a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd4c7b490a2f75f53ddc6bdc4f45745a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_a_nlib_8h.html#abd4c7b490a2f75f53ddc6bdc4f45745a">CANLIB_RX_ID</a>&#160;&#160;&#160;0x100UL</td></tr>
+<tr class="memdesc:abd4c7b490a2f75f53ddc6bdc4f45745a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exakt zu empfangende ID, ohne Verschiebung oder zusaetzliche Flagbits. <br/></td></tr>
+<tr class="separator:abd4c7b490a2f75f53ddc6bdc4f45745a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45372d90be2f1f97a3c95de0195067cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45372d90be2f1f97a3c95de0195067cc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_a_nlib_8h.html#a45372d90be2f1f97a3c95de0195067cc">CANLIB_TX_ID</a>&#160;&#160;&#160;0x101UL</td></tr>
+<tr class="memdesc:a45372d90be2f1f97a3c95de0195067cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard-Sende-ID; die Anwendung sendet gruppenabhaengig mit SendWithId. <br/></td></tr>
+<tr class="separator:a45372d90be2f1f97a3c95de0195067cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ac787f79964fa7247aadc2a9f98f930"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ac787f79964fa7247aadc2a9f98f930"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_a_nlib_8h.html#a9ac787f79964fa7247aadc2a9f98f930">CANLIB_BITRATE</a>&#160;&#160;&#160;500000UL</td></tr>
+<tr class="memdesc:a9ac787f79964fa7247aadc2a9f98f930"><td class="mdescLeft">&#160;</td><td class="mdescRight">Busgeschwindigkeit in Bit/s; Sender und Empfaenger muessen uebereinstimmen. <br/></td></tr>
+<tr class="separator:a9ac787f79964fa7247aadc2a9f98f930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87ee40b79dfce2dbac1bbcab2b8c0af1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87ee40b79dfce2dbac1bbcab2b8c0af1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CANLIB_ID_MASK</b>&#160;&#160;&#160;0x7FFUL</td></tr>
+<tr class="separator:a87ee40b79dfce2dbac1bbcab2b8c0af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2198503521cea41ba5c87a769c0ef9fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2198503521cea41ba5c87a769c0ef9fd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_a_nlib_8h.html#a2198503521cea41ba5c87a769c0ef9fd">CANLIB_RX_TIMEOUT_MS</a>&#160;&#160;&#160;1000UL</td></tr>
+<tr class="memdesc:a2198503521cea41ba5c87a769c0ef9fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeit ohne neue passende Botschaft bis zur Anzeige ALT, in Millisekunden. <br/></td></tr>
+<tr class="separator:a2198503521cea41ba5c87a769c0ef9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Aufzählungen</h2></td></tr>
+<tr class="memitem:a52735ffe59bbb7335c8003d8fd88bc02"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02">CANLIB_State_t</a> { <a class="el" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02a5eedffc98fafb751b496c246ee895643">CANLIB_STATE_NOT_READY</a>, 
+<a class="el" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02aef497deaca4f1937fde12fa3653409c0">CANLIB_STATE_ACTIVE</a>, 
+<a class="el" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02a7f17f43301a10e14b9cf0d42c4bfe875">CANLIB_STATE_WARNING</a>, 
+<a class="el" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02aa63fc84ab4eceedfe369520485e8f82c">CANLIB_STATE_BUS_OFF</a>
+ }</td></tr>
+<tr class="memdesc:a52735ffe59bbb7335c8003d8fd88bc02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Betriebszustand fuer die Statusanzeige.  <a href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02">Mehr ...</a><br/></td></tr>
+<tr class="separator:a52735ffe59bbb7335c8003d8fd88bc02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ae901656fb875946080798f93c93c4e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4e">CANLIB_TxResult_t</a> { <a class="el" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4ea19ebb7bb81a59c27a8bd1df217a8ad96">CANLIB_TX_ACCEPTED</a>, 
+<a class="el" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4ea0d35f7ff9880ddc072528363a1cec5bb">CANLIB_TX_BUSY</a>, 
+<a class="el" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4ea7cda2e9044c7ecb19ec170ae67adad50">CANLIB_TX_ERROR</a>
+ }</td></tr>
+<tr class="memdesc:a3ae901656fb875946080798f93c93c4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ergebnis der Uebergabe an das einzelne Sendeobjekt.  <a href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4e">Mehr ...</a><br/></td></tr>
+<tr class="separator:a3ae901656fb875946080798f93c93c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a8c14400742204f2f53bb50ecb35f3510"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_a_nlib_8h.html#a8c14400742204f2f53bb50ecb35f3510">CANLIB_Init</a> (void)</td></tr>
+<tr class="memdesc:a8c14400742204f2f53bb50ecb35f3510"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisiert CAN0, Pins, Bitzeit, Empfangsfilter und Sendeobjekt.  <a href="#a8c14400742204f2f53bb50ecb35f3510">Mehr ...</a><br/></td></tr>
+<tr class="separator:a8c14400742204f2f53bb50ecb35f3510"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a742f7c1f053b5589032abf5d81e649cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_a_nlib_8h.html#a742f7c1f053b5589032abf5d81e649cd">CANLIB_Receive</a> (<a class="el" href="struct_c_a_n_l_i_b___message__t.html">CANLIB_Message_t</a> *message)</td></tr>
+<tr class="memdesc:a742f7c1f053b5589032abf5d81e649cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fragt ohne Warten auf eine neue Botschaft das Empfangsobjekt ab.  <a href="#a742f7c1f053b5589032abf5d81e649cd">Mehr ...</a><br/></td></tr>
+<tr class="separator:a742f7c1f053b5589032abf5d81e649cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ca20e8ee9ec735149baef140c13385c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4e">CANLIB_TxResult_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_a_nlib_8h.html#a0ca20e8ee9ec735149baef140c13385c">CANLIB_Send</a> (const uint8_t *data, uint8_t length)</td></tr>
+<tr class="memdesc:a0ca20e8ee9ec735149baef140c13385c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Startet eine Classic-CAN-Datenbotschaft mit CANLIB_TX_ID.  <a href="#a0ca20e8ee9ec735149baef140c13385c">Mehr ...</a><br/></td></tr>
+<tr class="separator:a0ca20e8ee9ec735149baef140c13385c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c5b093876010b1a426b17c686ecba3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4e">CANLIB_TxResult_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_a_nlib_8h.html#a5c5b093876010b1a426b17c686ecba3b">CANLIB_SendWithId</a> (uint32_t id, const uint8_t *data, uint8_t length)</td></tr>
+<tr class="memdesc:a5c5b093876010b1a426b17c686ecba3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Startet einen Sendeauftrag mit einer zur Laufzeit gewaehlten ID.  <a href="#a5c5b093876010b1a426b17c686ecba3b">Mehr ...</a><br/></td></tr>
+<tr class="separator:a5c5b093876010b1a426b17c686ecba3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f1211412527c84e4a68be4d4a802a61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02">CANLIB_State_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_a_nlib_8h.html#a2f1211412527c84e4a68be4d4a802a61">CANLIB_GetState</a> (void)</td></tr>
+<tr class="memdesc:a2f1211412527c84e4a68be4d4a802a61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liefert den CAN-Knotenzustand.  <a href="#a2f1211412527c84e4a68be4d4a802a61">Mehr ...</a><br/></td></tr>
+<tr class="separator:a2f1211412527c84e4a68be4d4a802a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a6b55c1d7574df77a845d6271ebdcb9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_a_nlib_8h.html#a2a6b55c1d7574df77a845d6271ebdcb9">CANLIB_GetOverrunCount</a> (void)</td></tr>
+<tr class="memdesc:a2a6b55c1d7574df77a845d6271ebdcb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liefert die Anzahl erkannter Hardware-Ueberlaufmeldungen.  <a href="#a2a6b55c1d7574df77a845d6271ebdcb9">Mehr ...</a><br/></td></tr>
+<tr class="separator:a2a6b55c1d7574df77a845d6271ebdcb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Parametrierbarer Classic-CAN-Sender und -Empfaenger fuer KIT_XMC14_2Go. </p>
+<p>Die ID identifiziert eine Botschaft, nicht die Adresse eines Geraetes. CANlib benutzt CAN-Knoten 0 und Message Objects 0 (RX) und 1 (TX) exklusiv. I2C und OLED werden weiterhin durch DAVE initialisiert. Es ist keine zusaetzliche CAN-DAVE-APP noetig. </p>
+
+<p>Definiert in Datei <a class="el" href="_c_a_nlib_8h_source.html">CANlib.h</a>.</p>
+</div><h2 class="groupheader">Dokumentation der Aufzählungstypen</h2>
+<a class="anchor" id="a52735ffe59bbb7335c8003d8fd88bc02"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02">CANLIB_State_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Betriebszustand fuer die Statusanzeige. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a52735ffe59bbb7335c8003d8fd88bc02a5eedffc98fafb751b496c246ee895643"></a>CANLIB_STATE_NOT_READY</em>&nbsp;</td><td class="fielddoc">
+<p>Noch nicht oder nicht erfolgreich initialisiert. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a52735ffe59bbb7335c8003d8fd88bc02aef497deaca4f1937fde12fa3653409c0"></a>CANLIB_STATE_ACTIVE</em>&nbsp;</td><td class="fielddoc">
+<p>CAN aktiv, keine Fehlerwarnschwelle erreicht. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a52735ffe59bbb7335c8003d8fd88bc02a7f17f43301a10e14b9cf0d42c4bfe875"></a>CANLIB_STATE_WARNING</em>&nbsp;</td><td class="fielddoc">
+<p>CAN-Fehlerwarnschwelle erreicht. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a52735ffe59bbb7335c8003d8fd88bc02aa63fc84ab4eceedfe369520485e8f82c"></a>CANLIB_STATE_BUS_OFF</em>&nbsp;</td><td class="fielddoc">
+<p>Knoten vom Bus abgeschaltet; Board neu starten. </p>
+</td></tr>
+</table>
+
+<p>Definiert in Zeile <a class="el" href="_c_a_nlib_8h_source.html#l00069">69</a> der Datei <a class="el" href="_c_a_nlib_8h_source.html">CANlib.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;             {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02a5eedffc98fafb751b496c246ee895643">CANLIB_STATE_NOT_READY</a>, </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02aef497deaca4f1937fde12fa3653409c0">CANLIB_STATE_ACTIVE</a>,    </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02a7f17f43301a10e14b9cf0d42c4bfe875">CANLIB_STATE_WARNING</a>,   </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02aa63fc84ab4eceedfe369520485e8f82c">CANLIB_STATE_BUS_OFF</a>    </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;} <a class="code" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02" title="Betriebszustand fuer die Statusanzeige.">CANLIB_State_t</a>;</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a3ae901656fb875946080798f93c93c4e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4e">CANLIB_TxResult_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ergebnis der Uebergabe an das einzelne Sendeobjekt. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a3ae901656fb875946080798f93c93c4ea19ebb7bb81a59c27a8bd1df217a8ad96"></a>CANLIB_TX_ACCEPTED</em>&nbsp;</td><td class="fielddoc">
+<p>Auftrag angenommen; noch keine Empfangsbestaetigung! </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a3ae901656fb875946080798f93c93c4ea0d35f7ff9880ddc072528363a1cec5bb"></a>CANLIB_TX_BUSY</em>&nbsp;</td><td class="fielddoc">
+<p>Voriger Auftrag laeuft; Daten unveraendert lassen. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a3ae901656fb875946080798f93c93c4ea7cda2e9044c7ecb19ec170ae67adad50"></a>CANLIB_TX_ERROR</em>&nbsp;</td><td class="fielddoc">
+<p>Ungueltige Parameter, nicht bereit oder Bus-off. </p>
+</td></tr>
+</table>
+
+<p>Definiert in Zeile <a class="el" href="_c_a_nlib_8h_source.html#l00099">99</a> der Datei <a class="el" href="_c_a_nlib_8h_source.html">CANlib.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;             {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4ea19ebb7bb81a59c27a8bd1df217a8ad96">CANLIB_TX_ACCEPTED</a>, </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4ea0d35f7ff9880ddc072528363a1cec5bb">CANLIB_TX_BUSY</a>,     </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4ea7cda2e9044c7ecb19ec170ae67adad50">CANLIB_TX_ERROR</a>     </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;} <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4e" title="Ergebnis der Uebergabe an das einzelne Sendeobjekt.">CANLIB_TxResult_t</a>;</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="a2a6b55c1d7574df77a845d6271ebdcb9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t CANLIB_GetOverrunCount </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Liefert die Anzahl erkannter Hardware-Ueberlaufmeldungen. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>Seit Initialisierung beobachtete MSGLST-Ereignisse. </dd></dl>
+<dl class="section note"><dt>Zu beachten</dt><dd>Ein Ereignis kann mehrere ueberschriebene Botschaften bedeuten; der Wert ist keine genaue Anzahl aller verlorenen Frames. </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="_c_a_nlib_8c_source.html#l00152">152</a> der Datei <a class="el" href="_c_a_nlib_8c_source.html">CANlib.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="_c_a_nlib_8c.html#a96558d7c42139905e47a9dba76e5a33b" title="Beobachtete Meldungen ueber ueberschriebene Empfangsdaten.">overrun_count</a>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a2f1211412527c84e4a68be4d4a802a61"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02">CANLIB_State_t</a> CANLIB_GetState </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Liefert den CAN-Knotenzustand. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>Aktueller Betriebszustand. </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="_c_a_nlib_8c_source.html#l00142">142</a> der Datei <a class="el" href="_c_a_nlib_8c_source.html">CANlib.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;{</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    uint32_t status;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="_c_a_nlib_8c.html#aedeffc7d23da25d52b9a50045189fe2b" title="Gibt Hardwarezugriffe erst nach erfolgreicher Initialisierung frei.">initialized</a>) { <span class="keywordflow">return</span> <a class="code" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02a5eedffc98fafb751b496c246ee895643">CANLIB_STATE_NOT_READY</a>; }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    status = XMC_CAN_NODE_GetStatus(CAN_NODE0);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">if</span> (status &amp; XMC_CAN_NODE_STATUS_BUS_OFF) { <span class="keywordflow">return</span> <a class="code" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02aa63fc84ab4eceedfe369520485e8f82c">CANLIB_STATE_BUS_OFF</a>; }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">if</span> (status &amp; XMC_CAN_NODE_STATUS_ERROR_WARNING_STATUS) { <span class="keywordflow">return</span> <a class="code" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02a7f17f43301a10e14b9cf0d42c4bfe875">CANLIB_STATE_WARNING</a>; }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02aef497deaca4f1937fde12fa3653409c0">CANLIB_STATE_ACTIVE</a>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a8c14400742204f2f53bb50ecb35f3510"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CANLIB_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialisiert CAN0, Pins, Bitzeit, Empfangsfilter und Sendeobjekt. </p>
+<dl class="section pre"><dt>Vorbedingung</dt><dd>DAVE_Init() muss erfolgreich ausgefuehrt worden sein. </dd></dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>true bei Erfolg, false falls die Bitzeit nicht einstellbar ist. </dd></dl>
+<dl class="section note"><dt>Zu beachten</dt><dd>Einmal beim Start aufrufen. RX=P1.1, TX=P1.0/ALT9 passen zum eingebauten Transceiver des KIT_XMC14_2Go. Der Knoten bestaetigt empfangene Frames mit ACK und sendet Daten erst nach <a class="el" href="_c_a_nlib_8c.html#a0ca20e8ee9ec735149baef140c13385c" title="Startet eine Classic-CAN-Datenbotschaft mit CANLIB_TX_ID.">CANLIB_Send()</a>. Kein Silent Mode. </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="_c_a_nlib_8c_source.html#l00018">18</a> der Datei <a class="el" href="_c_a_nlib_8c_source.html">CANlib.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">const</span> XMC_GPIO_CONFIG_t rx_config = { .mode = XMC_GPIO_MODE_INPUT_PULL_UP };</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">const</span> XMC_GPIO_CONFIG_t tx_config = {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        .mode = XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT9,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        .output_level = XMC_GPIO_OUTPUT_LEVEL_HIGH</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    };</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    XMC_CAN_NODE_NOMINAL_BIT_TIME_CONFIG_t timing = {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        .can_frequency = 0U,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        .baudrate = <a class="code" href="_c_a_nlib_8h.html#a9ac787f79964fa7247aadc2a9f98f930" title="Busgeschwindigkeit in Bit/s; Sender und Empfaenger muessen uebereinstimmen.">CANLIB_BITRATE</a>,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        .sample_point = 8000U,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        .sjw = 1U</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    };</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="_c_a_nlib_8c.html#aedeffc7d23da25d52b9a50045189fe2b" title="Gibt Hardwarezugriffe erst nach erfolgreicher Initialisierung frei.">initialized</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="_c_a_nlib_8c.html#a96558d7c42139905e47a9dba76e5a33b" title="Beobachtete Meldungen ueber ueberschriebene Empfangsdaten.">overrun_count</a> = 0U;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">/* Einzelzuweisungen vermeiden Warnungen der alten GCC-Version bei den</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">     * anonymen Structs/Unions des XMCLib-Handles. */</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a> = (XMC_CAN_MO_t){0};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>.can_mo_ptr = CAN_MO0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>.can_identifier = <a class="code" href="_c_a_nlib_8h.html#abd4c7b490a2f75f53ddc6bdc4f45745a" title="Exakt zu empfangende ID, ohne Verschiebung oder zusaetzliche Flagbits.">CANLIB_RX_ID</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#if CANLIB_ID_BITS == 11U</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor"></span>    <a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>.can_id_mode = XMC_CAN_FRAME_TYPE_STANDARD_11BITS;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor"></span>    <a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>.can_id_mode = XMC_CAN_FRAME_TYPE_EXTENDED_29BITS;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span>    <a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>.can_priority = XMC_CAN_ARBITRATION_MODE_IDE_DIR_BASED_PRIO_2;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>.can_id_mask = CANLIB_ID_MASK;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>.can_ide_mask = 1U;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>.can_data_length = 8U;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>.can_mo_type = XMC_CAN_MO_TYPE_RECMSGOBJ;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">/* Der Rueckgabewert ist der wirklich eingestellte CAN-Modultakt.</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">     * Er ist die Grundlage fuer die Berechnung der 500-kbit/s-Bitzeit. */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    timing.can_frequency = XMC_CAN_InitEx(CAN, XMC_CAN_CANCLKSRC_MCLK, 8000000UL);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    XMC_CAN_NODE_SetInitBit(CAN_NODE0);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span> (XMC_CAN_NODE_NominalBitTimeConfigureEx(CAN_NODE0, &amp;timing)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        != XMC_CAN_STATUS_SUCCESS) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    XMC_GPIO_Init(XMC_GPIO_PORT1, 1U, &amp;rx_config);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    XMC_GPIO_Init(XMC_GPIO_PORT1, 0U, &amp;tx_config);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    XMC_CAN_NODE_EnableConfigurationChange(CAN_NODE0);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    XMC_CAN_NODE_SetReceiveInput(CAN_NODE0, CAN_NODE0_RXD_P1_1);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    XMC_CAN_NODE_DisableLoopBack(CAN_NODE0);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    XMC_CAN_NODE_ReSetAnalyzerMode(CAN_NODE0);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    XMC_CAN_NODE_DisableConfigurationChange(CAN_NODE0);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">/* Alle ID-Bits und das IDE-Bit muessen passen: Eine Extended-Botschaft</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">     * mit gleichem Zahlenwert wird im 11-Bit-Modus nicht angenommen. */</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    XMC_CAN_AllocateMOtoNodeList(CAN, 0U, 0U);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">while</span> (!XMC_CAN_IsPanelControlReady(CAN)) { }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    XMC_CAN_MO_Config(&amp;<a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    XMC_CAN_MO_ResetStatus(&amp;<a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        XMC_CAN_MO_RESET_STATUS_NEW_DATA | XMC_CAN_MO_RESET_STATUS_RX_PENDING |</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        XMC_CAN_MO_RESET_STATUS_MESSAGE_LOST);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">/* MO1 ist ausschliesslich zum Senden da. MO0 bleibt der Empfaenger.</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">     * Die gemeinsamen ID-Einstellungen gelten fuer beide Objekte. */</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="_c_a_nlib_8c.html#a05e91862001c792c45aac01bd94922b7" title="Eigenes Sendeobjekt, damit Empfang und Senden unabhaengig arbeiten.">tx_object</a> = <a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="_c_a_nlib_8c.html#a05e91862001c792c45aac01bd94922b7" title="Eigenes Sendeobjekt, damit Empfang und Senden unabhaengig arbeiten.">tx_object</a>.can_mo_ptr = CAN_MO1;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="_c_a_nlib_8c.html#a05e91862001c792c45aac01bd94922b7" title="Eigenes Sendeobjekt, damit Empfang und Senden unabhaengig arbeiten.">tx_object</a>.can_identifier = <a class="code" href="_c_a_nlib_8h.html#a45372d90be2f1f97a3c95de0195067cc" title="Standard-Sende-ID; die Anwendung sendet gruppenabhaengig mit SendWithId.">CANLIB_TX_ID</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="_c_a_nlib_8c.html#a05e91862001c792c45aac01bd94922b7" title="Eigenes Sendeobjekt, damit Empfang und Senden unabhaengig arbeiten.">tx_object</a>.can_mo_type = XMC_CAN_MO_TYPE_TRANSMSGOBJ;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    XMC_CAN_AllocateMOtoNodeList(CAN, 0U, 1U);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">while</span> (!XMC_CAN_IsPanelControlReady(CAN)) { }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    XMC_CAN_MO_Config(&amp;<a class="code" href="_c_a_nlib_8c.html#a05e91862001c792c45aac01bd94922b7" title="Eigenes Sendeobjekt, damit Empfang und Senden unabhaengig arbeiten.">tx_object</a>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    XMC_CAN_MO_ResetStatus(&amp;<a class="code" href="_c_a_nlib_8c.html#a05e91862001c792c45aac01bd94922b7" title="Eigenes Sendeobjekt, damit Empfang und Senden unabhaengig arbeiten.">tx_object</a>,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        XMC_CAN_MO_RESET_STATUS_TX_PENDING | XMC_CAN_MO_RESET_STATUS_TX_REQUEST);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    XMC_CAN_NODE_ResetInitBit(CAN_NODE0);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="_c_a_nlib_8c.html#aedeffc7d23da25d52b9a50045189fe2b" title="Gibt Hardwarezugriffe erst nach erfolgreicher Initialisierung frei.">initialized</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a742f7c1f053b5589032abf5d81e649cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CANLIB_Receive </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_c_a_n_l_i_b___message__t.html">CANLIB_Message_t</a> *&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fragt ohne Warten auf eine neue Botschaft das Empfangsobjekt ab. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">message</td><td>Gueltiger Ergebnispuffer; wird nur bei true beschrieben. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>true fuer eine neue passende Datenbotschaft, andernfalls false.</dd></dl>
+<p>Hoechstens drei Leseversuche verhindern eine Endlosschleife bei gleichzeitigem Hardwareempfang. Im Hauptprogramm moeglichst oft aufrufen. Ein einzelnes Hardwareobjekt speichert den neuesten Frame; waehrend langsamer Displayzugriffe koennen aeltere Frames ueberschrieben werden. Dies ist eine Anzeige der letzten Botschaft, kein verlustfreier CAN-Logger. </p>
+
+<p>Definiert in Zeile <a class="el" href="_c_a_nlib_8c_source.html#l00089">89</a> der Datei <a class="el" href="_c_a_nlib_8c_source.html">CANlib.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    uint32_t status;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="_c_a_nlib_8c.html#aedeffc7d23da25d52b9a50045189fe2b" title="Gibt Hardwarezugriffe erst nach erfolgreicher Initialisierung frei.">initialized</a> || message == NULL || <a class="code" href="_c_a_nlib_8c.html#a2f1211412527c84e4a68be4d4a802a61" title="Liefert den CAN-Knotenzustand.">CANLIB_GetState</a>() == <a class="code" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02aa63fc84ab4eceedfe369520485e8f82c">CANLIB_STATE_BUS_OFF</a>) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">for</span> (uint8_t attempt = 0U; attempt &lt; 3U; ++attempt) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="struct_c_a_n_l_i_b___message__t.html" title="Kopie einer vollstaendig empfangenen Datenbotschaft.">CANLIB_Message_t</a> snapshot = {0};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        uint32_t arbitration;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        uint32_t low;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        uint32_t high;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        status = XMC_CAN_MO_GetStatus(&amp;<a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span> (status &amp; XMC_CAN_MO_STATUS_MESSAGE_LOST) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            ++<a class="code" href="_c_a_nlib_8c.html#a96558d7c42139905e47a9dba76e5a33b" title="Beobachtete Meldungen ueber ueberschriebene Empfangsdaten.">overrun_count</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            XMC_CAN_MO_ResetStatus(&amp;<a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>, XMC_CAN_MO_RESET_STATUS_MESSAGE_LOST);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">if</span> (!(status &amp; XMC_CAN_MO_STATUS_NEW_DATA) ||</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            (status &amp; XMC_CAN_MO_STATUS_RX_UPDATING)) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="comment">/* NEWDAT vor dem Lesen quittieren. Wird es waehrend der Kopie erneut</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">         * gesetzt, gehoeren die Register moeglicherweise zu verschiedenen Frames.</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">         * Dann die Kopie verwerfen und beim naechsten Versuch erneut lesen. */</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        XMC_CAN_MO_ResetStatus(&amp;<a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            XMC_CAN_MO_RESET_STATUS_NEW_DATA | XMC_CAN_MO_RESET_STATUS_RX_PENDING);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        arbitration = <a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>.can_mo_ptr-&gt;MOAR;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        snapshot.<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a5d7d82448870bfeecdfdadbd3322e3d1">dlc</a> = (uint8_t)((<a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>.can_mo_ptr-&gt;MOFCR &amp; CAN_MO_MOFCR_DLC_Msk)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                 &gt;&gt; CAN_MO_MOFCR_DLC_Pos);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        low = <a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>.can_mo_ptr-&gt;MODATAL;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        high = <a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>.can_mo_ptr-&gt;MODATAH;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        status = XMC_CAN_MO_GetStatus(&amp;<a class="code" href="_c_a_nlib_8c.html#a89393b1388706eb1de922ce72a86c308" title="Hardwareobjekt fuer die parametrierte Empfangs-ID.">rx_object</a>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">if</span> (status &amp; (XMC_CAN_MO_STATUS_RX_UPDATING | XMC_CAN_MO_STATUS_NEW_DATA)) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        snapshot.<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a1f0c033021008352a5a17d2007e353ff">id_bits</a> = (arbitration &amp; CAN_MO_MOAR_IDE_Msk) ? 29U : 11U;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        snapshot.<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a0897516fba1a2a54425c1e80485fa2bb">id</a> = (snapshot.<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a1f0c033021008352a5a17d2007e353ff">id_bits</a> == 11U)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            ? (arbitration &amp; XMC_CAN_MO_MOAR_STDID_Msk) &gt;&gt; XMC_CAN_MO_MOAR_STDID_Pos</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            : (arbitration &amp; CAN_MO_MOAR_ID_Msk);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="comment">/* Zusaetzliche Softwarepruefung neben dem Hardwarefilter. */</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">if</span> (snapshot.<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a0897516fba1a2a54425c1e80485fa2bb">id</a> != <a class="code" href="_c_a_nlib_8h.html#abd4c7b490a2f75f53ddc6bdc4f45745a" title="Exakt zu empfangende ID, ohne Verschiebung oder zusaetzliche Flagbits.">CANLIB_RX_ID</a> || snapshot.<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a1f0c033021008352a5a17d2007e353ff">id_bits</a> != <a class="code" href="_c_a_nlib_8h.html#af07e75ad88d76fda840ad9ab6cb7a92b" title="Laenge des Identifiers: 11 (Standard) oder 29 (Extended) Bit.">CANLIB_ID_BITS</a>) {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        snapshot.<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a2af8b3f23fa3947f8ddc30194d99018f">length</a> = snapshot.<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a5d7d82448870bfeecdfdadbd3322e3d1">dlc</a> &gt; 8U ? 8U : snapshot.<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a5d7d82448870bfeecdfdadbd3322e3d1">dlc</a>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">for</span> (uint8_t i = 0U; i &lt; snapshot.<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a2af8b3f23fa3947f8ddc30194d99018f">length</a>; ++i) {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            snapshot.<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a552b14768f2f965cde8dd0543631ea58">data</a>[i] = (uint8_t)((i &lt; 4U ? low : high) &gt;&gt; (8U * (i % 4U)));</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        *message = snapshot;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a0ca20e8ee9ec735149baef140c13385c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4e">CANLIB_TxResult_t</a> CANLIB_Send </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Startet eine Classic-CAN-Datenbotschaft mit CANLIB_TX_ID. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Zeiger auf mindestens length Bytes; darf nicht NULL sein. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Anzahl Nutzdatenbytes von 0 bis 8 (gleich DLC). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>ACCEPTED bei angenommenem Auftrag, BUSY bei belegtem Objekt, ERROR bei ungueltigen Parametern oder nicht betriebsbereitem CAN.</dd></dl>
+<p>Kopiert die Daten sofort; der Aufrufer darf seinen Puffer danach wiederverwenden. Wartet nicht auf Bus oder ACK und hat keine Warteschlange. Bei BUSY/ERROR bleibt der bisherige Auftrag unveraendert. Die Hardware wiederholt fehlgeschlagene Uebertragungen automatisch. Ohne ACK kann das Objekt dauerhaft belegt bleiben. Bus-off erfordert einen Board-Neustart. </p>
+<dl class="section note"><dt>Zu beachten</dt><dd>Nur aus der Hauptschleife aufrufen, nicht gleichzeitig aus Interrupts. ACCEPTED bestaetigt nur die Uebergabe, nicht die erfolgreiche Busuebertragung. </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="_c_a_nlib_8c_source.html#l00157">157</a> der Datei <a class="el" href="_c_a_nlib_8c_source.html">CANlib.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;{</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="_c_a_nlib_8c.html#a5c5b093876010b1a426b17c686ecba3b" title="Startet einen Sendeauftrag mit einer zur Laufzeit gewaehlten ID.">CANLIB_SendWithId</a>(<a class="code" href="_c_a_nlib_8h.html#a45372d90be2f1f97a3c95de0195067cc" title="Standard-Sende-ID; die Anwendung sendet gruppenabhaengig mit SendWithId.">CANLIB_TX_ID</a>, data, length);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a5c5b093876010b1a426b17c686ecba3b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4e">CANLIB_TxResult_t</a> CANLIB_SendWithId </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Startet einen Sendeauftrag mit einer zur Laufzeit gewaehlten ID. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>Unverschobener Identifier innerhalb CANLIB_ID_MASK. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Datenpuffer mit mindestens length Bytes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Nutzdatenlaenge 0..8. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>ACCEPTED, BUSY oder ERROR wie bei <a class="el" href="_c_a_nlib_8c.html#a0ca20e8ee9ec735149baef140c13385c" title="Startet eine Classic-CAN-Datenbotschaft mit CANLIB_TX_ID.">CANLIB_Send()</a>.</dd></dl>
+<p>Prueft BUSY vor Aenderung von ID oder Daten. Ein laufender Auftrag behaelt auch bei Gruppenwechsel seine bisherige ID bis zum Abschluss. </p>
+
+<p>Definiert in Zeile <a class="el" href="_c_a_nlib_8c_source.html#l00162">162</a> der Datei <a class="el" href="_c_a_nlib_8c_source.html">CANlib.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;{</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="_c_a_nlib_8c.html#aedeffc7d23da25d52b9a50045189fe2b" title="Gibt Hardwarezugriffe erst nach erfolgreicher Initialisierung frei.">initialized</a> || data == NULL || length &gt; 8U || <span class="keywordtype">id</span> &gt; CANLIB_ID_MASK ||</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="_c_a_nlib_8c.html#a2f1211412527c84e4a68be4d4a802a61" title="Liefert den CAN-Knotenzustand.">CANLIB_GetState</a>() == <a class="code" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02aa63fc84ab4eceedfe369520485e8f82c">CANLIB_STATE_BUS_OFF</a>) {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4ea7cda2e9044c7ecb19ec170ae67adad50">CANLIB_TX_ERROR</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="comment">/* Unbedingt VOR UpdateData pruefen: Ein laufender Auftrag darf nicht</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment">     * deaktiviert oder mit teilweise neuen Nutzdaten ueberschrieben werden. */</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">if</span> (XMC_CAN_MO_GetStatus(&amp;<a class="code" href="_c_a_nlib_8c.html#a05e91862001c792c45aac01bd94922b7" title="Eigenes Sendeobjekt, damit Empfang und Senden unabhaengig arbeiten.">tx_object</a>) &amp; XMC_CAN_MO_STATUS_TX_REQUEST) {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4ea0d35f7ff9880ddc072528363a1cec5bb">CANLIB_TX_BUSY</a>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    XMC_CAN_MO_SetIdentifier(&amp;<a class="code" href="_c_a_nlib_8c.html#a05e91862001c792c45aac01bd94922b7" title="Eigenes Sendeobjekt, damit Empfang und Senden unabhaengig arbeiten.">tx_object</a>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="_c_a_nlib_8c.html#a05e91862001c792c45aac01bd94922b7" title="Eigenes Sendeobjekt, damit Empfang und Senden unabhaengig arbeiten.">tx_object</a>.can_data_length = length;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="_c_a_nlib_8c.html#a05e91862001c792c45aac01bd94922b7" title="Eigenes Sendeobjekt, damit Empfang und Senden unabhaengig arbeiten.">tx_object</a>.can_data[0] = 0U;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="_c_a_nlib_8c.html#a05e91862001c792c45aac01bd94922b7" title="Eigenes Sendeobjekt, damit Empfang und Senden unabhaengig arbeiten.">tx_object</a>.can_data[1] = 0U;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">for</span> (uint8_t i = 0U; i &lt; length; ++i) {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="comment">/* Vier Bytes bilden jeweils ein 32-Bit-Hardwareregister.</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">         * Explizite Verschiebungen vermeiden Alignment- und Cast-Probleme. */</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <a class="code" href="_c_a_nlib_8c.html#a05e91862001c792c45aac01bd94922b7" title="Eigenes Sendeobjekt, damit Empfang und Senden unabhaengig arbeiten.">tx_object</a>.can_data[i / 4U] |= (uint32_t)data[i] &lt;&lt; (8U * (i % 4U));</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    XMC_CAN_MO_ResetStatus(&amp;<a class="code" href="_c_a_nlib_8c.html#a05e91862001c792c45aac01bd94922b7" title="Eigenes Sendeobjekt, damit Empfang und Senden unabhaengig arbeiten.">tx_object</a>, XMC_CAN_MO_RESET_STATUS_TX_PENDING);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">if</span> (XMC_CAN_MO_UpdateData(&amp;<a class="code" href="_c_a_nlib_8c.html#a05e91862001c792c45aac01bd94922b7" title="Eigenes Sendeobjekt, damit Empfang und Senden unabhaengig arbeiten.">tx_object</a>) != XMC_CAN_STATUS_SUCCESS) {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4ea7cda2e9044c7ecb19ec170ae67adad50">CANLIB_TX_ERROR</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">return</span> XMC_CAN_MO_Transmit(&amp;<a class="code" href="_c_a_nlib_8c.html#a05e91862001c792c45aac01bd94922b7" title="Eigenes Sendeobjekt, damit Empfang und Senden unabhaengig arbeiten.">tx_object</a>) == XMC_CAN_STATUS_SUCCESS</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        ? <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4ea19ebb7bb81a59c27a8bd1df217a8ad96">CANLIB_TX_ACCEPTED</a> : <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4ea7cda2e9044c7ecb19ec170ae67adad50">CANLIB_TX_ERROR</a>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Fre Okt 30 2026 19:21:11 für TOF_PID_PWM mit XMC14_2GO von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.3.1
+</small></address>
+</body>
+</html>

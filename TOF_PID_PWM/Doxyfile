@@ -1,5 +1,5 @@
-PROJECT_NAME = "TOF_PID_PWM fuer Einsteiger"
-OUTPUT_DIRECTORY = Debug/doxygen
+PROJECT_NAME = "TOF_PID_PWM mit XMC14_2GO"
+OUTPUT_DIRECTORY = doxygen
 OUTPUT_LANGUAGE = German
 INPUT = PID_Optimierung.md Libraries/PID.c Libraries/PID.h Libraries/UART Libraries/OLED/gui.c Libraries/OLED/gui.h Libraries/CAN/CANlib.c Libraries/CAN/CANlib.h main.c Libraries/TOF/i2cTOF.c Libraries/TOF/i2cTOF.h Libraries/TOF/tof_dave_port.inc
 FILE_PATTERNS = *.c *.h *.inc *.md

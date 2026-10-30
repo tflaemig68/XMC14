@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>TOF_PID_PWM mit XMC14_2GO: Libraries/UART/UARTprotocol.h-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">TOF_PID_PWM mit XMC14_2GO
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="pages.html"><span>Zusätzliche&#160;Informationen</span></a></li>
+      <li><a href="annotated.html"><span>Klassen</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typdefinitionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Aufzählungen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Aufzählungswerte</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Makrodefinitionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Seiten</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d2d5b60bd20db849a9486835a2715aa.html">Libraries</a></li><li class="navelem"><a class="el" href="dir_99b890b8177a4436ba88030f6ffa5a39.html">UART</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Klassen</a> &#124;
+<a href="#define-members">Makrodefinitionen</a> &#124;
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">UARTprotocol.h-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Binaerformat fuer drei int16_t-Werte und einen Parameterbefehl.  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br/>
+<code>#include &lt;stdbool.h&gt;</code><br/>
+</div>
+<p><a href="_u_a_r_tprotocol_8h_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_u_a_r_t_p_r_o_t_o___command__t.html">UARTPROTO_Command_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gemeinsam uebernommene Parameter; keine rohe Struktur uebertragen!  <a href="struct_u_a_r_t_p_r_o_t_o___command__t.html#details">Mehr ...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html">UARTPROTO_Parser_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gleitendes Empfangsfenster; vor erster Verwendung nullinitialisieren.  <a href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#details">Mehr ...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:a7dce3fabaa126ab8980d39721ad9d521"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7dce3fabaa126ab8980d39721ad9d521"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_tprotocol_8h.html#a7dce3fabaa126ab8980d39721ad9d521">UART_SETPOINT_MIN_MM</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:a7dce3fabaa126ab8980d39721ad9d521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gueltiger Sollwertbereich in mm; wird vom Hoehenregler verwendet. <br/></td></tr>
+<tr class="separator:a7dce3fabaa126ab8980d39721ad9d521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a812094af83b2a8f66942ccdb6887451c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a812094af83b2a8f66942ccdb6887451c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_tprotocol_8h.html#a812094af83b2a8f66942ccdb6887451c">UART_SETPOINT_MAX_MM</a>&#160;&#160;&#160;300</td></tr>
+<tr class="memdesc:a812094af83b2a8f66942ccdb6887451c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obere Grenze fuer empfangene Sollwerte. <br/></td></tr>
+<tr class="separator:a812094af83b2a8f66942ccdb6887451c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e22ef2546641ddecd6d8b94d7f3bfb6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e22ef2546641ddecd6d8b94d7f3bfb6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_tprotocol_8h.html#a0e22ef2546641ddecd6d8b94d7f3bfb6">UART_SETPOINT_DEFAULT_MM</a>&#160;&#160;&#160;300</td></tr>
+<tr class="memdesc:a0e22ef2546641ddecd6d8b94d7f3bfb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Startwert nach Reset, nur im RAM gespeichert. <br/></td></tr>
+<tr class="separator:a0e22ef2546641ddecd6d8b94d7f3bfb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a192e44d203f432f73147a4bac65fd093"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a192e44d203f432f73147a4bac65fd093"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_tprotocol_8h.html#a192e44d203f432f73147a4bac65fd093">UARTPROTO_COMMAND_SIZE</a>&#160;&#160;&#160;13U</td></tr>
+<tr class="memdesc:a192e44d203f432f73147a4bac65fd093"><td class="mdescLeft">&#160;</td><td class="mdescRight">Laenge des Parameterbefehls inklusive Header und CRC. <br/></td></tr>
+<tr class="separator:a192e44d203f432f73147a4bac65fd093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a79caf508da803a71dd7c22f81b64aada"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_tprotocol_8h.html#a79caf508da803a71dd7c22f81b64aada">UARTPROTO_Encode</a> (uint8_t out[8], int16_t height, int16_t setpoint, int16_t pwm)</td></tr>
+<tr class="memdesc:a79caf508da803a71dd7c22f81b64aada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packt 55 AA und drei signed 16-Bit-Werte in Little Endian.  <a href="#a79caf508da803a71dd7c22f81b64aada">Mehr ...</a><br/></td></tr>
+<tr class="separator:a79caf508da803a71dd7c22f81b64aada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4915f328165a397922b0bcb8e6d856b2"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_tprotocol_8h.html#a4915f328165a397922b0bcb8e6d856b2">UARTPROTO_Crc</a> (const uint8_t *data, uint8_t length)</td></tr>
+<tr class="memdesc:a4915f328165a397922b0bcb8e6d856b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/CCITT-FALSE (Polynom 0x1021, Start 0xFFFF).  <a href="#a4915f328165a397922b0bcb8e6d856b2">Mehr ...</a><br/></td></tr>
+<tr class="separator:a4915f328165a397922b0bcb8e6d856b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78223397bab1cf59650c7431a06a9e56"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_tprotocol_8h.html#a78223397bab1cf59650c7431a06a9e56">UARTPROTO_Push</a> (<a class="el" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html">UARTPROTO_Parser_t</a> *parser, uint8_t byte, <a class="el" href="struct_u_a_r_t_p_r_o_t_o___command__t.html">UARTPROTO_Command_t</a> *command)</td></tr>
+<tr class="memdesc:a78223397bab1cf59650c7431a06a9e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erkennt ein vollstaendiges Parametertelegramm.  <a href="#a78223397bab1cf59650c7431a06a9e56">Mehr ...</a><br/></td></tr>
+<tr class="separator:a78223397bab1cf59650c7431a06a9e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Binaerformat fuer drei int16_t-Werte und einen Parameterbefehl. </p>
+
+<p>Definiert in Datei <a class="el" href="_u_a_r_tprotocol_8h_source.html">UARTprotocol.h</a>.</p>
+</div><h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="a4915f328165a397922b0bcb8e6d856b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t UARTPROTO_Crc </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CRC-16/CCITT-FALSE (Polynom 0x1021, Start 0xFFFF). </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Datenpuffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Anzahl Bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>CRC ohne abschliessendes XOR, nicht reflektiert. </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="_u_a_r_tprotocol_8c_source.html#l00017">17</a> der Datei <a class="el" href="_u_a_r_tprotocol_8c_source.html">UARTprotocol.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    uint16_t crc = 0xFFFFU;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">for</span> (uint8_t i = 0U; i &lt; length; ++i) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        crc ^= (uint16_t)data[i] &lt;&lt; 8U;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">for</span> (uint8_t bit = 0U; bit &lt; 8U; ++bit) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            crc = (uint16_t)((crc &lt;&lt; 1U) ^ ((crc &amp; 0x8000U) ? 0x1021U : 0U));</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> crc;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a79caf508da803a71dd7c22f81b64aada"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UARTPROTO_Encode </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>out</em>[8], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&#160;</td>
+          <td class="paramname"><em>setpoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&#160;</td>
+          <td class="paramname"><em>pwm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Packt 55 AA und drei signed 16-Bit-Werte in Little Endian. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>Puffer mit mindestens acht Bytes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>Hoehe in mm, -1 bedeutet ungueltig. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">setpoint</td><td>Hoehensollwert in mm. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pwm</td><td>PWM-Sollwert in ganzen Prozent. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definiert in Zeile <a class="el" href="_u_a_r_tprotocol_8c_source.html#l00006">6</a> der Datei <a class="el" href="_u_a_r_tprotocol_8c_source.html">UARTprotocol.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">const</span> int16_t values[3] = {height, setpoint, pwm};</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    out[0] = 0x55U;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    out[1] = 0xAAU;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">for</span> (uint8_t i = 0U; i &lt; 3U; ++i) {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        uint16_t bits = (uint16_t)values[i];</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        out[2U + 2U*i] = (uint8_t)bits;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        out[3U + 2U*i] = (uint8_t)(bits &gt;&gt; 8U);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a78223397bab1cf59650c7431a06a9e56"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UARTPROTO_Push </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html">UARTPROTO_Parser_t</a> *&#160;</td>
+          <td class="paramname"><em>parser</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>byte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_u_a_r_t_p_r_o_t_o___command__t.html">UARTPROTO_Command_t</a> *&#160;</td>
+          <td class="paramname"><em>command</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Erkennt ein vollstaendiges Parametertelegramm. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">parser</td><td>Empfangszustand. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">byte</td><td>Neues Byte. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">command</td><td>Nur bei true werden alle Felder gemeinsam beschrieben. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>true bei Header A5 5A, Gruppe 1..32, Sollwert 0..300 und CRC.</dd></dl>
+<p>Format: A5 5A Gruppe Soll_L Soll_H KP_L KP_H KI_L KI_H KD_L KD_H CRC_L CRC_H. CRC ueber die ersten 11 Bytes, alle int16 Little Endian. KP/KI/KD werden durch 100 geteilt. Negative Verstaerkungen sind zugelassen. Fehlerhafte Fenster werden um ein Byte verschoben; alte 6-Byte-Befehle werden nicht mehr als eigenstaendige Befehle unterstuetzt. </p>
+
+<p>Definiert in Zeile <a class="el" href="_u_a_r_tprotocol_8c_source.html#l00037">37</a> der Datei <a class="el" href="_u_a_r_tprotocol_8c_source.html">UARTprotocol.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    uint16_t crc;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    int16_t setpoint;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span> (parser == NULL || command == NULL) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#aaff1e86633443cf3219af71fa9fe7f9c">count</a> &gt;= <a class="code" href="_u_a_r_tprotocol_8h.html#a192e44d203f432f73147a4bac65fd093" title="Laenge des Parameterbefehls inklusive Header und CRC.">UARTPROTO_COMMAND_SIZE</a>) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">for</span> (uint8_t i = 0U; i &lt; <a class="code" href="_u_a_r_tprotocol_8h.html#a192e44d203f432f73147a4bac65fd093" title="Laenge des Parameterbefehls inklusive Header und CRC.">UARTPROTO_COMMAND_SIZE</a> - 1U; ++i) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#a97aa168c0fdaf35263856812712fad70">bytes</a>[i] = parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#a97aa168c0fdaf35263856812712fad70">bytes</a>[i+1U];</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#aaff1e86633443cf3219af71fa9fe7f9c">count</a> = <a class="code" href="_u_a_r_tprotocol_8h.html#a192e44d203f432f73147a4bac65fd093" title="Laenge des Parameterbefehls inklusive Header und CRC.">UARTPROTO_COMMAND_SIZE</a> - 1U;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#a97aa168c0fdaf35263856812712fad70">bytes</a>[parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#aaff1e86633443cf3219af71fa9fe7f9c">count</a>++] = byte;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#aaff1e86633443cf3219af71fa9fe7f9c">count</a> != <a class="code" href="_u_a_r_tprotocol_8h.html#a192e44d203f432f73147a4bac65fd093" title="Laenge des Parameterbefehls inklusive Header und CRC.">UARTPROTO_COMMAND_SIZE</a> ||</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#a97aa168c0fdaf35263856812712fad70">bytes</a>[0] != 0xA5U || parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#a97aa168c0fdaf35263856812712fad70">bytes</a>[1] != 0x5AU) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    setpoint = <a class="code" href="_u_a_r_tprotocol_8c.html#a3c9530b464083b21da5b15d8c965a4c9" title="Dekodiert int16 portabel ohne vorzeichenbehafteten Rechts-Shift.">read_signed</a>(&amp;parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#a97aa168c0fdaf35263856812712fad70">bytes</a>[3]);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    crc = (uint16_t)((uint16_t)parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#a97aa168c0fdaf35263856812712fad70">bytes</a>[11] | ((uint16_t)parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#a97aa168c0fdaf35263856812712fad70">bytes</a>[12] &lt;&lt; 8U));</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span> (parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#a97aa168c0fdaf35263856812712fad70">bytes</a>[2] &lt; 1U || parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#a97aa168c0fdaf35263856812712fad70">bytes</a>[2] &gt; 32U ||</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        setpoint &lt; UART_SETPOINT_MIN_MM || setpoint &gt; <a class="code" href="_u_a_r_tprotocol_8h.html#a812094af83b2a8f66942ccdb6887451c" title="Obere Grenze fuer empfangene Sollwerte.">UART_SETPOINT_MAX_MM</a> ||</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        crc != <a class="code" href="_u_a_r_tprotocol_8c.html#a4915f328165a397922b0bcb8e6d856b2" title="CRC-16/CCITT-FALSE (Polynom 0x1021, Start 0xFFFF).">UARTPROTO_Crc</a>(parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#a97aa168c0fdaf35263856812712fad70">bytes</a>, 11U)) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    command-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___command__t.html#a3589621959af1ac275e1b1424ec98602">group</a> = parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#a97aa168c0fdaf35263856812712fad70">bytes</a>[2];</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    command-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___command__t.html#ae8cf4461464b98dcbf1db6b1652fe830">setpoint</a> = setpoint;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    command-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___command__t.html#a13555da25b2d0f484bda4b28030ef50f">kp</a> = <a class="code" href="_u_a_r_tprotocol_8c.html#a3c9530b464083b21da5b15d8c965a4c9" title="Dekodiert int16 portabel ohne vorzeichenbehafteten Rechts-Shift.">read_signed</a>(&amp;parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#a97aa168c0fdaf35263856812712fad70">bytes</a>[5]);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    command-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___command__t.html#aafbc0cfb67cf4e845af4f6e9cdb16fd5">ki</a> = <a class="code" href="_u_a_r_tprotocol_8c.html#a3c9530b464083b21da5b15d8c965a4c9" title="Dekodiert int16 portabel ohne vorzeichenbehafteten Rechts-Shift.">read_signed</a>(&amp;parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#a97aa168c0fdaf35263856812712fad70">bytes</a>[7]);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    command-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___command__t.html#aa69d9c8a214ce9b046484d639dbbe2dd">kd</a> = <a class="code" href="_u_a_r_tprotocol_8c.html#a3c9530b464083b21da5b15d8c965a4c9" title="Dekodiert int16 portabel ohne vorzeichenbehafteten Rechts-Shift.">read_signed</a>(&amp;parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#a97aa168c0fdaf35263856812712fad70">bytes</a>[9]);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    parser-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#aaff1e86633443cf3219af71fa9fe7f9c">count</a> = 0U;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Fre Okt 30 2026 19:21:11 für TOF_PID_PWM mit XMC14_2GO von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.3.1
+</small></address>
+</body>
+</html>

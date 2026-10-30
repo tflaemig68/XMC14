@@ -1,0 +1,559 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>TOF_PID_PWM mit XMC14_2GO: main.c Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">TOF_PID_PWM mit XMC14_2GO
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="pages.html"><span>Zusätzliche&#160;Informationen</span></a></li>
+      <li><a href="annotated.html"><span>Klassen</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typdefinitionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Aufzählungen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Aufzählungswerte</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Makrodefinitionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Seiten</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">main.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="main_8c.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;DAVE.h&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_p_i_d_8h.html" title="Zeitdiskreter PID-Regler mit begrenztem Ausgang.">Libraries/PID.h</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_c_a_nlib_8h.html" title="Parametrierbarer Classic-CAN-Sender und -Empfaenger fuer KIT_XMC14_2Go.">Libraries/CAN/CANlib.h</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_u_a_r_tlib_8h.html" title="UART Ein-/Ausgabe ueber den USB-COM-Port des KIT_XMC14_2Go.">Libraries/UART/UARTlib.h</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_u_a_r_tprotocol_8h.html" title="Binaerformat fuer drei int16_t-Werte und einen Parameterbefehl.">Libraries/UART/UARTprotocol.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="i2c_t_o_f_8h.html" title="VL53L0X-Entfernungssensor: Schnittstelle und Datentypen.">Libraries/TOF/i2cTOF.h</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;Libraries/OLED/oled.h&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;Libraries/OLED/gui.h&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;Libraries/OLED/test.h&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="main_8c.html#a8aa85ae9867fabf70ec72cd3bf6fb6b9">   41</a></span>&#160;<span class="preprocessor">#define LED1 XMC_GPIO_PORT0, 7</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="main_8c.html#ad09fe5bf321b9a2de26bd5e5b9af6424">   43</a></span>&#160;<span class="preprocessor">#define LED2 XMC_GPIO_PORT0, 6</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="main_8c.html#a696110b28f7e1c4567a2b9421cf10441">   45</a></span>&#160;<span class="preprocessor">#define TOF_PROFILE TOF_DEFAULT_MODE_D</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="main_8c.html#afcf8f87c06c01474c990e22adc78ce3d">   48</a></span>&#160;<span class="preprocessor">#define PWMset_Periode_ms 50U</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="main_8c.html#a8e068a05c6d2bc99f8ba4692fb612b36">   50</a></span>&#160;<span class="preprocessor">#define HEIGHT_PID_KP (0.333333f)</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="main_8c.html#aa7595baca551625b5c402fa114b46750">   52</a></span>&#160;<span class="preprocessor">#define HEIGHT_PID_KI (0.1f)</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="main_8c.html#af3634d3a76aacf7c917d12dc7d8e9d40">   54</a></span>&#160;<span class="preprocessor">#define HEIGHT_PID_KD (0.02f)</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="main_8c.html#a4ac75c4324ab869f6e5a3beb74b846e8">   56</a></span>&#160;<span class="preprocessor">#define HEIGHT_MEASUREMENT_TIMEOUT_MS 250U</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="code" href="main_8c.html#aa68db511049a4c934edfb50641877209">   58</a></span>&#160;<span class="preprocessor">#define HEIGHT_CONTROL_TIMEOUT_MS 500U</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="main_8c.html#a4e7ebaeadbcccaa48c3f850212da2b87">   60</a></span>&#160;<a class="code" href="struct_p_i_d_contr__t.html" title="Parameter und Gedaechtnis eines einzelnen Reglers.">PIDContr_t</a> <a class="code" href="main_8c.html#a4e7ebaeadbcccaa48c3f850212da2b87" title="Reglerparameter und Verlauf, im Debugger beobachtbar.">height_pid</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="main_8c.html#a013fca36080becfd6b8b4c1c05462733">   63</a></span>&#160;<span class="preprocessor">#define TOF_CAN_PERIOD_MS 50U</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="main_8c.html#a6251c5fdd8c5fa30b9bfe744a0bd0288">   65</a></span>&#160;<span class="preprocessor">#define TOF_CAN_INVALID_MM UINT16_MAX</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="main_8c.html#a1000b4cb74dd640169f987f3af60cb41">   68</a></span>&#160;<span class="preprocessor">#define TOF_SCOPE_LIMIT_MM 300U</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="main_8c.html#a55e4ab6dafab803720a07d60671b53e3">   70</a></span>&#160;<span class="keyword">static</span> <a class="code" href="struct_g_u_i___scope__t.html" title="Zustand eines einkanaligen OLED-Oszilloskops ohne Bildpuffer.">GUI_Scope_t</a> <a class="code" href="main_8c.html#a55e4ab6dafab803720a07d60671b53e3" title="Zustand des laufenden OLED-Plots; keine gespeicherte Messwertliste.">tof_scope</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="main_8c.html#ac8e992852a66d3980a95d15dc70f5678">   72</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="main_8c.html#ac8e992852a66d3980a95d15dc70f5678" title="Sperrt Textausgaben, solange die Grafik den Bildschirm nutzt.">scope_active</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="code" href="main_8c.html#a1c7358a9915f7431df9a42bb250c2cf6">   75</a></span>&#160;<span class="preprocessor">#define TOF_MEAN_WINDOW_SIZE 4U</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">/* Die Summe passt bei maximal 65535 Werten vom Typ uint16_t in uint32_t. */</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#if (TOF_MEAN_WINDOW_SIZE &lt; 1U) || (TOF_MEAN_WINDOW_SIZE &gt; 65535U)</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#error &quot;TOF_MEAN_WINDOW_SIZE muss zwischen 1 und 65535 liegen&quot;</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor"></span><span class="comment">//#define TOF_PROFILE TOF_HIGH_ACCURACY_MODE_A</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="main_8c.html#a4e8a6555599b84c9f9dce9d40c3211a3">   90</a></span>&#160;<span class="preprocessor">#define DisplayRate 4*(TOF_Sensor_1.Ranging_Profile_time + 5U)</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="code" href="tof__dave__port_8inc.html#a538854b06be9b14ee04d43b6341526db">   97</a></span>&#160;<span class="keyword">volatile</span> uint32_t <a class="code" href="main_8c.html#a538854b06be9b14ee04d43b6341526db" title="Seit Timerstart vergangene Millisekunden.">SysTickCounter</a> = 0U;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="code" href="main_8c.html#a2c14ae6c1be812dd83c3cdd01f871d4c">   99</a></span>&#160;<a class="code" href="struct_t_o_f_sensor.html" title="Buendelt Bus, Einstellungen und Ergebnis eines Sensors.">TOFSensor_t</a> <a class="code" href="main_8c.html#a2c14ae6c1be812dd83c3cdd01f871d4c" title="Bus, Einstellungen und letzter Messwert des einzigen Sensors.">TOF_Sensor_1</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26">  101</a></span>&#160;<span class="keyword">volatile</span> <span class="keywordtype">bool</span> <a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="code" href="main_8c.html#ae38d19b198689bf5e05911de9e29fbc2">  103</a></span>&#160;<span class="keyword">volatile</span> uint32_t <a class="code" href="main_8c.html#ae38d19b198689bf5e05911de9e29fbc2" title="Anzahl erkannter TOF-Fehler; im Debugger beobachtbar.">tof_error_count</a> = 0U;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="code" href="main_8c.html#a5bf0e1b89e479db54f3f875e7faa0bd7">  106</a></span>&#160;int16_t <a class="code" href="main_8c.html#a5bf0e1b89e479db54f3f875e7faa0bd7" title="Wirksamer Hoehensollwert in mm; wird von UART oder CAN bestimmt.">TOF_Setpoint_mm</a> = <a class="code" href="_u_a_r_tprotocol_8h.html#a0e22ef2546641ddecd6d8b94d7f3bfb6" title="Startwert nach Reset, nur im RAM gespeichert.">UART_SETPOINT_DEFAULT_MM</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="main_8c.html#a6aa0f09f32702f8ebb2d00e16076e199">  108</a></span>&#160;int16_t <a class="code" href="main_8c.html#a6aa0f09f32702f8ebb2d00e16076e199" title="UART-Vorgabe: 0 waehlt CAN als Quelle, sonst direkter Sollwert.">UART_Setpoint_mm</a> = <a class="code" href="_u_a_r_tprotocol_8h.html#a0e22ef2546641ddecd6d8b94d7f3bfb6" title="Startwert nach Reset, nur im RAM gespeichert.">UART_SETPOINT_DEFAULT_MM</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="code" href="main_8c.html#a2839a834b9961caa0ebbdbfb876b65df">  110</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="main_8c.html#a2839a834b9961caa0ebbdbfb876b65df" title="true nach passendem CAN-Sollwert seit Gruppen-/Quellenwechsel.">can_setpoint_valid</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="main_8c.html#a05108fefd06d4101941289f7d7b7546e">  112</a></span>&#160;<span class="keyword">volatile</span> uint32_t <a class="code" href="main_8c.html#a05108fefd06d4101941289f7d7b7546e" title="Anzahl gueltiger, fuer die eigene Gruppe uebernommener Sollwerte.">can_setpoint_count</a> = 0U;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="code" href="main_8c.html#a2b5bfed5342abbd3304af58a766589f2">  114</a></span>&#160;<span class="preprocessor">#define TOF_CAN_TX_BASE_ID 0x100UL</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="code" href="main_8c.html#a8bae3146329fe0876d4af0908badf62a">  116</a></span>&#160;uint8_t <a class="code" href="main_8c.html#a8bae3146329fe0876d4af0908badf62a" title="Aktuelle Gruppe fuer Titel, CAN-TX-ID und CAN-Sollwertfilter; 0 bis UART-Empfang.">UART_Group</a> = 0U;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="code" href="main_8c.html#a8d6fe4fbc6db65edf2761aca2aa98c32">  118</a></span>&#160;<span class="keyword">volatile</span> uint32_t <a class="code" href="main_8c.html#a8d6fe4fbc6db65edf2761aca2aa98c32" title="Angenommene Parameterbefehle, im Debugger sichtbar.">uart_setpoint_count</a> = 0U;</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="code" href="main_8c.html#a2dcb22a2a7cd727eff60d6df205fcd6a">  120</a></span>&#160;<span class="keyword">volatile</span> uint32_t <a class="code" href="main_8c.html#a2dcb22a2a7cd727eff60d6df205fcd6a" title="Wegen belegtem TX-FIFO verworfene komplette Telemetriedatensaetze.">uart_tx_skipped</a> = 0U;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="code" href="main_8c.html#abc21299ff6360e8faafe0a82c67def30">  127</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="main_8c.html#abc21299ff6360e8faafe0a82c67def30" title="Uebernimmt einen bereits durch den UART-Parser geprueften Parametersatz.">TOF_UARTApply</a>(<span class="keyword">const</span> <a class="code" href="struct_u_a_r_t_p_r_o_t_o___command__t.html" title="Gemeinsam uebernommene Parameter; keine rohe Struktur uebertragen!">UARTPROTO_Command_t</a> *requested)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;{</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">float</span> kp = requested-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___command__t.html#a13555da25b2d0f484bda4b28030ef50f">kp</a> / 100.0f;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">float</span> ki = requested-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___command__t.html#aafbc0cfb67cf4e845af4f6e9cdb16fd5">ki</a> / 100.0f;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">float</span> kd = requested-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___command__t.html#aa69d9c8a214ce9b046484d639dbbe2dd">kd</a> / 100.0f;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">bool</span> source_changed = (<a class="code" href="main_8c.html#a6aa0f09f32702f8ebb2d00e16076e199" title="UART-Vorgabe: 0 waehlt CAN als Quelle, sonst direkter Sollwert.">UART_Setpoint_mm</a> == 0) != (requested-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___command__t.html#ae8cf4461464b98dcbf1db6b1652fe830">setpoint</a> == 0);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">bool</span> group_changed = <a class="code" href="main_8c.html#a8bae3146329fe0876d4af0908badf62a" title="Aktuelle Gruppe fuer Titel, CAN-TX-ID und CAN-Sollwertfilter; 0 bis UART-Empfang.">UART_Group</a> != requested-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___command__t.html#a3589621959af1ac275e1b1424ec98602">group</a>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">if</span> (source_changed || group_changed) { <a class="code" href="main_8c.html#a2839a834b9961caa0ebbdbfb876b65df" title="true nach passendem CAN-Sollwert seit Gruppen-/Quellenwechsel.">can_setpoint_valid</a> = <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">if</span> (source_changed || group_changed || height_pid.<a class="code" href="struct_p_i_d_contr__t.html#a412294956a0b94953e92508f28100222">KP</a> != kp ||</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        height_pid.<a class="code" href="struct_p_i_d_contr__t.html#af51c11609afaf9b0e8bd4ee85f9b3920">KI</a> != ki || height_pid.<a class="code" href="struct_p_i_d_contr__t.html#acd8323bc3eb9146c7bd244d1f6a29f81">KD</a> != kd) {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <a class="code" href="_p_i_d_8c.html#a93038bb6188b4f48e211519daa9b6d86" title="Loescht Integral und D-Gedaechtnis, behaelt die Parameter.">PIDclear</a>(&amp;height_pid);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="main_8c.html#a6aa0f09f32702f8ebb2d00e16076e199" title="UART-Vorgabe: 0 waehlt CAN als Quelle, sonst direkter Sollwert.">UART_Setpoint_mm</a> != requested-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___command__t.html#ae8cf4461464b98dcbf1db6b1652fe830">setpoint</a>) {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="comment">/* Ein neues Fuehrungssignal darf den aufgebauten I-Anteil nicht loeschen. */</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <a class="code" href="_p_i_d_8c.html#a9af33c30c72564df0c7d6556e14719e9" title="Unterdrueckt den D-Impuls nach Sollwertwechsel, behaelt das Integral.">PIDresetDerivative</a>(&amp;height_pid);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="main_8c.html#a8bae3146329fe0876d4af0908badf62a" title="Aktuelle Gruppe fuer Titel, CAN-TX-ID und CAN-Sollwertfilter; 0 bis UART-Empfang.">UART_Group</a> = requested-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___command__t.html#a3589621959af1ac275e1b1424ec98602">group</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="main_8c.html#a6aa0f09f32702f8ebb2d00e16076e199" title="UART-Vorgabe: 0 waehlt CAN als Quelle, sonst direkter Sollwert.">UART_Setpoint_mm</a> = requested-&gt;<a class="code" href="struct_u_a_r_t_p_r_o_t_o___command__t.html#ae8cf4461464b98dcbf1db6b1652fe830">setpoint</a>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="main_8c.html#a6aa0f09f32702f8ebb2d00e16076e199" title="UART-Vorgabe: 0 waehlt CAN als Quelle, sonst direkter Sollwert.">UART_Setpoint_mm</a> != 0) { <a class="code" href="main_8c.html#a5bf0e1b89e479db54f3f875e7faa0bd7" title="Wirksamer Hoehensollwert in mm; wird von UART oder CAN bestimmt.">TOF_Setpoint_mm</a> = <a class="code" href="main_8c.html#a6aa0f09f32702f8ebb2d00e16076e199" title="UART-Vorgabe: 0 waehlt CAN als Quelle, sonst direkter Sollwert.">UART_Setpoint_mm</a>; }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code" href="main_8c.html#a2839a834b9961caa0ebbdbfb876b65df" title="true nach passendem CAN-Sollwert seit Gruppen-/Quellenwechsel.">can_setpoint_valid</a>) { <a class="code" href="main_8c.html#a5bf0e1b89e479db54f3f875e7faa0bd7" title="Wirksamer Hoehensollwert in mm; wird von UART oder CAN bestimmt.">TOF_Setpoint_mm</a> = 0; }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    height_pid.<a class="code" href="struct_p_i_d_contr__t.html#a412294956a0b94953e92508f28100222">KP</a> = kp; height_pid.<a class="code" href="struct_p_i_d_contr__t.html#af51c11609afaf9b0e8bd4ee85f9b3920">KI</a> = ki; height_pid.<a class="code" href="struct_p_i_d_contr__t.html#acd8323bc3eb9146c7bd244d1f6a29f81">KD</a> = kd;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    ++<a class="code" href="main_8c.html#a8d6fe4fbc6db65edf2761aca2aa98c32" title="Angenommene Parameterbefehle, im Debugger sichtbar.">uart_setpoint_count</a>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="code" href="main_8c.html#a9e163251ae3720029696e9343a46d752">  157</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="main_8c.html#a9e163251ae3720029696e9343a46d752" title="Prueft einen CAN-Sollwert fuer die aktive Gruppe.">TOF_CAN_ApplySetpoint</a>(<span class="keyword">const</span> <a class="code" href="struct_c_a_n_l_i_b___message__t.html" title="Kopie einer vollstaendig empfangenen Datenbotschaft.">CANLIB_Message_t</a> *message)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;{</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    int32_t height;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    uint16_t raw;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">if</span> (message == NULL || <a class="code" href="main_8c.html#a6aa0f09f32702f8ebb2d00e16076e199" title="UART-Vorgabe: 0 waehlt CAN als Quelle, sonst direkter Sollwert.">UART_Setpoint_mm</a> != 0 || UART_Group &lt; 1U || UART_Group &gt; 32U ||</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        message-&gt;<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a0897516fba1a2a54425c1e80485fa2bb">id</a> != <a class="code" href="_c_a_nlib_8h.html#abd4c7b490a2f75f53ddc6bdc4f45745a" title="Exakt zu empfangende ID, ohne Verschiebung oder zusaetzliche Flagbits.">CANLIB_RX_ID</a> || message-&gt;<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a1f0c033021008352a5a17d2007e353ff">id_bits</a> != <a class="code" href="_c_a_nlib_8h.html#af07e75ad88d76fda840ad9ab6cb7a92b" title="Laenge des Identifiers: 11 (Standard) oder 29 (Extended) Bit.">CANLIB_ID_BITS</a> ||</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        message-&gt;<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a2af8b3f23fa3947f8ddc30194d99018f">length</a> != 3U || message-&gt;<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a5d7d82448870bfeecdfdadbd3322e3d1">dlc</a> != 3U || message-&gt;<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a552b14768f2f965cde8dd0543631ea58">data</a>[0] != <a class="code" href="main_8c.html#a8bae3146329fe0876d4af0908badf62a" title="Aktuelle Gruppe fuer Titel, CAN-TX-ID und CAN-Sollwertfilter; 0 bis UART-Empfang.">UART_Group</a>) {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    raw = (uint16_t)((uint16_t)message-&gt;<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a552b14768f2f965cde8dd0543631ea58">data</a>[1] | ((uint16_t)message-&gt;<a class="code" href="struct_c_a_n_l_i_b___message__t.html#a552b14768f2f965cde8dd0543631ea58">data</a>[2] &lt;&lt; 8U));</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    height = raw &lt;= INT16_MAX ? (int32_t)raw : (int32_t)raw - 65536L;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">if</span> (height &lt; UART_SETPOINT_MIN_MM || height &gt; <a class="code" href="_u_a_r_tprotocol_8h.html#a812094af83b2a8f66942ccdb6887451c" title="Obere Grenze fuer empfangene Sollwerte.">UART_SETPOINT_MAX_MM</a>) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="main_8c.html#a5bf0e1b89e479db54f3f875e7faa0bd7" title="Wirksamer Hoehensollwert in mm; wird von UART oder CAN bestimmt.">TOF_Setpoint_mm</a> != (int16_t)height) { <a class="code" href="_p_i_d_8c.html#a9af33c30c72564df0c7d6556e14719e9" title="Unterdrueckt den D-Impuls nach Sollwertwechsel, behaelt das Integral.">PIDresetDerivative</a>(&amp;height_pid); }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="main_8c.html#a5bf0e1b89e479db54f3f875e7faa0bd7" title="Wirksamer Hoehensollwert in mm; wird von UART oder CAN bestimmt.">TOF_Setpoint_mm</a> = (int16_t)height;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="main_8c.html#a2839a834b9961caa0ebbdbfb876b65df" title="true nach passendem CAN-Sollwert seit Gruppen-/Quellenwechsel.">can_setpoint_valid</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    ++<a class="code" href="main_8c.html#a05108fefd06d4101941289f7d7b7546e" title="Anzahl gueltiger, fuer die eigene Gruppe uebernommener Sollwerte.">can_setpoint_count</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="code" href="main_8c.html#a9c083e57dffdb4548f318e160b77a018">  185</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="main_8c.html#a9c083e57dffdb4548f318e160b77a018" title="Bearbeitet empfangene Parameterbefehle mit begrenztem Aufwand.">TOF_UARTReceive</a>(uint32_t now)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keyword">static</span> <a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html" title="Gleitendes Empfangsfenster; vor erster Verwendung nullinitialisieren.">UARTPROTO_Parser_t</a> parser = {{0}, 0U};</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keyword">static</span> uint32_t last_byte = 0U;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">if</span> ((uint32_t)(now - last_byte) &gt;= 200U) { parser.<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#aaff1e86633443cf3219af71fa9fe7f9c">count</a> = 0U; }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">for</span> (uint16_t i = 0U; i &lt; 128U; ++i) {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        int16_t byte = <a class="code" href="_u_a_r_tlib_8c.html#aeb7f3b0492ee1ce82cf5a3c456a99caf" title="Holt ein Byte aus dem IRQ-Empfangspuffer, ohne auf Daten zu warten.">UARTLIB_ReadByte</a>();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <a class="code" href="struct_u_a_r_t_p_r_o_t_o___command__t.html" title="Gemeinsam uebernommene Parameter; keine rohe Struktur uebertragen!">UARTPROTO_Command_t</a> requested;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">if</span> (byte == -1) { <span class="keywordflow">break</span>; }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keywordflow">if</span> (byte == -2) { parser.<a class="code" href="struct_u_a_r_t_p_r_o_t_o___parser__t.html#aaff1e86633443cf3219af71fa9fe7f9c">count</a> = 0U; <span class="keywordflow">continue</span>; }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        last_byte = now;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="_u_a_r_tprotocol_8c.html#a78223397bab1cf59650c7431a06a9e56" title="Erkennt ein vollstaendiges Parametertelegramm.">UARTPROTO_Push</a>(&amp;parser, (uint8_t)byte, &amp;requested)) {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <a class="code" href="main_8c.html#abc21299ff6360e8faafe0a82c67def30" title="Uebernimmt einen bereits durch den UART-Parser geprueften Parametersatz.">TOF_UARTApply</a>(&amp;requested);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="code" href="main_8c.html#a22c5d1467285018a2c44c530d66e8436">  203</a></span>&#160;<span class="keyword">volatile</span> uint32_t <a class="code" href="main_8c.html#a22c5d1467285018a2c44c530d66e8436" title="Anzahl angenommener CAN-Auftraege, keine Anzahl bestaetigter Frames.">can_tx_accepted_count</a> = 0U;</div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="code" href="main_8c.html#a865d8e8b48735f203d8e8226acb33611">  205</a></span>&#160;<span class="keyword">volatile</span> uint32_t <a class="code" href="main_8c.html#a865d8e8b48735f203d8e8226acb33611" title="Anzahl wegen belegtem Sendeobjekt ausgelassener Sendeintervalle.">can_tx_busy_count</a> = 0U;</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="code" href="main_8c.html#acc29179b4cc38fa3f047ce71fa7bfd82">  207</a></span>&#160;<span class="keyword">volatile</span> uint32_t <a class="code" href="main_8c.html#acc29179b4cc38fa3f047ce71fa7bfd82" title="Anzahl abgelehnter Auftraege (z.B. Bus-off).">can_tx_error_count</a> = 0U;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno"><a class="code" href="main_8c.html#a328a31cbdde858271ff7e7eab5f292d1">  225</a></span>&#160;<span class="keyword">static</span> <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4e" title="Ergebnis der Uebergabe an das einzelne Sendeobjekt.">CANLIB_TxResult_t</a> <a class="code" href="main_8c.html#a328a31cbdde858271ff7e7eab5f292d1" title="Packt den TOF-Wert in eine 8-Byte-Botschaft und startet den Versand.">TOF_CAN_SendDistance</a>(int8_t pwm_percent, uint16_t distance_mm)</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;{</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keyword">static</span> uint8_t message_counter = 0U;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    uint8_t data[8] = {0};</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4e" title="Ergebnis der Uebergabe an das einzelne Sendeobjekt.">CANLIB_TxResult_t</a> result;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordflow">if</span> (UART_Group &lt; 1U || UART_Group &gt; 32U) { <span class="keywordflow">return</span> <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4ea7cda2e9044c7ecb19ec170ae67adad50">CANLIB_TX_ERROR</a>; }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    data[0] = message_counter &amp; 0x0FU;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="comment">/* Der Cast uebertraegt auch negative int8_t-Werte als ihr 8-Bit-Muster. */</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    data[1] = (uint8_t)pwm_percent;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    data[2] = (uint8_t)(distance_mm &amp; 0xFFU);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    data[3] = (uint8_t)(distance_mm &gt;&gt; 8U);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="comment">/* Wirksamer Sollwert, -1 solange im CAN-Betrieb noch keine Vorgabe vorliegt. */</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        uint16_t target = (<a class="code" href="main_8c.html#a6aa0f09f32702f8ebb2d00e16076e199" title="UART-Vorgabe: 0 waehlt CAN als Quelle, sonst direkter Sollwert.">UART_Setpoint_mm</a> == 0 &amp;&amp; !<a class="code" href="main_8c.html#a2839a834b9961caa0ebbdbfb876b65df" title="true nach passendem CAN-Sollwert seit Gruppen-/Quellenwechsel.">can_setpoint_valid</a>)</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            ? UINT16_MAX : (uint16_t)<a class="code" href="main_8c.html#a5bf0e1b89e479db54f3f875e7faa0bd7" title="Wirksamer Hoehensollwert in mm; wird von UART oder CAN bestimmt.">TOF_Setpoint_mm</a>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        data[4] = (uint8_t)target;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        data[5] = (uint8_t)(target &gt;&gt; 8U);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    data[6] = 2U; <span class="comment">/* Version 2 meldet zusaetzlich die Sollwertquelle. */</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    data[7] = <a class="code" href="main_8c.html#a6aa0f09f32702f8ebb2d00e16076e199" title="UART-Vorgabe: 0 waehlt CAN als Quelle, sonst direkter Sollwert.">UART_Setpoint_mm</a> == 0 ? 1U : 0U; <span class="comment">/* Bit 0: CAN-Sollwertbetrieb. */</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    result = <a class="code" href="_c_a_nlib_8c.html#a5c5b093876010b1a426b17c686ecba3b" title="Startet einen Sendeauftrag mit einer zur Laufzeit gewaehlten ID.">CANLIB_SendWithId</a>(<a class="code" href="main_8c.html#a2b5bfed5342abbd3304af58a766589f2" title="Basis der Telemetrie-IDs: Gruppe 1..32 ergibt 0x101..0x120.">TOF_CAN_TX_BASE_ID</a> + <a class="code" href="main_8c.html#a8bae3146329fe0876d4af0908badf62a" title="Aktuelle Gruppe fuer Titel, CAN-TX-ID und CAN-Sollwertfilter; 0 bis UART-Empfang.">UART_Group</a>, data, <span class="keyword">sizeof</span>(data));</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">if</span> (result == <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4ea19ebb7bb81a59c27a8bd1df217a8ad96">CANLIB_TX_ACCEPTED</a>) {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        message_counter = (uint8_t)((message_counter + 1U) &amp; 0x0FU);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        ++<a class="code" href="main_8c.html#a22c5d1467285018a2c44c530d66e8436" title="Anzahl angenommener CAN-Auftraege, keine Anzahl bestaetigter Frames.">can_tx_accepted_count</a>;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (result == <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4ea0d35f7ff9880ddc072528363a1cec5bb">CANLIB_TX_BUSY</a>) {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        ++<a class="code" href="main_8c.html#a865d8e8b48735f203d8e8226acb33611" title="Anzahl wegen belegtem Sendeobjekt ausgelassener Sendeintervalle.">can_tx_busy_count</a>;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        ++<a class="code" href="main_8c.html#acc29179b4cc38fa3f047ce71fa7bfd82" title="Anzahl abgelehnter Auftraege (z.B. Bus-off).">can_tx_error_count</a>;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="code" href="main_8c.html#a24c1f9963bd4838b47839d6b17567660">  278</a></span>&#160;<span class="keyword">static</span> uint16_t <a class="code" href="main_8c.html#a24c1f9963bd4838b47839d6b17567660" title="Berechnet den gleitenden Mittelwert der letzten gueltigen TOF-Messwerte.">TOF_MovingAverage</a>(uint16_t distance_mm)</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;{</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keyword">static</span> uint16_t samples[<a class="code" href="main_8c.html#a1c7358a9915f7431df9a42bb250c2cf6" title="Anzahl gueltiger Messwerte im gleitenden Mittelwert.">TOF_MEAN_WINDOW_SIZE</a>] = {0};</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keyword">static</span> uint32_t sum = 0U;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keyword">static</span> uint16_t next_index = 0U;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keyword">static</span> uint16_t sample_count = 0U;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="comment">/* Reichweitenfehler sind keine Entfernungen und duerfen die Summe nicht aendern. */</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordflow">if</span> (distance_mm == TOF_VL53L0X_OUT_OF_RANGE) {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">return</span> TOF_VL53L0X_OUT_OF_RANGE;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">if</span> (sample_count &lt; <a class="code" href="main_8c.html#a1c7358a9915f7431df9a42bb250c2cf6" title="Anzahl gueltiger Messwerte im gleitenden Mittelwert.">TOF_MEAN_WINDOW_SIZE</a>) {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        ++sample_count;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="comment">/* Am Schreibplatz steht bei vollem Puffer der aelteste Messwert. */</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        sum -= samples[next_index];</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    samples[next_index] = distance_mm;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    sum += distance_mm;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="comment">/* Nach dem letzten Feld wieder beim ersten beginnen: ein Ringpuffer. */</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    ++next_index;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">if</span> (next_index &gt;= <a class="code" href="main_8c.html#a1c7358a9915f7431df9a42bb250c2cf6" title="Anzahl gueltiger Messwerte im gleitenden Mittelwert.">TOF_MEAN_WINDOW_SIZE</a>) {</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        next_index = 0U;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="comment">/* Halben Divisor addieren: Ganzzahldivision rundet so zum naechsten mm.</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment">     * sample_count ist hier mindestens 1; eine Division durch 0 ist ausgeschlossen. */</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">return</span> (uint16_t)((sum + sample_count / 2U) / sample_count);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
+<div class="line"><a name="l00316"></a><span class="lineno"><a class="code" href="main_8c.html#a0adbabcbc326079477bb65bf59220b85">  316</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="main_8c.html#a0adbabcbc326079477bb65bf59220b85" title="Timer-Callback: erhoeht jede Millisekunde den Zeitzaehler.">milliSec_Handler</a>(<span class="keywordtype">void</span> *args)</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;{</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="comment">/* Bewusst unbenutzt: verhindert eine entsprechende Compilerwarnung. */</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    (void)args;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    ++<a class="code" href="main_8c.html#a538854b06be9b14ee04d43b6341526db" title="Seit Timerstart vergangene Millisekunden.">SysTickCounter</a>;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;}</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
+<div class="line"><a name="l00330"></a><span class="lineno"><a class="code" href="main_8c.html#a42ceb6e2a33ea279f41bc4a16d7b47c4">  330</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a42ceb6e2a33ea279f41bc4a16d7b47c4" title="Schaltet bei einem vom DAVE-Handler gemeldeten NACK die Fehler-LED ein.">NACK_Handler</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;{</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    XMC_GPIO_SetOutputHigh(<a class="code" href="main_8c.html#ad09fe5bf321b9a2de26bd5e5b9af6424" title="Port/Pin-Paar der Fehler-LED (P0.6).">LED2</a>);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;}</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
+<div class="line"><a name="l00342"></a><span class="lineno"><a class="code" href="main_8c.html#aa01936e3aca89d1b9f8a86f7c3eab2b6">  342</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="main_8c.html#aa01936e3aca89d1b9f8a86f7c3eab2b6" title="Schreibt eine Statuszeile oder Entfernung auf das OLED.">show_status</a>(<span class="keywordtype">char</span> *text)</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;{</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    GUI_ShowString(0, 2, text, 16, 1);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;}</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
+<div class="line"><a name="l00352"></a><span class="lineno"><a class="code" href="main_8c.html#a7f9c99986bcef475f257db8a215ef6c8">  352</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="main_8c.html#a7f9c99986bcef475f257db8a215ef6c8" title="Zeigt den Projektnamen und die Gruppe zweistellig auf Seiten 0/1.">TOF_ShowTitle</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;{</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keyword">static</span> uint8_t displayed_group = UINT8_MAX;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">char</span> title[15];</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordflow">if</span> (displayed_group == <a class="code" href="main_8c.html#a8bae3146329fe0876d4af0908badf62a" title="Aktuelle Gruppe fuer Titel, CAN-TX-ID und CAN-Sollwertfilter; 0 bis UART-Empfang.">UART_Group</a>) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    snprintf(title, <span class="keyword">sizeof</span>(title), <span class="stringliteral">&quot;TOF_PID_PWM %02u&quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)<a class="code" href="main_8c.html#a8bae3146329fe0876d4af0908badf62a" title="Aktuelle Gruppe fuer Titel, CAN-TX-ID und CAN-Sollwertfilter; 0 bis UART-Empfang.">UART_Group</a>);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    GUI_ShowString(0, 0, title, 16, 1);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    displayed_group = <a class="code" href="main_8c.html#a8bae3146329fe0876d4af0908badf62a" title="Aktuelle Gruppe fuer Titel, CAN-TX-ID und CAN-Sollwertfilter; 0 bis UART-Empfang.">UART_Group</a>;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;}</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div>
+<div class="line"><a name="l00363"></a><span class="lineno"><a class="code" href="main_8c.html#a1914f246d8d37040dc12c2b2949037d6">  363</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="main_8c.html#a1914f246d8d37040dc12c2b2949037d6" title="Loescht nur den Inhalt unterhalb der 16 Pixel hohen Titelzeile.">TOF_ClearContent</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;{</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    uint8_t empty[OLED_WIDTH] = {0};</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keywordflow">for</span> (uint8_t page = 2U; page &lt; OLED_HEIGHT / 8U; ++page) {</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        OLED_Set_Pos(0U, page);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        OLED_WriteDataS(empty, OLED_WIDTH);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    }</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;}</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;</div>
+<div class="line"><a name="l00382"></a><span class="lineno"><a class="code" href="main_8c.html#aa49ac32c746da0b954b6910b27a130ee">  382</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="main_8c.html#aa49ac32c746da0b954b6910b27a130ee" title="Schaltet die Ansicht um und zeichnet genau eine neue TOF-Messung.">TOF_UpdateScope</a>(uint16_t raw_mm)</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;{</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keywordtype">char</span> title[20];</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keywordtype">bool</span> want_scope = raw_mm &lt; <a class="code" href="main_8c.html#a1000b4cb74dd640169f987f3af60cb41" title="Unter diesem Rohabstand in mm wird das Oszilloskop angezeigt.">TOF_SCOPE_LIMIT_MM</a>;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordflow">if</span> (want_scope != <a class="code" href="main_8c.html#ac8e992852a66d3980a95d15dc70f5678" title="Sperrt Textausgaben, solange die Grafik den Bildschirm nutzt.">scope_active</a>) {</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <span class="comment">/* Titel bleibt auch beim Ansichtswechsel unveraendert sichtbar. */</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <a class="code" href="main_8c.html#a1914f246d8d37040dc12c2b2949037d6" title="Loescht nur den Inhalt unterhalb der 16 Pixel hohen Titelzeile.">TOF_ClearContent</a>();</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <span class="keywordflow">if</span> (want_scope) {</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            <a class="code" href="main_8c.html#ac8e992852a66d3980a95d15dc70f5678" title="Sperrt Textausgaben, solange die Grafik den Bildschirm nutzt.">scope_active</a> = GUI_ScopeInit(&amp;tof_scope, 0U, 2U,</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                                         OLED_WIDTH, 5U, TOF_SCOPE_LIMIT_MM);</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            snprintf(title, <span class="keyword">sizeof</span>(title), <span class="stringliteral">&quot;ta:%02ums, ymax:%03umm&quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)(TOF_Sensor_1.<a class="code" href="struct_t_o_f_sensor.html#a3fadb0d83e3e932d9c33b04a4ee6653e" title="Messabstand in ms; 0 bedeutet Messungen direkt nacheinander.">Ranging_Profile_time</a> + 5U), (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)TOF_SCOPE_LIMIT_MM);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            GUI_ShowString(0, 7, title, 8, 1);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            <a class="code" href="main_8c.html#ac8e992852a66d3980a95d15dc70f5678" title="Sperrt Textausgaben, solange die Grafik den Bildschirm nutzt.">scope_active</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        }</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    }</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="main_8c.html#ac8e992852a66d3980a95d15dc70f5678" title="Sperrt Textausgaben, solange die Grafik den Bildschirm nutzt.">scope_active</a>) { GUI_ScopePlot(&amp;tof_scope, raw_mm); }</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;}</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
+<div class="line"><a name="l00408"></a><span class="lineno"><a class="code" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">  408</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Initialisiert das Board und bearbeitet die regelmaessigen Aufgaben.">main</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;{</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="comment">/* const: Diese gemeinsam fuer beide LEDs verwendeten Einstellungen bleiben gleich. */</span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="keyword">const</span> XMC_GPIO_CONFIG_t led_config = {</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        .mode = XMC_GPIO_MODE_OUTPUT_PUSH_PULL,</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        .output_level = XMC_GPIO_OUTPUT_LEVEL_LOW</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    };</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="comment">/* DAVE_Init() richtet die im Projekt konfigurierten APPs ein. */</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    DAVE_STATUS_t status = DAVE_Init();</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    uint32_t timer_id;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <span class="comment">/* Zeitstempel der letzten Ausfuehrung, keine herunterzaehlenden Timer. */</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    uint32_t last_measurement = 0U;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    uint32_t last_display = 0U;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    uint32_t last_led = 0U;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="comment">/* Zeitstempel des letzten PWM-Sollwertupdates; Mindestabstand 50 ms. */</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    uint32_t last_pwm = 0U;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    uint32_t last_valid_measurement = 0U;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordtype">bool</span> new_measurement = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    int16_t previous_setpoint = <a class="code" href="main_8c.html#a5bf0e1b89e479db54f3f875e7faa0bd7" title="Wirksamer Hoehensollwert in mm; wird von UART oder CAN bestimmt.">TOF_Setpoint_mm</a>;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="comment">/* CAN bekommt einen eigenen Zeitstempel, unabhaengig von der Anzeige. */</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    uint32_t last_can = 0U;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    uint32_t last_uart = 0U;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <span class="keywordtype">bool</span> uart_ready;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keywordtype">bool</span> can_ready;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4e" title="Ergebnis der Uebergabe an das einzelne Sendeobjekt.">CANLIB_TxResult_t</a> can_result = <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4ea7cda2e9044c7ecb19ec170ae67adad50">CANLIB_TX_ERROR</a>;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="comment">/* Gemeinsamer Mittelwert fuer Distanzanzeige und PWM-Sollwert.</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="comment">     * distanceFromTOF bleibt der ungefilterte Sensorwert. */</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    uint16_t distance_mean_mm = TOF_VL53L0X_OUT_OF_RANGE;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="comment">/* Tastgrad in ganzen Prozent (0 bis 100), zugleich Wert der Prozentanzeige.</span></div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="comment">     * Erst beim DAVE-Aufruf wird mit 100 auf den Bereich 0 bis 10000 skaliert. */</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="comment">/* Bis zur ersten gueltigen Regelung bleibt die PWM aus. */</span></div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    uint16_t PWM_Value = 0U;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="comment">/* Platz fuer bis zu 21 Zeichen und das abschliessende Nullzeichen. */</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <span class="keywordtype">char</span> line[22];</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    XMC_GPIO_Init(<a class="code" href="main_8c.html#a8aa85ae9867fabf70ec72cd3bf6fb6b9" title="Port/Pin-Paar der LED fuer das Lebenszeichen (P0.7).">LED1</a>, &amp;led_config);</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    XMC_GPIO_Init(<a class="code" href="main_8c.html#ad09fe5bf321b9a2de26bd5e5b9af6424" title="Port/Pin-Paar der Fehler-LED (P0.6).">LED2</a>, &amp;led_config);</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keywordflow">if</span> (status != DAVE_STATUS_SUCCESS) {</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;        XMC_GPIO_SetOutputHigh(<a class="code" href="main_8c.html#ad09fe5bf321b9a2de26bd5e5b9af6424" title="Port/Pin-Paar der Fehler-LED (P0.6).">LED2</a>);</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        <span class="comment">/* Ohne funktionierende Hardware oder Zeitbasis hier bewusst anhalten. */</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        <span class="keywordflow">while</span> (1U) { }</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    }</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    PWM_SetDutyCycle(&amp;PWM_0, 0U);</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <a class="code" href="_p_i_d_8c.html#abfcbc7481bc674c0622556749e48257d" title="Initialisiert einen Regler mit Ausgang 0..100 und D-Filter 0,1 s.">PIDinit</a>(&amp;height_pid, <a class="code" href="main_8c.html#a8e068a05c6d2bc99f8ba4692fb612b36" title="P-Startwert in Prozent/mm; am realen Aufbau abstimmen.">HEIGHT_PID_KP</a>, <a class="code" href="main_8c.html#aa7595baca551625b5c402fa114b46750" title="I-Startwert in Prozent/(mm*s).">HEIGHT_PID_KI</a>, <a class="code" href="main_8c.html#af3634d3a76aacf7c917d12dc7d8e9d40" title="D-Startwert in Prozent*s/mm; Tiefpass in PIDinit: 0,1 s.">HEIGHT_PID_KD</a>,</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;            <a class="code" href="main_8c.html#afcf8f87c06c01474c990e22adc78ce3d" title="Aktualisierung des PWM-Ausgabewertes in Millisekunden.">PWMset_Periode_ms</a> / 1000.0f);</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    uart_ready = <a class="code" href="_u_a_r_tlib_8c.html#a07e1863278928fbc29302dea41f3630d" title="Initialisiert einmal nach DAVE_Init() den freien UART-Kanal.">UARTLIB_Init</a>();</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keywordflow">if</span> (!uart_ready) { XMC_GPIO_SetOutputHigh(<a class="code" href="main_8c.html#ad09fe5bf321b9a2de26bd5e5b9af6424" title="Port/Pin-Paar der Fehler-LED (P0.6).">LED2</a>); }</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    can_ready = <a class="code" href="_c_a_nlib_8c.html#a8c14400742204f2f53bb50ecb35f3510" title="Initialisiert CAN0, Pins, Bitzeit, Empfangsfilter und Sendeobjekt.">CANLIB_Init</a>();</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <span class="keywordflow">if</span> (!can_ready) {</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        XMC_GPIO_SetOutputHigh(<a class="code" href="main_8c.html#ad09fe5bf321b9a2de26bd5e5b9af6424" title="Port/Pin-Paar der Fehler-LED (P0.6).">LED2</a>);</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    }</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="comment">/* SYSTIMER erwartet Mikrosekunden: 1000 us entsprechen 1 ms.</span></div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="comment">     * Die zurueckgegebene ID identifiziert den angelegten Softwaretimer. */</span></div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    timer_id = SYSTIMER_CreateTimer(1000U, SYSTIMER_MODE_PERIODIC,</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;                                   <a class="code" href="main_8c.html#a0adbabcbc326079477bb65bf59220b85" title="Timer-Callback: erhoeht jede Millisekunde den Zeitzaehler.">milliSec_Handler</a>, NULL);</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="keywordflow">if</span> ((timer_id == 0U) || (SYSTIMER_StartTimer(timer_id) != SYSTIMER_STATUS_SUCCESS)) {</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        XMC_GPIO_SetOutputHigh(<a class="code" href="main_8c.html#ad09fe5bf321b9a2de26bd5e5b9af6424" title="Port/Pin-Paar der Fehler-LED (P0.6).">LED2</a>);</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        <span class="comment">/* Ohne funktionierende Hardware oder Zeitbasis hier bewusst anhalten. */</span></div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        <span class="keywordflow">while</span> (1U) { }</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    }</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="comment">/* Erst warten, wenn der Zeitzaehler laeuft; Sensor und Display starten mit. */</span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    delay_ms(500U);</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    OLED_Init();</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    OLED_Clear(0);</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <a class="code" href="main_8c.html#a7f9c99986bcef475f257db8a215ef6c8" title="Zeigt den Projektnamen und die Gruppe zweistellig auf Seiten 0/1.">TOF_ShowTitle</a>();</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    <a class="code" href="main_8c.html#aa01936e3aca89d1b9f8a86f7c3eab2b6" title="Schreibt eine Statuszeile oder Entfernung auf das OLED.">show_status</a>(<span class="stringliteral">&quot;Initialisierung &quot;</span>);</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    <span class="comment">/* &amp; liefert die Adresse einer Variablen. So kann die Bibliothek die</span></div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;<span class="comment">     * Originalstruktur beschreiben und das vorhandene DAVE-Handle verwenden. */</span></div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    <a class="code" href="i2c_t_o_f_8c.html#afe190388f7295267d70e2e74748b97f1" title="Legt die Anfangswerte einer Sensorstruktur im RAM an.">initTOFSensorData</a>(&amp;TOF_Sensor_1, &amp;I2C_MASTER_0,</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                      <a class="code" href="i2c_t_o_f_8h.html#a55ef6eb707bed6571b566a641f212b7da2f1e915301ccb62bba90c1d740cb39bb" title="VL53LOX sensor address.">TOF_ADDR_VL53LOX</a>, <a class="code" href="main_8c.html#a696110b28f7e1c4567a2b9421cf10441" title="Standardprofil mit 30 ms Messbudget.">TOF_PROFILE</a>, 0U);</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    <span class="comment">/* Reihenfolge: Sensor pruefen/kalibrieren, Profil setzen, Dauermessung starten.</span></div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;<span class="comment">     * Jeder folgende Schritt wird nur nach Erfolg des vorherigen ausgefuehrt. */</span></div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    <a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a> = <a class="code" href="i2c_t_o_f_8c.html#a843cf245c7d427dc924d493e9c8fd81a" title="Prueft und initialisiert den VL53L0X.">TOF_init</a>(&amp;TOF_Sensor_1);</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a>) {</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        <a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a> = <a class="code" href="i2c_t_o_f_8c.html#af2c5f65ada0ae910861e5c5dc6f7ebf1" title="Uebertraegt das in der Struktur gewaehlte Messprofil.">TOF_set_ranging_profile</a>(&amp;TOF_Sensor_1);</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;    }</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a>) {</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;        TOF_Sensor_1.<a class="code" href="struct_t_o_f_sensor.html#acadb7c77128f7da848dd6c659245ee09" title="Freigabewunsch der Anwendung; kein automatischer Hardware-Ein/Aus-Schalter.">enableTOFSensor</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;        <a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a> = <a class="code" href="i2c_t_o_f_8c.html#a49752b429ba1c075a898f9eb9334fbcb" title="Startet wiederholte Messungen ohne weitere Startbefehle.">TOF_start_continuous</a>(&amp;TOF_Sensor_1);</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    }</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a>) {</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;        TOF_Sensor_1.<a class="code" href="struct_t_o_f_sensor.html#acadb7c77128f7da848dd6c659245ee09" title="Freigabewunsch der Anwendung; kein automatischer Hardware-Ein/Aus-Schalter.">enableTOFSensor</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        ++<a class="code" href="main_8c.html#ae38d19b198689bf5e05911de9e29fbc2" title="Anzahl erkannter TOF-Fehler; im Debugger beobachtbar.">tof_error_count</a>;</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        XMC_GPIO_SetOutputHigh(<a class="code" href="main_8c.html#ad09fe5bf321b9a2de26bd5e5b9af6424" title="Port/Pin-Paar der Fehler-LED (P0.6).">LED2</a>);</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        <a class="code" href="main_8c.html#aa01936e3aca89d1b9f8a86f7c3eab2b6" title="Schreibt eine Statuszeile oder Entfernung auf das OLED.">show_status</a>(<span class="stringliteral">&quot;TOF Init-Fehler  &quot;</span>);</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    }</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    last_pwm = <a class="code" href="main_8c.html#a538854b06be9b14ee04d43b6341526db" title="Seit Timerstart vergangene Millisekunden.">SysTickCounter</a>;</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    <span class="comment">/* 1U ist immer wahr: Ein Mikrocontroller arbeitet normalerweise dauerhaft. */</span></div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    <span class="keywordflow">while</span> (1U) {</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        <span class="comment">/* Einmal lesen: Alle Aufgaben dieses Durchlaufs nutzen denselben Zeitwert.</span></div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;<span class="comment">         * Unsigned-Subtraktion funktioniert auch ueber den Zaehlerueberlauf,</span></div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;<span class="comment">         * solange die betrachteten Zeitabstaende kleiner als ein Umlauf sind. */</span></div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;        uint32_t now = <a class="code" href="main_8c.html#a538854b06be9b14ee04d43b6341526db" title="Seit Timerstart vergangene Millisekunden.">SysTickCounter</a>;</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;        <span class="keywordflow">if</span> (uart_ready) { <a class="code" href="main_8c.html#a9c083e57dffdb4548f318e160b77a018" title="Bearbeitet empfangene Parameterbefehle mit begrenztem Aufwand.">TOF_UARTReceive</a>(now); }</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        <span class="keywordflow">if</span> (can_ready) {</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;            <a class="code" href="struct_c_a_n_l_i_b___message__t.html" title="Kopie einer vollstaendig empfangenen Datenbotschaft.">CANLIB_Message_t</a> message;</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="_c_a_nlib_8c.html#a742f7c1f053b5589032abf5d81e649cd" title="Fragt ohne Warten auf eine neue Botschaft das Empfangsobjekt ab.">CANLIB_Receive</a>(&amp;message)) { (void)<a class="code" href="main_8c.html#a9e163251ae3720029696e9343a46d752" title="Prueft einen CAN-Sollwert fuer die aktive Gruppe.">TOF_CAN_ApplySetpoint</a>(&amp;message); }</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        }</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;        <a class="code" href="main_8c.html#a7f9c99986bcef475f257db8a215ef6c8" title="Zeigt den Projektnamen und die Gruppe zweistellig auf Seiten 0/1.">TOF_ShowTitle</a>();</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        <span class="comment">/* &amp;&amp; verlangt beide Bedingungen: Sensor bereit UND genug Zeit vergangen.</span></div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;<span class="comment">         * Die 5 ms Zugabe sind ein kleiner Abstand zum vorgesehenen Messbudget. */</span></div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a> &amp;&amp; (uint32_t)(now - last_measurement) &gt;=</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;                         TOF_Sensor_1.<a class="code" href="struct_t_o_f_sensor.html#a3fadb0d83e3e932d9c33b04a4ee6653e" title="Messabstand in ms; 0 bedeutet Messungen direkt nacheinander.">Ranging_Profile_time</a> + 5U) {</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;            last_measurement = now;</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;            <span class="comment">/* ! kehrt den Wahrheitswert um: Dieser Zweig behandelt einen Fehler. */</span></div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="i2c_t_o_f_8c.html#a6001239ce4ed2c4f604ce7803b849b8c" title="Liest eine Entfernung im laufenden Dauerbetrieb.">TOF_read_continuous_distance</a>(&amp;TOF_Sensor_1)) {</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;                ++<a class="code" href="main_8c.html#ae38d19b198689bf5e05911de9e29fbc2" title="Anzahl erkannter TOF-Fehler; im Debugger beobachtbar.">tof_error_count</a>;</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;                <a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;                TOF_Sensor_1.<a class="code" href="struct_t_o_f_sensor.html#acadb7c77128f7da848dd6c659245ee09" title="Freigabewunsch der Anwendung; kein automatischer Hardware-Ein/Aus-Schalter.">enableTOFSensor</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;                XMC_GPIO_SetOutputHigh(<a class="code" href="main_8c.html#ad09fe5bf321b9a2de26bd5e5b9af6424" title="Port/Pin-Paar der Fehler-LED (P0.6).">LED2</a>);</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;                <a class="code" href="main_8c.html#aa49ac32c746da0b954b6910b27a130ee" title="Schaltet die Ansicht um und zeichnet genau eine neue TOF-Messung.">TOF_UpdateScope</a>(TOF_VL53L0X_OUT_OF_RANGE);</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;                <a class="code" href="main_8c.html#aa01936e3aca89d1b9f8a86f7c3eab2b6" title="Schreibt eine Statuszeile oder Entfernung auf das OLED.">show_status</a>(<span class="stringliteral">&quot;TOF Lesefehler   &quot;</span>);</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;                <span class="comment">/* Jede neue Messung genau einmal in die Mittelwertbildung geben. */</span></div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;                distance_mean_mm = <a class="code" href="main_8c.html#a24c1f9963bd4838b47839d6b17567660" title="Berechnet den gleitenden Mittelwert der letzten gueltigen TOF-Messwerte.">TOF_MovingAverage</a>(TOF_Sensor_1.<a class="code" href="struct_t_o_f_sensor.html#af0d765e18d8101cf6ff594d7808c2af9" title="Letzte Entfernung in mm oder TOF_VL53L0X_OUT_OF_RANGE.">distanceFromTOF</a>);</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;                <span class="keywordflow">if</span> (distance_mean_mm != TOF_VL53L0X_OUT_OF_RANGE) {</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                    last_valid_measurement = <a class="code" href="main_8c.html#a538854b06be9b14ee04d43b6341526db" title="Seit Timerstart vergangene Millisekunden.">SysTickCounter</a>;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;                    new_measurement = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;                }</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;                <a class="code" href="main_8c.html#aa49ac32c746da0b954b6910b27a130ee" title="Schaltet die Ansicht um und zeichnet genau eine neue TOF-Messung.">TOF_UpdateScope</a>(TOF_Sensor_1.<a class="code" href="struct_t_o_f_sensor.html#af0d765e18d8101cf6ff594d7808c2af9" title="Letzte Entfernung in mm oder TOF_VL53L0X_OUT_OF_RANGE.">distanceFromTOF</a>);</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;            }</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;        }</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;        <span class="comment">/* Nach Buszugriffen den Zeitwert erneut lesen. Keine Regelung mit alten Daten. */</span></div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        now = <a class="code" href="main_8c.html#a538854b06be9b14ee04d43b6341526db" title="Seit Timerstart vergangene Millisekunden.">SysTickCounter</a>;</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        <span class="keywordflow">if</span> ((<a class="code" href="main_8c.html#a6aa0f09f32702f8ebb2d00e16076e199" title="UART-Vorgabe: 0 waehlt CAN als Quelle, sonst direkter Sollwert.">UART_Setpoint_mm</a> == 0 &amp;&amp; !<a class="code" href="main_8c.html#a2839a834b9961caa0ebbdbfb876b65df" title="true nach passendem CAN-Sollwert seit Gruppen-/Quellenwechsel.">can_setpoint_valid</a>) ||</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;            !<a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a> || distance_mean_mm == TOF_VL53L0X_OUT_OF_RANGE ||</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;            (uint32_t)(now - last_valid_measurement) &gt;= <a class="code" href="main_8c.html#a4ac75c4324ab869f6e5a3beb74b846e8" title="Maximales Alter einer gueltigen Messung in ms.">HEIGHT_MEASUREMENT_TIMEOUT_MS</a> ||</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;            (uint32_t)(now - last_pwm) &gt; <a class="code" href="main_8c.html#aa68db511049a4c934edfb50641877209" title="Nach laengerer Regelpause nicht mit einem grossen I-Schritt fortsetzen.">HEIGHT_CONTROL_TIMEOUT_MS</a>) {</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;            <a class="code" href="_p_i_d_8c.html#a93038bb6188b4f48e211519daa9b6d86" title="Loescht Integral und D-Gedaechtnis, behaelt die Parameter.">PIDclear</a>(&amp;height_pid);</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;            PWM_Value = 0U;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;            PWM_SetDutyCycle(&amp;PWM_0, 0U);</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;            new_measurement = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;            last_pwm = now;</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (new_measurement &amp;&amp; (uint32_t)(now - last_pwm) &gt;= <a class="code" href="main_8c.html#afcf8f87c06c01474c990e22adc78ce3d" title="Aktualisierung des PWM-Ausgabewertes in Millisekunden.">PWMset_Periode_ms</a>) {</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;            <span class="keywordtype">float</span> output;</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;            <span class="comment">/* Ein Sollwertsprung soll keinen kuenstlichen D-Impuls ausloesen. */</span></div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="main_8c.html#a5bf0e1b89e479db54f3f875e7faa0bd7" title="Wirksamer Hoehensollwert in mm; wird von UART oder CAN bestimmt.">TOF_Setpoint_mm</a> != previous_setpoint) { <a class="code" href="_p_i_d_8c.html#a9af33c30c72564df0c7d6556e14719e9" title="Unterdrueckt den D-Impuls nach Sollwertwechsel, behaelt das Integral.">PIDresetDerivative</a>(&amp;height_pid); }</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;            previous_setpoint = <a class="code" href="main_8c.html#a5bf0e1b89e479db54f3f875e7faa0bd7" title="Wirksamer Hoehensollwert in mm; wird von UART oder CAN bestimmt.">TOF_Setpoint_mm</a>;</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;            <span class="comment">/* Sekunden aus ms: Multiplikation statt Software-Float-Division. */</span></div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;            height_pid.<a class="code" href="struct_p_i_d_contr__t.html#a4ee8eff577547b85069f3bc887b3a4e6">TA</a> = (float)(uint32_t)(now - last_pwm) * 0.001f;</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;            last_pwm = now;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;            new_measurement = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;            output = <a class="code" href="_p_i_d_8c.html#aa0d2162b3848937a9410f44be970e02b" title="Berechnet einen begrenzten Stellwert aus Sollwert minus Istwert.">PIDrun</a>(&amp;height_pid, (<span class="keywordtype">float</span>)<a class="code" href="main_8c.html#a5bf0e1b89e479db54f3f875e7faa0bd7" title="Wirksamer Hoehensollwert in mm; wird von UART oder CAN bestimmt.">TOF_Setpoint_mm</a> - (<span class="keywordtype">float</span>)distance_mean_mm);</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;            <span class="comment">/* Ganze Prozent fuer CAN/UART; DAVE erwartet Hundertstel-Prozent. */</span></div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;            PWM_Value = (uint16_t)(output + 0.5f);</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;            PWM_SetDutyCycle(&amp;PWM_0, 100U * PWM_Value);</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;        }</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;        <span class="comment">/* Langsamere Anzeige spart Buszeit; die Messung darf haeufiger erfolgen. */</span></div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="main_8c.html#ac8e992852a66d3980a95d15dc70f5678" title="Sperrt Textausgaben, solange die Grafik den Bildschirm nutzt.">scope_active</a> &amp;&amp; (uint32_t)(now - last_display) &gt;= <a class="code" href="main_8c.html#a4e8a6555599b84c9f9dce9d40c3211a3" title="Zeitabstand der Distanzanzeige in ms: vier nominelle Messintervalle.">DisplayRate</a>) {</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;            last_display = now;</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a>) {</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;                <span class="keywordflow">if</span> (distance_mean_mm == TOF_VL53L0X_OUT_OF_RANGE) {</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;                    <a class="code" href="main_8c.html#aa01936e3aca89d1b9f8a86f7c3eab2b6" title="Schreibt eine Statuszeile oder Entfernung auf das OLED.">show_status</a>(<span class="stringliteral">&quot;Ausser Reichw.   &quot;</span>);</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;                    <span class="comment">/* snprintf begrenzt die Ausgabe auf die Puffergroesse.</span></div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;<span class="comment">                     * %5u formatiert eine positive Ganzzahl mit mindestens 5 Stellen. */</span></div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;                    snprintf(line, <span class="keyword">sizeof</span>(line), <span class="stringliteral">&quot;%5u mm        &quot;</span>,</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;                             (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)distance_mean_mm);</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;                    <a class="code" href="main_8c.html#aa01936e3aca89d1b9f8a86f7c3eab2b6" title="Schreibt eine Statuszeile oder Entfernung auf das OLED.">show_status</a>(line);</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;                }</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;            }</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;            snprintf(line, <span class="keyword">sizeof</span>(line), <span class="stringliteral">&quot;Soll:%3dmm PWM:%3u%% &quot;</span>,</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;                     (<span class="keywordtype">int</span>)<a class="code" href="main_8c.html#a5bf0e1b89e479db54f3f875e7faa0bd7" title="Wirksamer Hoehensollwert in mm; wird von UART oder CAN bestimmt.">TOF_Setpoint_mm</a>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)PWM_Value);</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;            GUI_ShowString(0, 5, line, 8, 1);</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;            <span class="comment">/* Auftrag angenommen bedeutet noch nicht, dass ein Empfaenger ACK gab. */</span></div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;            <span class="comment">/* RX active: gueltiger CAN-Sollwert seit Gruppen-/Quellenwechsel.</span></div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;<span class="comment">             * Auf 21 Zeichen auffuellen, damit beim Statuswechsel keine Reste bleiben. */</span></div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;            {</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">char</span> *can_status = <a class="code" href="main_8c.html#a8bae3146329fe0876d4af0908badf62a" title="Aktuelle Gruppe fuer Titel, CAN-TX-ID und CAN-Sollwertfilter; 0 bis UART-Empfang.">UART_Group</a> == 0U ? <span class="stringliteral">&quot;CAN: keine Gruppe&quot;</span> :</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;                    !can_ready ? <span class="stringliteral">&quot;CAN Init-Fehler&quot;</span> :</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;                    <a class="code" href="_c_a_nlib_8c.html#a2f1211412527c84e4a68be4d4a802a61" title="Liefert den CAN-Knotenzustand.">CANLIB_GetState</a>() == <a class="code" href="_c_a_nlib_8h.html#a52735ffe59bbb7335c8003d8fd88bc02aa63fc84ab4eceedfe369520485e8f82c">CANLIB_STATE_BUS_OFF</a> ? <span class="stringliteral">&quot;CAN Bus-off&quot;</span> :</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;                    can_result == <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4ea0d35f7ff9880ddc072528363a1cec5bb">CANLIB_TX_BUSY</a> ? <span class="stringliteral">&quot;CAN TX busy&quot;</span> :</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;                    can_result == <a class="code" href="_c_a_nlib_8h.html#a3ae901656fb875946080798f93c93c4ea19ebb7bb81a59c27a8bd1df217a8ad96">CANLIB_TX_ACCEPTED</a> ?</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;                        (<a class="code" href="main_8c.html#a6aa0f09f32702f8ebb2d00e16076e199" title="UART-Vorgabe: 0 waehlt CAN als Quelle, sonst direkter Sollwert.">UART_Setpoint_mm</a> == 0 &amp;&amp; <a class="code" href="main_8c.html#a2839a834b9961caa0ebbdbfb876b65df" title="true nach passendem CAN-Sollwert seit Gruppen-/Quellenwechsel.">can_setpoint_valid</a> ?</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;                            <span class="stringliteral">&quot;CAN TX sent RX active&quot;</span> : <span class="stringliteral">&quot;CAN TX sent&quot;</span>) : <span class="stringliteral">&quot;CAN TX Fehler&quot;</span>;</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;                snprintf(line, <span class="keyword">sizeof</span>(line), <span class="stringliteral">&quot;%-21s&quot;</span>, can_status);</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                GUI_ShowString(0, 6, line, 8, 1);</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;            }</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;            snprintf(line, <span class="keyword">sizeof</span>(line), <span class="stringliteral">&quot;Zeit: %6lu s&quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)(now / 1000U));</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;            GUI_ShowString(0, OLED_HEIGHT / 8 - 1, line, 8, 1);</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;        }</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;        <span class="keywordflow">if</span> ((uint32_t)(now - last_led) &gt;= 1000U) {</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;            last_led = now;</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;            XMC_GPIO_ToggleOutput(<a class="code" href="main_8c.html#a8aa85ae9867fabf70ec72cd3bf6fb6b9" title="Port/Pin-Paar der LED fuer das Lebenszeichen (P0.7).">LED1</a>);</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;        }</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;        <span class="comment">/* Nach dem PWM-Update senden: Byte 1 enthaelt den gesetzten Sollwert. */</span></div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;        <span class="comment">/* CAN sendet auch bei Sensorfehler einen eindeutig ungueltigen Wert.</span></div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;<span class="comment">         * Alte Entfernungen werden damit nicht als aktuelle Messung ausgegeben. */</span></div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;        <span class="keywordflow">if</span> ((uint32_t)(now - last_can) &gt;= <a class="code" href="main_8c.html#a013fca36080becfd6b8b4c1c05462733" title="Mindestabstand der CAN-Sendeversuche in Millisekunden.">TOF_CAN_PERIOD_MS</a>) {</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;            uint16_t can_distance = (<a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a> &amp;&amp;</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;                distance_mean_mm != TOF_VL53L0X_OUT_OF_RANGE)</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;                ? distance_mean_mm : <a class="code" href="main_8c.html#a6251c5fdd8c5fa30b9bfe744a0bd0288" title="Ersatzwert bei fehlender/ungueltiger Messung; keine Entfernung.">TOF_CAN_INVALID_MM</a>;</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;            last_can = now;</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;            <span class="keywordflow">if</span> (can_ready &amp;&amp; <a class="code" href="main_8c.html#a8bae3146329fe0876d4af0908badf62a" title="Aktuelle Gruppe fuer Titel, CAN-TX-ID und CAN-Sollwertfilter; 0 bis UART-Empfang.">UART_Group</a> &gt;= 1U &amp;&amp; <a class="code" href="main_8c.html#a8bae3146329fe0876d4af0908badf62a" title="Aktuelle Gruppe fuer Titel, CAN-TX-ID und CAN-Sollwertfilter; 0 bis UART-Empfang.">UART_Group</a> &lt;= 32U) {</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;                can_result = <a class="code" href="main_8c.html#a328a31cbdde858271ff7e7eab5f292d1" title="Packt den TOF-Wert in eine 8-Byte-Botschaft und startet den Versand.">TOF_CAN_SendDistance</a>((int8_t)PWM_Value, can_distance);</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;            }</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        }</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;        <span class="comment">/* Acht Bytes: 55 AA, Hoehe, Sollwert, PWM (je int16 Little Endian).</span></div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;<span class="comment">         * Kein printf und kein Zeilenende auf dieser Leitung. */</span></div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;        <span class="keywordflow">if</span> (uart_ready &amp;&amp; (uint32_t)(now - last_uart) &gt;= <a class="code" href="_u_a_r_tlib_8h.html#a08935f8995b44dbfa931c63523d5cbb7" title="Ausgabeintervall in ms; acht Binaerbytes je Datensatz.">UARTLIB_TELEMETRY_MS</a>) {</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;            uint8_t packet[8];</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;            int16_t height = (<a class="code" href="main_8c.html#a0345ba250c02c39921c9aeb3d321fa26" title="true, solange Initialisierung und Messbetrieb erfolgreich sind.">initedTOF</a> &amp;&amp; distance_mean_mm != TOF_VL53L0X_OUT_OF_RANGE &amp;&amp;</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;                distance_mean_mm &lt;= INT16_MAX) ? (int16_t)distance_mean_mm : -1;</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;            last_uart = now;</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;            <a class="code" href="_u_a_r_tprotocol_8c.html#a79caf508da803a71dd7c22f81b64aada" title="Packt 55 AA und drei signed 16-Bit-Werte in Little Endian.">UARTPROTO_Encode</a>(packet, height, <a class="code" href="main_8c.html#a5bf0e1b89e479db54f3f875e7faa0bd7" title="Wirksamer Hoehensollwert in mm; wird von UART oder CAN bestimmt.">TOF_Setpoint_mm</a>, (int16_t)PWM_Value);</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="_u_a_r_tlib_8c.html#a908263155f2e13864fc88f90ecea438b" title="Uebergibt einen kompletten 8-Byte-Datensatz ohne Warten an TX-FIFO.">UARTLIB_Write8</a>(packet)) { ++<a class="code" href="main_8c.html#a2dcb22a2a7cd727eff60d6df205fcd6a" title="Wegen belegtem TX-FIFO verworfene komplette Telemetriedatensaetze.">uart_tx_skipped</a>; }</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;        }</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    }</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Fre Okt 30 2026 19:21:11 für TOF_PID_PWM mit XMC14_2GO von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.3.1
+</small></address>
+</body>
+</html>

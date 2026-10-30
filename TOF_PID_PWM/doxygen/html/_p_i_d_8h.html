@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>TOF_PID_PWM mit XMC14_2GO: Libraries/PID.h-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">TOF_PID_PWM mit XMC14_2GO
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="pages.html"><span>Zusätzliche&#160;Informationen</span></a></li>
+      <li><a href="annotated.html"><span>Klassen</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typdefinitionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Aufzählungen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Aufzählungswerte</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Makrodefinitionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Seiten</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d2d5b60bd20db849a9486835a2715aa.html">Libraries</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Klassen</a> &#124;
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">PID.h-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Zeitdiskreter PID-Regler mit begrenztem Ausgang.  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br/>
+<code>#include &lt;stdint.h&gt;</code><br/>
+</div>
+<p><a href="_p_i_d_8h_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_i_d_contr__t.html">PIDContr_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameter und Gedaechtnis eines einzelnen Reglers.  <a href="struct_p_i_d_contr__t.html#details">Mehr ...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a93038bb6188b4f48e211519daa9b6d86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_i_d_8h.html#a93038bb6188b4f48e211519daa9b6d86">PIDclear</a> (<a class="el" href="struct_p_i_d_contr__t.html">PIDContr_t</a> *pid)</td></tr>
+<tr class="memdesc:a93038bb6188b4f48e211519daa9b6d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loescht Integral und D-Gedaechtnis, behaelt die Parameter.  <a href="#a93038bb6188b4f48e211519daa9b6d86">Mehr ...</a><br/></td></tr>
+<tr class="separator:a93038bb6188b4f48e211519daa9b6d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9af33c30c72564df0c7d6556e14719e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_i_d_8h.html#a9af33c30c72564df0c7d6556e14719e9">PIDresetDerivative</a> (<a class="el" href="struct_p_i_d_contr__t.html">PIDContr_t</a> *pid)</td></tr>
+<tr class="memdesc:a9af33c30c72564df0c7d6556e14719e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unterdrueckt den D-Impuls nach Sollwertwechsel, behaelt das Integral.  <a href="#a9af33c30c72564df0c7d6556e14719e9">Mehr ...</a><br/></td></tr>
+<tr class="separator:a9af33c30c72564df0c7d6556e14719e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfcbc7481bc674c0622556749e48257d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_i_d_8h.html#abfcbc7481bc674c0622556749e48257d">PIDinit</a> (<a class="el" href="struct_p_i_d_contr__t.html">PIDContr_t</a> *pid, float kp, float ki, float kd, float ta)</td></tr>
+<tr class="memdesc:abfcbc7481bc674c0622556749e48257d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisiert einen Regler mit Ausgang 0..100 und D-Filter 0,1 s.  <a href="#abfcbc7481bc674c0622556749e48257d">Mehr ...</a><br/></td></tr>
+<tr class="separator:abfcbc7481bc674c0622556749e48257d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0d2162b3848937a9410f44be970e02b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_i_d_8h.html#aa0d2162b3848937a9410f44be970e02b">PIDrun</a> (<a class="el" href="struct_p_i_d_contr__t.html">PIDContr_t</a> *pid, float difference)</td></tr>
+<tr class="memdesc:aa0d2162b3848937a9410f44be970e02b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Berechnet einen begrenzten Stellwert aus Sollwert minus Istwert.  <a href="#aa0d2162b3848937a9410f44be970e02b">Mehr ...</a><br/></td></tr>
+<tr class="separator:aa0d2162b3848937a9410f44be970e02b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Zeitdiskreter PID-Regler mit begrenztem Ausgang. </p>
+<p>Nach regler.c.demo V2.1 von Prof Flaemig (Aug. 2025). Lizenz der Vorlage: CC BY-NC-SA 4.0; diese Bearbeitung unter gleicher Lizenz. </p>
+
+<p>Definiert in Datei <a class="el" href="_p_i_d_8h_source.html">PID.h</a>.</p>
+</div><h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="a93038bb6188b4f48e211519daa9b6d86"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PIDclear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_p_i_d_contr__t.html">PIDContr_t</a> *&#160;</td>
+          <td class="paramname"><em>pid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loescht Integral und D-Gedaechtnis, behaelt die Parameter. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pid</td><td>Reglerzustand; NULL wird ignoriert. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definiert in Zeile <a class="el" href="_p_i_d_8c_source.html#l00084">84</a> der Datei <a class="el" href="_p_i_d_8c_source.html">PID.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span> (pid==NULL) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a8add34d67767876f78b3055477fe0def">ISUM</a>=0.0f;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="_p_i_d_8c.html#a9af33c30c72564df0c7d6556e14719e9" title="Unterdrueckt den D-Impuls nach Sollwertwechsel, behaelt das Integral.">PIDresetDerivative</a>(pid);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">/* Gueltige Koeffizienten bleiben erhalten: Zustand loeschen kostet keine Division. */</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="abfcbc7481bc674c0622556749e48257d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PIDinit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_p_i_d_contr__t.html">PIDContr_t</a> *&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ki</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialisiert einen Regler mit Ausgang 0..100 und D-Filter 0,1 s. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pid</td><td>Reglerzustand. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">kp</td><td>P-Verstaerkung. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ki</td><td>I-Verstaerkung. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">kd</td><td>D-Verstaerkung. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ta</td><td>Abtastzeit in Sekunden (groesser als null). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definiert in Zeile <a class="el" href="_p_i_d_8c_source.html#l00096">96</a> der Datei <a class="el" href="_p_i_d_8c_source.html">PID.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (pid==NULL) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a412294956a0b94953e92508f28100222">KP</a>=kp; pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#af51c11609afaf9b0e8bd4ee85f9b3920">KI</a>=ki; pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#acd8323bc3eb9146c7bd244d1f6a29f81">KD</a>=kd; pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a4ee8eff577547b85069f3bc887b3a4e6">TA</a>=ta;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a1d8fda1426d76117171c1887689f4f56">minimum</a>=0.0f; pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#adf8166c9c510b3097204f18e28f17b2d">maximum</a>=100.0f; pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a6e31508f313dbc18670e653756384379">filter_time</a>=0.1f;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#af513b8cc6d6127a2b481bb52e28349a8">coefficients_valid</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="_p_i_d_8c.html#a93038bb6188b4f48e211519daa9b6d86" title="Loescht Integral und D-Gedaechtnis, behaelt die Parameter.">PIDclear</a>(pid);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    (void)<a class="code" href="_p_i_d_8c.html#a0423315d68ef7207ed0044f7983b2fdb" title="Aktualisiert den Koeffizientencache bei geaenderten Parametern.">PIDprepare</a>(pid);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a9af33c30c72564df0c7d6556e14719e9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PIDresetDerivative </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_p_i_d_contr__t.html">PIDContr_t</a> *&#160;</td>
+          <td class="paramname"><em>pid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unterdrueckt den D-Impuls nach Sollwertwechsel, behaelt das Integral. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pid</td><td>Reglerzustand; NULL wird ignoriert.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Im naechsten Schritt wird keine Fehlersteigung berechnet. Das bereits aufgebaute Integral bleibt erhalten und integriert normal weiter. </p>
+
+<p>Definiert in Zeile <a class="el" href="_p_i_d_8c_source.html#l00091">91</a> der Datei <a class="el" href="_p_i_d_8c_source.html">PID.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> (pid==NULL) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a720dd8c3edf0de171e1d39d64ca656ac">InpOld</a>=0.0f; pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a151d5b1864ad01d42c1b58fa455e6cba">derivative</a>=0.0f; pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#ac509e4c645d419122492669e149b098c">started</a>=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aa0d2162b3848937a9410f44be970e02b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PIDrun </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_p_i_d_contr__t.html">PIDContr_t</a> *&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>difference</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Berechnet einen begrenzten Stellwert aus Sollwert minus Istwert. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pid</td><td>Reglerzustand und Parameter. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">difference</td><td>Regelfehler in Eingangseinheiten, hier mm. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Stellwert innerhalb minimum..maximum; bei ungueltigen Zahlen 0.</dd></dl>
+<p>KI*TA, KD/TA und der D-Filterkoeffizient werden nur bei Aenderung neu berechnet. Bei unveraenderten Parametern ist der Regelschritt divisionsfrei; bei KD=0 entfaellt auch die D-Berechnung. Reale TA-Aenderungen werden erkannt. P reagiert sofort, I beseitigt bleibende Abweichungen, D daempft schnelle Aenderungen. Der erste Schritt hat keinen D-Impuls. Bedingte Integration verhindert weiteres Aufladen in Richtung einer Saettigung. Bei Sollwertsprung <a class="el" href="_p_i_d_8c.html#a9af33c30c72564df0c7d6556e14719e9" title="Unterdrueckt den D-Impuls nach Sollwertwechsel, behaelt das Integral.">PIDresetDerivative()</a> verwenden, um D-Kick zu vermeiden und den I-Anteil zu erhalten. <a class="el" href="_p_i_d_8c.html#a93038bb6188b4f48e211519daa9b6d86" title="Loescht Integral und D-Gedaechtnis, behaelt die Parameter.">PIDclear()</a> nur fuer einen vollstaendigen Reset. </p>
+
+<p>Definiert in Zeile <a class="el" href="_p_i_d_8c_source.html#l00105">105</a> der Datei <a class="el" href="_p_i_d_8c_source.html">PID.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">float</span> increment,integral,base,output;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">if</span> (pid==NULL) { <span class="keywordflow">return</span> 0.0f; }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="_p_i_d_8c.html#ac91fb3ac56dbb416c3dc207e55e36284" title="Prueft IEEE-754-Exponent statt zweier Software-Float-Vergleiche.">PIDfinite</a>(difference) || !<a class="code" href="_p_i_d_8c.html#ac91fb3ac56dbb416c3dc207e55e36284" title="Prueft IEEE-754-Exponent statt zweier Software-Float-Vergleiche.">PIDfinite</a>(pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a412294956a0b94953e92508f28100222">KP</a>) || !<a class="code" href="_p_i_d_8c.html#ac91fb3ac56dbb416c3dc207e55e36284" title="Prueft IEEE-754-Exponent statt zweier Software-Float-Vergleiche.">PIDfinite</a>(pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a1d8fda1426d76117171c1887689f4f56">minimum</a>) ||</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        !<a class="code" href="_p_i_d_8c.html#ac91fb3ac56dbb416c3dc207e55e36284" title="Prueft IEEE-754-Exponent statt zweier Software-Float-Vergleiche.">PIDfinite</a>(pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#adf8166c9c510b3097204f18e28f17b2d">maximum</a>) || pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a1d8fda1426d76117171c1887689f4f56">minimum</a>&gt;pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#adf8166c9c510b3097204f18e28f17b2d">maximum</a> || !<a class="code" href="_p_i_d_8c.html#a0423315d68ef7207ed0044f7983b2fdb" title="Aktualisiert den Koeffizientencache bei geaenderten Parametern.">PIDprepare</a>(pid)) {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="_p_i_d_8c.html#a93038bb6188b4f48e211519daa9b6d86" title="Loescht Integral und D-Gedaechtnis, behaelt die Parameter.">PIDclear</a>(pid); <span class="keywordflow">return</span> 0.0f;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">if</span> ((pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#aaa8b150db505523ded5ec9d5dd2780d0">cached_kd</a>&amp;0x7FFFFFFFUL)!=0U) {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">if</span> (pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#ac509e4c645d419122492669e149b098c">started</a>) {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordtype">float</span> d_unfiltered=pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a52c159d1f6e566b84b7801a53fcda6c6">kd_ta</a>*(difference-pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a720dd8c3edf0de171e1d39d64ca656ac">InpOld</a>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a151d5b1864ad01d42c1b58fa455e6cba">derivative</a>+=pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#ab59703c4165a999a4b00da0e10612b5e">d_alpha</a>*(d_unfiltered-pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a151d5b1864ad01d42c1b58fa455e6cba">derivative</a>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    } <span class="keywordflow">else</span> { pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a151d5b1864ad01d42c1b58fa455e6cba">derivative</a>=0.0f; }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a720dd8c3edf0de171e1d39d64ca656ac">InpOld</a>=difference; pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#ac509e4c645d419122492669e149b098c">started</a>=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">if</span> ((pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a183ace97b520d7482204e632380639a7">cached_ki</a>&amp;0x7FFFFFFFUL)==0U) { pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a8add34d67767876f78b3055477fe0def">ISUM</a>=0.0f; }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    increment=pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a18559ff16be33e80878395721827733c">ki_ta</a>*difference;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    integral=pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a8add34d67767876f78b3055477fe0def">ISUM</a>+increment;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    base=pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a412294956a0b94953e92508f28100222">KP</a>*difference+pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a151d5b1864ad01d42c1b58fa455e6cba">derivative</a>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    output=base+integral;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">/* Endliche Pruefung verhindert auch einen Variablenueberlauf im Integrator. */</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="_p_i_d_8c.html#ac91fb3ac56dbb416c3dc207e55e36284" title="Prueft IEEE-754-Exponent statt zweier Software-Float-Vergleiche.">PIDfinite</a>(integral) || !<a class="code" href="_p_i_d_8c.html#ac91fb3ac56dbb416c3dc207e55e36284" title="Prueft IEEE-754-Exponent statt zweier Software-Float-Vergleiche.">PIDfinite</a>(output)) { <a class="code" href="_p_i_d_8c.html#a93038bb6188b4f48e211519daa9b6d86" title="Loescht Integral und D-Gedaechtnis, behaelt die Parameter.">PIDclear</a>(pid); <span class="keywordflow">return</span> 0.0f; }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">if</span> ((output&gt;pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#adf8166c9c510b3097204f18e28f17b2d">maximum</a> &amp;&amp; increment&gt;0.0f) ||</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        (output&lt;pid-&gt;minimum &amp;&amp; increment&lt;0.0f)) {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        output=base+pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a8add34d67767876f78b3055477fe0def">ISUM</a>; <span class="comment">/* Unzulaessigen I-Schritt nicht uebernehmen. */</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    } <span class="keywordflow">else</span> { pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a8add34d67767876f78b3055477fe0def">ISUM</a>=integral; }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">if</span> (output&gt;pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#adf8166c9c510b3097204f18e28f17b2d">maximum</a>) { output=pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#adf8166c9c510b3097204f18e28f17b2d">maximum</a>; }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">if</span> (output&lt;pid-&gt;minimum) { output=pid-&gt;<a class="code" href="struct_p_i_d_contr__t.html#a1d8fda1426d76117171c1887689f4f56">minimum</a>; }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">return</span> output;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Fre Okt 30 2026 19:21:11 für TOF_PID_PWM mit XMC14_2GO von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.3.1
+</small></address>
+</body>
+</html>

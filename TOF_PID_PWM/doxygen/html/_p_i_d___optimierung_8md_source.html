@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>TOF_PID_PWM mit XMC14_2GO: PID_Optimierung.md Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">TOF_PID_PWM mit XMC14_2GO
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="pages.html"><span>Zusätzliche&#160;Informationen</span></a></li>
+      <li><a href="annotated.html"><span>Klassen</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typdefinitionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Aufzählungen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Aufzählungswerte</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Makrodefinitionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Seiten</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">PID_Optimierung.md</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor"># PID-Laufzeitoptimierung, 30.10.2026</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">## Umsetzung</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;Die Positionsform bleibt bestehen. Vorberechnet werden KI*TA, KD/TA und</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;TA/(filter_time+TA). Ein Cache erkennt Aenderungen an KI, KD, TA und Filterzeit.</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;Bei konstanten Parametern hat der Regelschritt keine Division; der erste</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;PID-Aufruf bei Initialisierung berechnet die Koeffizienten. Bei KD=0 werden</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;weder D-Koeffizienten dividiert noch D-Schritte ausgefuehrt. Bei veraenderter</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;realer Abtastzeit wird der Cache neu berechnet, keine Jitterzeit unterschlagen.</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;Auch <a class="code" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Initialisiert das Board und bearbeitet die regelmaessigen Aufgaben.">main</a> rechnet Millisekunden mit *0.001f statt /1000.0f in Sekunden um.</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;Der I-Anteil lautet jetzt I_k=I_alt+(KI*TA)*e. ISUM speichert bereits den</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;gewichteten I-Stellwert in Prozent, nicht mehr Integral(e dt) in mm*s.</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;Der gefilterte D-Zustand speichert ebenso bereits den D-Stellwert in Prozent.</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;Diese Einheiten sind in PID.h dokumentiert. Im Debugger muss ISUM deshalb</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;nicht nochmals mit KI multipliziert werden. Bei KI=0 wird ISUM auf 0 gesetzt.</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;Bei Sollwertwechseln bleibt I erhalten, D wird wie zuvor neu gestartet.</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;Verstaerkungswechsel erfordern <a class="code" href="_p_i_d_8c.html#a93038bb6188b4f48e211519daa9b6d86" title="Loescht Integral und D-Gedaechtnis, behaelt die Parameter.">PIDclear</a>, wie in <a class="code" href="main_8c.html#abc21299ff6360e8faafe0a82c67def30" title="Uebernimmt einen bereits durch den UART-Parser geprueften Parametersatz.">TOF_UARTApply</a> umgesetzt:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;Ein gespeicherter gewichteter Zustand darf sonst nicht mit einem neuen</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;KI/KD verwechselt werden. Gruppen-/Quellen-/Fehlerresets bleiben erhalten.</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;Anti-Windup ist weiterhin bedingte Integration: Ein neuer I-Schritt, der den</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;Gesamtausgang weiter ueber 100 oder unter 0 treiben wuerde, wird verworfen.</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;Entgegengesetzte Schritte koennen den Integrator wieder abbauen. Der Ausgang</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;wird anschliessend begrenzt. Endlichkeitspruefungen sichern Koeffizienten,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;Integrator und Ausgang gegen NaN/Unendlich ab. Es wird kein zusaetzlicher,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;willkuerlicher I-Grenzwert eingefuehrt, der das bisherige Verhalten aendern wuerde.</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;Die IEEE-754-Endlichkeitspruefung und Cachevergleiche verwenden Integer-Bitmuster</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;statt vieler Software-Float-Vergleiche. Dies setzt den im XMC-ARM-GCC verwendeten</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;32-Bit-IEEE-754-<span class="keywordtype">float</span> voraus. Es wird kein -ffast-math eingeschaltet.</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;Die alternative Rekursion y_k=y_alt+q0*e_k+q1*e_alt+q2*e_alt2 wird nicht</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;verwendet. Sie waere fuer den ungefilterten PID bei konstantem TA mit</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;q0=KP+KI*TA+KD/TA, q1=-KP-2*KD/TA, q2=KD/TA herleitbar. Variable Zeit,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;D-Tiefpass und Anti-Windup wuerden eine angepasste Herleitung erfordern.</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;Die vorgesehene Vorberechnung wurde stattdessen in die vorhandene Positionsform</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;uebernommen. Fixed Point wird nicht eingefuehrt.</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;## Vergleich mit vorherigem Code</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;Tests/pid_reference.c bewahrt die Rechenfassung unmittelbar vor Optimierung</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;als Testreferenz. Sie wird durch den Tests-Quellausschluss nicht in die Firmware</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;gelinkt. Tests/validate_pid_compare.py vergleicht 8000 Schritte: P/PI/PID,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;wechselnde Zeiten, positive/negative Verstaerkungen, Ausgangssaettigung,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;Tiefpass und Reset. Ausgang sowie entsprechend gewichtete I-/D-Zustaende</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;werden mit einer absoluten Toleranz von 0.02 Prozentpunkten verglichen.</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;Diese ist kleiner als die 1-Prozent-Ausgabequantisierung. Die Rechnung ist</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;wegen geaenderter <span class="keywordtype">float</span>-Operationsreihenfolge nicht bitidentisch; unmittelbar</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;an einer Rundungsgrenze kann auch die gerundete PWM um 1 Prozentpunkt abweichen.</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;Die bestehenden PID-Rechentests und UART-/CAN-Sollwerttests bestehen ebenfalls,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;insbesondere der zuvor korrigierte Integratorerhalt bei laufendem Profil.</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;## Instruktionsvergleich</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;Tests/benchmark_pid.py baut mit DAVE GCC 4.9, Cortex-M0, -Os wie im Projekt.</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;Pro Fall werden Initialisierung plus 100 Regelschritte im Unicorn-Emulator</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;gezaehlt, einschliesslich der eingebundenen Software-Float-Routinen. Die</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;Vergleichssignale und Parameter sind in Tests/pid_benchmark.c festgelegt.</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;| Fall | Vorher: Instruktionen | Optimiert | Reduktion | Float-Divisionen vorher / optimiert |</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;| --- | ---: | ---: | ---: | ---: |</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;| PI, konstant 50 ms | 335222 | 84404 | 74.8 % | 198 / 0 |</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;| PID, konstant 50 ms | 341977 | 137975 | 59.7 % | 198 / 2 |</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;| PI, wechselnd 50/51/52 ms | 357395 | 131293 | 63.3 % | 198 / 0 |</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;| PID, wechselnd 50/51/52 ms | 364068 | 270313 | 25.8 % | 198 / 200 |</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;Bei konstantem TA sind die zwei PID-Divisionen nur in der Initialisierung</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;enthalten. Mit wechselndem TA und aktivem D-Anteil muessen die Koeffizienten</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;jedes Mal aktualisiert werden; die Reduktion stammt dann vor allem aus weniger</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;Multiplikationen, Vergleichen und der gewichteten Zustandsdarstellung.</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;**Diese Zahlen sind keine Taktzyklen, keine Mikrosekunden und kein gemessener</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;Hardware-Beschleunigungsfaktor.** Instruktionslaufzeiten, Flash-Wartezeiten und</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;Interrupts werden durch diese Zaehler nicht abgebildet. Fuer echte Laufzeitmessung</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;auf dem XMC1404 <a class="code" href="_p_i_d_8c.html#aa0d2162b3848937a9410f44be970e02b" title="Berechnet einen begrenzten Stellwert aus Sollwert minus Istwert.">PIDrun</a> mit einem GPIO-Puls einklammern und am Oszilloskop messen.</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;Referenz und Optimierung dabei mit gleichen Eingaben und Compileroptionen messen.</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;Die Rohdaten stehen in Tests/pid_benchmark_results.json.</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;## Code und Verwendung</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;Libraries/PID.c dokumentiert die Gleichungen und Gruende direkt am Code.</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;Libraries/PID.h beschreibt alle Zustands- und Cachefelder. Nur <a class="code" href="_p_i_d_8c.html#abfcbc7481bc674c0622556749e48257d" title="Initialisiert einen Regler mit Ausgang 0..100 und D-Filter 0,1 s.">PIDinit</a>/<a class="code" href="_p_i_d_8c.html#aa0d2162b3848937a9410f44be970e02b" title="Berechnet einen begrenzten Stellwert aus Sollwert minus Istwert.">PIDrun</a></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;und die Resetfunktionen verwenden; Cachefelder nicht von aussen aendern.</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;Der Cache vergroessert den Reglerzustand um einige Worte; die vorher benoetigten</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;Software-Float-Bibliotheken koennen fuer andere Funktionen weiterhin im ELF bleiben.</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;Firmware neu bauen und flashen; die Abstimmung an der realen Regelstrecke bleibt</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;zu pruefen. Der Softwarevergleich ersetzt diese Messung nicht.</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt am Fre Okt 30 2026 19:21:11 für TOF_PID_PWM mit XMC14_2GO von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.3.1
+</small></address>
+</body>
+</html>
